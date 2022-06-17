@@ -1,0 +1,12 @@
+
+# 프로젝트 제외 경로
+/out/
+
+# idea
+.idea
+
+# 실행파일
+bin
+
+# jar 파일
+/MediaWatcher*.jar
