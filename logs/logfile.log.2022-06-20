@@ -1,0 +1,543 @@
+[2022-06-20 09:06:12][INFO ](Watcher.java:main:43) - user_dir : /home/jake/workspace/java/tryspace/MediaWatcher-v2
+[2022-06-20 09:06:12][INFO ](Watcher.java:main:56) - mode : null
+[2022-06-20 09:06:15][INFO ](Watcher.java:start:73) - [PRG_START]
+[2022-06-20 09:06:15][INFO ](Watcher.java:printVersion:98) - [PRG_VER]null
+[2022-06-20 09:06:22][DEBUG](ThreadSafeClientConnManager.java:getConnection:235) - Get connection: {}->http://api.kr.dev.kollus.com, timeout = 0
+[2022-06-20 09:06:23][DEBUG](ThreadSafeClientConnManager.java:releaseConnection:280) - Released connection is reusable.
+[2022-06-20 09:06:23][INFO ](Config.java:printUrls:242) - URLS [watcher.list.insert] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/register
+[2022-06-20 09:06:23][INFO ](Config.java:printUrls:242) - URLS [watcher.list.complete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/complete
+[2022-06-20 09:06:23][INFO ](Config.java:printUrls:242) - URLS [watcher.list.delete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/remove
+[2022-06-20 09:06:23][INFO ](Config.java:printUrls:242) - URLS [watcher.usage_day_amount.insert] http://api.kr.dev.kollus.com/0/catenoid/usage_day_amount/register
+[2022-06-20 09:06:23][INFO ](Config.java:printUrls:242) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-06-20 09:06:23][INFO ](Config.java:printUrls:242) - URLS [transcoding_job.assign] http://jobmanager-dev-kr.kollus.com:8180/assign
+[2022-06-20 09:06:23][INFO ](Config.java:printUrls:242) - URLS [transcoding_job.manager] http://api.kr.dev.kollus.com/0/catenoid/transcoding_job/manager
+[2022-06-20 09:06:23][INFO ](Config.java:printUrls:242) - URLS [transcoding_file.register] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/register
+[2022-06-20 09:06:23][INFO ](Config.java:printUrls:242) - URLS [transcoding_file.update] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/update
+[2022-06-20 09:06:23][INFO ](Config.java:printUrls:242) - URLS [transcoding_file.complete] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete
+[2022-06-20 09:06:23][INFO ](Config.java:printUrls:242) - URLS [transcoding_file.complete_all] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete_all
+[2022-06-20 09:06:23][INFO ](Config.java:printUrls:242) - URLS [module.check_activated_at] http://api.kr.dev.kollus.com/0/catenoid/module/check_activated_at
+[2022-06-20 09:06:23][INFO ](Config.java:printUrls:242) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-06-20 09:10:35][INFO ](Watcher.java:main:49) - user_dir : /home/jake/workspace/java/tryspace/MediaWatcher-v2
+[2022-06-20 09:10:35][INFO ](Watcher.java:main:62) - mode : null
+[2022-06-20 09:10:37][INFO ](Watcher.java:start:79) - [PRG_START]
+[2022-06-20 09:10:39][INFO ](Watcher.java:printVersion:133) - [PRG_VER]null
+[2022-06-20 09:10:42][DEBUG](ThreadSafeClientConnManager.java:getConnection:235) - Get connection: {}->http://api.kr.dev.kollus.com, timeout = 0
+[2022-06-20 09:10:42][DEBUG](ThreadSafeClientConnManager.java:releaseConnection:280) - Released connection is reusable.
+[2022-06-20 09:10:42][INFO ](Config.java:printUrls:242) - URLS [watcher.list.insert] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/register
+[2022-06-20 09:10:42][INFO ](Config.java:printUrls:242) - URLS [watcher.list.complete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/complete
+[2022-06-20 09:10:42][INFO ](Config.java:printUrls:242) - URLS [watcher.list.delete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/remove
+[2022-06-20 09:10:42][INFO ](Config.java:printUrls:242) - URLS [watcher.usage_day_amount.insert] http://api.kr.dev.kollus.com/0/catenoid/usage_day_amount/register
+[2022-06-20 09:10:42][INFO ](Config.java:printUrls:242) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-06-20 09:10:42][INFO ](Config.java:printUrls:242) - URLS [transcoding_job.assign] http://jobmanager-dev-kr.kollus.com:8180/assign
+[2022-06-20 09:10:42][INFO ](Config.java:printUrls:242) - URLS [transcoding_job.manager] http://api.kr.dev.kollus.com/0/catenoid/transcoding_job/manager
+[2022-06-20 09:10:42][INFO ](Config.java:printUrls:242) - URLS [transcoding_file.register] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/register
+[2022-06-20 09:10:42][INFO ](Config.java:printUrls:242) - URLS [transcoding_file.update] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/update
+[2022-06-20 09:10:42][INFO ](Config.java:printUrls:242) - URLS [transcoding_file.complete] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete
+[2022-06-20 09:10:42][INFO ](Config.java:printUrls:242) - URLS [transcoding_file.complete_all] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete_all
+[2022-06-20 09:10:42][INFO ](Config.java:printUrls:242) - URLS [module.check_activated_at] http://api.kr.dev.kollus.com/0/catenoid/module/check_activated_at
+[2022-06-20 09:10:42][INFO ](Config.java:printUrls:242) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-06-20 09:10:51][DEBUG](Watcher.java:setupWatcher:210) - [PRG_CONF]job_watcherfile1=0/10 * * * * ?
+[2022-06-20 09:10:51][DEBUG](Watcher.java:setupWatcher:210) - [PRG_CONF]job_watcherfile2=0/1 * * * * ?
+[2022-06-20 09:10:51][DEBUG](Watcher.java:setupWatcher:210) - [PRG_CONF]job_watcherfile3=0/10 * * * * ?
+[2022-06-20 09:10:51][DEBUG](Watcher.java:setupWatcher:210) - [PRG_CONF]job_watcherfile4=0/1 * * * * ?
+[2022-06-20 09:13:22][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost:1521" [90067-168]
+[2022-06-20 09:13:22][ERROR](FtpUploadServiceImp.java:<init>:50) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost:1521" [90067-168]
+[2022-06-20 09:13:22][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost:1521" [90067-168]
+[2022-06-20 09:13:22][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost:1521" [90067-168]
+[2022-06-20 09:13:22][ERROR](FtpUploadServiceImp.java:<init>:50) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost:1521" [90067-168]
+[2022-06-20 09:13:22][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost:1521" [90067-168]
+[2022-06-20 09:13:22][ERROR](FtpUploadServiceImp.java:<init>:50) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost:1521" [90067-168]
+[2022-06-20 09:13:22][ERROR](FtpUploadServiceImp.java:<init>:50) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost:1521" [90067-168]
+[2022-06-20 09:13:37][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost:1521" [90067-168]
+[2022-06-20 09:13:38][ERROR](FtpUploadServiceImp.java:<init>:50) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost:1521" [90067-168]
+[2022-06-20 09:13:53][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost:1521" [90067-168]
+[2022-06-20 09:13:53][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost:1521" [90067-168]
+[2022-06-20 09:13:53][ERROR](FtpUploadServiceImp.java:<init>:50) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost:1521" [90067-168]
+[2022-06-20 09:13:53][ERROR](FtpUploadServiceImp.java:<init>:50) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost:1521" [90067-168]
+[2022-06-20 09:13:56][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost:1521" [90067-168]
+[2022-06-20 09:13:58][ERROR](FtpUploadServiceImp.java:<init>:50) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost:1521" [90067-168]
+[2022-06-20 09:14:09][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost:1521" [90067-168]
+[2022-06-20 09:14:09][ERROR](FtpUploadServiceImp.java:<init>:50) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost:1521" [90067-168]
+[2022-06-20 09:17:19][INFO ](Watcher.java:main:49) - user_dir : /home/jake/workspace/java/tryspace/MediaWatcher-v2
+[2022-06-20 09:17:19][INFO ](Watcher.java:main:62) - mode : null
+[2022-06-20 09:17:21][INFO ](Watcher.java:start:79) - [PRG_START]
+[2022-06-20 09:17:22][INFO ](Watcher.java:printVersion:133) - [PRG_VER]null
+[2022-06-20 09:17:24][DEBUG](ThreadSafeClientConnManager.java:getConnection:235) - Get connection: {}->http://api.kr.dev.kollus.com, timeout = 0
+[2022-06-20 09:17:24][DEBUG](ThreadSafeClientConnManager.java:releaseConnection:280) - Released connection is reusable.
+[2022-06-20 09:17:24][INFO ](Config.java:printUrls:242) - URLS [watcher.list.insert] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/register
+[2022-06-20 09:17:24][INFO ](Config.java:printUrls:242) - URLS [watcher.list.complete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/complete
+[2022-06-20 09:17:24][INFO ](Config.java:printUrls:242) - URLS [watcher.list.delete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/remove
+[2022-06-20 09:17:24][INFO ](Config.java:printUrls:242) - URLS [watcher.usage_day_amount.insert] http://api.kr.dev.kollus.com/0/catenoid/usage_day_amount/register
+[2022-06-20 09:17:24][INFO ](Config.java:printUrls:242) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-06-20 09:17:24][INFO ](Config.java:printUrls:242) - URLS [transcoding_job.assign] http://jobmanager-dev-kr.kollus.com:8180/assign
+[2022-06-20 09:17:24][INFO ](Config.java:printUrls:242) - URLS [transcoding_job.manager] http://api.kr.dev.kollus.com/0/catenoid/transcoding_job/manager
+[2022-06-20 09:17:24][INFO ](Config.java:printUrls:242) - URLS [transcoding_file.register] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/register
+[2022-06-20 09:17:24][INFO ](Config.java:printUrls:242) - URLS [transcoding_file.update] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/update
+[2022-06-20 09:17:24][INFO ](Config.java:printUrls:242) - URLS [transcoding_file.complete] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete
+[2022-06-20 09:17:24][INFO ](Config.java:printUrls:242) - URLS [transcoding_file.complete_all] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete_all
+[2022-06-20 09:17:24][INFO ](Config.java:printUrls:242) - URLS [module.check_activated_at] http://api.kr.dev.kollus.com/0/catenoid/module/check_activated_at
+[2022-06-20 09:17:24][INFO ](Config.java:printUrls:242) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-06-20 09:17:40][DEBUG](Watcher.java:setupWatcher:210) - [PRG_CONF]job_watcherfile1=0/10 * * * * ?
+[2022-06-20 09:17:40][DEBUG](Watcher.java:setupWatcher:210) - [PRG_CONF]job_watcherfile2=0/1 * * * * ?
+[2022-06-20 09:17:40][DEBUG](Watcher.java:setupWatcher:210) - [PRG_CONF]job_watcherfile3=0/10 * * * * ?
+[2022-06-20 09:17:40][DEBUG](Watcher.java:setupWatcher:210) - [PRG_CONF]job_watcherfile4=0/1 * * * * ?
+[2022-06-20 09:18:10][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost:1521" [90067-168]
+[2022-06-20 09:18:10][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost:1521" [90067-168]
+[2022-06-20 09:18:10][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost:1521" [90067-168]
+[2022-06-20 09:18:10][ERROR](FtpUploadServiceImp.java:<init>:50) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost:1521" [90067-168]
+[2022-06-20 09:18:10][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost:1521" [90067-168]
+[2022-06-20 09:18:10][ERROR](FtpUploadServiceImp.java:<init>:50) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost:1521" [90067-168]
+[2022-06-20 09:18:10][ERROR](FtpUploadServiceImp.java:<init>:50) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost:1521" [90067-168]
+[2022-06-20 09:18:10][ERROR](FtpUploadServiceImp.java:<init>:50) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost:1521" [90067-168]
+[2022-06-20 09:37:46][INFO ](Watcher.java:main:49) - user_dir : /home/jake/workspace/java/tryspace/MediaWatcher-v2
+[2022-06-20 09:37:46][INFO ](Watcher.java:main:62) - mode : null
+[2022-06-20 09:37:49][INFO ](Watcher.java:start:79) - [PRG_START]
+[2022-06-20 09:37:50][INFO ](Watcher.java:printVersion:133) - [PRG_VER]null
+[2022-06-20 09:37:51][DEBUG](ThreadSafeClientConnManager.java:getConnection:235) - Get connection: {}->http://api.kr.dev.kollus.com, timeout = 0
+[2022-06-20 09:37:51][DEBUG](ThreadSafeClientConnManager.java:releaseConnection:280) - Released connection is reusable.
+[2022-06-20 09:37:51][INFO ](Config.java:printUrls:242) - URLS [watcher.list.insert] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/register
+[2022-06-20 09:37:51][INFO ](Config.java:printUrls:242) - URLS [watcher.list.complete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/complete
+[2022-06-20 09:37:51][INFO ](Config.java:printUrls:242) - URLS [watcher.list.delete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/remove
+[2022-06-20 09:37:51][INFO ](Config.java:printUrls:242) - URLS [watcher.usage_day_amount.insert] http://api.kr.dev.kollus.com/0/catenoid/usage_day_amount/register
+[2022-06-20 09:37:51][INFO ](Config.java:printUrls:242) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-06-20 09:37:51][INFO ](Config.java:printUrls:242) - URLS [transcoding_job.assign] http://jobmanager-dev-kr.kollus.com:8180/assign
+[2022-06-20 09:37:51][INFO ](Config.java:printUrls:242) - URLS [transcoding_job.manager] http://api.kr.dev.kollus.com/0/catenoid/transcoding_job/manager
+[2022-06-20 09:37:51][INFO ](Config.java:printUrls:242) - URLS [transcoding_file.register] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/register
+[2022-06-20 09:37:51][INFO ](Config.java:printUrls:242) - URLS [transcoding_file.update] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/update
+[2022-06-20 09:37:51][INFO ](Config.java:printUrls:242) - URLS [transcoding_file.complete] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete
+[2022-06-20 09:37:51][INFO ](Config.java:printUrls:242) - URLS [transcoding_file.complete_all] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete_all
+[2022-06-20 09:37:51][INFO ](Config.java:printUrls:242) - URLS [module.check_activated_at] http://api.kr.dev.kollus.com/0/catenoid/module/check_activated_at
+[2022-06-20 09:37:51][INFO ](Config.java:printUrls:242) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-06-20 09:38:09][DEBUG](Watcher.java:setupWatcher:210) - [PRG_CONF]job_watcherfile1=0/10 * * * * ?
+[2022-06-20 09:38:17][DEBUG](Watcher.java:setupWatcher:210) - [PRG_CONF]job_watcherfile2=0/1 * * * * ?
+[2022-06-20 09:38:18][DEBUG](Watcher.java:setupWatcher:210) - [PRG_CONF]job_watcherfile3=0/10 * * * * ?
+[2022-06-20 09:38:19][DEBUG](Watcher.java:setupWatcher:210) - [PRG_CONF]job_watcherfile4=0/1 * * * * ?
+[2022-06-20 09:39:14][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:39:14][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:39:14][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:39:14][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:39:14][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:39:14][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:39:14][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:39:14][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:39:27][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:39:28][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:39:33][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:39:33][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:39:39][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:39:39][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:39:39][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:39:40][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:39:41][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:39:42][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:39:42][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:39:43][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:39:48][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:39:48][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:10][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.SocketTimeoutException: localhost" [90067-168]
+[2022-06-20 09:40:10][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.SocketTimeoutException: localhost" [90067-168]
+[2022-06-20 09:40:11][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:11][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:11][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:11][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:11][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:11][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:11][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:11][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:12][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:12][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:12][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:12][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:12][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:12][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:14][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:14][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:14][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:14][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:14][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:14][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:15][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:15][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:15][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:15][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:15][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:15][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:16][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:16][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:16][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:16][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:17][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:17][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:17][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:17][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:19][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:19][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:19][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:19][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:20][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:20][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:20][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:20][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:21][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:21][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:21][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:21][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:21][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:21][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:21][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:21][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:22][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:22][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:22][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:22][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:24][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:24][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:24][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:24][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:25][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:25][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:25][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:25][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:26][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:26][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:26][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:26][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:27][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:27][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:27][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:27][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:29][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:29][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:29][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:29][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:30][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:30][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:30][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:30][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:31][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:31][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:31][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:31][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:31][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:31][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:31][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:31][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:32][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:32][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:32][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:32][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:34][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:34][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:34][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:34][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:35][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:35][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:35][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:35][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:36][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:36][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:36][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:36][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:37][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:37][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:37][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:37][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:39][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:39][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:39][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:39][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:40][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:40][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:40][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:40][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:41][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:41][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:41][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:41][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:40:41][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.SocketTimeoutException: localhost:1521" [90067-168]
+[2022-06-20 09:40:41][ERROR](FtpUploadServiceImp.java:<init>:50) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.SocketTimeoutException: localhost:1521" [90067-168]
+[2022-06-20 09:48:00][INFO ](Watcher.java:main:49) - user_dir : /home/jake/workspace/java/tryspace/MediaWatcher-v2
+[2022-06-20 09:48:00][INFO ](Watcher.java:main:62) - mode : null
+[2022-06-20 09:48:01][INFO ](Watcher.java:start:79) - [PRG_START]
+[2022-06-20 09:48:02][INFO ](Watcher.java:printVersion:133) - [PRG_VER]null
+[2022-06-20 09:48:03][DEBUG](ThreadSafeClientConnManager.java:getConnection:235) - Get connection: {}->http://api.kr.dev.kollus.com, timeout = 0
+[2022-06-20 09:48:03][DEBUG](ThreadSafeClientConnManager.java:releaseConnection:280) - Released connection is reusable.
+[2022-06-20 09:48:03][INFO ](Config.java:printUrls:242) - URLS [watcher.list.insert] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/register
+[2022-06-20 09:48:03][INFO ](Config.java:printUrls:242) - URLS [watcher.list.complete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/complete
+[2022-06-20 09:48:03][INFO ](Config.java:printUrls:242) - URLS [watcher.list.delete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/remove
+[2022-06-20 09:48:03][INFO ](Config.java:printUrls:242) - URLS [watcher.usage_day_amount.insert] http://api.kr.dev.kollus.com/0/catenoid/usage_day_amount/register
+[2022-06-20 09:48:03][INFO ](Config.java:printUrls:242) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-06-20 09:48:03][INFO ](Config.java:printUrls:242) - URLS [transcoding_job.assign] http://jobmanager-dev-kr.kollus.com:8180/assign
+[2022-06-20 09:48:03][INFO ](Config.java:printUrls:242) - URLS [transcoding_job.manager] http://api.kr.dev.kollus.com/0/catenoid/transcoding_job/manager
+[2022-06-20 09:48:03][INFO ](Config.java:printUrls:242) - URLS [transcoding_file.register] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/register
+[2022-06-20 09:48:03][INFO ](Config.java:printUrls:242) - URLS [transcoding_file.update] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/update
+[2022-06-20 09:48:03][INFO ](Config.java:printUrls:242) - URLS [transcoding_file.complete] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete
+[2022-06-20 09:48:03][INFO ](Config.java:printUrls:242) - URLS [transcoding_file.complete_all] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete_all
+[2022-06-20 09:48:03][INFO ](Config.java:printUrls:242) - URLS [module.check_activated_at] http://api.kr.dev.kollus.com/0/catenoid/module/check_activated_at
+[2022-06-20 09:48:03][INFO ](Config.java:printUrls:242) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-06-20 09:48:05][DEBUG](Watcher.java:setupWatcher:210) - [PRG_CONF]job_watcherfile1=0/10 * * * * ?
+[2022-06-20 09:48:10][DEBUG](Watcher.java:setupWatcher:210) - [PRG_CONF]job_watcherfile2=0/1 * * * * ?
+[2022-06-20 09:48:11][DEBUG](Watcher.java:setupWatcher:210) - [PRG_CONF]job_watcherfile3=0/10 * * * * ?
+[2022-06-20 09:48:12][DEBUG](Watcher.java:setupWatcher:210) - [PRG_CONF]job_watcherfile4=0/1 * * * * ?
+[2022-06-20 09:48:28][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:48:28][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:48:28][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:48:28][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:48:28][ERROR](H2DB.java:connectDatabase:37) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:48:28][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:48:28][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:48:28][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:51:22][INFO ](Watcher.java:main:49) - user_dir : /home/jake/workspace/java/tryspace/MediaWatcher-v2
+[2022-06-20 09:51:22][INFO ](Watcher.java:main:62) - mode : null
+[2022-06-20 09:51:24][INFO ](Watcher.java:start:79) - [PRG_START]
+[2022-06-20 09:51:26][INFO ](Watcher.java:printVersion:133) - [PRG_VER]null
+[2022-06-20 09:51:27][DEBUG](ThreadSafeClientConnManager.java:getConnection:235) - Get connection: {}->http://api.kr.dev.kollus.com, timeout = 0
+[2022-06-20 09:51:27][DEBUG](ThreadSafeClientConnManager.java:releaseConnection:280) - Released connection is reusable.
+[2022-06-20 09:51:27][INFO ](Config.java:printUrls:242) - URLS [watcher.list.insert] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/register
+[2022-06-20 09:51:27][INFO ](Config.java:printUrls:242) - URLS [watcher.list.complete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/complete
+[2022-06-20 09:51:27][INFO ](Config.java:printUrls:242) - URLS [watcher.list.delete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/remove
+[2022-06-20 09:51:27][INFO ](Config.java:printUrls:242) - URLS [watcher.usage_day_amount.insert] http://api.kr.dev.kollus.com/0/catenoid/usage_day_amount/register
+[2022-06-20 09:51:27][INFO ](Config.java:printUrls:242) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-06-20 09:51:27][INFO ](Config.java:printUrls:242) - URLS [transcoding_job.assign] http://jobmanager-dev-kr.kollus.com:8180/assign
+[2022-06-20 09:51:27][INFO ](Config.java:printUrls:242) - URLS [transcoding_job.manager] http://api.kr.dev.kollus.com/0/catenoid/transcoding_job/manager
+[2022-06-20 09:51:27][INFO ](Config.java:printUrls:242) - URLS [transcoding_file.register] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/register
+[2022-06-20 09:51:27][INFO ](Config.java:printUrls:242) - URLS [transcoding_file.update] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/update
+[2022-06-20 09:51:27][INFO ](Config.java:printUrls:242) - URLS [transcoding_file.complete] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete
+[2022-06-20 09:51:27][INFO ](Config.java:printUrls:242) - URLS [transcoding_file.complete_all] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete_all
+[2022-06-20 09:51:27][INFO ](Config.java:printUrls:242) - URLS [module.check_activated_at] http://api.kr.dev.kollus.com/0/catenoid/module/check_activated_at
+[2022-06-20 09:51:27][INFO ](Config.java:printUrls:242) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-06-20 09:51:31][DEBUG](Watcher.java:setupWatcher:210) - [PRG_CONF]job_watcherfile1=0/10 * * * * ?
+[2022-06-20 09:51:33][DEBUG](Watcher.java:setupWatcher:210) - [PRG_CONF]job_watcherfile2=0/1 * * * * ?
+[2022-06-20 09:51:36][DEBUG](Watcher.java:setupWatcher:210) - [PRG_CONF]job_watcherfile3=0/10 * * * * ?
+[2022-06-20 09:51:36][DEBUG](Watcher.java:setupWatcher:210) - [PRG_CONF]job_watcherfile4=0/1 * * * * ?
+[2022-06-20 09:51:48][INFO ](H2DB.java:connectDatabase:31) - dbURL : jdbc:h2:tcp://localhost/~/watcherfile2;TRACE_LEVEL_FILE=0;TRACE_LEVEL_SYSTEM_OUT=0;
+[2022-06-20 09:51:48][INFO ](H2DB.java:connectDatabase:31) - dbURL : jdbc:h2:tcp://localhost/~/watcherfile4;TRACE_LEVEL_FILE=0;TRACE_LEVEL_SYSTEM_OUT=0;
+[2022-06-20 09:51:48][INFO ](H2DB.java:connectDatabase:31) - dbURL : jdbc:h2:tcp://localhost/~/watcherfile3;TRACE_LEVEL_FILE=0;TRACE_LEVEL_SYSTEM_OUT=0;
+[2022-06-20 09:51:48][INFO ](H2DB.java:connectDatabase:31) - dbURL : jdbc:h2:tcp://localhost/~/watcherfile1;TRACE_LEVEL_FILE=0;TRACE_LEVEL_SYSTEM_OUT=0;
+[2022-06-20 09:51:57][ERROR](H2DB.java:connectDatabase:38) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:51:57][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:51:57][ERROR](H2DB.java:connectDatabase:38) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:51:57][ERROR](H2DB.java:connectDatabase:38) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:51:57][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:51:57][ERROR](H2DB.java:connectDatabase:38) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:51:57][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 09:51:57][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 10:00:37][INFO ](H2DB.java:connectDatabase:31) - dbURL : jdbc:h2:tcp://localhost/~/watcherfile4;TRACE_LEVEL_FILE=0;TRACE_LEVEL_SYSTEM_OUT=0;
+[2022-06-20 10:00:37][INFO ](H2DB.java:connectDatabase:31) - dbURL : jdbc:h2:tcp://localhost/~/watcherfile2;TRACE_LEVEL_FILE=0;TRACE_LEVEL_SYSTEM_OUT=0;
+[2022-06-20 10:00:37][INFO ](H2DB.java:connectDatabase:31) - dbURL : jdbc:h2:tcp://localhost/~/watcherfile1;TRACE_LEVEL_FILE=0;TRACE_LEVEL_SYSTEM_OUT=0;
+[2022-06-20 10:00:37][INFO ](H2DB.java:connectDatabase:31) - dbURL : jdbc:h2:tcp://localhost/~/watcherfile3;TRACE_LEVEL_FILE=0;TRACE_LEVEL_SYSTEM_OUT=0;
+[2022-06-20 10:02:41][INFO ](Watcher.java:main:49) - user_dir : /home/jake/workspace/java/tryspace/MediaWatcher-v2
+[2022-06-20 10:02:41][INFO ](Watcher.java:main:62) - mode : null
+[2022-06-20 10:02:43][INFO ](Watcher.java:start:79) - [PRG_START]
+[2022-06-20 10:02:44][INFO ](Watcher.java:printVersion:133) - [PRG_VER]null
+[2022-06-20 10:02:48][DEBUG](ThreadSafeClientConnManager.java:getConnection:235) - Get connection: {}->http://api.kr.dev.kollus.com, timeout = 0
+[2022-06-20 10:02:48][DEBUG](ThreadSafeClientConnManager.java:releaseConnection:280) - Released connection is reusable.
+[2022-06-20 10:02:48][INFO ](Config.java:printUrls:242) - URLS [watcher.list.insert] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/register
+[2022-06-20 10:02:48][INFO ](Config.java:printUrls:242) - URLS [watcher.list.complete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/complete
+[2022-06-20 10:02:48][INFO ](Config.java:printUrls:242) - URLS [watcher.list.delete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/remove
+[2022-06-20 10:02:48][INFO ](Config.java:printUrls:242) - URLS [watcher.usage_day_amount.insert] http://api.kr.dev.kollus.com/0/catenoid/usage_day_amount/register
+[2022-06-20 10:02:48][INFO ](Config.java:printUrls:242) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-06-20 10:02:48][INFO ](Config.java:printUrls:242) - URLS [transcoding_job.assign] http://jobmanager-dev-kr.kollus.com:8180/assign
+[2022-06-20 10:02:48][INFO ](Config.java:printUrls:242) - URLS [transcoding_job.manager] http://api.kr.dev.kollus.com/0/catenoid/transcoding_job/manager
+[2022-06-20 10:02:48][INFO ](Config.java:printUrls:242) - URLS [transcoding_file.register] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/register
+[2022-06-20 10:02:48][INFO ](Config.java:printUrls:242) - URLS [transcoding_file.update] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/update
+[2022-06-20 10:02:48][INFO ](Config.java:printUrls:242) - URLS [transcoding_file.complete] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete
+[2022-06-20 10:02:48][INFO ](Config.java:printUrls:242) - URLS [transcoding_file.complete_all] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete_all
+[2022-06-20 10:02:48][INFO ](Config.java:printUrls:242) - URLS [module.check_activated_at] http://api.kr.dev.kollus.com/0/catenoid/module/check_activated_at
+[2022-06-20 10:02:48][INFO ](Config.java:printUrls:242) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-06-20 10:02:48][DEBUG](Watcher.java:setupWatcher:210) - [PRG_CONF]job_watcherfile1=0/10 * * * * ?
+[2022-06-20 10:02:48][DEBUG](Watcher.java:setupWatcher:210) - [PRG_CONF]job_watcherfile2=0/1 * * * * ?
+[2022-06-20 10:02:48][DEBUG](Watcher.java:setupWatcher:210) - [PRG_CONF]job_watcherfile3=0/10 * * * * ?
+[2022-06-20 10:02:48][DEBUG](Watcher.java:setupWatcher:210) - [PRG_CONF]job_watcherfile4=0/1 * * * * ?
+[2022-06-20 10:02:48][INFO ](H2DB.java:connectDatabase:31) - dbURL : jdbc:h2:tcp://localhost/~/watcherfile2;TRACE_LEVEL_FILE=0;TRACE_LEVEL_SYSTEM_OUT=0;
+[2022-06-20 10:02:48][INFO ](H2DB.java:connectDatabase:31) - dbURL : jdbc:h2:tcp://localhost/~/watcherfile4;TRACE_LEVEL_FILE=0;TRACE_LEVEL_SYSTEM_OUT=0;
+[2022-06-20 10:02:50][INFO ](H2DB.java:connectDatabase:31) - dbURL : jdbc:h2:tcp://localhost/~/watcherfile1;TRACE_LEVEL_FILE=0;TRACE_LEVEL_SYSTEM_OUT=0;
+[2022-06-20 10:02:50][INFO ](H2DB.java:connectDatabase:31) - dbURL : jdbc:h2:tcp://localhost/~/watcherfile3;TRACE_LEVEL_FILE=0;TRACE_LEVEL_SYSTEM_OUT=0;
+[2022-06-20 10:02:50][ERROR](H2DB.java:connectDatabase:38) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 10:02:50][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 10:02:50][ERROR](H2DB.java:connectDatabase:38) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 10:02:50][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 10:02:50][INFO ](H2DB.java:connectDatabase:31) - dbURL : jdbc:h2:tcp://localhost/~/watcherfile4;TRACE_LEVEL_FILE=0;TRACE_LEVEL_SYSTEM_OUT=0;
+[2022-06-20 10:02:50][INFO ](H2DB.java:connectDatabase:31) - dbURL : jdbc:h2:tcp://localhost/~/watcherfile2;TRACE_LEVEL_FILE=0;TRACE_LEVEL_SYSTEM_OUT=0;
+[2022-06-20 10:02:51][ERROR](H2DB.java:connectDatabase:38) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 10:02:51][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 10:02:51][ERROR](H2DB.java:connectDatabase:38) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 10:02:51][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 10:02:51][ERROR](H2DB.java:connectDatabase:38) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 10:02:51][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 10:02:51][ERROR](H2DB.java:connectDatabase:38) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 10:02:51][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 10:02:51][INFO ](H2DB.java:connectDatabase:31) - dbURL : jdbc:h2:tcp://localhost/~/watcherfile2;TRACE_LEVEL_FILE=0;TRACE_LEVEL_SYSTEM_OUT=0;
+[2022-06-20 10:02:51][INFO ](H2DB.java:connectDatabase:31) - dbURL : jdbc:h2:tcp://localhost/~/watcherfile4;TRACE_LEVEL_FILE=0;TRACE_LEVEL_SYSTEM_OUT=0;
+[2022-06-20 10:02:52][ERROR](H2DB.java:connectDatabase:38) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 10:02:52][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 10:02:52][ERROR](H2DB.java:connectDatabase:38) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 10:02:52][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 10:02:52][INFO ](H2DB.java:connectDatabase:31) - dbURL : jdbc:h2:tcp://localhost/~/watcherfile2;TRACE_LEVEL_FILE=0;TRACE_LEVEL_SYSTEM_OUT=0;
+[2022-06-20 10:02:52][INFO ](H2DB.java:connectDatabase:31) - dbURL : jdbc:h2:tcp://localhost/~/watcherfile4;TRACE_LEVEL_FILE=0;TRACE_LEVEL_SYSTEM_OUT=0;
+[2022-06-20 10:55:19][INFO ](Watcher.java:main:49) - user_dir : /home/jake/workspace/java/tryspace/MediaWatcher-v2
+[2022-06-20 10:55:19][INFO ](Watcher.java:main:62) - mode : null
+[2022-06-20 10:55:20][INFO ](Watcher.java:start:79) - [PRG_START]
+[2022-06-20 10:55:20][INFO ](Watcher.java:printVersion:133) - [PRG_VER]null
+[2022-06-20 10:55:20][DEBUG](ThreadSafeClientConnManager.java:getConnection:235) - Get connection: {}->http://api.kr.dev.kollus.com, timeout = 0
+[2022-06-20 10:55:20][DEBUG](ThreadSafeClientConnManager.java:releaseConnection:280) - Released connection is reusable.
+[2022-06-20 10:55:20][INFO ](Config.java:printUrls:242) - URLS [watcher.list.insert] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/register
+[2022-06-20 10:55:20][INFO ](Config.java:printUrls:242) - URLS [watcher.list.complete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/complete
+[2022-06-20 10:55:20][INFO ](Config.java:printUrls:242) - URLS [watcher.list.delete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/remove
+[2022-06-20 10:55:20][INFO ](Config.java:printUrls:242) - URLS [watcher.usage_day_amount.insert] http://api.kr.dev.kollus.com/0/catenoid/usage_day_amount/register
+[2022-06-20 10:55:20][INFO ](Config.java:printUrls:242) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-06-20 10:55:20][INFO ](Config.java:printUrls:242) - URLS [transcoding_job.assign] http://jobmanager-dev-kr.kollus.com:8180/assign
+[2022-06-20 10:55:20][INFO ](Config.java:printUrls:242) - URLS [transcoding_job.manager] http://api.kr.dev.kollus.com/0/catenoid/transcoding_job/manager
+[2022-06-20 10:55:20][INFO ](Config.java:printUrls:242) - URLS [transcoding_file.register] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/register
+[2022-06-20 10:55:20][INFO ](Config.java:printUrls:242) - URLS [transcoding_file.update] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/update
+[2022-06-20 10:55:20][INFO ](Config.java:printUrls:242) - URLS [transcoding_file.complete] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete
+[2022-06-20 10:55:20][INFO ](Config.java:printUrls:242) - URLS [transcoding_file.complete_all] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete_all
+[2022-06-20 10:55:20][INFO ](Config.java:printUrls:242) - URLS [module.check_activated_at] http://api.kr.dev.kollus.com/0/catenoid/module/check_activated_at
+[2022-06-20 10:55:20][INFO ](Config.java:printUrls:242) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-06-20 10:55:20][DEBUG](Watcher.java:setupWatcher:210) - [PRG_CONF]job_watcherfile1=0/10 * * * * ?
+[2022-06-20 10:55:20][DEBUG](Watcher.java:setupWatcher:210) - [PRG_CONF]job_watcherfile2=0/1 * * * * ?
+[2022-06-20 10:55:20][DEBUG](Watcher.java:setupWatcher:210) - [PRG_CONF]job_watcherfile3=0/10 * * * * ?
+[2022-06-20 10:55:20][DEBUG](Watcher.java:setupWatcher:210) - [PRG_CONF]job_watcherfile4=0/1 * * * * ?
+[2022-06-20 10:55:20][INFO ](H2DB.java:connectDatabase:31) - dbURL : jdbc:h2:tcp://localhost/~/watcherfile1;TRACE_LEVEL_FILE=0;TRACE_LEVEL_SYSTEM_OUT=0;
+[2022-06-20 10:55:20][INFO ](H2DB.java:connectDatabase:31) - dbURL : jdbc:h2:tcp://localhost/~/watcherfile4;TRACE_LEVEL_FILE=0;TRACE_LEVEL_SYSTEM_OUT=0;
+[2022-06-20 10:55:20][INFO ](H2DB.java:connectDatabase:31) - dbURL : jdbc:h2:tcp://localhost/~/watcherfile2;TRACE_LEVEL_FILE=0;TRACE_LEVEL_SYSTEM_OUT=0;
+[2022-06-20 10:55:20][INFO ](H2DB.java:connectDatabase:31) - dbURL : jdbc:h2:tcp://localhost/~/watcherfile3;TRACE_LEVEL_FILE=0;TRACE_LEVEL_SYSTEM_OUT=0;
+[2022-06-20 10:55:22][ERROR](H2DB.java:connectDatabase:38) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 10:55:22][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 10:55:22][ERROR](H2DB.java:connectDatabase:38) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 10:55:22][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 10:55:22][ERROR](H2DB.java:connectDatabase:38) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 10:55:22][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 10:55:22][ERROR](H2DB.java:connectDatabase:38) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 10:55:22][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 10:55:22][INFO ](H2DB.java:connectDatabase:31) - dbURL : jdbc:h2:tcp://localhost/~/watcherfile2;TRACE_LEVEL_FILE=0;TRACE_LEVEL_SYSTEM_OUT=0;
+[2022-06-20 10:55:22][INFO ](H2DB.java:connectDatabase:31) - dbURL : jdbc:h2:tcp://localhost/~/watcherfile4;TRACE_LEVEL_FILE=0;TRACE_LEVEL_SYSTEM_OUT=0;
+[2022-06-20 10:55:23][ERROR](H2DB.java:connectDatabase:38) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 10:55:23][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 10:55:23][ERROR](H2DB.java:connectDatabase:38) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 10:55:23][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 10:55:23][INFO ](H2DB.java:connectDatabase:31) - dbURL : jdbc:h2:tcp://localhost/~/watcherfile2;TRACE_LEVEL_FILE=0;TRACE_LEVEL_SYSTEM_OUT=0;
+[2022-06-20 10:55:23][INFO ](H2DB.java:connectDatabase:31) - dbURL : jdbc:h2:tcp://localhost/~/watcherfile4;TRACE_LEVEL_FILE=0;TRACE_LEVEL_SYSTEM_OUT=0;
+[2022-06-20 10:55:24][ERROR](H2DB.java:connectDatabase:38) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 10:55:24][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 10:55:24][ERROR](H2DB.java:connectDatabase:38) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 10:55:24][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 10:55:24][INFO ](H2DB.java:connectDatabase:31) - dbURL : jdbc:h2:tcp://localhost/~/watcherfile2;TRACE_LEVEL_FILE=0;TRACE_LEVEL_SYSTEM_OUT=0;
+[2022-06-20 10:55:24][INFO ](H2DB.java:connectDatabase:31) - dbURL : jdbc:h2:tcp://localhost/~/watcherfile4;TRACE_LEVEL_FILE=0;TRACE_LEVEL_SYSTEM_OUT=0;
+[2022-06-20 11:06:16][INFO ](Watcher.java:main:49) - user_dir : /home/jake/workspace/java/tryspace/MediaWatcher-v2
+[2022-06-20 11:06:16][INFO ](Watcher.java:main:62) - mode : null
+[2022-06-20 11:06:16][INFO ](Watcher.java:start:79) - [PRG_START]
+[2022-06-20 11:06:16][INFO ](Watcher.java:printVersion:133) - [PRG_VER]2.0-b4 [gson]
+[2022-06-20 11:06:16][DEBUG](ThreadSafeClientConnManager.java:getConnection:235) - Get connection: {}->http://api.kr.dev.kollus.com, timeout = 0
+[2022-06-20 11:06:16][DEBUG](ThreadSafeClientConnManager.java:releaseConnection:280) - Released connection is reusable.
+[2022-06-20 11:06:16][INFO ](Config.java:printUrls:242) - URLS [watcher.list.insert] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/register
+[2022-06-20 11:06:16][INFO ](Config.java:printUrls:242) - URLS [watcher.list.complete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/complete
+[2022-06-20 11:06:16][INFO ](Config.java:printUrls:242) - URLS [watcher.list.delete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/remove
+[2022-06-20 11:06:16][INFO ](Config.java:printUrls:242) - URLS [watcher.usage_day_amount.insert] http://api.kr.dev.kollus.com/0/catenoid/usage_day_amount/register
+[2022-06-20 11:06:16][INFO ](Config.java:printUrls:242) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-06-20 11:06:16][INFO ](Config.java:printUrls:242) - URLS [transcoding_job.assign] http://jobmanager-dev-kr.kollus.com:8180/assign
+[2022-06-20 11:06:16][INFO ](Config.java:printUrls:242) - URLS [transcoding_job.manager] http://api.kr.dev.kollus.com/0/catenoid/transcoding_job/manager
+[2022-06-20 11:06:16][INFO ](Config.java:printUrls:242) - URLS [transcoding_file.register] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/register
+[2022-06-20 11:06:16][INFO ](Config.java:printUrls:242) - URLS [transcoding_file.update] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/update
+[2022-06-20 11:06:16][INFO ](Config.java:printUrls:242) - URLS [transcoding_file.complete] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete
+[2022-06-20 11:06:16][INFO ](Config.java:printUrls:242) - URLS [transcoding_file.complete_all] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete_all
+[2022-06-20 11:06:16][INFO ](Config.java:printUrls:242) - URLS [module.check_activated_at] http://api.kr.dev.kollus.com/0/catenoid/module/check_activated_at
+[2022-06-20 11:06:16][INFO ](Config.java:printUrls:242) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-06-20 11:06:16][DEBUG](Watcher.java:setupWatcher:210) - [PRG_CONF]job_watcherfile1=0/10 * * * * ?
+[2022-06-20 11:06:16][DEBUG](Watcher.java:setupWatcher:210) - [PRG_CONF]job_watcherfile2=0/1 * * * * ?
+[2022-06-20 11:06:16][DEBUG](Watcher.java:setupWatcher:210) - [PRG_CONF]job_watcherfile3=0/10 * * * * ?
+[2022-06-20 11:06:16][DEBUG](Watcher.java:setupWatcher:210) - [PRG_CONF]job_watcherfile4=0/1 * * * * ?
+[2022-06-20 11:06:16][INFO ](H2DB.java:connectDatabase:31) - dbURL : jdbc:h2:tcp://localhost/~/watcherfile2;TRACE_LEVEL_FILE=0;TRACE_LEVEL_SYSTEM_OUT=0;
+[2022-06-20 11:06:16][INFO ](H2DB.java:connectDatabase:31) - dbURL : jdbc:h2:tcp://localhost/~/watcherfile4;TRACE_LEVEL_FILE=0;TRACE_LEVEL_SYSTEM_OUT=0;
+[2022-06-20 11:06:17][ERROR](H2DB.java:connectDatabase:38) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 11:06:17][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 11:06:17][ERROR](H2DB.java:connectDatabase:38) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 11:06:17][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 11:06:17][INFO ](H2DB.java:connectDatabase:31) - dbURL : jdbc:h2:tcp://localhost/~/watcherfile2;TRACE_LEVEL_FILE=0;TRACE_LEVEL_SYSTEM_OUT=0;
+[2022-06-20 11:06:17][INFO ](H2DB.java:connectDatabase:31) - dbURL : jdbc:h2:tcp://localhost/~/watcherfile4;TRACE_LEVEL_FILE=0;TRACE_LEVEL_SYSTEM_OUT=0;
+[2022-06-20 14:37:35][INFO ](Watcher.java:main:49) - user_dir : /home/jake/workspace/java/tryspace/MediaWatcher-v2
+[2022-06-20 14:37:35][INFO ](Watcher.java:main:62) - mode : null
+[2022-06-20 14:37:36][INFO ](Watcher.java:start:79) - [PRG_START]
+[2022-06-20 14:37:36][INFO ](Watcher.java:printVersion:133) - [PRG_VER]null
+[2022-06-20 14:37:36][DEBUG](ThreadSafeClientConnManager.java:getConnection:235) - Get connection: {}->http://api.kr.dev.kollus.com, timeout = 0
+[2022-06-20 14:37:36][DEBUG](ThreadSafeClientConnManager.java:releaseConnection:280) - Released connection is reusable.
+[2022-06-20 14:37:36][INFO ](Config.java:printUrls:242) - URLS [watcher.list.insert] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/register
+[2022-06-20 14:37:36][INFO ](Config.java:printUrls:242) - URLS [watcher.list.complete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/complete
+[2022-06-20 14:37:36][INFO ](Config.java:printUrls:242) - URLS [watcher.list.delete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/remove
+[2022-06-20 14:37:36][INFO ](Config.java:printUrls:242) - URLS [watcher.usage_day_amount.insert] http://api.kr.dev.kollus.com/0/catenoid/usage_day_amount/register
+[2022-06-20 14:37:36][INFO ](Config.java:printUrls:242) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-06-20 14:37:36][INFO ](Config.java:printUrls:242) - URLS [transcoding_job.assign] http://jobmanager-dev-kr.kollus.com:8180/assign
+[2022-06-20 14:37:36][INFO ](Config.java:printUrls:242) - URLS [transcoding_job.manager] http://api.kr.dev.kollus.com/0/catenoid/transcoding_job/manager
+[2022-06-20 14:37:36][INFO ](Config.java:printUrls:242) - URLS [transcoding_file.register] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/register
+[2022-06-20 14:37:36][INFO ](Config.java:printUrls:242) - URLS [transcoding_file.update] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/update
+[2022-06-20 14:37:36][INFO ](Config.java:printUrls:242) - URLS [transcoding_file.complete] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete
+[2022-06-20 14:37:36][INFO ](Config.java:printUrls:242) - URLS [transcoding_file.complete_all] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete_all
+[2022-06-20 14:37:36][INFO ](Config.java:printUrls:242) - URLS [module.check_activated_at] http://api.kr.dev.kollus.com/0/catenoid/module/check_activated_at
+[2022-06-20 14:37:36][INFO ](Config.java:printUrls:242) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-06-20 14:37:36][DEBUG](Watcher.java:setupWatcher:210) - [PRG_CONF]job_watcherfile1=0/10 * * * * ?
+[2022-06-20 14:37:36][DEBUG](Watcher.java:setupWatcher:210) - [PRG_CONF]job_watcherfile2=0/1 * * * * ?
+[2022-06-20 14:37:36][DEBUG](Watcher.java:setupWatcher:210) - [PRG_CONF]job_watcherfile3=0/10 * * * * ?
+[2022-06-20 14:37:36][DEBUG](Watcher.java:setupWatcher:210) - [PRG_CONF]job_watcherfile4=0/1 * * * * ?
+[2022-06-20 14:37:36][INFO ](H2DB.java:connectDatabase:31) - dbURL : jdbc:h2:tcp://localhost/~/watcherfile2;TRACE_LEVEL_FILE=0;TRACE_LEVEL_SYSTEM_OUT=0;
+[2022-06-20 14:37:36][INFO ](H2DB.java:connectDatabase:31) - dbURL : jdbc:h2:tcp://localhost/~/watcherfile4;TRACE_LEVEL_FILE=0;TRACE_LEVEL_SYSTEM_OUT=0;
+[2022-06-20 14:37:44][ERROR](H2DB.java:connectDatabase:38) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 14:37:44][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 14:37:44][ERROR](H2DB.java:connectDatabase:38) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 14:37:44][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 14:37:44][INFO ](H2DB.java:connectDatabase:31) - dbURL : jdbc:h2:tcp://localhost/~/watcherfile1;TRACE_LEVEL_FILE=0;TRACE_LEVEL_SYSTEM_OUT=0;
+[2022-06-20 14:37:44][INFO ](H2DB.java:connectDatabase:31) - dbURL : jdbc:h2:tcp://localhost/~/watcherfile3;TRACE_LEVEL_FILE=0;TRACE_LEVEL_SYSTEM_OUT=0;
+[2022-06-20 14:37:44][INFO ](H2DB.java:connectDatabase:31) - dbURL : jdbc:h2:tcp://localhost/~/watcherfile4;TRACE_LEVEL_FILE=0;TRACE_LEVEL_SYSTEM_OUT=0;
+[2022-06-20 14:37:44][INFO ](H2DB.java:connectDatabase:31) - dbURL : jdbc:h2:tcp://localhost/~/watcherfile2;TRACE_LEVEL_FILE=0;TRACE_LEVEL_SYSTEM_OUT=0;
+[2022-06-20 14:37:47][ERROR](H2DB.java:connectDatabase:38) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 14:37:47][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 14:37:47][ERROR](H2DB.java:connectDatabase:38) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 14:37:47][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 14:37:47][ERROR](H2DB.java:connectDatabase:38) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 14:37:47][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 14:37:47][ERROR](H2DB.java:connectDatabase:38) - Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 14:37:47][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused (Connection refused): localhost" [90067-168]
+[2022-06-20 14:37:47][INFO ](H2DB.java:connectDatabase:31) - dbURL : jdbc:h2:tcp://localhost/~/watcherfile2;TRACE_LEVEL_FILE=0;TRACE_LEVEL_SYSTEM_OUT=0;
+[2022-06-20 14:37:47][INFO ](H2DB.java:connectDatabase:31) - dbURL : jdbc:h2:tcp://localhost/~/watcherfile4;TRACE_LEVEL_FILE=0;TRACE_LEVEL_SYSTEM_OUT=0;
+[2022-06-20 16:26:35][INFO ](Watcher.java:main:49) - user_dir : /home/jake/workspace/java/tryspace/MediaWatcher-v2
+[2022-06-20 16:26:35][INFO ](Watcher.java:main:62) - mode : null
+[2022-06-20 16:26:36][INFO ](Watcher.java:start:79) - [PRG_START]
+[2022-06-20 16:26:36][INFO ](Watcher.java:printVersion:133) - [PRG_VER]null
+[2022-06-20 16:26:36][DEBUG](ThreadSafeClientConnManager.java:getConnection:235) - Get connection: {}->http://api.kr.dev.kollus.com, timeout = 0
+[2022-06-20 16:26:37][DEBUG](ThreadSafeClientConnManager.java:releaseConnection:280) - Released connection is reusable.
+[2022-06-20 16:26:37][INFO ](Config.java:printUrls:242) - URLS [watcher.list.insert] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/register
+[2022-06-20 16:26:37][INFO ](Config.java:printUrls:242) - URLS [watcher.list.complete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/complete
+[2022-06-20 16:26:37][INFO ](Config.java:printUrls:242) - URLS [watcher.list.delete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/remove
+[2022-06-20 16:26:37][INFO ](Config.java:printUrls:242) - URLS [watcher.usage_day_amount.insert] http://api.kr.dev.kollus.com/0/catenoid/usage_day_amount/register
+[2022-06-20 16:26:37][INFO ](Config.java:printUrls:242) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-06-20 16:26:37][INFO ](Config.java:printUrls:242) - URLS [transcoding_job.assign] http://jobmanager-dev-kr.kollus.com:8180/assign
+[2022-06-20 16:26:37][INFO ](Config.java:printUrls:242) - URLS [transcoding_job.manager] http://api.kr.dev.kollus.com/0/catenoid/transcoding_job/manager
+[2022-06-20 16:26:37][INFO ](Config.java:printUrls:242) - URLS [transcoding_file.register] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/register
+[2022-06-20 16:26:37][INFO ](Config.java:printUrls:242) - URLS [transcoding_file.update] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/update
+[2022-06-20 16:26:37][INFO ](Config.java:printUrls:242) - URLS [transcoding_file.complete] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete
+[2022-06-20 16:26:37][INFO ](Config.java:printUrls:242) - URLS [transcoding_file.complete_all] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete_all
+[2022-06-20 16:26:37][INFO ](Config.java:printUrls:242) - URLS [module.check_activated_at] http://api.kr.dev.kollus.com/0/catenoid/module/check_activated_at
+[2022-06-20 16:26:37][INFO ](Config.java:printUrls:242) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-06-20 16:26:37][DEBUG](Watcher.java:setupWatcher:210) - [PRG_CONF]job_watcherfile1=0/10 * * * * ?
+[2022-06-20 16:26:37][DEBUG](Watcher.java:setupWatcher:210) - [PRG_CONF]job_watcherfile2=0/1 * * * * ?
+[2022-06-20 16:26:37][DEBUG](Watcher.java:setupWatcher:210) - [PRG_CONF]job_watcherfile3=0/10 * * * * ?
+[2022-06-20 16:26:37][DEBUG](Watcher.java:setupWatcher:210) - [PRG_CONF]job_watcherfile4=0/1 * * * * ?
+[2022-06-20 16:26:37][INFO ](H2DB.java:connectDatabase:31) - dbURL : jdbc:h2:tcp://localhost/~/watcherfile2;TRACE_LEVEL_FILE=0;TRACE_LEVEL_SYSTEM_OUT=0;
+[2022-06-20 16:26:37][INFO ](H2DB.java:connectDatabase:31) - dbURL : jdbc:h2:tcp://localhost/~/watcherfile4;TRACE_LEVEL_FILE=0;TRACE_LEVEL_SYSTEM_OUT=0;
+[2022-06-20 16:26:44][ERROR](H2DB.java:connectDatabase:38) - Connection is broken: "java.net.ConnectException: Connection refused: localhost" [90067-168]
+[2022-06-20 16:26:44][ERROR](H2DB.java:connectDatabase:38) - Connection is broken: "java.net.ConnectException: Connection refused: localhost" [90067-168]
+[2022-06-20 16:26:44][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused: localhost" [90067-168]
+[2022-06-20 16:26:44][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused: localhost" [90067-168]
+[2022-06-20 16:26:44][INFO ](H2DB.java:connectDatabase:31) - dbURL : jdbc:h2:tcp://localhost/~/watcherfile1;TRACE_LEVEL_FILE=0;TRACE_LEVEL_SYSTEM_OUT=0;
+[2022-06-20 16:26:44][INFO ](H2DB.java:connectDatabase:31) - dbURL : jdbc:h2:tcp://localhost/~/watcherfile3;TRACE_LEVEL_FILE=0;TRACE_LEVEL_SYSTEM_OUT=0;
+[2022-06-20 16:26:44][INFO ](H2DB.java:connectDatabase:31) - dbURL : jdbc:h2:tcp://localhost/~/watcherfile2;TRACE_LEVEL_FILE=0;TRACE_LEVEL_SYSTEM_OUT=0;
+[2022-06-20 16:26:44][INFO ](H2DB.java:connectDatabase:31) - dbURL : jdbc:h2:tcp://localhost/~/watcherfile4;TRACE_LEVEL_FILE=0;TRACE_LEVEL_SYSTEM_OUT=0;
+[2022-06-20 16:26:47][ERROR](H2DB.java:connectDatabase:38) - Connection is broken: "java.net.ConnectException: Connection refused: localhost" [90067-168]
+[2022-06-20 16:26:47][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused: localhost" [90067-168]
+[2022-06-20 16:26:47][ERROR](H2DB.java:connectDatabase:38) - Connection is broken: "java.net.ConnectException: Connection refused: localhost" [90067-168]
+[2022-06-20 16:26:47][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused: localhost" [90067-168]
+[2022-06-20 16:26:47][ERROR](H2DB.java:connectDatabase:38) - Connection is broken: "java.net.ConnectException: Connection refused: localhost" [90067-168]
+[2022-06-20 16:26:47][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused: localhost" [90067-168]
+[2022-06-20 16:26:47][ERROR](H2DB.java:connectDatabase:38) - Connection is broken: "java.net.ConnectException: Connection refused: localhost" [90067-168]
+[2022-06-20 16:26:47][ERROR](FtpUploadServiceImp.java:<init>:52) - FtpUploadServiceImp Construct Err : Connection is broken: "java.net.ConnectException: Connection refused: localhost" [90067-168]
+[2022-06-20 16:26:47][INFO ](H2DB.java:connectDatabase:31) - dbURL : jdbc:h2:tcp://localhost/~/watcherfile2;TRACE_LEVEL_FILE=0;TRACE_LEVEL_SYSTEM_OUT=0;
+[2022-06-20 16:26:47][INFO ](H2DB.java:connectDatabase:31) - dbURL : jdbc:h2:tcp://localhost/~/watcherfile4;TRACE_LEVEL_FILE=0;TRACE_LEVEL_SYSTEM_OUT=0;

@@ -19,12 +19,22 @@ public class Config extends BaseConfig {
 
     private static Logger log = Logger.getLogger(Config.class);
 
+    /**
+     * 환경 설정 파일명
+     */
     public static final String WATCHER_PROPERTIES_FILE = "watcher.json";
+//	public static final String WATCHER_PROPERTIES_FILE = "watcher-local.json";
 
-    private static Config config;
-
+    // Config를 임의 생성하지 못하도록 한다.cat
     protected Config() {
     }
+
+    /**
+     * Singleton으로 유지하기 위해 사용
+     */
+    private static Config config;
+
+//	private ConfigMediaWatcher watcher;
 
     @Expose
     @SerializedName("api")
@@ -133,23 +143,11 @@ public class Config extends BaseConfig {
     }
 
     /**
-     * 추가지원 확장자
+     * 환경 설정 객체를 획득한다. 신규로 생성되는 경우 설정파일을 자동으로 읽어 들인다.
      *
      * @return
+     * @throws Exception
      */
-    public String[] getSupportExt() {
-        return support_ext;
-    }
-
-
-    public boolean isStartWithRun() {
-        return start_with_run;
-    }
-
-    public Thumbnail getSnap() {
-        return snap;
-    }
-
     public static Config getConfig() {
         if (config != null)
             return config;
@@ -191,6 +189,20 @@ public class Config extends BaseConfig {
         return cfg;
     }
 
+    /**
+     * 초기화 함수 모음
+     * @throws IOException
+     * @throws ClientProtocolException
+     * @throws JsonSyntaxException
+     */
+    private void _init() throws JsonSyntaxException, ClientProtocolException, IOException {
+        setSupportExt(_support_ext);
+        this.httpd._init();
+
+        printUrls(this.kollus_api.get_module_config().watcher);
+        printUrls(this.kollus_api.get_module_config().transcoder);
+    }
+
     private static String get_config_file_path() {
         String user_dir = System.getProperty("user.dir");
         String propFileName = WATCHER_PROPERTIES_FILE;
@@ -210,18 +222,26 @@ public class Config extends BaseConfig {
         return null;
     }
 
-    /**
-     * 초기화 함수 모음
-     * @throws IOException
-     * @throws ClientProtocolException
-     * @throws JsonSyntaxException
-     */
-    private void _init() throws JsonSyntaxException, ClientProtocolException, IOException {
-        setSupportExt(_support_ext);
-        this.httpd._init();
+    public String getDefaultCharset() {
+        return this.default_charset;
+    }
 
-        printUrls(this.kollus_api.get_module_config().watcher);
-        printUrls(this.kollus_api.get_module_config().transcoder);
+    private void printUrls(Map<String, String> map) {
+        Iterator<String> keys = map.keySet().iterator();
+        while (keys.hasNext()) {
+            String name = keys.next();
+            String value = map.get(name);
+            log.info(String.format("URLS [%s] %s", name, value));
+        }
+    }
+
+    /**
+     * 추가지원 확장자
+     *
+     * @return
+     */
+    public String[] getSupportExt() {
+        return support_ext;
     }
 
     /**
@@ -234,13 +254,69 @@ public class Config extends BaseConfig {
         this.support_ext = support_ext.split(delimiter);
     }
 
-    private void printUrls(Map<String, String> map) {
-        Iterator<String> keys = map.keySet().iterator();
-        while (keys.hasNext()) {
-            String name = keys.next();
-            String value = map.get(name);
-            log.info(String.format("URLS [%s] %s", name, value));
+    /**
+     * 감시 리스트를 한번에 전송하는 최대 크기
+     *
+     * @return
+     */
+    public int getWatcherSendMax() {
+        return watcher_send_max;
+    }
+
+    public Thumbnail getSnap() {
+        return snap;
+    }
+
+    public boolean isStartWithRun() {
+        return start_with_run;
+    }
+
+    public String getLsDir() {
+        return ls_dir;
+    }
+
+    public String getLsCharset() {
+        return ls_charset;
+    }
+
+    public String[] getIgnoreFilename() {
+        return ignore_filename;
+    }
+
+    public long getLsSleep() {
+        return this.ls_sleep;
+    }
+
+    public HttpServerConf getHttpserverConf() {
+        return httpd;
+    }
+
+    public String get_convmv_path() {
+        return this.convmv_path ;
+    }
+
+    /**
+     * rsync bwlimit 옵션, 최대속도를 지정하는 옵션와 함께 반환<br>
+     * --bwlimit=10000 (kb)
+     * @return
+     */
+    public String get_rsync_bwlimit() {
+        if(this.rsync_bwlimit != null) {
+            this.rsync_bwlimit = this.rsync_bwlimit.trim();
+            if(this.rsync_bwlimit.length() > 0) {
+                return String.format("--bwlimit=%s", this.rsync_bwlimit);
+            }
         }
+        return null;
+    }
+
+    public boolean is_use_rsync() {
+        return this.use_rsync ;
+    }
+
+    public String toString() {
+        final Gson gson = BaseCommand.gson(true);
+        return gson.toJson(this);
     }
 
 }

@@ -9,6 +9,8 @@ import net.catenoid.watcher.upload.utils.FtpUploadUtils;
 import net.catenoid.watcher.uploadDao.FtpUploadDao;
 import org.apache.log4j.Logger;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -41,14 +43,14 @@ public class FtpUploadServiceImp extends FtpUploadDao implements FtpUploadServic
         this.check_time = dateFormat.format(now);
 
         try {
-//            super.conn = H2DB.connectDatabase(info);
-//            super.stmt = utils.getStatment(conn);
+            super.conn = H2DB.connectDatabase(info);
+            super.stmt = utils.getStatment(conn);
 
-//            createTable();
+            createTable();
         } catch (Exception e) {
             // TODO Auto-generated catch block
             log.error("FtpUploadServiceImp Construct Err : " + e.getMessage());
-//            utils.shutdownDerby(conn, stmt);
+            utils.shutdownDerby(conn, stmt);
         }
     }
 
@@ -60,5 +62,42 @@ public class FtpUploadServiceImp extends FtpUploadDao implements FtpUploadServic
     @Override
     public void renewWorkFileList() throws Exception {
 
+    }
+
+    /**
+     * Derby 테이블을 생성한다.
+     *
+     * @throws SQLException
+     */
+
+    private void createTable() throws SQLException {
+        if (conn == null) {
+            log.warn("Not connect H2 database");
+            return;
+        }
+        if (stmt == null) {
+            log.warn("Not Statement instance");
+            return;
+        }
+
+        /**
+         * FILES 테이블이 존재하면 그냥 패스, 없으면 생성 (Apache derby) 무조건 생성하는 경우 오히려 시간이 더 걸리거나 메모리가
+         * 증가하는 현상 발견 (H2)에서는 현상 발견하지 못함.
+         */
+        String sql = "SHOW TABLES";
+
+//		sql = "SELECT * FROM FILES;";
+
+        ResultSet rs = stmt.executeQuery(sql);
+
+        int num = 0;
+
+        while (rs.next()) {
+            num++;
+        }
+
+        if (num == 0) {
+            createNewTable();
+        }
     }
 }

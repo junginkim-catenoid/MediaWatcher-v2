@@ -1,0 +1,68 @@
+[2022-06-17 15:49:31][INFO ](Watcher.java:main:41) - mode : null
+[2022-06-17 15:49:50][INFO ](Watcher.java:main:41) - mode : null
+[2022-06-17 15:50:20][INFO ](Watcher.java:main:41) - mode : null
+[2022-06-17 15:50:54][INFO ](Watcher.java:main:32) - user_dir : /home/jake/workspace/java/tryspace/MediaWatcher-v2
+[2022-06-17 15:50:54][INFO ](Watcher.java:main:46) - mode : null
+[2022-06-17 16:31:05][INFO ](Watcher.java:main:40) - user_dir : /home/jake/workspace/java/tryspace/MediaWatcher-v2
+[2022-06-17 16:31:05][INFO ](Watcher.java:main:53) - mode : null
+[2022-06-17 16:31:27][INFO ](Watcher.java:main:40) - user_dir : /home/jake/workspace/java/tryspace/MediaWatcher-v2
+[2022-06-17 16:31:27][INFO ](Watcher.java:main:53) - mode : null
+[2022-06-17 16:31:27][INFO ](Watcher.java:start:70) - [PRG_START]
+[2022-06-17 16:31:30][INFO ](Watcher.java:printVersion:88) - [PRG_VER]null
+[2022-06-17 16:51:28][INFO ](Watcher.java:main:40) - user_dir : /home/jake/workspace/java/tryspace/MediaWatcher-v2
+[2022-06-17 16:51:28][INFO ](Watcher.java:main:53) - mode : null
+[2022-06-17 16:51:30][INFO ](Watcher.java:start:70) - [PRG_START]
+[2022-06-17 16:51:31][INFO ](Watcher.java:printVersion:88) - [PRG_VER]null
+[2022-06-17 16:51:34][DEBUG](ThreadSafeClientConnManager.java:getConnection:235) - Get connection: {}->http://api.kr.dev.kollus.com, timeout = 0
+[2022-06-17 16:51:34][DEBUG](ThreadSafeClientConnManager.java:releaseConnection:280) - Released connection is reusable.
+[2022-06-17 16:51:34][INFO ](Config.java:printUrls:224) - URLS [watcher.list.insert] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/register
+[2022-06-17 16:51:34][INFO ](Config.java:printUrls:224) - URLS [watcher.list.complete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/complete
+[2022-06-17 16:51:34][INFO ](Config.java:printUrls:224) - URLS [watcher.list.delete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/remove
+[2022-06-17 16:51:34][INFO ](Config.java:printUrls:224) - URLS [watcher.usage_day_amount.insert] http://api.kr.dev.kollus.com/0/catenoid/usage_day_amount/register
+[2022-06-17 16:51:34][INFO ](Config.java:printUrls:224) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-06-17 16:51:34][INFO ](Config.java:printUrls:224) - URLS [transcoding_job.assign] http://jobmanager-dev-kr.kollus.com:8180/assign
+[2022-06-17 16:51:34][INFO ](Config.java:printUrls:224) - URLS [transcoding_job.manager] http://api.kr.dev.kollus.com/0/catenoid/transcoding_job/manager
+[2022-06-17 16:51:34][INFO ](Config.java:printUrls:224) - URLS [transcoding_file.register] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/register
+[2022-06-17 16:51:34][INFO ](Config.java:printUrls:224) - URLS [transcoding_file.update] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/update
+[2022-06-17 16:51:34][INFO ](Config.java:printUrls:224) - URLS [transcoding_file.complete] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete
+[2022-06-17 16:51:34][INFO ](Config.java:printUrls:224) - URLS [transcoding_file.complete_all] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete_all
+[2022-06-17 16:51:34][INFO ](Config.java:printUrls:224) - URLS [module.check_activated_at] http://api.kr.dev.kollus.com/0/catenoid/module/check_activated_at
+[2022-06-17 16:51:34][INFO ](Config.java:printUrls:224) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-06-17 17:55:43][INFO ](Watcher.java:main:43) - user_dir : /home/jake/workspace/java/tryspace/MediaWatcher-v2
+[2022-06-17 17:55:43][INFO ](Watcher.java:main:56) - mode : null
+[2022-06-17 17:55:47][INFO ](Watcher.java:start:73) - [PRG_START]
+[2022-06-17 17:55:47][INFO ](Watcher.java:printVersion:98) - [PRG_VER]null
+[2022-06-17 17:55:49][DEBUG](ThreadSafeClientConnManager.java:getConnection:235) - Get connection: {}->http://api.kr.dev.kollus.com, timeout = 0
+[2022-06-17 17:55:49][DEBUG](ThreadSafeClientConnManager.java:releaseConnection:280) - Released connection is reusable.
+[2022-06-17 17:55:49][INFO ](Config.java:printUrls:242) - URLS [watcher.list.insert] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/register
+[2022-06-17 17:55:49][INFO ](Config.java:printUrls:242) - URLS [watcher.list.complete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/complete
+[2022-06-17 17:55:49][INFO ](Config.java:printUrls:242) - URLS [watcher.list.delete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/remove
+[2022-06-17 17:55:49][INFO ](Config.java:printUrls:242) - URLS [watcher.usage_day_amount.insert] http://api.kr.dev.kollus.com/0/catenoid/usage_day_amount/register
+[2022-06-17 17:55:49][INFO ](Config.java:printUrls:242) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-06-17 17:55:49][INFO ](Config.java:printUrls:242) - URLS [transcoding_job.assign] http://jobmanager-dev-kr.kollus.com:8180/assign
+[2022-06-17 17:55:49][INFO ](Config.java:printUrls:242) - URLS [transcoding_job.manager] http://api.kr.dev.kollus.com/0/catenoid/transcoding_job/manager
+[2022-06-17 17:55:49][INFO ](Config.java:printUrls:242) - URLS [transcoding_file.register] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/register
+[2022-06-17 17:55:49][INFO ](Config.java:printUrls:242) - URLS [transcoding_file.update] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/update
+[2022-06-17 17:55:49][INFO ](Config.java:printUrls:242) - URLS [transcoding_file.complete] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete
+[2022-06-17 17:55:49][INFO ](Config.java:printUrls:242) - URLS [transcoding_file.complete_all] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete_all
+[2022-06-17 17:55:49][INFO ](Config.java:printUrls:242) - URLS [module.check_activated_at] http://api.kr.dev.kollus.com/0/catenoid/module/check_activated_at
+[2022-06-17 17:55:49][INFO ](Config.java:printUrls:242) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-06-17 17:56:34][INFO ](Watcher.java:main:43) - user_dir : /home/jake/workspace/java/tryspace/MediaWatcher-v2
+[2022-06-17 17:56:34][INFO ](Watcher.java:main:56) - mode : null
+[2022-06-17 17:56:35][INFO ](Watcher.java:start:73) - [PRG_START]
+[2022-06-17 17:56:39][INFO ](Watcher.java:printVersion:98) - [PRG_VER]null
+[2022-06-17 17:56:50][DEBUG](ThreadSafeClientConnManager.java:getConnection:235) - Get connection: {}->http://api.kr.dev.kollus.com, timeout = 0
+[2022-06-17 17:56:50][DEBUG](ThreadSafeClientConnManager.java:releaseConnection:280) - Released connection is reusable.
+[2022-06-17 17:56:50][INFO ](Config.java:printUrls:242) - URLS [watcher.list.insert] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/register
+[2022-06-17 17:56:50][INFO ](Config.java:printUrls:242) - URLS [watcher.list.complete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/complete
+[2022-06-17 17:56:50][INFO ](Config.java:printUrls:242) - URLS [watcher.list.delete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/remove
+[2022-06-17 17:56:50][INFO ](Config.java:printUrls:242) - URLS [watcher.usage_day_amount.insert] http://api.kr.dev.kollus.com/0/catenoid/usage_day_amount/register
+[2022-06-17 17:56:50][INFO ](Config.java:printUrls:242) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-06-17 17:56:50][INFO ](Config.java:printUrls:242) - URLS [transcoding_job.assign] http://jobmanager-dev-kr.kollus.com:8180/assign
+[2022-06-17 17:56:50][INFO ](Config.java:printUrls:242) - URLS [transcoding_job.manager] http://api.kr.dev.kollus.com/0/catenoid/transcoding_job/manager
+[2022-06-17 17:56:50][INFO ](Config.java:printUrls:242) - URLS [transcoding_file.register] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/register
+[2022-06-17 17:56:50][INFO ](Config.java:printUrls:242) - URLS [transcoding_file.update] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/update
+[2022-06-17 17:56:50][INFO ](Config.java:printUrls:242) - URLS [transcoding_file.complete] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete
+[2022-06-17 17:56:50][INFO ](Config.java:printUrls:242) - URLS [transcoding_file.complete_all] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete_all
+[2022-06-17 17:56:50][INFO ](Config.java:printUrls:242) - URLS [module.check_activated_at] http://api.kr.dev.kollus.com/0/catenoid/module/check_activated_at
+[2022-06-17 17:56:50][INFO ](Config.java:printUrls:242) - URLS [module.error_report] http://mc-dev.kollus.com/report/error

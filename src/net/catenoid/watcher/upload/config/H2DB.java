@@ -9,7 +9,7 @@ import java.sql.DriverManager;
 
 public class H2DB {
 
-    private static Logger log= LoggerFactory.getLogger(H2DB.class);
+    private static Logger log=LoggerFactory.getLogger(H2DB.class);
     private static final int H2_TRACE_LEVEL = 0;
 
     /**

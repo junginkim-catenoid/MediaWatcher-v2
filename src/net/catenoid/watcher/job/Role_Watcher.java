@@ -17,6 +17,7 @@ import java.util.TimeZone;
 @DisallowConcurrentExecution
 public class Role_Watcher implements InterruptableJob  {
 
+
     private static Logger log = Logger.getLogger(Role_Watcher.class);
     private static SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
 
