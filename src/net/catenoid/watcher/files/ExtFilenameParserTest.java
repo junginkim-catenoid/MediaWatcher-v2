@@ -1,5 +1,11 @@
 package net.catenoid.watcher.files;
 
+import net.catenoid.watcher.upload.dto.ExtFilenameParserDTO;
+import net.catenoid.watcher.upload.dto.ExtFilenameResultDTO;
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
+
 /**
  * @author : JAKE
  * @date : 2022/06/22

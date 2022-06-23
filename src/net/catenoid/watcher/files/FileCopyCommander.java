@@ -1,5 +1,7 @@
 package net.catenoid.watcher.files;
 
+import org.apache.log4j.Logger;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;

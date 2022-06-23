@@ -2,6 +2,7 @@ package net.catenoid.watcher.files;
 
 import net.catenoid.watcher.LogAction;
 import net.catenoid.watcher.config.Config;
+import org.apache.log4j.Logger;
 
 import java.io.BufferedReader;
 import java.io.IOException;

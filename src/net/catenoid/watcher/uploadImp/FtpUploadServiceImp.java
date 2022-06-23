@@ -3,6 +3,7 @@ package net.catenoid.watcher.uploadImp;
 import com.kollus.json_data.config.ModuleConfig;
 import net.catenoid.watcher.config.Config;
 import net.catenoid.watcher.config.WatcherFolder;
+import net.catenoid.watcher.files.ConvertMove;
 import net.catenoid.watcher.upload.FtpUploadService;
 import net.catenoid.watcher.upload.config.H2DB;
 import net.catenoid.watcher.upload.dto.FileItemDTO;
@@ -236,9 +237,9 @@ public class FtpUploadServiceImp extends FtpUploadDao implements FtpUploadServic
         if (insert_count == 0 && update_count == 0 && error_count > 0) {
             log.debug("convert not matched charset filename");
 
-//            ConvertMove convmv = new ConvertMove(conf, rootPath);
+            ConvertMove convmv = new ConvertMove(conf, rootPath);
 
-//            convmv.run();
+            convmv.run();
         }
     }
 
