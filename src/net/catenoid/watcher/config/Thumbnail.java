@@ -23,7 +23,7 @@ public class Thumbnail {
     private String snap_temp;
 
     @Expose
-    private Map<String, Poster> custom;
+    private Map<String,Poster> custom;
 
     public Poster get_custom_snapshot(String content_provider_key) {
         if(this.custom == null) {
