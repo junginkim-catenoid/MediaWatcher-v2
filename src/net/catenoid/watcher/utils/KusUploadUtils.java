@@ -33,8 +33,15 @@ public class KusUploadUtils extends CommonUtils {
             if (f.isFile()) {
                 if (isCompleteFile(f.getName())) {
                     FileItemDTO item = findWorkFileItems(f, false);
-                    fileList.add(item);
-                    log.debug("getUploadFullFilePath FileList : " + item.toString());
+                    if (checkIsMediaContent(item.getPhysicalPath())) {
+                        fileList.add(item);
+                        log.debug("getUploadFullFilePath FileList : " + item.toString());
+                    } else {
+                        log.debug("is not MediaFile : " + item.toString());
+                        if (f.delete()) {
+                            log.debug("Not MediaFile removed");
+                        }
+                    }
                 }
                 // 이 부분은 원래 로직에서 처리하도록 한다.
                 // _complete 으로 끝나지 않는 파일은 여기서 처리하지 않아야함.

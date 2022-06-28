@@ -10,9 +10,9 @@ public class KollusApiWatcherContentDTO {
     public String message;
     @Expose
     public KollusApiWatcherFile result;
-    @Override
-    public String toString() {
-        return "WatcherFileDTO [error=" + error + ", message=" + message + ", result=" + result + "]";
-    }
+//    @Override
+//    public String toString() {
+//        return "WatcherFileDTO [error=" + error + ", message=" + message + ", result=" + result + "]";
+//    }
 
 }

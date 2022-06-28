@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 import com.kollus.json_data.BaseCommand;
 import com.kollus.json_data.config.ModuleConfig;
 import com.kollus.utils.HttpAgent;
+import com.kollus.utils.StringUtils;
 import net.catenoid.watcher.LogAction;
 import net.catenoid.watcher.config.Config;
 import net.catenoid.watcher.config.WatcherFolder;
@@ -68,8 +69,12 @@ public class CommonUtils {
         String responseBody = "";
         int nStatus = 0;
 
-        String url = apiType == "register" ? conf.get_kollus_api().get_url(ModuleConfig.URLS.WATCHER_LIST_INSERT)
-                : conf.get_kollus_api().get_url(ModuleConfig.URLS.WATCHER_LIST_COMPLETE);
+//        String url = apiType == "register" ? conf.get_kollus_api().get_url(ModuleConfig.URLS.WATCHER_LIST_INSERT)
+//                : conf.get_kollus_api().get_url(ModuleConfig.URLS.WATCHER_LIST_COMPLETE);
+
+        String url = apiType == "register" ? "http://localhost:3002/register"
+                : "http://localhost:3002/complete";
+
         try {
             // Body Param을 채우기
             qparams = getHttpQueryParam(sendItem, apiType);
@@ -81,7 +86,7 @@ public class CommonUtils {
 
             if (response == null) {
                 log.error(LogAction.HTTP_LOG + url + ", status: connection failed");
-                transmitErrorReport(503, ModuleConfig.URLS.WATCHER_LIST_DELETE, "", conf);
+//                transmitErrorReport(503, ModuleConfig.URLS.WATCHER_LIST_DELETE, "", conf);
             } else {
                 Map<String, Object> resMap = getResponseBody(inputStream, response);
 
@@ -97,11 +102,12 @@ public class CommonUtils {
                     return null;
                 }
             }
+
         } catch (Exception e) {
             log.error(WatcherUtils.getStackTrace(e));
             log.error(responseBody);
             String msgType = apiType == "register" ? ModuleConfig.URLS.WATCHER_LIST_INSERT : ModuleConfig.URLS.WATCHER_LIST_COMPLETE;
-            transmitErrorReport(5002, "JSON Error: " + msgType, "", conf);
+//            transmitErrorReport(5002, "JSON Error: " + msgType, "", conf);
             return null;
 
         } finally {
@@ -114,6 +120,7 @@ public class CommonUtils {
         if (httpPost != null) {
             httpPost.abort();
         }
+
 
         return responseBody;
     }
@@ -185,48 +192,51 @@ public class CommonUtils {
      * BadNetWork Gat 또는 Bad Requests외 등등 api 전송상 문제가 발생된경우 Error을 받는 api 쪽으로 전송
      */
     private void transmitErrorReport(int i_err, String n_msg, String content_provider_key, Config conf) {
-        String url = conf.get_kollus_api().get_url(ModuleConfig.URLS.MODULE_ERROR_REPORT);
 
-        RequestConfig requestConfig = RequestConfig.custom().setConnectTimeout(3 * 1000).build();
-        HttpClient httpClient = HttpClientBuilder.create().setDefaultRequestConfig(requestConfig).build();
-
-        String n_err = String.valueOf(i_err);
-        String main_node = conf.get_kollus_api().get_main_node_key();
-
-        URIBuilder builder = null;
-        try {
-            builder = new URIBuilder(url);
-            builder.setParameter(Role_Watcher.PARAM.MODULE_TAG, "watcher");
-            builder.setParameter(Role_Watcher.PARAM.ERROR_CODE, n_err);
-            builder.setParameter(Role_Watcher.PARAM.MESSAGE, n_msg);
-            builder.setParameter(Role_Watcher.PARAM.MAIN_NODE_KEY, main_node);
-            builder.setParameter(Role_Watcher.PARAM.CONTENT_PROVIDER_KEY, content_provider_key);
-        } catch (URISyntaxException e) {
-            log.error(e.toString());
-        }
-
-        if (builder != null) {
-            URI uri = null;
-            try {
-                uri = builder.build();
-            } catch (URISyntaxException e) {
-                log.error(e.toString());
-            }
-
-            if (uri != null) {
-                HttpGet httpGet = new HttpGet(uri);
-                try {
-                    httpClient.execute(httpGet);
-                } catch (ClientProtocolException e) {
-                    log.error(e.toString());
-                } catch (IOException e) {
-                    log.error(e.toString());
-                }
-
-                log.debug(uri.toString());
-                httpGet.abort();
-            }
-        }
+        return;
+//
+//        String url = conf.get_kollus_api().get_url(ModuleConfig.URLS.MODULE_ERROR_REPORT);
+//
+//        RequestConfig requestConfig = RequestConfig.custom().setConnectTimeout(3 * 1000).build();
+//        HttpClient httpClient = HttpClientBuilder.create().setDefaultRequestConfig(requestConfig).build();
+//
+//        String n_err = String.valueOf(i_err);
+//        String main_node = conf.get_kollus_api().get_main_node_key();
+//
+//        URIBuilder builder = null;
+//        try {
+//            builder = new URIBuilder(url);
+//            builder.setParameter(Role_Watcher.PARAM.MODULE_TAG, "watcher");
+//            builder.setParameter(Role_Watcher.PARAM.ERROR_CODE, n_err);
+//            builder.setParameter(Role_Watcher.PARAM.MESSAGE, n_msg);
+//            builder.setParameter(Role_Watcher.PARAM.MAIN_NODE_KEY, main_node);
+//            builder.setParameter(Role_Watcher.PARAM.CONTENT_PROVIDER_KEY, content_provider_key);
+//        } catch (URISyntaxException e) {
+//            log.error(e.toString());
+//        }
+//
+//        if (builder != null) {
+//            URI uri = null;
+//            try {
+//                uri = builder.build();
+//            } catch (URISyntaxException e) {
+//                log.error(e.toString());
+//            }
+//
+//            if (uri != null) {
+//                HttpGet httpGet = new HttpGet(uri);
+//                try {
+//                    httpClient.execute(httpGet);
+//                } catch (ClientProtocolException e) {
+//                    log.error(e.toString());
+//                } catch (IOException e) {
+//                    log.error(e.toString());
+//                }
+//
+//                log.debug(uri.toString());
+//                httpGet.abort();
+//            }
+//        }
     }
 
     /*
@@ -270,48 +280,50 @@ public class CommonUtils {
      */
     public void sendErrorReport(int i_err, String n_msg, String content_provider_key) {
 
-        String url = conf.get_kollus_api().get_url(ModuleConfig.URLS.MODULE_ERROR_REPORT);
-        // HttpClient httpClient = agent.newHttpClient();
-        RequestConfig requestConfig = RequestConfig.custom().setConnectTimeout(3 * 1000).build();
-        HttpClient httpClient = HttpClientBuilder.create().setDefaultRequestConfig(requestConfig).build();
+        return;
 
-        String n_err = String.valueOf(i_err);
-        String main_node = conf.get_kollus_api().get_main_node_key();
-
-        URIBuilder builder = null;
-        try {
-            builder = new URIBuilder(url);
-            builder.setParameter(Role_Watcher.PARAM.MODULE_TAG, "watcher");
-            builder.setParameter(Role_Watcher.PARAM.ERROR_CODE, n_err);
-            builder.setParameter(Role_Watcher.PARAM.MESSAGE, n_msg);
-            builder.setParameter(Role_Watcher.PARAM.MAIN_NODE_KEY, main_node);
-            builder.setParameter(Role_Watcher.PARAM.CONTENT_PROVIDER_KEY, content_provider_key);
-        } catch (URISyntaxException e) {
-            log.error(e.toString());
-        }
-
-        if (builder != null) {
-            URI uri = null;
-            try {
-                uri = builder.build();
-            } catch (URISyntaxException e) {
-                log.error(e.toString());
-            }
-
-            if (uri != null) {
-                HttpGet httpGet = new HttpGet(uri);
-                try {
-                    httpClient.execute(httpGet);
-                } catch (ClientProtocolException e) {
-                    log.error(e.toString());
-                } catch (IOException e) {
-                    log.error(e.toString());
-                }
-
-                log.debug(uri.toString());
-                httpGet.abort();
-            }
-        }
+//        String url = conf.get_kollus_api().get_url(ModuleConfig.URLS.MODULE_ERROR_REPORT);
+//        // HttpClient httpClient = agent.newHttpClient();
+//        RequestConfig requestConfig = RequestConfig.custom().setConnectTimeout(3 * 1000).build();
+//        HttpClient httpClient = HttpClientBuilder.create().setDefaultRequestConfig(requestConfig).build();
+//
+//        String n_err = String.valueOf(i_err);
+//        String main_node = conf.get_kollus_api().get_main_node_key();
+//
+//        URIBuilder builder = null;
+//        try {
+//            builder = new URIBuilder(url);
+//            builder.setParameter(Role_Watcher.PARAM.MODULE_TAG, "watcher");
+//            builder.setParameter(Role_Watcher.PARAM.ERROR_CODE, n_err);
+//            builder.setParameter(Role_Watcher.PARAM.MESSAGE, n_msg);
+//            builder.setParameter(Role_Watcher.PARAM.MAIN_NODE_KEY, main_node);
+//            builder.setParameter(Role_Watcher.PARAM.CONTENT_PROVIDER_KEY, content_provider_key);
+//        } catch (URISyntaxException e) {
+//            log.error(e.toString());
+//        }
+//
+//        if (builder != null) {
+//            URI uri = null;
+//            try {
+//                uri = builder.build();
+//            } catch (URISyntaxException e) {
+//                log.error(e.toString());
+//            }
+//
+//            if (uri != null) {
+//                HttpGet httpGet = new HttpGet(uri);
+//                try {
+//                    httpClient.execute(httpGet);
+//                } catch (ClientProtocolException e) {
+//                    log.error(e.toString());
+//                } catch (IOException e) {
+//                    log.error(e.toString());
+//                }
+//
+//                log.debug(uri.toString());
+//                httpGet.abort();
+//            }
+//        }
     }
 
     public void ExceptionLogPrint(Exception e) {
@@ -541,6 +553,73 @@ public class CommonUtils {
         return bRet;
     }
 
+    /**
+     * File 의 MediaInfo 여부를 확인한다.
+     * @param physicalPath
+     * @return
+     */
+    public boolean checkIsMediaContent(String physicalPath) {
+        MediaInfo MI = new MediaInfo();
+        if (MI.Open(physicalPath) == 0) {
+            return false;
+        }
+
+        log.info("physicalPath : " + physicalPath );
+
+        MI.Option("Complete", "");
+
+        String duration = empty2null(MI.Get(StreamKind.General, 0, "Duration"));
+        String videoBitRate = empty2null(MI.Get(StreamKind.Video, 0, "BitRate"));
+        String audioBitRate = empty2null(MI.Get(StreamKind.Audio, 0, "BitRate"));
+        String videoWidth = empty2null(MI.Get(StreamKind.Video, 0, "Width"));
+        String videoHeight = empty2null(MI.Get(StreamKind.Video, 0, "Height"));
+        String imageWidth = empty2null(MI.Get(StreamKind.Image, 0, "Width"));
+        String imageHeight = empty2null(MI.Get(StreamKind.Image, 0, "Height"));
+
+        MI.Close();
+
+        if (hasText(duration)) {
+            return true;
+        }
+
+        if (hasText(videoBitRate) || hasText(audioBitRate)) {
+            return true;
+        }
+
+        if (hasText(videoWidth) && hasText(videoHeight)) {
+            return true;
+        }
+
+        // 이미지도 미디어콘텐츠인 경우
+        if (hasText(imageWidth) && hasText(imageHeight)) {
+            return true;
+        }
+
+
+        log.info(empty2null("format : " + MI.Get(StreamKind.General, 0, "Format")));
+        log.info(empty2null("duration : " + MI.Get(StreamKind.General, 0, "Duration")));
+        log.info(empty2null("videoDuration : " + MI.Get(StreamKind.Video, 0, "Duration")));
+        log.info(empty2null("videoFormat : " + MI.Get(StreamKind.Video, 0, "Format")));
+        log.info(empty2null("videoCodec : " + MI.Get(StreamKind.Video, 0, "CodecID/Hint")));
+        log.info(empty2null("videoBitrate : " + MI.Get(StreamKind.Video, 0, "BitRate")));
+        log.info(empty2null("videoWidth : " + MI.Get(StreamKind.Video, 0, "Width")));
+        log.info(empty2null("videoHeight : " + MI.Get(StreamKind.Video, 0, "Height")));
+        log.info(empty2null("video frameRate : " + MI.Get(StreamKind.Video, 0, "FrameRate")));
+        log.info(empty2null("video displayAspectRatio : " + MI.Get(StreamKind.Video, 0, "DisplayAspectRatio")));
+        log.info(empty2null("video rotation : " + MI.Get(StreamKind.Video, 0, "Rotation")));
+        log.info(empty2null("video scanType : " + MI.Get(StreamKind.Video, 0, "ScanType/String")));
+        log.info(empty2null("audio format : " + MI.Get(StreamKind.Audio, 0, "Format")));
+        log.info(empty2null("audio codec : " + MI.Get(StreamKind.Audio, 0, "CodecID/Hint")));
+        log.info(empty2null("audio bitrate : " + MI.Get(StreamKind.Audio, 0, "BitRate")));
+        log.info(empty2null("audio samplingRate : " + MI.Get(StreamKind.Audio, 0, "SamplingRate")));
+        log.info(empty2null("audio duration : " + MI.Get(StreamKind.Audio, 0, "Duration")));
+        log.info(empty2null("image format : " + MI.Get(StreamKind.Image, 0, "Format")));
+        log.info(empty2null("image width : " + MI.Get(StreamKind.Image, 0, "Width")));
+        log.info(empty2null("image height : " + MI.Get(StreamKind.Image, 0, "Height")));
+
+        return false;
+    }
+
     private boolean setMediaInfo(FileItemDTO f) {
         MediaInfo MI = new MediaInfo();
 
@@ -582,6 +661,13 @@ public class CommonUtils {
             return null;
         }
         return s;
+    }
+
+    private static boolean hasText(String s) {
+        if (s == null || s.length() == 0) {
+            return false;
+        }
+        return true;
     }
 
     private boolean checkSupportExt(FileItemDTO item) {
@@ -790,41 +876,42 @@ public class CommonUtils {
      * @param item
      */
     public void failApiResultOrRegisterProcess(KollusApiWatchersDTO apiResult, KollusApiWatcherContentDTO item) {
-        if (apiResult != null) {
-            if (apiResult.result != null && apiResult.result.error_code > 0) {
-                sendErrorReport(apiResult.result.error_code, apiResult.message, "");
-            }
-            return;
-        } else if (item != null) {
-            if (item.result == null) {
-                log.warn("item result is null");
-                return;
-            }
-
-            if (item.result.deleted_watcher_file_upload_url == null) {
-                log.warn("서버 요청에 의해 Watcher파일 삭제없음");
-                return;
-            }
-
-            String deleted_watcher_file_url = item.result.deleted_watcher_file_upload_url;
-            log.warn("서버 요청에 의해 Watcher파일 삭제: " + deleted_watcher_file_url);
-
-            if (deleted_watcher_file_url.indexOf(info.getWatcherDir()) > 0) {
-                log.error("삭제 경로 시작이 watcherDir이 아님 : " + deleted_watcher_file_url);
-                return;
-            }
-
-            String watcher_filepath = String.format("%s", deleted_watcher_file_url);
-            File watcherFile = new File(watcher_filepath);
-            watcherFile.delete();
-
-            if (!watcherFile.exists()) {
-                log.info("요청에 의해 삭제: " + watcher_filepath);
-                return;
-            }
-
-            log.error("요청에 의해 삭제하려고 했으나 삭제 실패함: " + watcher_filepath);
-        }
+        return;
+//        if (apiResult != null) {
+//            if (apiResult.result != null && apiResult.result.error_code > 0) {
+//                sendErrorReport(apiResult.result.error_code, apiResult.message, "");
+//            }
+//            return;
+//        } else if (item != null) {
+//            if (item.result == null) {
+//                log.warn("item result is null");
+//                return;
+//            }
+//
+//            if (item.result.deleted_watcher_file_upload_url == null) {
+//                log.warn("서버 요청에 의해 Watcher파일 삭제없음");
+//                return;
+//            }
+//
+//            String deleted_watcher_file_url = item.result.deleted_watcher_file_upload_url;
+//            log.warn("서버 요청에 의해 Watcher파일 삭제: " + deleted_watcher_file_url);
+//
+//            if (deleted_watcher_file_url.indexOf(info.getWatcherDir()) > 0) {
+//                log.error("삭제 경로 시작이 watcherDir이 아님 : " + deleted_watcher_file_url);
+//                return;
+//            }
+//
+//            String watcher_filepath = String.format("%s", deleted_watcher_file_url);
+//            File watcherFile = new File(watcher_filepath);
+//            watcherFile.delete();
+//
+//            if (!watcherFile.exists()) {
+//                log.info("요청에 의해 삭제: " + watcher_filepath);
+//                return;
+//            }
+//
+//            log.error("요청에 의해 삭제하려고 했으나 삭제 실패함: " + watcher_filepath);
+//        }
     }
 
     /**

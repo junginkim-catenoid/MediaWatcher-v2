@@ -82,47 +82,47 @@ public class KusUploadServiceImp implements KusUploadService {
             return cnt;
         }
 
-        for (KollusApiWatcherContentDTO item : apiResult.result.watcher_files) {
-            if (item.error == 0) {
-                // error가 아닌 경우만 media_content_id가 있으나 사용처가 없어 삭제함
-                FileItemDTO findItem = utils.findSendItem(fileList, item.result.key);
-                if (findItem == null) {
-                    log.error("FileItem  파일 정보를 찾을 수 없습니다. [" + item.result.key + "]");
-
-                }
-                cnt += 1;
-                continue;
-            }
-
-            log.warn("warn code: " + item.error + ", warn message: " + item.message);
-
-            if (item.result == null) {
-                continue;
-            }
-
-            FileItemDTO findItem = utils.findSendItem(fileList, item.result.key);
-
-            if (findItem == null) {
-                log.error("실패한 파일 정보를 찾을 수 없습니다. [" + item.result.key + "]");
-                continue;
-            }
-            List<String> msgList = new ArrayList<String>();
-
-            msgList.add("FAIL");
-            msgList.add("Fail to API transfered 삭제 성공" + findItem.getPhysicalPath());
-            msgList.add("Fail to API transfered 삭제 실패" + findItem.getPhysicalPath());
-
-            String completePath = findItem.getPhysicalPath() + "_complete";
-            if (findItem.isConsoleUpload()) {
-                completePath = "";
-            }
-
-            log.warn("Complete Api is deleted to status is failed" + findItem.toString());
-
-            utils.removeToIndividuaFile(findItem.getPhysicalPath(), findItem.getSnapshotPath(), completePath, msgList);
-
-            findItem.setCompleteFail(true);
-        }
+//        for (KollusApiWatcherContentDTO item : apiResult.result.watcher_files) {
+//            if (item.error == 0) {
+//                // error가 아닌 경우만 media_content_id가 있으나 사용처가 없어 삭제함
+//                FileItemDTO findItem = utils.findSendItem(fileList, item.result.key);
+//                if (findItem == null) {
+//                    log.error("FileItem  파일 정보를 찾을 수 없습니다. [" + item.result.key + "]");
+//
+//                }
+//                cnt += 1;
+//                continue;
+//            }
+//
+//            log.warn("warn code: " + item.error + ", warn message: " + item.message);
+//
+//            if (item.result == null) {
+//                continue;
+//            }
+//
+//            FileItemDTO findItem = utils.findSendItem(fileList, item.result.key);
+//
+//            if (findItem == null) {
+//                log.error("실패한 파일 정보를 찾을 수 없습니다. [" + item.result.key + "]");
+//                continue;
+//            }
+//            List<String> msgList = new ArrayList<String>();
+//
+//            msgList.add("FAIL");
+//            msgList.add("Fail to API transfered 삭제 성공" + findItem.getPhysicalPath());
+//            msgList.add("Fail to API transfered 삭제 실패" + findItem.getPhysicalPath());
+//
+//            String completePath = findItem.getPhysicalPath() + "_complete";
+//            if (findItem.isConsoleUpload()) {
+//                completePath = "";
+//            }
+//
+//            log.warn("Complete Api is deleted to status is failed" + findItem.toString());
+//
+//            utils.removeToIndividuaFile(findItem.getPhysicalPath(), findItem.getSnapshotPath(), completePath, msgList);
+//
+//            findItem.setCompleteFail(true);
+//        }
 
         return cnt;
     }
@@ -172,19 +172,19 @@ public class KusUploadServiceImp implements KusUploadService {
             return;
         }
 
-        for (KollusApiWatcherContentDTO item : apiResult.result.watcher_files) {
-            if (item.error == 0) {
-                /**
-                 * error == 0인 등록에 성공한 파일
-                 */
-                FileItemDTO f = utils.convertResultApiItem(item);
-                items.update(f);
-                continue;
-            }
-
-            log.error(item.message);
-
-            utils.failApiResultOrRegisterProcess(null, item);
-        }
+//        for (KollusApiWatcherContentDTO item : apiResult.result.watcher_files) {
+//            if (item.error == 0) {
+//                /**
+//                 * error == 0인 등록에 성공한 파일
+//                 */
+//                FileItemDTO f = utils.convertResultApiItem(item);
+//                items.update(f);
+//                continue;
+//            }
+//
+//            log.error(item.message);
+//
+//            utils.failApiResultOrRegisterProcess(null, item);
+//        }
     }
 }

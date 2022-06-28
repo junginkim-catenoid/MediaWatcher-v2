@@ -102,33 +102,34 @@ public class FtpUploadServiceImp extends FtpUploadDao implements FtpUploadServic
         // TODO Auto-generated method stub
         try {
             int sendRegistCnt = sendWatchFiles();
-            if(sendRegistCnt > 0) {
-                log.info("Send to register count : " + sendRegistCnt);
-            }
-
-            /**
-             * 작업 대상 파일 리스트를 획득한다.
-             */
-            ArrayList<FileItemDTO> items = selectCompareOver(check_time);
-            if (items.size() > 0 && items != null) {
-                log.info("Working file count : " + items.size());
-
-                utils.createSnapFile(items);
-            }
-
-            if (utils.moveToWorkDir(items) > 0) {
-                postCopyCompleteFiles(items);
-            }
-//			else {
-//				log.warn("selectCompareOver == item-size: " + items.size() + ", " + utils.info.getName());
-//			}
-
-            removeNotExistFile();
+            return;
+//            if (sendRegistCnt > 0) {
+//                log.info("Send to register count : " + sendRegistCnt);
+//            }
+//
+//            /**
+//             * 작업 대상 파일 리스트를 획득한다.
+//             */
+//            ArrayList<FileItemDTO> items = selectCompareOver(check_time);
+//            if (items.size() > 0 && items != null) {
+//                log.info("Working file count : " + items.size());
+//
+//                utils.createSnapFile(items);
+//            }
+//
+//            if (utils.moveToWorkDir(items) > 0) {
+//                postCopyCompleteFiles(items);
+//            }
+////			else {
+////				log.warn("selectCompareOver == item-size: " + items.size() + ", " + utils.info.getName());
+////			}
+//
+//            removeNotExistFile();
 
         } catch (Exception e) {
             // TODO: handle exception
             utils.ExceptionLogPrint(e);
-            utils.sendErrorReport(5002, "JSON Error: " + ModuleConfig.URLS.WATCHER_LIST_COMPLETE, "");
+//            utils.sendErrorReport(5002, "JSON Error: " + ModuleConfig.URLS.WATCHER_LIST_COMPLETE, "");
         }finally {
             stmt.close();
         }
@@ -175,7 +176,7 @@ public class FtpUploadServiceImp extends FtpUploadDao implements FtpUploadServic
      * 파일 리스트 생성 및 DB 추가 (Statment가 null이 아닌 경우 DB 추가) DB에 데이터가 존재하는 경우 Update 한다.
      * TODO: file update so slow...
      *
-     * @param stmt
+     * @param
      * @param dirs
      * @param files
      * @return
@@ -220,7 +221,28 @@ public class FtpUploadServiceImp extends FtpUploadDao implements FtpUploadServic
                 continue;
             }
 
-            if (utils.isIgnoreFile(f) == false) {
+//            if (utils.getMediaContentInfo(f)) {
+//
+//            }
+//
+//            if (f.getMediaInfo() == null) {
+//                log.debug("is not MediaFile : " + f.getPhysicalPath());
+////                if (file.delete()) {
+////                    log.debug("Not MediaFile removed");
+////                }
+//            }
+
+            // 미디어파일 여부를 조사한 후 로깅 및 삭제처리
+//             콘솔 업로드 여부에 따라 Physical Path 분기처리 필요여부 확인 필요
+            boolean isMediaContentFile = utils.checkIsMediaContent(f.getPhysicalPath());
+            if (!isMediaContentFile) {
+                log.debug("is not MediaFile : " + f.toString());
+                if (file.delete()) {
+                    log.debug("Not MediaFile removed");
+                }
+            }
+
+            if (utils.isIgnoreFile(f) == false && isMediaContentFile) {
                 if (existFileItem(f, check_time) == true) {
                     update_count++;
                     updateFileItem(f, check_time);
@@ -235,11 +257,11 @@ public class FtpUploadServiceImp extends FtpUploadDao implements FtpUploadServic
          * charset이 다른 파일이 존재하는것으로 보임.
          */
         if (insert_count == 0 && update_count == 0 && error_count > 0) {
-            log.debug("convert not matched charset filename");
-
-            ConvertMove convmv = new ConvertMove(conf, rootPath);
-
-            convmv.run();
+//            log.debug("convert not matched charset filename");
+//
+//            ConvertMove convmv = new ConvertMove(conf, rootPath);
+//
+//            convmv.run();
         }
     }
 
@@ -247,12 +269,15 @@ public class FtpUploadServiceImp extends FtpUploadDao implements FtpUploadServic
      * 작업폴더로 이동시킨 파일 정보를 서버로 전송한다.<br>
      * post에 성공하면 파일을 삭제한다.
      *
-     * @param stmt
+     * @param
      * @param items
      * @return
      */
     private void postCopyCompleteFiles(ArrayList<FileItemDTO> items) throws Exception {
-        String url = utils.conf.get_kollus_api().get_url(ModuleConfig.URLS.WATCHER_LIST_COMPLETE);
+//        String url = utils.conf.get_kollus_api().get_url(ModuleConfig.URLS.WATCHER_LIST_COMPLETE);
+
+        String url = "http://localhost:3002/complete";
+
         SendFileItemsDTO sendItem = new SendFileItemsDTO();
 
         for (FileItemDTO item : items) {

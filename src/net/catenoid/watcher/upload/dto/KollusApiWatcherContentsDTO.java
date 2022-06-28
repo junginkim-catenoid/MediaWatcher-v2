@@ -15,10 +15,10 @@ public class KollusApiWatcherContentsDTO {
     @Expose
     public KollusApiWatcherContentDTO[] watcher_files;
 
-    @Override
-    public String toString() {
-        return "HttpResults [error_code=" + error_code + ", error_detail=" + error_detail + ", watcher_files="
-                + Arrays.toString(watcher_files).toString() + "]";
-    }
+//    @Override
+//    public String toString() {
+//        return "HttpResults [error_code=" + error_code + ", error_detail=" + error_detail + ", watcher_files="
+//                + Arrays.toString(watcher_files).toString() + "]";
+//    }
 
 }

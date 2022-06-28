@@ -129,7 +129,10 @@ public class LSParser {
         String snapDir = conf.getSnap().getSnapTempDir();
         long _time = System.currentTimeMillis();
         lsFilePath = String.format("%s/%s_%d.txt", snapDir, jobName, _time);
-        String cmd = lineParser.getOption(lsPath, rootPath, lsFilePath);// +
+
+
+        String cmd = lineParser.getOption(lsPath, rootPath, lsFilePath);
+//        String cmd = lineParser.getOption(lsPath, rootPath, lsFilePath);// +
         // " > "
         // +
         // lsFilePath;

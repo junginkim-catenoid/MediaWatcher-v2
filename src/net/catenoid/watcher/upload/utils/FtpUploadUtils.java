@@ -61,7 +61,7 @@ public class FtpUploadUtils extends CommonUtils {
     /**
      * 데이터베이스 연결 종료
      *
-     * @param jobName
+     * @param
      * @param stmt
      * @throws SQLException
      */
@@ -87,8 +87,6 @@ public class FtpUploadUtils extends CommonUtils {
     /**
      * Database 연결 statment를 얻는다. 연결풀을 사용할때를 대비해 파라미터를 받음.
      *
-     * @param name
-     * @param h2Conn
      * @return Statement
      * @throws SQLException
      */
@@ -151,7 +149,9 @@ public class FtpUploadUtils extends CommonUtils {
         if (info.getWatcherFileKind() == 2)
             return true;
 
-        String url = conf.get_kollus_api().get_url(ModuleConfig.URLS.WATCHER_LIST_DELETE);
+//        String url = conf.get_kollus_api().get_url(ModuleConfig.URLS.WATCHER_LIST_DELETE);
+
+        String url = "http://localhost:3002/delete";
 
         try {
             if (postRemoveFileItem(url, sendItem) == 200) {
@@ -244,25 +244,25 @@ public class FtpUploadUtils extends CommonUtils {
                     if (api_result.error != 0) {
                         log.error(api_result.message);
 
-                        if (api_result.result != null && api_result.result.error_code > 0) {
-                            this.sendErrorReport(api_result.result.error_code, api_result.message, "");
-                        }
+//                        if (api_result.result != null && api_result.result.error_code > 0) {
+//                            this.sendErrorReport(api_result.result.error_code, api_result.message, "");
+//                        }
                     } else {
-                        for (KollusApiWatcherContentDTO item : api_result.result.watcher_files) {
-                            if (item.error != 0) {
-                                log.error(item.message);
-                                // 실패한 경우 key정보를 확인하고 원복한다.
-
-                                if (item.result != null) {
-                                    /**
-                                     * error_code가 반환되면 추가 처리함.
-                                     */
-                                    if (item.result.error_code > 0) {
-                                        this.sendErrorReport(item.result.error_code, item.result.error_detail, "");
-                                    }
-                                }
-                            }
-                        }
+//                        for (KollusApiWatcherContentDTO item : api_result.result.watcher_files) {
+//                            if (item.error != 0) {
+//                                log.error(item.message);
+//                                // 실패한 경우 key정보를 확인하고 원복한다.
+//
+//                                if (item.result != null) {
+//                                    /**
+//                                     * error_code가 반환되면 추가 처리함.
+//                                     */
+//                                    if (item.result.error_code > 0) {
+//                                        this.sendErrorReport(item.result.error_code, item.result.error_detail, "");
+//                                    }
+//                                }
+//                            }
+//                        }
                     }
                 } catch (Exception e) {
                     log.error(Utils.getStackTrace(e));
@@ -321,7 +321,7 @@ public class FtpUploadUtils extends CommonUtils {
             failApiResultOrRegisterProcess(null, item);
         }
 
-        return true;
+        return false;
     }
 
     /*

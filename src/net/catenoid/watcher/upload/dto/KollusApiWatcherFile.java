@@ -44,14 +44,14 @@ public class KollusApiWatcherFile {
     @Expose
     public Poster poster;
 
-    @Override
-    public String toString() {
-        return "HttpResultDTO [error_code=" + error_code + ", error_detail=" + error_detail + ", content_provider_key="
-                + content_provider_key + ", key=" + key + ", media_content_id=" + media_content_id + ", content_path="
-                + content_path + ", upload_path=" + upload_path + ", is_audio_file=" + is_audio_file
-                + ", checksum_type=" + checksum_type + ", snapshot_path=" + snapshot_path + ", physical_path="
-                + physical_path + ", deleted_watcher_file_upload_url=" + deleted_watcher_file_upload_url + ", poster="
-                + poster + "]";
-    }
+//    @Override
+//    public String toString() {
+//        return "HttpResultDTO [error_code=" + error_code + ", error_detail=" + error_detail + ", content_provider_key="
+//                + content_provider_key + ", key=" + key + ", media_content_id=" + media_content_id + ", content_path="
+//                + content_path + ", upload_path=" + upload_path + ", is_audio_file=" + is_audio_file
+//                + ", checksum_type=" + checksum_type + ", snapshot_path=" + snapshot_path + ", physical_path="
+//                + physical_path + ", deleted_watcher_file_upload_url=" + deleted_watcher_file_upload_url + ", poster="
+//                + poster + "]";
+//    }
 
 }
