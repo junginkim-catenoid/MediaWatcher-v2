@@ -547,7 +547,9 @@ public class CommonUtils {
             f.setMediaInfo(null);
         } else {
             f.format = f.getMediaInfo().getFormat();
-            f.duration = Float.parseFloat(f.getMediaInfo().getDuration());
+            if (hasText(f.getMediaInfo().getDuration())) {
+                f.duration = Float.parseFloat(f.getMediaInfo().getDuration());
+            }
         }
 
         return bRet;
@@ -569,10 +571,12 @@ public class CommonUtils {
         MI.Option("Complete", "");
 
         String duration = empty2null(MI.Get(StreamKind.General, 0, "Duration"));
+        String videoDuration = empty2null(MI.Get(StreamKind.Video, 0, "Duration"));
         String videoBitRate = empty2null(MI.Get(StreamKind.Video, 0, "BitRate"));
-        String audioBitRate = empty2null(MI.Get(StreamKind.Audio, 0, "BitRate"));
         String videoWidth = empty2null(MI.Get(StreamKind.Video, 0, "Width"));
         String videoHeight = empty2null(MI.Get(StreamKind.Video, 0, "Height"));
+        String audioBitRate = empty2null(MI.Get(StreamKind.Audio, 0, "BitRate"));
+        String audioDuration = empty2null(MI.Get(StreamKind.Audio, 0, "Duration"));
         String imageWidth = empty2null(MI.Get(StreamKind.Image, 0, "Width"));
         String imageHeight = empty2null(MI.Get(StreamKind.Image, 0, "Height"));
 
@@ -582,11 +586,11 @@ public class CommonUtils {
             return true;
         }
 
-        if (hasText(videoBitRate) || hasText(audioBitRate)) {
+        if (hasText(videoDuration) || hasText(videoBitRate) || hasText(videoWidth) && hasText(videoHeight)) {
             return true;
         }
 
-        if (hasText(videoWidth) && hasText(videoHeight)) {
+        if (hasText(audioDuration) || hasText(audioBitRate)) {
             return true;
         }
 

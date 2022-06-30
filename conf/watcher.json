@@ -34,22 +34,21 @@
   },
   "watchers": [
     {
-      "name": "watcherfile2",
-      "api_reference" : "module+watcherfile2",
+      "name": "watcherfile1",
+      "api_reference" : "module+watcherfile1",
       "api_key": "test",
-      "watcher.dir": "/home/kollus/kollus-upload-v2",
-      "watcher_file.kind" : 2,
+      "watcher.dir": "/home/kollus/upload",
       "work.dir": "/mnt/medianas/working",
       "trash.dir": "/mnt/medianas/trashcan",
       "delete.diff.minute": 30,
-      "interval": "0/1 * * * * ?",
-      "checkin.time": 1,
+      "interval": "0/10 * * * * ?",
+      "checkin.time": 30,
       "checkin.count": 0,
-      "monitor.check.limit.minute": 10,
+      "monitor.check.limit.minute": 60,
       "monitor.check.limit.count": 2,
       "enabled": true,
       "work.path.prefix": "",
-      "kus_mode" : true
+      "kus_mode" : false
     }
   ],
   "diskuse" : {

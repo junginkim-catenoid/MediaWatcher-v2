@@ -1,0 +1,1009 @@
+[2022-06-28 09:37:33][INFO ](Watcher.java:start:94) - [PRG_START]
+[2022-06-28 09:37:33][INFO ](Watcher.java:printVersion:41) - [PRG_VER]null
+[2022-06-28 09:37:33][DEBUG](ThreadSafeClientConnManager.java:getConnection:235) - Get connection: {}->http://api.kr.dev.kollus.com, timeout = 0
+[2022-06-28 09:37:34][DEBUG](ThreadSafeClientConnManager.java:releaseConnection:280) - Released connection is reusable.
+[2022-06-28 09:37:34][INFO ](Config.java:printUrls:234) - URLS [watcher.list.insert] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/register
+[2022-06-28 09:37:34][INFO ](Config.java:printUrls:234) - URLS [watcher.list.complete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/complete
+[2022-06-28 09:37:34][INFO ](Config.java:printUrls:234) - URLS [watcher.list.delete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/remove
+[2022-06-28 09:37:34][INFO ](Config.java:printUrls:234) - URLS [watcher.usage_day_amount.insert] http://api.kr.dev.kollus.com/0/catenoid/usage_day_amount/register
+[2022-06-28 09:37:34][INFO ](Config.java:printUrls:234) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-06-28 09:37:34][INFO ](Config.java:printUrls:234) - URLS [transcoding_job.assign] http://jobmanager-dev-kr.kollus.com:8180/assign
+[2022-06-28 09:37:34][INFO ](Config.java:printUrls:234) - URLS [transcoding_job.manager] http://api.kr.dev.kollus.com/0/catenoid/transcoding_job/manager
+[2022-06-28 09:37:34][INFO ](Config.java:printUrls:234) - URLS [transcoding_file.register] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/register
+[2022-06-28 09:37:34][INFO ](Config.java:printUrls:234) - URLS [transcoding_file.update] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/update
+[2022-06-28 09:37:34][INFO ](Config.java:printUrls:234) - URLS [transcoding_file.complete] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete
+[2022-06-28 09:37:34][INFO ](Config.java:printUrls:234) - URLS [transcoding_file.complete_all] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete_all
+[2022-06-28 09:37:34][INFO ](Config.java:printUrls:234) - URLS [module.check_activated_at] http://api.kr.dev.kollus.com/0/catenoid/module/check_activated_at
+[2022-06-28 09:37:34][INFO ](Config.java:printUrls:234) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-06-28 09:37:34][DEBUG](Watcher.java:setupWatcher:233) - [PRG_CONF]job_watcherfile3=0/10 * * * * ?
+[2022-06-28 09:37:40][DEBUG](LinuxLineParser.java:parser:102) - /home/kollus/kollus-upload-v2/http_upload, /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220623-a8ba9ba81ecdfaae.mp4, 1655973017000, 9557596
+[2022-06-28 09:37:40][DEBUG](LinuxLineParser.java:parser:102) - /home/kollus/kollus-upload-v2/http_upload, /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220623-a8ba9ba81ecdfaae.mp4_complete, 1655973017000, 138
+[2022-06-28 09:37:40][DEBUG](LinuxLineParser.java:parser:102) - /home/kollus/kollus-upload-v2/http_upload, /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-7b764b1d764edfeb.mp4, 1656318594000, 9557596
+[2022-06-28 09:37:40][DEBUG](LinuxLineParser.java:parser:102) - /home/kollus/kollus-upload-v2/http_upload, /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-7b764b1d764edfeb.mp4_complete, 1656318594000, 138
+[2022-06-28 09:37:40][DEBUG](LinuxLineParser.java:parser:102) - /home/kollus/kollus-upload-v2/http_upload, /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4, 1656318660000, 9557596
+[2022-06-28 09:37:40][DEBUG](LinuxLineParser.java:parser:102) - /home/kollus/kollus-upload-v2/http_upload, /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4_complete, 1656318660000, 138
+[2022-06-28 09:37:40][DEBUG](LinuxLineParser.java:parser:102) - /home/kollus/kollus-upload-v2/http_upload, /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-e9e93d9cd5c3196b.jpeg, 1656318709000, 568634
+[2022-06-28 09:37:40][DEBUG](LinuxLineParser.java:parser:102) - /home/kollus/kollus-upload-v2/http_upload, /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-e9e93d9cd5c3196b.jpeg_complete, 1656318709000, 138
+[2022-06-28 09:37:40][DEBUG](LinuxLineParser.java:parser:102) - /home/kollus/kollus-upload-v2/http_upload, /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220628-3aa5a85f0469057c.jpeg, 1656375313000, 568634
+[2022-06-28 09:37:40][DEBUG](LinuxLineParser.java:parser:102) - /home/kollus/kollus-upload-v2/http_upload, /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220628-3aa5a85f0469057c.jpeg_complete, 1656375325000, 138
+[2022-06-28 09:37:45][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220623-a8ba9ba81ecdfaae.mp4
+[2022-06-28 09:37:50][INFO ](CommonUtils.java:checkIsMediaContent:566) - physicalPath : /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220623-a8ba9ba81ecdfaae.mp4
+[2022-06-28 09:38:01][INFO ](CommonUtils.java:checkIsMediaContent:577) - format : MPEG-4
+[2022-06-28 09:38:01][INFO ](CommonUtils.java:checkIsMediaContent:578) - duration : 428269
+[2022-06-28 09:38:01][INFO ](CommonUtils.java:checkIsMediaContent:579) - videoDuration : 428267
+[2022-06-28 09:38:01][INFO ](CommonUtils.java:checkIsMediaContent:580) - videoFormat : AVC
+[2022-06-28 09:38:01][INFO ](CommonUtils.java:checkIsMediaContent:581) - videoCodec : 
+[2022-06-28 09:38:01][INFO ](CommonUtils.java:checkIsMediaContent:582) - videoBitrate : 46598
+[2022-06-28 09:38:01][INFO ](CommonUtils.java:checkIsMediaContent:583) - videoWidth : 1280
+[2022-06-28 09:38:01][INFO ](CommonUtils.java:checkIsMediaContent:584) - videoHeight : 720
+[2022-06-28 09:38:01][INFO ](CommonUtils.java:checkIsMediaContent:585) - video frameRate : 30.000
+[2022-06-28 09:38:01][INFO ](CommonUtils.java:checkIsMediaContent:586) - video displayAspectRatio : 1.778
+[2022-06-28 09:38:01][INFO ](CommonUtils.java:checkIsMediaContent:587) - video rotation : 0.000
+[2022-06-28 09:38:01][INFO ](CommonUtils.java:checkIsMediaContent:588) - video scanType : Progressive
+[2022-06-28 09:38:01][INFO ](CommonUtils.java:checkIsMediaContent:589) - audio format : AAC
+[2022-06-28 09:38:01][INFO ](CommonUtils.java:checkIsMediaContent:590) - audio codec : 
+[2022-06-28 09:38:01][INFO ](CommonUtils.java:checkIsMediaContent:591) - audio bitrate : 128014
+[2022-06-28 09:38:01][INFO ](CommonUtils.java:checkIsMediaContent:592) - audio samplingRate : 44100
+[2022-06-28 09:38:01][INFO ](CommonUtils.java:checkIsMediaContent:593) - audio duration : 428269
+[2022-06-28 09:38:01][INFO ](CommonUtils.java:checkIsMediaContent:594) - image format : 
+[2022-06-28 09:38:01][INFO ](CommonUtils.java:checkIsMediaContent:595) - image width : 
+[2022-06-28 09:38:01][INFO ](CommonUtils.java:checkIsMediaContent:596) - image height : 
+[2022-06-28 09:38:25][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220623-a8ba9ba81ecdfaae.mp4_complete
+[2022-06-28 09:38:27][INFO ](CommonUtils.java:checkIsMediaContent:566) - physicalPath : /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220623-a8ba9ba81ecdfaae.mp4_complete
+[2022-06-28 09:38:30][INFO ](CommonUtils.java:checkIsMediaContent:577) - format : 
+[2022-06-28 09:38:30][INFO ](CommonUtils.java:checkIsMediaContent:578) - duration : 
+[2022-06-28 09:38:30][INFO ](CommonUtils.java:checkIsMediaContent:579) - videoDuration : 
+[2022-06-28 09:38:30][INFO ](CommonUtils.java:checkIsMediaContent:580) - videoFormat : 
+[2022-06-28 09:38:30][INFO ](CommonUtils.java:checkIsMediaContent:581) - videoCodec : 
+[2022-06-28 09:38:30][INFO ](CommonUtils.java:checkIsMediaContent:582) - videoBitrate : 
+[2022-06-28 09:38:30][INFO ](CommonUtils.java:checkIsMediaContent:583) - videoWidth : 
+[2022-06-28 09:38:30][INFO ](CommonUtils.java:checkIsMediaContent:584) - videoHeight : 
+[2022-06-28 09:38:30][INFO ](CommonUtils.java:checkIsMediaContent:585) - video frameRate : 
+[2022-06-28 09:38:30][INFO ](CommonUtils.java:checkIsMediaContent:586) - video displayAspectRatio : 
+[2022-06-28 09:38:30][INFO ](CommonUtils.java:checkIsMediaContent:587) - video rotation : 
+[2022-06-28 09:38:30][INFO ](CommonUtils.java:checkIsMediaContent:588) - video scanType : 
+[2022-06-28 09:38:30][INFO ](CommonUtils.java:checkIsMediaContent:589) - audio format : 
+[2022-06-28 09:38:30][INFO ](CommonUtils.java:checkIsMediaContent:590) - audio codec : 
+[2022-06-28 09:38:30][INFO ](CommonUtils.java:checkIsMediaContent:591) - audio bitrate : 
+[2022-06-28 09:38:30][INFO ](CommonUtils.java:checkIsMediaContent:592) - audio samplingRate : 
+[2022-06-28 09:38:30][INFO ](CommonUtils.java:checkIsMediaContent:593) - audio duration : 
+[2022-06-28 09:38:30][INFO ](CommonUtils.java:checkIsMediaContent:594) - image format : 
+[2022-06-28 09:38:30][INFO ](CommonUtils.java:checkIsMediaContent:595) - image width : 
+[2022-06-28 09:38:30][INFO ](CommonUtils.java:checkIsMediaContent:596) - image height : 
+[2022-06-28 09:38:48][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-7b764b1d764edfeb.mp4
+[2022-06-28 09:38:52][INFO ](CommonUtils.java:checkIsMediaContent:566) - physicalPath : /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-7b764b1d764edfeb.mp4
+[2022-06-28 09:38:52][INFO ](CommonUtils.java:checkIsMediaContent:577) - format : MPEG-4
+[2022-06-28 09:38:52][INFO ](CommonUtils.java:checkIsMediaContent:578) - duration : 428269
+[2022-06-28 09:38:52][INFO ](CommonUtils.java:checkIsMediaContent:579) - videoDuration : 428267
+[2022-06-28 09:38:52][INFO ](CommonUtils.java:checkIsMediaContent:580) - videoFormat : AVC
+[2022-06-28 09:38:52][INFO ](CommonUtils.java:checkIsMediaContent:581) - videoCodec : 
+[2022-06-28 09:38:52][INFO ](CommonUtils.java:checkIsMediaContent:582) - videoBitrate : 46598
+[2022-06-28 09:38:52][INFO ](CommonUtils.java:checkIsMediaContent:583) - videoWidth : 1280
+[2022-06-28 09:38:52][INFO ](CommonUtils.java:checkIsMediaContent:584) - videoHeight : 720
+[2022-06-28 09:38:52][INFO ](CommonUtils.java:checkIsMediaContent:585) - video frameRate : 30.000
+[2022-06-28 09:38:52][INFO ](CommonUtils.java:checkIsMediaContent:586) - video displayAspectRatio : 1.778
+[2022-06-28 09:38:52][INFO ](CommonUtils.java:checkIsMediaContent:587) - video rotation : 0.000
+[2022-06-28 09:38:52][INFO ](CommonUtils.java:checkIsMediaContent:588) - video scanType : Progressive
+[2022-06-28 09:38:52][INFO ](CommonUtils.java:checkIsMediaContent:589) - audio format : AAC
+[2022-06-28 09:38:52][INFO ](CommonUtils.java:checkIsMediaContent:590) - audio codec : 
+[2022-06-28 09:38:52][INFO ](CommonUtils.java:checkIsMediaContent:591) - audio bitrate : 128014
+[2022-06-28 09:38:52][INFO ](CommonUtils.java:checkIsMediaContent:592) - audio samplingRate : 44100
+[2022-06-28 09:38:52][INFO ](CommonUtils.java:checkIsMediaContent:593) - audio duration : 428269
+[2022-06-28 09:38:52][INFO ](CommonUtils.java:checkIsMediaContent:594) - image format : 
+[2022-06-28 09:38:52][INFO ](CommonUtils.java:checkIsMediaContent:595) - image width : 
+[2022-06-28 09:38:52][INFO ](CommonUtils.java:checkIsMediaContent:596) - image height : 
+[2022-06-28 09:38:54][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-7b764b1d764edfeb.mp4_complete
+[2022-06-28 09:38:54][INFO ](CommonUtils.java:checkIsMediaContent:566) - physicalPath : /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-7b764b1d764edfeb.mp4_complete
+[2022-06-28 09:38:54][INFO ](CommonUtils.java:checkIsMediaContent:577) - format : 
+[2022-06-28 09:38:54][INFO ](CommonUtils.java:checkIsMediaContent:578) - duration : 
+[2022-06-28 09:38:54][INFO ](CommonUtils.java:checkIsMediaContent:579) - videoDuration : 
+[2022-06-28 09:38:54][INFO ](CommonUtils.java:checkIsMediaContent:580) - videoFormat : 
+[2022-06-28 09:38:54][INFO ](CommonUtils.java:checkIsMediaContent:581) - videoCodec : 
+[2022-06-28 09:38:54][INFO ](CommonUtils.java:checkIsMediaContent:582) - videoBitrate : 
+[2022-06-28 09:38:54][INFO ](CommonUtils.java:checkIsMediaContent:583) - videoWidth : 
+[2022-06-28 09:38:54][INFO ](CommonUtils.java:checkIsMediaContent:584) - videoHeight : 
+[2022-06-28 09:38:54][INFO ](CommonUtils.java:checkIsMediaContent:585) - video frameRate : 
+[2022-06-28 09:38:54][INFO ](CommonUtils.java:checkIsMediaContent:586) - video displayAspectRatio : 
+[2022-06-28 09:38:54][INFO ](CommonUtils.java:checkIsMediaContent:587) - video rotation : 
+[2022-06-28 09:38:54][INFO ](CommonUtils.java:checkIsMediaContent:588) - video scanType : 
+[2022-06-28 09:38:54][INFO ](CommonUtils.java:checkIsMediaContent:589) - audio format : 
+[2022-06-28 09:38:54][INFO ](CommonUtils.java:checkIsMediaContent:590) - audio codec : 
+[2022-06-28 09:38:54][INFO ](CommonUtils.java:checkIsMediaContent:591) - audio bitrate : 
+[2022-06-28 09:38:54][INFO ](CommonUtils.java:checkIsMediaContent:592) - audio samplingRate : 
+[2022-06-28 09:38:54][INFO ](CommonUtils.java:checkIsMediaContent:593) - audio duration : 
+[2022-06-28 09:38:54][INFO ](CommonUtils.java:checkIsMediaContent:594) - image format : 
+[2022-06-28 09:38:54][INFO ](CommonUtils.java:checkIsMediaContent:595) - image width : 
+[2022-06-28 09:38:54][INFO ](CommonUtils.java:checkIsMediaContent:596) - image height : 
+[2022-06-28 09:38:57][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4
+[2022-06-28 09:38:59][INFO ](CommonUtils.java:checkIsMediaContent:566) - physicalPath : /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4
+[2022-06-28 09:38:59][INFO ](CommonUtils.java:checkIsMediaContent:577) - format : MPEG-4
+[2022-06-28 09:38:59][INFO ](CommonUtils.java:checkIsMediaContent:578) - duration : 428269
+[2022-06-28 09:38:59][INFO ](CommonUtils.java:checkIsMediaContent:579) - videoDuration : 428267
+[2022-06-28 09:38:59][INFO ](CommonUtils.java:checkIsMediaContent:580) - videoFormat : AVC
+[2022-06-28 09:38:59][INFO ](CommonUtils.java:checkIsMediaContent:581) - videoCodec : 
+[2022-06-28 09:38:59][INFO ](CommonUtils.java:checkIsMediaContent:582) - videoBitrate : 46598
+[2022-06-28 09:38:59][INFO ](CommonUtils.java:checkIsMediaContent:583) - videoWidth : 1280
+[2022-06-28 09:38:59][INFO ](CommonUtils.java:checkIsMediaContent:584) - videoHeight : 720
+[2022-06-28 09:38:59][INFO ](CommonUtils.java:checkIsMediaContent:585) - video frameRate : 30.000
+[2022-06-28 09:38:59][INFO ](CommonUtils.java:checkIsMediaContent:586) - video displayAspectRatio : 1.778
+[2022-06-28 09:38:59][INFO ](CommonUtils.java:checkIsMediaContent:587) - video rotation : 0.000
+[2022-06-28 09:38:59][INFO ](CommonUtils.java:checkIsMediaContent:588) - video scanType : Progressive
+[2022-06-28 09:38:59][INFO ](CommonUtils.java:checkIsMediaContent:589) - audio format : AAC
+[2022-06-28 09:38:59][INFO ](CommonUtils.java:checkIsMediaContent:590) - audio codec : 
+[2022-06-28 09:38:59][INFO ](CommonUtils.java:checkIsMediaContent:591) - audio bitrate : 128014
+[2022-06-28 09:38:59][INFO ](CommonUtils.java:checkIsMediaContent:592) - audio samplingRate : 44100
+[2022-06-28 09:38:59][INFO ](CommonUtils.java:checkIsMediaContent:593) - audio duration : 428269
+[2022-06-28 09:38:59][INFO ](CommonUtils.java:checkIsMediaContent:594) - image format : 
+[2022-06-28 09:38:59][INFO ](CommonUtils.java:checkIsMediaContent:595) - image width : 
+[2022-06-28 09:38:59][INFO ](CommonUtils.java:checkIsMediaContent:596) - image height : 
+[2022-06-28 09:39:00][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4_complete
+[2022-06-28 09:39:01][INFO ](CommonUtils.java:checkIsMediaContent:566) - physicalPath : /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4_complete
+[2022-06-28 09:39:01][INFO ](CommonUtils.java:checkIsMediaContent:577) - format : 
+[2022-06-28 09:39:01][INFO ](CommonUtils.java:checkIsMediaContent:578) - duration : 
+[2022-06-28 09:39:01][INFO ](CommonUtils.java:checkIsMediaContent:579) - videoDuration : 
+[2022-06-28 09:39:01][INFO ](CommonUtils.java:checkIsMediaContent:580) - videoFormat : 
+[2022-06-28 09:39:01][INFO ](CommonUtils.java:checkIsMediaContent:581) - videoCodec : 
+[2022-06-28 09:39:01][INFO ](CommonUtils.java:checkIsMediaContent:582) - videoBitrate : 
+[2022-06-28 09:39:01][INFO ](CommonUtils.java:checkIsMediaContent:583) - videoWidth : 
+[2022-06-28 09:39:01][INFO ](CommonUtils.java:checkIsMediaContent:584) - videoHeight : 
+[2022-06-28 09:39:01][INFO ](CommonUtils.java:checkIsMediaContent:585) - video frameRate : 
+[2022-06-28 09:39:01][INFO ](CommonUtils.java:checkIsMediaContent:586) - video displayAspectRatio : 
+[2022-06-28 09:39:01][INFO ](CommonUtils.java:checkIsMediaContent:587) - video rotation : 
+[2022-06-28 09:39:01][INFO ](CommonUtils.java:checkIsMediaContent:588) - video scanType : 
+[2022-06-28 09:39:01][INFO ](CommonUtils.java:checkIsMediaContent:589) - audio format : 
+[2022-06-28 09:39:01][INFO ](CommonUtils.java:checkIsMediaContent:590) - audio codec : 
+[2022-06-28 09:39:01][INFO ](CommonUtils.java:checkIsMediaContent:591) - audio bitrate : 
+[2022-06-28 09:39:01][INFO ](CommonUtils.java:checkIsMediaContent:592) - audio samplingRate : 
+[2022-06-28 09:39:01][INFO ](CommonUtils.java:checkIsMediaContent:593) - audio duration : 
+[2022-06-28 09:39:01][INFO ](CommonUtils.java:checkIsMediaContent:594) - image format : 
+[2022-06-28 09:39:01][INFO ](CommonUtils.java:checkIsMediaContent:595) - image width : 
+[2022-06-28 09:39:01][INFO ](CommonUtils.java:checkIsMediaContent:596) - image height : 
+[2022-06-28 09:39:03][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-e9e93d9cd5c3196b.jpeg
+[2022-06-28 09:39:05][INFO ](CommonUtils.java:checkIsMediaContent:566) - physicalPath : /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-e9e93d9cd5c3196b.jpeg
+[2022-06-28 09:39:05][INFO ](CommonUtils.java:checkIsMediaContent:577) - format : JPEG
+[2022-06-28 09:39:05][INFO ](CommonUtils.java:checkIsMediaContent:578) - duration : 
+[2022-06-28 09:39:05][INFO ](CommonUtils.java:checkIsMediaContent:579) - videoDuration : 
+[2022-06-28 09:39:05][INFO ](CommonUtils.java:checkIsMediaContent:580) - videoFormat : 
+[2022-06-28 09:39:05][INFO ](CommonUtils.java:checkIsMediaContent:581) - videoCodec : 
+[2022-06-28 09:39:05][INFO ](CommonUtils.java:checkIsMediaContent:582) - videoBitrate : 
+[2022-06-28 09:39:05][INFO ](CommonUtils.java:checkIsMediaContent:583) - videoWidth : 
+[2022-06-28 09:39:05][INFO ](CommonUtils.java:checkIsMediaContent:584) - videoHeight : 
+[2022-06-28 09:39:05][INFO ](CommonUtils.java:checkIsMediaContent:585) - video frameRate : 
+[2022-06-28 09:39:05][INFO ](CommonUtils.java:checkIsMediaContent:586) - video displayAspectRatio : 
+[2022-06-28 09:39:05][INFO ](CommonUtils.java:checkIsMediaContent:587) - video rotation : 
+[2022-06-28 09:39:05][INFO ](CommonUtils.java:checkIsMediaContent:588) - video scanType : 
+[2022-06-28 09:39:05][INFO ](CommonUtils.java:checkIsMediaContent:589) - audio format : 
+[2022-06-28 09:39:05][INFO ](CommonUtils.java:checkIsMediaContent:590) - audio codec : 
+[2022-06-28 09:39:05][INFO ](CommonUtils.java:checkIsMediaContent:591) - audio bitrate : 
+[2022-06-28 09:39:05][INFO ](CommonUtils.java:checkIsMediaContent:592) - audio samplingRate : 
+[2022-06-28 09:39:05][INFO ](CommonUtils.java:checkIsMediaContent:593) - audio duration : 
+[2022-06-28 09:39:05][INFO ](CommonUtils.java:checkIsMediaContent:594) - image format : JPEG
+[2022-06-28 09:39:05][INFO ](CommonUtils.java:checkIsMediaContent:595) - image width : 1080
+[2022-06-28 09:39:05][INFO ](CommonUtils.java:checkIsMediaContent:596) - image height : 1440
+[2022-06-28 09:39:14][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-e9e93d9cd5c3196b.jpeg_complete
+[2022-06-28 09:39:15][INFO ](CommonUtils.java:checkIsMediaContent:566) - physicalPath : /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-e9e93d9cd5c3196b.jpeg_complete
+[2022-06-28 09:39:15][INFO ](CommonUtils.java:checkIsMediaContent:577) - format : 
+[2022-06-28 09:39:15][INFO ](CommonUtils.java:checkIsMediaContent:578) - duration : 
+[2022-06-28 09:39:15][INFO ](CommonUtils.java:checkIsMediaContent:579) - videoDuration : 
+[2022-06-28 09:39:15][INFO ](CommonUtils.java:checkIsMediaContent:580) - videoFormat : 
+[2022-06-28 09:39:15][INFO ](CommonUtils.java:checkIsMediaContent:581) - videoCodec : 
+[2022-06-28 09:39:15][INFO ](CommonUtils.java:checkIsMediaContent:582) - videoBitrate : 
+[2022-06-28 09:39:15][INFO ](CommonUtils.java:checkIsMediaContent:583) - videoWidth : 
+[2022-06-28 09:39:15][INFO ](CommonUtils.java:checkIsMediaContent:584) - videoHeight : 
+[2022-06-28 09:39:15][INFO ](CommonUtils.java:checkIsMediaContent:585) - video frameRate : 
+[2022-06-28 09:39:15][INFO ](CommonUtils.java:checkIsMediaContent:586) - video displayAspectRatio : 
+[2022-06-28 09:39:15][INFO ](CommonUtils.java:checkIsMediaContent:587) - video rotation : 
+[2022-06-28 09:39:15][INFO ](CommonUtils.java:checkIsMediaContent:588) - video scanType : 
+[2022-06-28 09:39:15][INFO ](CommonUtils.java:checkIsMediaContent:589) - audio format : 
+[2022-06-28 09:39:15][INFO ](CommonUtils.java:checkIsMediaContent:590) - audio codec : 
+[2022-06-28 09:39:15][INFO ](CommonUtils.java:checkIsMediaContent:591) - audio bitrate : 
+[2022-06-28 09:39:15][INFO ](CommonUtils.java:checkIsMediaContent:592) - audio samplingRate : 
+[2022-06-28 09:39:15][INFO ](CommonUtils.java:checkIsMediaContent:593) - audio duration : 
+[2022-06-28 09:39:15][INFO ](CommonUtils.java:checkIsMediaContent:594) - image format : 
+[2022-06-28 09:39:15][INFO ](CommonUtils.java:checkIsMediaContent:595) - image width : 
+[2022-06-28 09:39:15][INFO ](CommonUtils.java:checkIsMediaContent:596) - image height : 
+[2022-06-28 09:39:20][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220628-3aa5a85f0469057c.jpeg
+[2022-06-28 09:39:23][INFO ](CommonUtils.java:checkIsMediaContent:566) - physicalPath : /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220628-3aa5a85f0469057c.jpeg
+[2022-06-28 09:39:23][INFO ](CommonUtils.java:checkIsMediaContent:577) - format : JPEG
+[2022-06-28 09:39:23][INFO ](CommonUtils.java:checkIsMediaContent:578) - duration : 
+[2022-06-28 09:39:23][INFO ](CommonUtils.java:checkIsMediaContent:579) - videoDuration : 
+[2022-06-28 09:39:23][INFO ](CommonUtils.java:checkIsMediaContent:580) - videoFormat : 
+[2022-06-28 09:39:23][INFO ](CommonUtils.java:checkIsMediaContent:581) - videoCodec : 
+[2022-06-28 09:39:23][INFO ](CommonUtils.java:checkIsMediaContent:582) - videoBitrate : 
+[2022-06-28 09:39:23][INFO ](CommonUtils.java:checkIsMediaContent:583) - videoWidth : 
+[2022-06-28 09:39:23][INFO ](CommonUtils.java:checkIsMediaContent:584) - videoHeight : 
+[2022-06-28 09:39:23][INFO ](CommonUtils.java:checkIsMediaContent:585) - video frameRate : 
+[2022-06-28 09:39:23][INFO ](CommonUtils.java:checkIsMediaContent:586) - video displayAspectRatio : 
+[2022-06-28 09:39:23][INFO ](CommonUtils.java:checkIsMediaContent:587) - video rotation : 
+[2022-06-28 09:39:23][INFO ](CommonUtils.java:checkIsMediaContent:588) - video scanType : 
+[2022-06-28 09:39:23][INFO ](CommonUtils.java:checkIsMediaContent:589) - audio format : 
+[2022-06-28 09:39:23][INFO ](CommonUtils.java:checkIsMediaContent:590) - audio codec : 
+[2022-06-28 09:39:23][INFO ](CommonUtils.java:checkIsMediaContent:591) - audio bitrate : 
+[2022-06-28 09:39:23][INFO ](CommonUtils.java:checkIsMediaContent:592) - audio samplingRate : 
+[2022-06-28 09:39:23][INFO ](CommonUtils.java:checkIsMediaContent:593) - audio duration : 
+[2022-06-28 09:39:23][INFO ](CommonUtils.java:checkIsMediaContent:594) - image format : JPEG
+[2022-06-28 09:39:23][INFO ](CommonUtils.java:checkIsMediaContent:595) - image width : 1080
+[2022-06-28 09:39:23][INFO ](CommonUtils.java:checkIsMediaContent:596) - image height : 1440
+[2022-06-28 09:39:23][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220628-3aa5a85f0469057c.jpeg_complete
+[2022-06-28 09:39:23][INFO ](CommonUtils.java:checkIsMediaContent:566) - physicalPath : /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220628-3aa5a85f0469057c.jpeg_complete
+[2022-06-28 09:39:23][INFO ](CommonUtils.java:checkIsMediaContent:577) - format : 
+[2022-06-28 09:39:23][INFO ](CommonUtils.java:checkIsMediaContent:578) - duration : 
+[2022-06-28 09:39:23][INFO ](CommonUtils.java:checkIsMediaContent:579) - videoDuration : 
+[2022-06-28 09:39:23][INFO ](CommonUtils.java:checkIsMediaContent:580) - videoFormat : 
+[2022-06-28 09:39:23][INFO ](CommonUtils.java:checkIsMediaContent:581) - videoCodec : 
+[2022-06-28 09:39:23][INFO ](CommonUtils.java:checkIsMediaContent:582) - videoBitrate : 
+[2022-06-28 09:39:23][INFO ](CommonUtils.java:checkIsMediaContent:583) - videoWidth : 
+[2022-06-28 09:39:23][INFO ](CommonUtils.java:checkIsMediaContent:584) - videoHeight : 
+[2022-06-28 09:39:23][INFO ](CommonUtils.java:checkIsMediaContent:585) - video frameRate : 
+[2022-06-28 09:39:23][INFO ](CommonUtils.java:checkIsMediaContent:586) - video displayAspectRatio : 
+[2022-06-28 09:39:23][INFO ](CommonUtils.java:checkIsMediaContent:587) - video rotation : 
+[2022-06-28 09:39:23][INFO ](CommonUtils.java:checkIsMediaContent:588) - video scanType : 
+[2022-06-28 09:39:23][INFO ](CommonUtils.java:checkIsMediaContent:589) - audio format : 
+[2022-06-28 09:39:23][INFO ](CommonUtils.java:checkIsMediaContent:590) - audio codec : 
+[2022-06-28 09:39:23][INFO ](CommonUtils.java:checkIsMediaContent:591) - audio bitrate : 
+[2022-06-28 09:39:23][INFO ](CommonUtils.java:checkIsMediaContent:592) - audio samplingRate : 
+[2022-06-28 09:39:23][INFO ](CommonUtils.java:checkIsMediaContent:593) - audio duration : 
+[2022-06-28 09:39:23][INFO ](CommonUtils.java:checkIsMediaContent:594) - image format : 
+[2022-06-28 09:39:23][INFO ](CommonUtils.java:checkIsMediaContent:595) - image width : 
+[2022-06-28 09:39:23][INFO ](CommonUtils.java:checkIsMediaContent:596) - image height : 
+[2022-06-28 09:39:23][DEBUG](FtpUploadDao.java:sendWatchFiles:250) - sql result = rs5: org.h2.result.LocalResult@296b2e28 columns: 19 rows: 10 pos: 0
+[2022-06-28 09:39:23][DEBUG](CommonUtils.java:fromResultSet:400) - /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220623-a8ba9ba81ecdfaae.mp4
+[2022-06-28 09:39:23][INFO ](CommonUtils.java:pathToTRmpk:701) - [ pathToTRmpk 1/3 ] 20220623-a8ba9ba81ecdfaae.mp4
+[2022-06-28 09:39:23][INFO ](CommonUtils.java:pathToTRmpk:705) - [ pathToTRmpk 2/3 ] 20220623-a8ba9ba81ecdfaae
+[2022-06-28 09:39:23][DEBUG](CommonUtils.java:fromResultSet:437) - fromResultSet Add TransCoder : null
+[2022-06-28 09:39:23][DEBUG](CommonUtils.java:fromResultSet:438) - fromResultSet Path : /jungin-kim/20220623-a8ba9ba81ecdfaae.mp4
+[2022-06-28 09:39:23][DEBUG](CommonUtils.java:fromResultSet:439) - fromResultSet item : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"physical_path":"/home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220623-a8ba9ba81ecdfaae.mp4","upload_path":"/jungin-kim/20220623-a8ba9ba81ecdfaae.mp4","filesize":9557596,"filesize_str":"9.1 MB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"20220623-a8ba9ba81ecdfaae","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-06-28 09:39:23][DEBUG](FtpUploadDao.java:sendWatchFiles:250) - sql result = rs5: org.h2.result.LocalResult@296b2e28 columns: 19 rows: 10 pos: 1
+[2022-06-28 09:39:23][DEBUG](CommonUtils.java:fromResultSet:400) - /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220623-a8ba9ba81ecdfaae.mp4_complete
+[2022-06-28 09:39:23][INFO ](CommonUtils.java:pathToTRmpk:701) - [ pathToTRmpk 1/3 ] 20220623-a8ba9ba81ecdfaae.mp4_complete
+[2022-06-28 09:39:23][INFO ](CommonUtils.java:pathToTRmpk:705) - [ pathToTRmpk 2/3 ] 20220623-a8ba9ba81ecdfaae
+[2022-06-28 09:39:23][DEBUG](CommonUtils.java:fromResultSet:437) - fromResultSet Add TransCoder : null
+[2022-06-28 09:39:23][DEBUG](CommonUtils.java:fromResultSet:438) - fromResultSet Path : /jungin-kim/20220623-a8ba9ba81ecdfaae.mp4_complete
+[2022-06-28 09:39:23][DEBUG](CommonUtils.java:fromResultSet:439) - fromResultSet item : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"physical_path":"/home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220623-a8ba9ba81ecdfaae.mp4_complete","upload_path":"/jungin-kim/20220623-a8ba9ba81ecdfaae.mp4_complete","filesize":138,"filesize_str":"138 B","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"20220623-a8ba9ba81ecdfaae","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-06-28 09:39:23][DEBUG](FtpUploadDao.java:sendWatchFiles:250) - sql result = rs5: org.h2.result.LocalResult@296b2e28 columns: 19 rows: 10 pos: 2
+[2022-06-28 09:39:23][DEBUG](CommonUtils.java:fromResultSet:400) - /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-7b764b1d764edfeb.mp4
+[2022-06-28 09:39:23][INFO ](CommonUtils.java:pathToTRmpk:701) - [ pathToTRmpk 1/3 ] 20220627-7b764b1d764edfeb.mp4
+[2022-06-28 09:39:23][INFO ](CommonUtils.java:pathToTRmpk:705) - [ pathToTRmpk 2/3 ] 20220627-7b764b1d764edfeb
+[2022-06-28 09:39:23][DEBUG](CommonUtils.java:fromResultSet:437) - fromResultSet Add TransCoder : null
+[2022-06-28 09:39:23][DEBUG](CommonUtils.java:fromResultSet:438) - fromResultSet Path : /jungin-kim/20220627-7b764b1d764edfeb.mp4
+[2022-06-28 09:39:23][DEBUG](CommonUtils.java:fromResultSet:439) - fromResultSet item : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"physical_path":"/home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-7b764b1d764edfeb.mp4","upload_path":"/jungin-kim/20220627-7b764b1d764edfeb.mp4","filesize":9557596,"filesize_str":"9.1 MB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"20220627-7b764b1d764edfeb","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-06-28 09:39:23][DEBUG](FtpUploadDao.java:sendWatchFiles:250) - sql result = rs5: org.h2.result.LocalResult@296b2e28 columns: 19 rows: 10 pos: 3
+[2022-06-28 09:39:23][DEBUG](CommonUtils.java:fromResultSet:400) - /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-7b764b1d764edfeb.mp4_complete
+[2022-06-28 09:39:23][INFO ](CommonUtils.java:pathToTRmpk:701) - [ pathToTRmpk 1/3 ] 20220627-7b764b1d764edfeb.mp4_complete
+[2022-06-28 09:39:23][INFO ](CommonUtils.java:pathToTRmpk:705) - [ pathToTRmpk 2/3 ] 20220627-7b764b1d764edfeb
+[2022-06-28 09:39:23][DEBUG](CommonUtils.java:fromResultSet:437) - fromResultSet Add TransCoder : null
+[2022-06-28 09:39:23][DEBUG](CommonUtils.java:fromResultSet:438) - fromResultSet Path : /jungin-kim/20220627-7b764b1d764edfeb.mp4_complete
+[2022-06-28 09:39:23][DEBUG](CommonUtils.java:fromResultSet:439) - fromResultSet item : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"physical_path":"/home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-7b764b1d764edfeb.mp4_complete","upload_path":"/jungin-kim/20220627-7b764b1d764edfeb.mp4_complete","filesize":138,"filesize_str":"138 B","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"20220627-7b764b1d764edfeb","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-06-28 09:39:23][DEBUG](FtpUploadDao.java:sendWatchFiles:250) - sql result = rs5: org.h2.result.LocalResult@296b2e28 columns: 19 rows: 10 pos: 4
+[2022-06-28 09:39:23][DEBUG](CommonUtils.java:fromResultSet:400) - /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4
+[2022-06-28 09:39:23][INFO ](CommonUtils.java:pathToTRmpk:701) - [ pathToTRmpk 1/3 ] 20220627-80607469f8ba85d8.mp4
+[2022-06-28 09:39:23][INFO ](CommonUtils.java:pathToTRmpk:705) - [ pathToTRmpk 2/3 ] 20220627-80607469f8ba85d8
+[2022-06-28 09:39:23][DEBUG](CommonUtils.java:fromResultSet:437) - fromResultSet Add TransCoder : null
+[2022-06-28 09:39:23][DEBUG](CommonUtils.java:fromResultSet:438) - fromResultSet Path : /jungin-kim/20220627-80607469f8ba85d8.mp4
+[2022-06-28 09:39:23][DEBUG](CommonUtils.java:fromResultSet:439) - fromResultSet item : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"physical_path":"/home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4","upload_path":"/jungin-kim/20220627-80607469f8ba85d8.mp4","filesize":9557596,"filesize_str":"9.1 MB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"20220627-80607469f8ba85d8","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-06-28 09:39:23][DEBUG](FtpUploadDao.java:sendWatchFiles:250) - sql result = rs5: org.h2.result.LocalResult@296b2e28 columns: 19 rows: 10 pos: 5
+[2022-06-28 09:39:23][ERROR](CommonUtils.java:ExceptionLogPrint:332) - org.h2.jdbc.JdbcSQLException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-168]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.get(DbException.java:146)
+	at org.h2.message.DbException.get(DbException.java:135)
+	at org.h2.jdbc.JdbcConnection.checkClosed(JdbcConnection.java:1384)
+	at org.h2.jdbc.JdbcStatement.checkClosed(JdbcStatement.java:927)
+	at org.h2.jdbc.JdbcStatement.checkClosed(JdbcStatement.java:901)
+	at org.h2.jdbc.JdbcResultSet.checkClosed(JdbcResultSet.java:2948)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:2860)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:2979)
+	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:291)
+	at net.catenoid.watcher.upload.utils.CommonUtils.fromResultSet(CommonUtils.java:354)
+	at net.catenoid.watcher.uploadDao.FtpUploadDao.sendWatchFiles(FtpUploadDao.java:253)
+	at net.catenoid.watcher.uploadImp.FtpUploadServiceImp.findWorkFileList(FtpUploadServiceImp.java:104)
+	at net.catenoid.watcher.job.Role_Watcher.execute(Role_Watcher.java:157)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:557)
+
+[2022-06-28 09:39:23][ERROR](CommonUtils.java:ExceptionLogPrint:333) - org.h2.jdbc.JdbcSQLException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-168]
+[2022-06-28 11:21:11][INFO ](Watcher.java:start:94) - [PRG_START]
+[2022-06-28 11:21:11][INFO ](Watcher.java:printVersion:41) - [PRG_VER]null
+[2022-06-28 11:21:11][DEBUG](ThreadSafeClientConnManager.java:getConnection:235) - Get connection: {}->http://api.kr.dev.kollus.com, timeout = 0
+[2022-06-28 11:21:11][DEBUG](ThreadSafeClientConnManager.java:releaseConnection:280) - Released connection is reusable.
+[2022-06-28 11:21:11][INFO ](Config.java:printUrls:234) - URLS [watcher.list.insert] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/register
+[2022-06-28 11:21:11][INFO ](Config.java:printUrls:234) - URLS [watcher.list.complete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/complete
+[2022-06-28 11:21:11][INFO ](Config.java:printUrls:234) - URLS [watcher.list.delete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/remove
+[2022-06-28 11:21:11][INFO ](Config.java:printUrls:234) - URLS [watcher.usage_day_amount.insert] http://api.kr.dev.kollus.com/0/catenoid/usage_day_amount/register
+[2022-06-28 11:21:11][INFO ](Config.java:printUrls:234) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-06-28 11:21:11][INFO ](Config.java:printUrls:234) - URLS [transcoding_job.assign] http://jobmanager-dev-kr.kollus.com:8180/assign
+[2022-06-28 11:21:11][INFO ](Config.java:printUrls:234) - URLS [transcoding_job.manager] http://api.kr.dev.kollus.com/0/catenoid/transcoding_job/manager
+[2022-06-28 11:21:11][INFO ](Config.java:printUrls:234) - URLS [transcoding_file.register] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/register
+[2022-06-28 11:21:11][INFO ](Config.java:printUrls:234) - URLS [transcoding_file.update] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/update
+[2022-06-28 11:21:11][INFO ](Config.java:printUrls:234) - URLS [transcoding_file.complete] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete
+[2022-06-28 11:21:11][INFO ](Config.java:printUrls:234) - URLS [transcoding_file.complete_all] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete_all
+[2022-06-28 11:21:11][INFO ](Config.java:printUrls:234) - URLS [module.check_activated_at] http://api.kr.dev.kollus.com/0/catenoid/module/check_activated_at
+[2022-06-28 11:21:11][INFO ](Config.java:printUrls:234) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-06-28 11:21:11][DEBUG](Watcher.java:setupWatcher:233) - [PRG_CONF]job_watcherfile3=0/10 * * * * ?
+[2022-06-28 11:21:20][DEBUG](LinuxLineParser.java:parser:102) - /home/kollus/kollus-upload-v2/http_upload, /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220623-a8ba9ba81ecdfaae.mp4, 1655973017000, 9557596
+[2022-06-28 11:21:20][DEBUG](LinuxLineParser.java:parser:102) - /home/kollus/kollus-upload-v2/http_upload, /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220623-a8ba9ba81ecdfaae.mp4_complete, 1655973017000, 138
+[2022-06-28 11:21:20][DEBUG](LinuxLineParser.java:parser:102) - /home/kollus/kollus-upload-v2/http_upload, /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-7b764b1d764edfeb.mp4, 1656318594000, 9557596
+[2022-06-28 11:21:20][DEBUG](LinuxLineParser.java:parser:102) - /home/kollus/kollus-upload-v2/http_upload, /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-7b764b1d764edfeb.mp4_complete, 1656318594000, 138
+[2022-06-28 11:21:20][DEBUG](LinuxLineParser.java:parser:102) - /home/kollus/kollus-upload-v2/http_upload, /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4, 1656318660000, 9557596
+[2022-06-28 11:21:20][DEBUG](LinuxLineParser.java:parser:102) - /home/kollus/kollus-upload-v2/http_upload, /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4_complete, 1656318660000, 138
+[2022-06-28 11:21:20][DEBUG](LinuxLineParser.java:parser:102) - /home/kollus/kollus-upload-v2/http_upload, /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-e9e93d9cd5c3196b.jpeg, 1656318709000, 568634
+[2022-06-28 11:21:20][DEBUG](LinuxLineParser.java:parser:102) - /home/kollus/kollus-upload-v2/http_upload, /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-e9e93d9cd5c3196b.jpeg_complete, 1656318709000, 138
+[2022-06-28 11:21:20][DEBUG](LinuxLineParser.java:parser:102) - /home/kollus/kollus-upload-v2/http_upload, /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220628-3aa5a85f0469057c.jpeg, 1656375313000, 568634
+[2022-06-28 11:21:20][DEBUG](LinuxLineParser.java:parser:102) - /home/kollus/kollus-upload-v2/http_upload, /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220628-3aa5a85f0469057c.jpeg_complete, 1656375325000, 138
+[2022-06-28 11:21:20][DEBUG](LinuxLineParser.java:parser:102) - /home/kollus/kollus-upload-v2/http_upload, /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220628-a14c8dc4161fdcbb.mp4, 1656379258000, 9557596
+[2022-06-28 11:21:20][DEBUG](LinuxLineParser.java:parser:102) - /home/kollus/kollus-upload-v2/http_upload, /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220628-a14c8dc4161fdcbb.mp4_complete, 1656379259000, 138
+[2022-06-28 11:21:28][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220623-a8ba9ba81ecdfaae.mp4
+[2022-06-28 11:21:29][INFO ](CommonUtils.java:checkIsMediaContent:567) - physicalPath : /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220623-a8ba9ba81ecdfaae.mp4
+[2022-06-28 11:21:30][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220623-a8ba9ba81ecdfaae.mp4_complete
+[2022-06-28 11:21:36][INFO ](CommonUtils.java:checkIsMediaContent:567) - physicalPath : /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220623-a8ba9ba81ecdfaae.mp4_complete
+[2022-06-28 11:21:36][INFO ](CommonUtils.java:checkIsMediaContent:593) - format : 
+[2022-06-28 11:21:36][INFO ](CommonUtils.java:checkIsMediaContent:594) - duration : 
+[2022-06-28 11:21:36][INFO ](CommonUtils.java:checkIsMediaContent:595) - videoDuration : 
+[2022-06-28 11:21:36][INFO ](CommonUtils.java:checkIsMediaContent:596) - videoFormat : 
+[2022-06-28 11:21:36][INFO ](CommonUtils.java:checkIsMediaContent:597) - videoCodec : 
+[2022-06-28 11:21:36][INFO ](CommonUtils.java:checkIsMediaContent:598) - videoBitrate : 
+[2022-06-28 11:21:36][INFO ](CommonUtils.java:checkIsMediaContent:599) - videoWidth : 
+[2022-06-28 11:21:36][INFO ](CommonUtils.java:checkIsMediaContent:600) - videoHeight : 
+[2022-06-28 11:21:36][INFO ](CommonUtils.java:checkIsMediaContent:601) - video frameRate : 
+[2022-06-28 11:21:36][INFO ](CommonUtils.java:checkIsMediaContent:602) - video displayAspectRatio : 
+[2022-06-28 11:21:36][INFO ](CommonUtils.java:checkIsMediaContent:603) - video rotation : 
+[2022-06-28 11:21:36][INFO ](CommonUtils.java:checkIsMediaContent:604) - video scanType : 
+[2022-06-28 11:21:36][INFO ](CommonUtils.java:checkIsMediaContent:605) - audio format : 
+[2022-06-28 11:21:36][INFO ](CommonUtils.java:checkIsMediaContent:606) - audio codec : 
+[2022-06-28 11:21:36][INFO ](CommonUtils.java:checkIsMediaContent:607) - audio bitrate : 
+[2022-06-28 11:21:36][INFO ](CommonUtils.java:checkIsMediaContent:608) - audio samplingRate : 
+[2022-06-28 11:21:36][INFO ](CommonUtils.java:checkIsMediaContent:609) - audio duration : 
+[2022-06-28 11:21:36][INFO ](CommonUtils.java:checkIsMediaContent:610) - image format : 
+[2022-06-28 11:21:36][INFO ](CommonUtils.java:checkIsMediaContent:611) - image width : 
+[2022-06-28 11:21:36][INFO ](CommonUtils.java:checkIsMediaContent:612) - image height : 
+[2022-06-28 11:21:37][DEBUG](FtpUploadServiceImp.java:newFileItems:239) - is not MediaFile : /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220623-a8ba9ba81ecdfaae.mp4_complete
+[2022-06-28 11:21:49][DEBUG](FtpUploadServiceImp.java:newFileItems:241) - Not MediaFile removed
+[2022-06-28 11:21:49][ERROR](FtpUploadDao.java:insertFileItem:154) - INSERT INTO FILES(PATH,DOMAIN,OLD_SIZE,NEW_SIZE,OLD_DATE,NEW_DATE,ERR_DATE,CHK_DATE,COMP_CNT,STATUS,UPLOAD_PATH,CID,CPATH,SNAP_PATH,TITLE,MD5,CHECKSUM_TYPE,POSTER_POS,POSTER_WIDTH,POSTER_HEIGHT) VALUES ('/home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220623-a8ba9ba81ecdfaae.mp4_complete','jungin-kim', 138, 138, '2022-06-23 17:30:17.000', '2022-06-23 17:30:17.000', '1970-01-01 01:01:01.000', '2022-06-28 11:21:20.117', 0, 0,'/jungin-kim/20220623-a8ba9ba81ecdfaae.mp4_complete','','','','20220623-a8ba9ba81ecdfaae','', 0, -1, -1, -1)
+[2022-06-28 11:21:49][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-7b764b1d764edfeb.mp4
+[2022-06-28 11:21:49][INFO ](CommonUtils.java:checkIsMediaContent:567) - physicalPath : /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-7b764b1d764edfeb.mp4
+[2022-06-28 11:21:49][ERROR](CommonUtils.java:ExceptionLogPrint:333) - org.h2.jdbc.JdbcSQLException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-168]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.get(DbException.java:146)
+	at org.h2.message.DbException.get(DbException.java:135)
+	at org.h2.jdbc.JdbcConnection.checkClosed(JdbcConnection.java:1384)
+	at org.h2.jdbc.JdbcStatement.checkClosed(JdbcStatement.java:927)
+	at org.h2.jdbc.JdbcStatement.checkClosedForWrite(JdbcStatement.java:912)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:117)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:110)
+	at net.catenoid.watcher.uploadDao.FtpUploadDao.existFileItem(FtpUploadDao.java:85)
+	at net.catenoid.watcher.uploadImp.FtpUploadServiceImp.newFileItems(FtpUploadServiceImp.java:246)
+	at net.catenoid.watcher.uploadImp.FtpUploadServiceImp.renewWorkFileList(FtpUploadServiceImp.java:83)
+	at net.catenoid.watcher.job.Role_Watcher.execute(Role_Watcher.java:156)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:557)
+
+[2022-06-28 11:21:49][ERROR](CommonUtils.java:ExceptionLogPrint:334) - org.h2.jdbc.JdbcSQLException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-168]
+[2022-06-28 11:21:49][ERROR](CommonUtils.java:ExceptionLogPrint:333) - java.lang.NullPointerException
+	at net.catenoid.watcher.uploadDao.FtpUploadDao.sendWatchFiles(FtpUploadDao.java:313)
+	at net.catenoid.watcher.uploadImp.FtpUploadServiceImp.findWorkFileList(FtpUploadServiceImp.java:104)
+	at net.catenoid.watcher.job.Role_Watcher.execute(Role_Watcher.java:157)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:557)
+
+[2022-06-28 11:21:49][ERROR](CommonUtils.java:ExceptionLogPrint:334) - java.lang.NullPointerException
+[2022-06-28 13:19:14][INFO ](Watcher.java:start:94) - [PRG_START]
+[2022-06-28 13:19:14][INFO ](Watcher.java:printVersion:41) - [PRG_VER]null
+[2022-06-28 13:19:15][DEBUG](ThreadSafeClientConnManager.java:getConnection:235) - Get connection: {}->http://api.kr.dev.kollus.com, timeout = 0
+[2022-06-28 13:19:15][DEBUG](ThreadSafeClientConnManager.java:releaseConnection:280) - Released connection is reusable.
+[2022-06-28 13:19:15][INFO ](Config.java:printUrls:234) - URLS [watcher.list.insert] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/register
+[2022-06-28 13:19:15][INFO ](Config.java:printUrls:234) - URLS [watcher.list.complete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/complete
+[2022-06-28 13:19:15][INFO ](Config.java:printUrls:234) - URLS [watcher.list.delete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/remove
+[2022-06-28 13:19:15][INFO ](Config.java:printUrls:234) - URLS [watcher.usage_day_amount.insert] http://api.kr.dev.kollus.com/0/catenoid/usage_day_amount/register
+[2022-06-28 13:19:15][INFO ](Config.java:printUrls:234) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-06-28 13:19:15][INFO ](Config.java:printUrls:234) - URLS [transcoding_job.assign] http://jobmanager-dev-kr.kollus.com:8180/assign
+[2022-06-28 13:19:15][INFO ](Config.java:printUrls:234) - URLS [transcoding_job.manager] http://api.kr.dev.kollus.com/0/catenoid/transcoding_job/manager
+[2022-06-28 13:19:15][INFO ](Config.java:printUrls:234) - URLS [transcoding_file.register] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/register
+[2022-06-28 13:19:15][INFO ](Config.java:printUrls:234) - URLS [transcoding_file.update] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/update
+[2022-06-28 13:19:15][INFO ](Config.java:printUrls:234) - URLS [transcoding_file.complete] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete
+[2022-06-28 13:19:15][INFO ](Config.java:printUrls:234) - URLS [transcoding_file.complete_all] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete_all
+[2022-06-28 13:19:15][INFO ](Config.java:printUrls:234) - URLS [module.check_activated_at] http://api.kr.dev.kollus.com/0/catenoid/module/check_activated_at
+[2022-06-28 13:19:15][INFO ](Config.java:printUrls:234) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-06-28 13:19:15][DEBUG](Watcher.java:setupWatcher:233) - [PRG_CONF]job_watcherfile3=0/10 * * * * ?
+[2022-06-28 13:19:20][DEBUG](LinuxLineParser.java:parser:102) - /home/kollus/kollus-upload-v2/http_upload, /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220623-a8ba9ba81ecdfaae.mp4, 1655973017000, 9557596
+[2022-06-28 13:19:20][DEBUG](LinuxLineParser.java:parser:102) - /home/kollus/kollus-upload-v2/http_upload, /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-7b764b1d764edfeb.mp4, 1656318594000, 9557596
+[2022-06-28 13:19:20][DEBUG](LinuxLineParser.java:parser:102) - /home/kollus/kollus-upload-v2/http_upload, /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-7b764b1d764edfeb.mp4_complete, 1656318594000, 138
+[2022-06-28 13:19:20][DEBUG](LinuxLineParser.java:parser:102) - /home/kollus/kollus-upload-v2/http_upload, /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4, 1656318660000, 9557596
+[2022-06-28 13:19:20][DEBUG](LinuxLineParser.java:parser:102) - /home/kollus/kollus-upload-v2/http_upload, /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4_complete, 1656318660000, 138
+[2022-06-28 13:19:20][DEBUG](LinuxLineParser.java:parser:102) - /home/kollus/kollus-upload-v2/http_upload, /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-e9e93d9cd5c3196b.jpeg, 1656318709000, 568634
+[2022-06-28 13:19:20][DEBUG](LinuxLineParser.java:parser:102) - /home/kollus/kollus-upload-v2/http_upload, /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-e9e93d9cd5c3196b.jpeg_complete, 1656318709000, 138
+[2022-06-28 13:19:20][DEBUG](LinuxLineParser.java:parser:102) - /home/kollus/kollus-upload-v2/http_upload, /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220628-3aa5a85f0469057c.jpeg, 1656375313000, 568634
+[2022-06-28 13:19:20][DEBUG](LinuxLineParser.java:parser:102) - /home/kollus/kollus-upload-v2/http_upload, /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220628-3aa5a85f0469057c.jpeg_complete, 1656375325000, 138
+[2022-06-28 13:19:20][DEBUG](LinuxLineParser.java:parser:102) - /home/kollus/kollus-upload-v2/http_upload, /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220628-a14c8dc4161fdcbb.mp4, 1656379258000, 9557596
+[2022-06-28 13:19:20][DEBUG](LinuxLineParser.java:parser:102) - /home/kollus/kollus-upload-v2/http_upload, /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220628-a14c8dc4161fdcbb.mp4_complete, 1656379259000, 138
+[2022-06-28 13:19:22][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220623-a8ba9ba81ecdfaae.mp4
+[2022-06-28 13:19:27][INFO ](CommonUtils.java:checkIsMediaContent:567) - physicalPath : /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220623-a8ba9ba81ecdfaae.mp4
+[2022-06-28 13:19:44][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-7b764b1d764edfeb.mp4
+[2022-06-28 13:19:44][INFO ](CommonUtils.java:checkIsMediaContent:567) - physicalPath : /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-7b764b1d764edfeb.mp4
+[2022-06-28 13:19:44][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-7b764b1d764edfeb.mp4_complete
+[2022-06-28 13:19:44][INFO ](CommonUtils.java:checkIsMediaContent:567) - physicalPath : /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-7b764b1d764edfeb.mp4_complete
+[2022-06-28 13:19:44][DEBUG](FtpUploadServiceImp.java:newFileItems:239) - is not MediaFile : /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-7b764b1d764edfeb.mp4_complete
+[2022-06-28 13:19:44][DEBUG](FtpUploadServiceImp.java:newFileItems:241) - Not MediaFile removed
+[2022-06-28 13:19:44][ERROR](FtpUploadDao.java:insertFileItem:154) - INSERT INTO FILES(PATH,DOMAIN,OLD_SIZE,NEW_SIZE,OLD_DATE,NEW_DATE,ERR_DATE,CHK_DATE,COMP_CNT,STATUS,UPLOAD_PATH,CID,CPATH,SNAP_PATH,TITLE,MD5,CHECKSUM_TYPE,POSTER_POS,POSTER_WIDTH,POSTER_HEIGHT) VALUES ('/home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-7b764b1d764edfeb.mp4_complete','jungin-kim', 138, 138, '2022-06-27 17:29:54.000', '2022-06-27 17:29:54.000', '1970-01-01 01:01:01.000', '2022-06-28 13:19:20.113', 0, 0,'/jungin-kim/20220627-7b764b1d764edfeb.mp4_complete','','','','20220627-7b764b1d764edfeb','', 0, -1, -1, -1)
+[2022-06-28 13:19:44][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4
+[2022-06-28 13:19:44][INFO ](CommonUtils.java:checkIsMediaContent:567) - physicalPath : /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4
+[2022-06-28 13:19:44][ERROR](CommonUtils.java:ExceptionLogPrint:333) - org.h2.jdbc.JdbcSQLException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-168]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.get(DbException.java:146)
+	at org.h2.message.DbException.get(DbException.java:135)
+	at org.h2.jdbc.JdbcConnection.checkClosed(JdbcConnection.java:1384)
+	at org.h2.jdbc.JdbcStatement.checkClosed(JdbcStatement.java:927)
+	at org.h2.jdbc.JdbcStatement.checkClosedForWrite(JdbcStatement.java:912)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:117)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:110)
+	at net.catenoid.watcher.uploadDao.FtpUploadDao.existFileItem(FtpUploadDao.java:85)
+	at net.catenoid.watcher.uploadImp.FtpUploadServiceImp.newFileItems(FtpUploadServiceImp.java:246)
+	at net.catenoid.watcher.uploadImp.FtpUploadServiceImp.renewWorkFileList(FtpUploadServiceImp.java:83)
+	at net.catenoid.watcher.job.Role_Watcher.execute(Role_Watcher.java:156)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:557)
+
+[2022-06-28 13:19:44][ERROR](CommonUtils.java:ExceptionLogPrint:334) - org.h2.jdbc.JdbcSQLException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-168]
+[2022-06-28 13:19:44][ERROR](CommonUtils.java:ExceptionLogPrint:333) - java.lang.NullPointerException
+	at net.catenoid.watcher.uploadDao.FtpUploadDao.sendWatchFiles(FtpUploadDao.java:313)
+	at net.catenoid.watcher.uploadImp.FtpUploadServiceImp.findWorkFileList(FtpUploadServiceImp.java:104)
+	at net.catenoid.watcher.job.Role_Watcher.execute(Role_Watcher.java:157)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:557)
+
+[2022-06-28 13:19:44][ERROR](CommonUtils.java:ExceptionLogPrint:334) - java.lang.NullPointerException
+[2022-06-28 13:20:04][INFO ](Watcher.java:start:94) - [PRG_START]
+[2022-06-28 13:20:04][INFO ](Watcher.java:printVersion:41) - [PRG_VER]null
+[2022-06-28 13:20:05][DEBUG](ThreadSafeClientConnManager.java:getConnection:235) - Get connection: {}->http://api.kr.dev.kollus.com, timeout = 0
+[2022-06-28 13:20:05][DEBUG](ThreadSafeClientConnManager.java:releaseConnection:280) - Released connection is reusable.
+[2022-06-28 13:20:05][INFO ](Config.java:printUrls:234) - URLS [watcher.list.insert] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/register
+[2022-06-28 13:20:05][INFO ](Config.java:printUrls:234) - URLS [watcher.list.complete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/complete
+[2022-06-28 13:20:05][INFO ](Config.java:printUrls:234) - URLS [watcher.list.delete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/remove
+[2022-06-28 13:20:05][INFO ](Config.java:printUrls:234) - URLS [watcher.usage_day_amount.insert] http://api.kr.dev.kollus.com/0/catenoid/usage_day_amount/register
+[2022-06-28 13:20:05][INFO ](Config.java:printUrls:234) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-06-28 13:20:05][INFO ](Config.java:printUrls:234) - URLS [transcoding_job.assign] http://jobmanager-dev-kr.kollus.com:8180/assign
+[2022-06-28 13:20:05][INFO ](Config.java:printUrls:234) - URLS [transcoding_job.manager] http://api.kr.dev.kollus.com/0/catenoid/transcoding_job/manager
+[2022-06-28 13:20:05][INFO ](Config.java:printUrls:234) - URLS [transcoding_file.register] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/register
+[2022-06-28 13:20:05][INFO ](Config.java:printUrls:234) - URLS [transcoding_file.update] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/update
+[2022-06-28 13:20:05][INFO ](Config.java:printUrls:234) - URLS [transcoding_file.complete] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete
+[2022-06-28 13:20:05][INFO ](Config.java:printUrls:234) - URLS [transcoding_file.complete_all] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete_all
+[2022-06-28 13:20:05][INFO ](Config.java:printUrls:234) - URLS [module.check_activated_at] http://api.kr.dev.kollus.com/0/catenoid/module/check_activated_at
+[2022-06-28 13:20:05][INFO ](Config.java:printUrls:234) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-06-28 13:20:05][DEBUG](Watcher.java:setupWatcher:233) - [PRG_CONF]job_watcherfile3=0/10 * * * * ?
+[2022-06-28 13:20:10][DEBUG](LinuxLineParser.java:parser:102) - /home/kollus/kollus-upload-v2/http_upload, /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220623-a8ba9ba81ecdfaae.mp4, 1655973017000, 9557596
+[2022-06-28 13:20:10][DEBUG](LinuxLineParser.java:parser:102) - /home/kollus/kollus-upload-v2/http_upload, /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-7b764b1d764edfeb.mp4, 1656318594000, 9557596
+[2022-06-28 13:20:10][DEBUG](LinuxLineParser.java:parser:102) - /home/kollus/kollus-upload-v2/http_upload, /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4, 1656318660000, 9557596
+[2022-06-28 13:20:10][DEBUG](LinuxLineParser.java:parser:102) - /home/kollus/kollus-upload-v2/http_upload, /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4_complete, 1656318660000, 138
+[2022-06-28 13:20:10][DEBUG](LinuxLineParser.java:parser:102) - /home/kollus/kollus-upload-v2/http_upload, /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-e9e93d9cd5c3196b.jpeg, 1656318709000, 568634
+[2022-06-28 13:20:10][DEBUG](LinuxLineParser.java:parser:102) - /home/kollus/kollus-upload-v2/http_upload, /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-e9e93d9cd5c3196b.jpeg_complete, 1656318709000, 138
+[2022-06-28 13:20:10][DEBUG](LinuxLineParser.java:parser:102) - /home/kollus/kollus-upload-v2/http_upload, /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220628-3aa5a85f0469057c.jpeg, 1656375313000, 568634
+[2022-06-28 13:20:10][DEBUG](LinuxLineParser.java:parser:102) - /home/kollus/kollus-upload-v2/http_upload, /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220628-3aa5a85f0469057c.jpeg_complete, 1656375325000, 138
+[2022-06-28 13:20:10][DEBUG](LinuxLineParser.java:parser:102) - /home/kollus/kollus-upload-v2/http_upload, /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220628-a14c8dc4161fdcbb.mp4, 1656379258000, 9557596
+[2022-06-28 13:20:10][DEBUG](LinuxLineParser.java:parser:102) - /home/kollus/kollus-upload-v2/http_upload, /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220628-a14c8dc4161fdcbb.mp4_complete, 1656379259000, 138
+[2022-06-28 13:20:13][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220623-a8ba9ba81ecdfaae.mp4
+[2022-06-28 13:20:14][INFO ](CommonUtils.java:checkIsMediaContent:567) - physicalPath : /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220623-a8ba9ba81ecdfaae.mp4
+[2022-06-28 13:20:19][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-7b764b1d764edfeb.mp4
+[2022-06-28 13:20:20][INFO ](CommonUtils.java:checkIsMediaContent:567) - physicalPath : /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-7b764b1d764edfeb.mp4
+[2022-06-28 13:20:27][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4
+[2022-06-28 13:20:28][INFO ](CommonUtils.java:checkIsMediaContent:567) - physicalPath : /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4
+[2022-06-28 13:20:30][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4_complete
+[2022-06-28 13:20:33][INFO ](CommonUtils.java:checkIsMediaContent:567) - physicalPath : /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4_complete
+[2022-06-28 13:20:33][INFO ](CommonUtils.java:checkIsMediaContent:593) - format : 
+[2022-06-28 13:20:33][INFO ](CommonUtils.java:checkIsMediaContent:594) - duration : 
+[2022-06-28 13:20:33][INFO ](CommonUtils.java:checkIsMediaContent:595) - videoDuration : 
+[2022-06-28 13:20:33][INFO ](CommonUtils.java:checkIsMediaContent:596) - videoFormat : 
+[2022-06-28 13:20:33][INFO ](CommonUtils.java:checkIsMediaContent:597) - videoCodec : 
+[2022-06-28 13:20:33][INFO ](CommonUtils.java:checkIsMediaContent:598) - videoBitrate : 
+[2022-06-28 13:20:33][INFO ](CommonUtils.java:checkIsMediaContent:599) - videoWidth : 
+[2022-06-28 13:20:33][INFO ](CommonUtils.java:checkIsMediaContent:600) - videoHeight : 
+[2022-06-28 13:20:33][INFO ](CommonUtils.java:checkIsMediaContent:601) - video frameRate : 
+[2022-06-28 13:20:33][INFO ](CommonUtils.java:checkIsMediaContent:602) - video displayAspectRatio : 
+[2022-06-28 13:20:33][INFO ](CommonUtils.java:checkIsMediaContent:603) - video rotation : 
+[2022-06-28 13:20:33][INFO ](CommonUtils.java:checkIsMediaContent:604) - video scanType : 
+[2022-06-28 13:20:33][INFO ](CommonUtils.java:checkIsMediaContent:605) - audio format : 
+[2022-06-28 13:20:33][INFO ](CommonUtils.java:checkIsMediaContent:606) - audio codec : 
+[2022-06-28 13:20:33][INFO ](CommonUtils.java:checkIsMediaContent:607) - audio bitrate : 
+[2022-06-28 13:20:33][INFO ](CommonUtils.java:checkIsMediaContent:608) - audio samplingRate : 
+[2022-06-28 13:20:33][INFO ](CommonUtils.java:checkIsMediaContent:609) - audio duration : 
+[2022-06-28 13:20:33][INFO ](CommonUtils.java:checkIsMediaContent:610) - image format : 
+[2022-06-28 13:20:33][INFO ](CommonUtils.java:checkIsMediaContent:611) - image width : 
+[2022-06-28 13:20:33][INFO ](CommonUtils.java:checkIsMediaContent:612) - image height : 
+[2022-06-28 13:20:36][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-e9e93d9cd5c3196b.jpeg
+[2022-06-28 13:20:36][INFO ](CommonUtils.java:checkIsMediaContent:567) - physicalPath : /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-e9e93d9cd5c3196b.jpeg
+[2022-06-28 13:20:37][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-e9e93d9cd5c3196b.jpeg_complete
+[2022-06-28 13:20:38][INFO ](CommonUtils.java:checkIsMediaContent:567) - physicalPath : /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-e9e93d9cd5c3196b.jpeg_complete
+[2022-06-28 13:20:38][INFO ](CommonUtils.java:checkIsMediaContent:593) - format : 
+[2022-06-28 13:20:38][INFO ](CommonUtils.java:checkIsMediaContent:594) - duration : 
+[2022-06-28 13:20:38][INFO ](CommonUtils.java:checkIsMediaContent:595) - videoDuration : 
+[2022-06-28 13:20:38][INFO ](CommonUtils.java:checkIsMediaContent:596) - videoFormat : 
+[2022-06-28 13:20:38][INFO ](CommonUtils.java:checkIsMediaContent:597) - videoCodec : 
+[2022-06-28 13:20:38][INFO ](CommonUtils.java:checkIsMediaContent:598) - videoBitrate : 
+[2022-06-28 13:20:38][INFO ](CommonUtils.java:checkIsMediaContent:599) - videoWidth : 
+[2022-06-28 13:20:38][INFO ](CommonUtils.java:checkIsMediaContent:600) - videoHeight : 
+[2022-06-28 13:20:38][INFO ](CommonUtils.java:checkIsMediaContent:601) - video frameRate : 
+[2022-06-28 13:20:38][INFO ](CommonUtils.java:checkIsMediaContent:602) - video displayAspectRatio : 
+[2022-06-28 13:20:38][INFO ](CommonUtils.java:checkIsMediaContent:603) - video rotation : 
+[2022-06-28 13:20:38][INFO ](CommonUtils.java:checkIsMediaContent:604) - video scanType : 
+[2022-06-28 13:20:38][INFO ](CommonUtils.java:checkIsMediaContent:605) - audio format : 
+[2022-06-28 13:20:38][INFO ](CommonUtils.java:checkIsMediaContent:606) - audio codec : 
+[2022-06-28 13:20:38][INFO ](CommonUtils.java:checkIsMediaContent:607) - audio bitrate : 
+[2022-06-28 13:20:38][INFO ](CommonUtils.java:checkIsMediaContent:608) - audio samplingRate : 
+[2022-06-28 13:20:38][INFO ](CommonUtils.java:checkIsMediaContent:609) - audio duration : 
+[2022-06-28 13:20:38][INFO ](CommonUtils.java:checkIsMediaContent:610) - image format : 
+[2022-06-28 13:20:38][INFO ](CommonUtils.java:checkIsMediaContent:611) - image width : 
+[2022-06-28 13:20:38][INFO ](CommonUtils.java:checkIsMediaContent:612) - image height : 
+[2022-06-28 13:20:40][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220628-3aa5a85f0469057c.jpeg
+[2022-06-28 13:20:40][INFO ](CommonUtils.java:checkIsMediaContent:567) - physicalPath : /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220628-3aa5a85f0469057c.jpeg
+[2022-06-28 13:20:41][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220628-3aa5a85f0469057c.jpeg_complete
+[2022-06-28 13:20:42][INFO ](CommonUtils.java:checkIsMediaContent:567) - physicalPath : /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220628-3aa5a85f0469057c.jpeg_complete
+[2022-06-28 13:20:42][INFO ](CommonUtils.java:checkIsMediaContent:593) - format : 
+[2022-06-28 13:20:42][INFO ](CommonUtils.java:checkIsMediaContent:594) - duration : 
+[2022-06-28 13:20:42][INFO ](CommonUtils.java:checkIsMediaContent:595) - videoDuration : 
+[2022-06-28 13:20:42][INFO ](CommonUtils.java:checkIsMediaContent:596) - videoFormat : 
+[2022-06-28 13:20:42][INFO ](CommonUtils.java:checkIsMediaContent:597) - videoCodec : 
+[2022-06-28 13:20:42][INFO ](CommonUtils.java:checkIsMediaContent:598) - videoBitrate : 
+[2022-06-28 13:20:42][INFO ](CommonUtils.java:checkIsMediaContent:599) - videoWidth : 
+[2022-06-28 13:20:42][INFO ](CommonUtils.java:checkIsMediaContent:600) - videoHeight : 
+[2022-06-28 13:20:42][INFO ](CommonUtils.java:checkIsMediaContent:601) - video frameRate : 
+[2022-06-28 13:20:42][INFO ](CommonUtils.java:checkIsMediaContent:602) - video displayAspectRatio : 
+[2022-06-28 13:20:42][INFO ](CommonUtils.java:checkIsMediaContent:603) - video rotation : 
+[2022-06-28 13:20:42][INFO ](CommonUtils.java:checkIsMediaContent:604) - video scanType : 
+[2022-06-28 13:20:42][INFO ](CommonUtils.java:checkIsMediaContent:605) - audio format : 
+[2022-06-28 13:20:42][INFO ](CommonUtils.java:checkIsMediaContent:606) - audio codec : 
+[2022-06-28 13:20:42][INFO ](CommonUtils.java:checkIsMediaContent:607) - audio bitrate : 
+[2022-06-28 13:20:42][INFO ](CommonUtils.java:checkIsMediaContent:608) - audio samplingRate : 
+[2022-06-28 13:20:42][INFO ](CommonUtils.java:checkIsMediaContent:609) - audio duration : 
+[2022-06-28 13:20:42][INFO ](CommonUtils.java:checkIsMediaContent:610) - image format : 
+[2022-06-28 13:20:42][INFO ](CommonUtils.java:checkIsMediaContent:611) - image width : 
+[2022-06-28 13:20:42][INFO ](CommonUtils.java:checkIsMediaContent:612) - image height : 
+[2022-06-28 13:20:43][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220628-a14c8dc4161fdcbb.mp4
+[2022-06-28 13:20:44][INFO ](CommonUtils.java:checkIsMediaContent:567) - physicalPath : /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220628-a14c8dc4161fdcbb.mp4
+[2022-06-28 13:20:45][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220628-a14c8dc4161fdcbb.mp4_complete
+[2022-06-28 13:20:45][INFO ](CommonUtils.java:checkIsMediaContent:567) - physicalPath : /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220628-a14c8dc4161fdcbb.mp4_complete
+[2022-06-28 13:20:45][INFO ](CommonUtils.java:checkIsMediaContent:593) - format : 
+[2022-06-28 13:20:45][INFO ](CommonUtils.java:checkIsMediaContent:594) - duration : 
+[2022-06-28 13:20:45][INFO ](CommonUtils.java:checkIsMediaContent:595) - videoDuration : 
+[2022-06-28 13:20:45][INFO ](CommonUtils.java:checkIsMediaContent:596) - videoFormat : 
+[2022-06-28 13:20:45][INFO ](CommonUtils.java:checkIsMediaContent:597) - videoCodec : 
+[2022-06-28 13:20:45][INFO ](CommonUtils.java:checkIsMediaContent:598) - videoBitrate : 
+[2022-06-28 13:20:45][INFO ](CommonUtils.java:checkIsMediaContent:599) - videoWidth : 
+[2022-06-28 13:20:45][INFO ](CommonUtils.java:checkIsMediaContent:600) - videoHeight : 
+[2022-06-28 13:20:45][INFO ](CommonUtils.java:checkIsMediaContent:601) - video frameRate : 
+[2022-06-28 13:20:45][INFO ](CommonUtils.java:checkIsMediaContent:602) - video displayAspectRatio : 
+[2022-06-28 13:20:45][INFO ](CommonUtils.java:checkIsMediaContent:603) - video rotation : 
+[2022-06-28 13:20:45][INFO ](CommonUtils.java:checkIsMediaContent:604) - video scanType : 
+[2022-06-28 13:20:45][INFO ](CommonUtils.java:checkIsMediaContent:605) - audio format : 
+[2022-06-28 13:20:45][INFO ](CommonUtils.java:checkIsMediaContent:606) - audio codec : 
+[2022-06-28 13:20:45][INFO ](CommonUtils.java:checkIsMediaContent:607) - audio bitrate : 
+[2022-06-28 13:20:45][INFO ](CommonUtils.java:checkIsMediaContent:608) - audio samplingRate : 
+[2022-06-28 13:20:45][INFO ](CommonUtils.java:checkIsMediaContent:609) - audio duration : 
+[2022-06-28 13:20:45][INFO ](CommonUtils.java:checkIsMediaContent:610) - image format : 
+[2022-06-28 13:20:45][INFO ](CommonUtils.java:checkIsMediaContent:611) - image width : 
+[2022-06-28 13:20:45][INFO ](CommonUtils.java:checkIsMediaContent:612) - image height : 
+[2022-06-28 13:20:48][DEBUG](FtpUploadDao.java:sendWatchFiles:250) - sql result = rs5: org.h2.result.LocalResult@5aae17af columns: 19 rows: 12 pos: 0
+[2022-06-28 13:20:56][DEBUG](CommonUtils.java:fromResultSet:401) - /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220623-a8ba9ba81ecdfaae.mp4
+[2022-06-28 13:20:56][INFO ](CommonUtils.java:pathToTRmpk:720) - [ pathToTRmpk 1/3 ] 20220623-a8ba9ba81ecdfaae.mp4
+[2022-06-28 13:20:56][INFO ](CommonUtils.java:pathToTRmpk:724) - [ pathToTRmpk 2/3 ] 20220623-a8ba9ba81ecdfaae
+[2022-06-28 13:20:56][DEBUG](CommonUtils.java:fromResultSet:438) - fromResultSet Add TransCoder : null
+[2022-06-28 13:20:56][DEBUG](CommonUtils.java:fromResultSet:439) - fromResultSet Path : /jungin-kim/20220623-a8ba9ba81ecdfaae.mp4
+[2022-06-28 13:20:56][DEBUG](CommonUtils.java:fromResultSet:440) - fromResultSet item : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"physical_path":"/home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220623-a8ba9ba81ecdfaae.mp4","upload_path":"/jungin-kim/20220623-a8ba9ba81ecdfaae.mp4","filesize":9557596,"filesize_str":"9.1 MB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"20220623-a8ba9ba81ecdfaae","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-06-28 13:21:16][DEBUG](FtpUploadDao.java:sendWatchFiles:250) - sql result = rs5: org.h2.result.LocalResult@5aae17af columns: 19 rows: 12 pos: 1
+[2022-06-28 13:21:17][DEBUG](CommonUtils.java:fromResultSet:401) - /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220623-a8ba9ba81ecdfaae.mp4_complete
+[2022-06-28 13:21:17][INFO ](CommonUtils.java:pathToTRmpk:720) - [ pathToTRmpk 1/3 ] 20220623-a8ba9ba81ecdfaae.mp4_complete
+[2022-06-28 13:21:17][INFO ](CommonUtils.java:pathToTRmpk:724) - [ pathToTRmpk 2/3 ] 20220623-a8ba9ba81ecdfaae
+[2022-06-28 13:21:17][DEBUG](CommonUtils.java:fromResultSet:438) - fromResultSet Add TransCoder : null
+[2022-06-28 13:21:17][DEBUG](CommonUtils.java:fromResultSet:439) - fromResultSet Path : /jungin-kim/20220623-a8ba9ba81ecdfaae.mp4_complete
+[2022-06-28 13:21:17][DEBUG](CommonUtils.java:fromResultSet:440) - fromResultSet item : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"physical_path":"/home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220623-a8ba9ba81ecdfaae.mp4_complete","upload_path":"/jungin-kim/20220623-a8ba9ba81ecdfaae.mp4_complete","filesize":138,"filesize_str":"138 B","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"20220623-a8ba9ba81ecdfaae","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-06-28 13:23:45][DEBUG](FtpUploadDao.java:sendWatchFiles:250) - sql result = rs5: org.h2.result.LocalResult@5aae17af columns: 19 rows: 12 pos: 2
+[2022-06-28 13:23:48][DEBUG](CommonUtils.java:fromResultSet:401) - /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-7b764b1d764edfeb.mp4
+[2022-06-28 13:23:48][INFO ](CommonUtils.java:pathToTRmpk:720) - [ pathToTRmpk 1/3 ] 20220627-7b764b1d764edfeb.mp4
+[2022-06-28 13:23:48][INFO ](CommonUtils.java:pathToTRmpk:724) - [ pathToTRmpk 2/3 ] 20220627-7b764b1d764edfeb
+[2022-06-28 13:23:48][DEBUG](CommonUtils.java:fromResultSet:438) - fromResultSet Add TransCoder : null
+[2022-06-28 13:23:48][DEBUG](CommonUtils.java:fromResultSet:439) - fromResultSet Path : /jungin-kim/20220627-7b764b1d764edfeb.mp4
+[2022-06-28 13:23:48][DEBUG](CommonUtils.java:fromResultSet:440) - fromResultSet item : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"physical_path":"/home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-7b764b1d764edfeb.mp4","upload_path":"/jungin-kim/20220627-7b764b1d764edfeb.mp4","filesize":9557596,"filesize_str":"9.1 MB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"20220627-7b764b1d764edfeb","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-06-28 13:23:48][DEBUG](FtpUploadDao.java:sendWatchFiles:250) - sql result = rs5: org.h2.result.LocalResult@5aae17af columns: 19 rows: 12 pos: 3
+[2022-06-28 13:23:48][DEBUG](CommonUtils.java:fromResultSet:401) - /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-7b764b1d764edfeb.mp4_complete
+[2022-06-28 13:23:48][INFO ](CommonUtils.java:pathToTRmpk:720) - [ pathToTRmpk 1/3 ] 20220627-7b764b1d764edfeb.mp4_complete
+[2022-06-28 13:23:48][INFO ](CommonUtils.java:pathToTRmpk:724) - [ pathToTRmpk 2/3 ] 20220627-7b764b1d764edfeb
+[2022-06-28 13:23:48][DEBUG](CommonUtils.java:fromResultSet:438) - fromResultSet Add TransCoder : null
+[2022-06-28 13:23:48][DEBUG](CommonUtils.java:fromResultSet:439) - fromResultSet Path : /jungin-kim/20220627-7b764b1d764edfeb.mp4_complete
+[2022-06-28 13:23:48][DEBUG](CommonUtils.java:fromResultSet:440) - fromResultSet item : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"physical_path":"/home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-7b764b1d764edfeb.mp4_complete","upload_path":"/jungin-kim/20220627-7b764b1d764edfeb.mp4_complete","filesize":138,"filesize_str":"138 B","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"20220627-7b764b1d764edfeb","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-06-28 13:23:48][DEBUG](FtpUploadDao.java:sendWatchFiles:250) - sql result = rs5: org.h2.result.LocalResult@5aae17af columns: 19 rows: 12 pos: 4
+[2022-06-28 13:23:48][DEBUG](CommonUtils.java:fromResultSet:401) - /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4
+[2022-06-28 13:23:48][INFO ](CommonUtils.java:pathToTRmpk:720) - [ pathToTRmpk 1/3 ] 20220627-80607469f8ba85d8.mp4
+[2022-06-28 13:23:48][INFO ](CommonUtils.java:pathToTRmpk:724) - [ pathToTRmpk 2/3 ] 20220627-80607469f8ba85d8
+[2022-06-28 13:23:48][DEBUG](CommonUtils.java:fromResultSet:438) - fromResultSet Add TransCoder : null
+[2022-06-28 13:23:48][DEBUG](CommonUtils.java:fromResultSet:439) - fromResultSet Path : /jungin-kim/20220627-80607469f8ba85d8.mp4
+[2022-06-28 13:23:48][DEBUG](CommonUtils.java:fromResultSet:440) - fromResultSet item : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"physical_path":"/home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4","upload_path":"/jungin-kim/20220627-80607469f8ba85d8.mp4","filesize":9557596,"filesize_str":"9.1 MB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"20220627-80607469f8ba85d8","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-06-28 13:23:48][DEBUG](FtpUploadDao.java:sendWatchFiles:250) - sql result = rs5: org.h2.result.LocalResult@5aae17af columns: 19 rows: 12 pos: 5
+[2022-06-28 13:23:48][DEBUG](CommonUtils.java:fromResultSet:401) - /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4_complete
+[2022-06-28 13:23:48][INFO ](CommonUtils.java:pathToTRmpk:720) - [ pathToTRmpk 1/3 ] 20220627-80607469f8ba85d8.mp4_complete
+[2022-06-28 13:23:48][INFO ](CommonUtils.java:pathToTRmpk:724) - [ pathToTRmpk 2/3 ] 20220627-80607469f8ba85d8
+[2022-06-28 13:23:48][DEBUG](CommonUtils.java:fromResultSet:438) - fromResultSet Add TransCoder : null
+[2022-06-28 13:23:48][DEBUG](CommonUtils.java:fromResultSet:439) - fromResultSet Path : /jungin-kim/20220627-80607469f8ba85d8.mp4_complete
+[2022-06-28 13:23:48][DEBUG](CommonUtils.java:fromResultSet:440) - fromResultSet item : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"physical_path":"/home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4_complete","upload_path":"/jungin-kim/20220627-80607469f8ba85d8.mp4_complete","filesize":138,"filesize_str":"138 B","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"20220627-80607469f8ba85d8","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-06-28 13:23:48][DEBUG](FtpUploadDao.java:sendWatchFiles:250) - sql result = rs5: org.h2.result.LocalResult@5aae17af columns: 19 rows: 12 pos: 6
+[2022-06-28 13:23:48][DEBUG](CommonUtils.java:fromResultSet:401) - /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-e9e93d9cd5c3196b.jpeg
+[2022-06-28 13:23:48][INFO ](CommonUtils.java:pathToTRmpk:720) - [ pathToTRmpk 1/3 ] 20220627-e9e93d9cd5c3196b.jpeg
+[2022-06-28 13:23:48][INFO ](CommonUtils.java:pathToTRmpk:724) - [ pathToTRmpk 2/3 ] 20220627-e9e93d9cd5c3196b
+[2022-06-28 13:23:48][DEBUG](CommonUtils.java:fromResultSet:438) - fromResultSet Add TransCoder : null
+[2022-06-28 13:23:48][DEBUG](CommonUtils.java:fromResultSet:439) - fromResultSet Path : /jungin-kim/20220627-e9e93d9cd5c3196b.jpeg
+[2022-06-28 13:23:48][DEBUG](CommonUtils.java:fromResultSet:440) - fromResultSet item : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"physical_path":"/home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-e9e93d9cd5c3196b.jpeg","upload_path":"/jungin-kim/20220627-e9e93d9cd5c3196b.jpeg","filesize":568634,"filesize_str":"555.3 KB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"20220627-e9e93d9cd5c3196b","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-06-28 13:23:48][DEBUG](FtpUploadDao.java:sendWatchFiles:250) - sql result = rs5: org.h2.result.LocalResult@5aae17af columns: 19 rows: 12 pos: 7
+[2022-06-28 13:23:48][DEBUG](CommonUtils.java:fromResultSet:401) - /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-e9e93d9cd5c3196b.jpeg_complete
+[2022-06-28 13:23:48][INFO ](CommonUtils.java:pathToTRmpk:720) - [ pathToTRmpk 1/3 ] 20220627-e9e93d9cd5c3196b.jpeg_complete
+[2022-06-28 13:23:48][INFO ](CommonUtils.java:pathToTRmpk:724) - [ pathToTRmpk 2/3 ] 20220627-e9e93d9cd5c3196b
+[2022-06-28 13:23:48][DEBUG](CommonUtils.java:fromResultSet:438) - fromResultSet Add TransCoder : null
+[2022-06-28 13:23:48][DEBUG](CommonUtils.java:fromResultSet:439) - fromResultSet Path : /jungin-kim/20220627-e9e93d9cd5c3196b.jpeg_complete
+[2022-06-28 13:23:48][DEBUG](CommonUtils.java:fromResultSet:440) - fromResultSet item : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"physical_path":"/home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-e9e93d9cd5c3196b.jpeg_complete","upload_path":"/jungin-kim/20220627-e9e93d9cd5c3196b.jpeg_complete","filesize":138,"filesize_str":"138 B","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"20220627-e9e93d9cd5c3196b","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-06-28 13:23:48][DEBUG](FtpUploadDao.java:sendWatchFiles:250) - sql result = rs5: org.h2.result.LocalResult@5aae17af columns: 19 rows: 12 pos: 8
+[2022-06-28 13:23:48][DEBUG](CommonUtils.java:fromResultSet:401) - /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220628-3aa5a85f0469057c.jpeg
+[2022-06-28 13:23:48][INFO ](CommonUtils.java:pathToTRmpk:720) - [ pathToTRmpk 1/3 ] 20220628-3aa5a85f0469057c.jpeg
+[2022-06-28 13:23:48][INFO ](CommonUtils.java:pathToTRmpk:724) - [ pathToTRmpk 2/3 ] 20220628-3aa5a85f0469057c
+[2022-06-28 13:23:48][DEBUG](CommonUtils.java:fromResultSet:438) - fromResultSet Add TransCoder : null
+[2022-06-28 13:23:48][DEBUG](CommonUtils.java:fromResultSet:439) - fromResultSet Path : /jungin-kim/20220628-3aa5a85f0469057c.jpeg
+[2022-06-28 13:23:48][DEBUG](CommonUtils.java:fromResultSet:440) - fromResultSet item : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"physical_path":"/home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220628-3aa5a85f0469057c.jpeg","upload_path":"/jungin-kim/20220628-3aa5a85f0469057c.jpeg","filesize":568634,"filesize_str":"555.3 KB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"20220628-3aa5a85f0469057c","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-06-28 13:23:48][DEBUG](FtpUploadDao.java:sendWatchFiles:250) - sql result = rs5: org.h2.result.LocalResult@5aae17af columns: 19 rows: 12 pos: 9
+[2022-06-28 13:23:48][DEBUG](CommonUtils.java:fromResultSet:401) - /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220628-3aa5a85f0469057c.jpeg_complete
+[2022-06-28 13:23:48][INFO ](CommonUtils.java:pathToTRmpk:720) - [ pathToTRmpk 1/3 ] 20220628-3aa5a85f0469057c.jpeg_complete
+[2022-06-28 13:23:48][INFO ](CommonUtils.java:pathToTRmpk:724) - [ pathToTRmpk 2/3 ] 20220628-3aa5a85f0469057c
+[2022-06-28 13:23:48][DEBUG](CommonUtils.java:fromResultSet:438) - fromResultSet Add TransCoder : null
+[2022-06-28 13:23:48][DEBUG](CommonUtils.java:fromResultSet:439) - fromResultSet Path : /jungin-kim/20220628-3aa5a85f0469057c.jpeg_complete
+[2022-06-28 13:23:48][DEBUG](CommonUtils.java:fromResultSet:440) - fromResultSet item : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"physical_path":"/home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220628-3aa5a85f0469057c.jpeg_complete","upload_path":"/jungin-kim/20220628-3aa5a85f0469057c.jpeg_complete","filesize":138,"filesize_str":"138 B","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"20220628-3aa5a85f0469057c","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-06-28 13:23:48][INFO ](FtpUploadDao.java:sendWatchFiles:266) - We will process only 10 items, because large request can occur error.
+[2022-06-28 13:23:48][DEBUG](FtpUploadDao.java:sendWatchFiles:279) - file register 보내는값 = [{"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"physical_path":"/home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220623-a8ba9ba81ecdfaae.mp4","upload_path":"/jungin-kim/20220623-a8ba9ba81ecdfaae.mp4","filesize":9557596,"filesize_str":"9.1 MB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"20220623-a8ba9ba81ecdfaae","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}, {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"physical_path":"/home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220623-a8ba9ba81ecdfaae.mp4_complete","upload_path":"/jungin-kim/20220623-a8ba9ba81ecdfaae.mp4_complete","filesize":138,"filesize_str":"138 B","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"20220623-a8ba9ba81ecdfaae","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}, {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"physical_path":"/home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-7b764b1d764edfeb.mp4","upload_path":"/jungin-kim/20220627-7b764b1d764edfeb.mp4","filesize":9557596,"filesize_str":"9.1 MB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"20220627-7b764b1d764edfeb","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}, {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"physical_path":"/home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-7b764b1d764edfeb.mp4_complete","upload_path":"/jungin-kim/20220627-7b764b1d764edfeb.mp4_complete","filesize":138,"filesize_str":"138 B","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"20220627-7b764b1d764edfeb","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}, {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"physical_path":"/home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4","upload_path":"/jungin-kim/20220627-80607469f8ba85d8.mp4","filesize":9557596,"filesize_str":"9.1 MB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"20220627-80607469f8ba85d8","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}, {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"physical_path":"/home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4_complete","upload_path":"/jungin-kim/20220627-80607469f8ba85d8.mp4_complete","filesize":138,"filesize_str":"138 B","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"20220627-80607469f8ba85d8","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}, {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"physical_path":"/home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-e9e93d9cd5c3196b.jpeg","upload_path":"/jungin-kim/20220627-e9e93d9cd5c3196b.jpeg","filesize":568634,"filesize_str":"555.3 KB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"20220627-e9e93d9cd5c3196b","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}, {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"physical_path":"/home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-e9e93d9cd5c3196b.jpeg_complete","upload_path":"/jungin-kim/20220627-e9e93d9cd5c3196b.jpeg_complete","filesize":138,"filesize_str":"138 B","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"20220627-e9e93d9cd5c3196b","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}, {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"physical_path":"/home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220628-3aa5a85f0469057c.jpeg","upload_path":"/jungin-kim/20220628-3aa5a85f0469057c.jpeg","filesize":568634,"filesize_str":"555.3 KB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"20220628-3aa5a85f0469057c","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}, {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"physical_path":"/home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220628-3aa5a85f0469057c.jpeg_complete","upload_path":"/jungin-kim/20220628-3aa5a85f0469057c.jpeg_complete","filesize":138,"filesize_str":"138 B","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"20220628-3aa5a85f0469057c","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}]
+[2022-06-28 13:23:48][DEBUG](CommonUtils.java:getHttpResponse:176) - Post Requests Transfer Content : watcher_files=[{"kind":2,"module_key":"watcherfile3","is_audio_file":0,"checksum_type":0,"use_encryption":0,"physical_path":"/home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220623-a8ba9ba81ecdfaae.mp4","upload_path":"/jungin-kim/20220623-a8ba9ba81ecdfaae.mp4","filesize":9557596,"filesize_str":"9.1 MB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"20220623-a8ba9ba81ecdfaae","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""},{"kind":2,"module_key":"watcherfile3","is_audio_file":0,"checksum_type":0,"use_encryption":0,"physical_path":"/home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220623-a8ba9ba81ecdfaae.mp4_complete","upload_path":"/jungin-kim/20220623-a8ba9ba81ecdfaae.mp4_complete","filesize":138,"filesize_str":"138 B","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"20220623-a8ba9ba81ecdfaae","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""},{"kind":2,"module_key":"watcherfile3","is_audio_file":0,"checksum_type":0,"use_encryption":0,"physical_path":"/home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-7b764b1d764edfeb.mp4","upload_path":"/jungin-kim/20220627-7b764b1d764edfeb.mp4","filesize":9557596,"filesize_str":"9.1 MB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"20220627-7b764b1d764edfeb","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""},{"kind":2,"module_key":"watcherfile3","is_audio_file":0,"checksum_type":0,"use_encryption":0,"physical_path":"/home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-7b764b1d764edfeb.mp4_complete","upload_path":"/jungin-kim/20220627-7b764b1d764edfeb.mp4_complete","filesize":138,"filesize_str":"138 B","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"20220627-7b764b1d764edfeb","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""},{"kind":2,"module_key":"watcherfile3","is_audio_file":0,"checksum_type":0,"use_encryption":0,"physical_path":"/home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4","upload_path":"/jungin-kim/20220627-80607469f8ba85d8.mp4","filesize":9557596,"filesize_str":"9.1 MB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"20220627-80607469f8ba85d8","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""},{"kind":2,"module_key":"watcherfile3","is_audio_file":0,"checksum_type":0,"use_encryption":0,"physical_path":"/home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4_complete","upload_path":"/jungin-kim/20220627-80607469f8ba85d8.mp4_complete","filesize":138,"filesize_str":"138 B","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"20220627-80607469f8ba85d8","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""},{"kind":2,"module_key":"watcherfile3","is_audio_file":0,"checksum_type":0,"use_encryption":0,"physical_path":"/home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-e9e93d9cd5c3196b.jpeg","upload_path":"/jungin-kim/20220627-e9e93d9cd5c3196b.jpeg","filesize":568634,"filesize_str":"555.3 KB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"20220627-e9e93d9cd5c3196b","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""},{"kind":2,"module_key":"watcherfile3","is_audio_file":0,"checksum_type":0,"use_encryption":0,"physical_path":"/home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-e9e93d9cd5c3196b.jpeg_complete","upload_path":"/jungin-kim/20220627-e9e93d9cd5c3196b.jpeg_complete","filesize":138,"filesize_str":"138 B","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"20220627-e9e93d9cd5c3196b","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""},{"kind":2,"module_key":"watcherfile3","is_audio_file":0,"checksum_type":0,"use_encryption":0,"physical_path":"/home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220628-3aa5a85f0469057c.jpeg","upload_path":"/jungin-kim/20220628-3aa5a85f0469057c.jpeg","filesize":568634,"filesize_str":"555.3 KB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"20220628-3aa5a85f0469057c","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""},{"kind":2,"module_key":"watcherfile3","is_audio_file":0,"checksum_type":0,"use_encryption":0,"physical_path":"/home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220628-3aa5a85f0469057c.jpeg_complete","upload_path":"/jungin-kim/20220628-3aa5a85f0469057c.jpeg_complete","filesize":138,"filesize_str":"138 B","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"20220628-3aa5a85f0469057c","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}]
+[2022-06-28 13:31:16][INFO ](Watcher.java:start:94) - [PRG_START]
+[2022-06-28 13:31:16][INFO ](Watcher.java:printVersion:41) - [PRG_VER]null
+[2022-06-28 13:31:16][DEBUG](ThreadSafeClientConnManager.java:getConnection:235) - Get connection: {}->http://api.kr.dev.kollus.com, timeout = 0
+[2022-06-28 13:31:16][DEBUG](ThreadSafeClientConnManager.java:releaseConnection:280) - Released connection is reusable.
+[2022-06-28 13:31:16][INFO ](Config.java:printUrls:234) - URLS [watcher.list.insert] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/register
+[2022-06-28 13:31:16][INFO ](Config.java:printUrls:234) - URLS [watcher.list.complete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/complete
+[2022-06-28 13:31:16][INFO ](Config.java:printUrls:234) - URLS [watcher.list.delete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/remove
+[2022-06-28 13:31:16][INFO ](Config.java:printUrls:234) - URLS [watcher.usage_day_amount.insert] http://api.kr.dev.kollus.com/0/catenoid/usage_day_amount/register
+[2022-06-28 13:31:16][INFO ](Config.java:printUrls:234) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-06-28 13:31:16][INFO ](Config.java:printUrls:234) - URLS [transcoding_job.assign] http://jobmanager-dev-kr.kollus.com:8180/assign
+[2022-06-28 13:31:16][INFO ](Config.java:printUrls:234) - URLS [transcoding_job.manager] http://api.kr.dev.kollus.com/0/catenoid/transcoding_job/manager
+[2022-06-28 13:31:16][INFO ](Config.java:printUrls:234) - URLS [transcoding_file.register] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/register
+[2022-06-28 13:31:16][INFO ](Config.java:printUrls:234) - URLS [transcoding_file.update] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/update
+[2022-06-28 13:31:16][INFO ](Config.java:printUrls:234) - URLS [transcoding_file.complete] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete
+[2022-06-28 13:31:16][INFO ](Config.java:printUrls:234) - URLS [transcoding_file.complete_all] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete_all
+[2022-06-28 13:31:16][INFO ](Config.java:printUrls:234) - URLS [module.check_activated_at] http://api.kr.dev.kollus.com/0/catenoid/module/check_activated_at
+[2022-06-28 13:31:16][INFO ](Config.java:printUrls:234) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-06-28 13:31:16][DEBUG](Watcher.java:setupWatcher:233) - [PRG_CONF]job_watcherfile1=0/10 * * * * ?
+[2022-06-28 13:31:57][DEBUG](CommonUtils.java:fromResultSet:401) - /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4
+[2022-06-28 13:31:57][INFO ](CommonUtils.java:pathToTRmpk:720) - [ pathToTRmpk 1/3 ] 20220627-80607469f8ba85d8.mp4
+[2022-06-28 13:31:57][INFO ](CommonUtils.java:pathToTRmpk:724) - [ pathToTRmpk 2/3 ] 20220627-80607469f8ba85d8
+[2022-06-28 13:31:57][DEBUG](CommonUtils.java:fromResultSet:438) - fromResultSet Add TransCoder : null
+[2022-06-28 13:31:57][DEBUG](CommonUtils.java:fromResultSet:439) - fromResultSet Path : /jungin-kim/20220627-80607469f8ba85d8.mp4
+[2022-06-28 13:31:57][DEBUG](CommonUtils.java:fromResultSet:440) - fromResultSet item : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"physical_path":"/home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4","upload_path":"/jungin-kim/20220627-80607469f8ba85d8.mp4","filesize":9557596,"filesize_str":"9.1 MB","lastmodified":1656318660000,"lastmodified_str":"2022-06-27T17:31:00.000+0900","content_provider_key":"jungin-kim","key":"20220627-80607469f8ba85d8","content_path":"","snapshot_path":"","title":"20220627-80607469f8ba85d8","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-06-28 13:32:02][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4
+[2022-06-28 13:32:05][INFO ](CommonUtils.java:setMediaInfo:649) - MediaInfo information : %7B%0A++%22format%22%3A+%22MPEG-4%22%2C%0A++%22duration%22%3A+%22428269%22%2C%0A++%22video.format%22%3A+%22AVC%22%2C%0A++%22video.duration%22%3A+%22428267%22%2C%0A++%22video.bitrate%22%3A+%2246598%22%2C%0A++%22video.width%22%3A+%221280%22%2C%0A++%22video.height%22%3A+%22720%22%2C%0A++%22video.framerate%22%3A+%2230.000%22%2C%0A++%22video.ratio%22%3A+%221.778%22%2C%0A++%22video.rotation%22%3A+%220.000%22%2C%0A++%22video.scantype%22%3A+%22Progressive%22%2C%0A++%22audio.format%22%3A+%22AAC%22%2C%0A++%22audio.bitrate%22%3A+%22128014%22%2C%0A++%22audio.sample.rate%22%3A+%2244100%22%2C%0A++%22audio.duration%22%3A+%22428269%22%0A%7D
+[2022-06-28 13:32:05][INFO ](KusUploadUtils.java:findWorkFileItems:96) - Success to extracted MediaInfo
+[2022-06-28 13:32:05][INFO ](KusUploadUtils.java:findWorkFileItems:99) - Find to item : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"physical_path":"/home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4","upload_path":"/jungin-kim/20220627-80607469f8ba85d8.mp4","filesize":9557596,"filesize_str":"9.1 MB","lastmodified":1656318660000,"lastmodified_str":"2022-06-27T17:31:00.000+0900","media_information":"%7B%0A++%22format%22%3A+%22MPEG-4%22%2C%0A++%22duration%22%3A+%22428269%22%2C%0A++%22video.format%22%3A+%22AVC%22%2C%0A++%22video.duration%22%3A+%22428267%22%2C%0A++%22video.bitrate%22%3A+%2246598%22%2C%0A++%22video.width%22%3A+%221280%22%2C%0A++%22video.height%22%3A+%22720%22%2C%0A++%22video.framerate%22%3A+%2230.000%22%2C%0A++%22video.ratio%22%3A+%221.778%22%2C%0A++%22video.rotation%22%3A+%220.000%22%2C%0A++%22video.scantype%22%3A+%22Progressive%22%2C%0A++%22audio.format%22%3A+%22AAC%22%2C%0A++%22audio.bitrate%22%3A+%22128014%22%2C%0A++%22audio.sample.rate%22%3A+%2244100%22%2C%0A++%22audio.duration%22%3A+%22428269%22%0A%7D","content_provider_key":"jungin-kim","key":"20220627-80607469f8ba85d8","content_path":"","snapshot_path":"","title":"20220627-80607469f8ba85d8","md5":"","format":"MPEG-4","duration":428269.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-06-28 13:32:24][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4
+[2022-06-28 13:32:25][INFO ](CommonUtils.java:checkIsMediaContent:567) - physicalPath : /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4
+[2022-06-28 13:32:37][DEBUG](KusUploadUtils.java:getUploadFullFilePath:38) - getUploadFullFilePath FileList : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"physical_path":"/home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4","upload_path":"/jungin-kim/20220627-80607469f8ba85d8.mp4","filesize":9557596,"filesize_str":"9.1 MB","lastmodified":1656318660000,"lastmodified_str":"2022-06-27T17:31:00.000+0900","media_information":"%7B%0A++%22format%22%3A+%22MPEG-4%22%2C%0A++%22duration%22%3A+%22428269%22%2C%0A++%22video.format%22%3A+%22AVC%22%2C%0A++%22video.duration%22%3A+%22428267%22%2C%0A++%22video.bitrate%22%3A+%2246598%22%2C%0A++%22video.width%22%3A+%221280%22%2C%0A++%22video.height%22%3A+%22720%22%2C%0A++%22video.framerate%22%3A+%2230.000%22%2C%0A++%22video.ratio%22%3A+%221.778%22%2C%0A++%22video.rotation%22%3A+%220.000%22%2C%0A++%22video.scantype%22%3A+%22Progressive%22%2C%0A++%22audio.format%22%3A+%22AAC%22%2C%0A++%22audio.bitrate%22%3A+%22128014%22%2C%0A++%22audio.sample.rate%22%3A+%2244100%22%2C%0A++%22audio.duration%22%3A+%22428269%22%0A%7D","content_provider_key":"jungin-kim","key":"20220627-80607469f8ba85d8","content_path":"","snapshot_path":"","title":"20220627-80607469f8ba85d8","md5":"","format":"MPEG-4","duration":428269.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-06-28 13:32:39][DEBUG](CommonUtils.java:fromResultSet:401) - /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220628-a14c8dc4161fdcbb.mp4
+[2022-06-28 13:32:39][INFO ](CommonUtils.java:pathToTRmpk:720) - [ pathToTRmpk 1/3 ] 20220628-a14c8dc4161fdcbb.mp4
+[2022-06-28 13:32:39][INFO ](CommonUtils.java:pathToTRmpk:724) - [ pathToTRmpk 2/3 ] 20220628-a14c8dc4161fdcbb
+[2022-06-28 13:32:39][DEBUG](CommonUtils.java:fromResultSet:438) - fromResultSet Add TransCoder : null
+[2022-06-28 13:32:39][DEBUG](CommonUtils.java:fromResultSet:439) - fromResultSet Path : /jungin-kim/20220628-a14c8dc4161fdcbb.mp4
+[2022-06-28 13:32:39][DEBUG](CommonUtils.java:fromResultSet:440) - fromResultSet item : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"physical_path":"/home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220628-a14c8dc4161fdcbb.mp4","upload_path":"/jungin-kim/20220628-a14c8dc4161fdcbb.mp4","filesize":9557596,"filesize_str":"9.1 MB","lastmodified":1656379200000,"lastmodified_str":"2022-06-28T10:20:00.000+0900","content_provider_key":"jungin-kim","key":"20220628-a14c8dc4161fdcbb","content_path":"","snapshot_path":"","title":"20220628-a14c8dc4161fdcbb","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-06-28 13:32:41][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220628-a14c8dc4161fdcbb.mp4
+[2022-06-28 13:32:42][INFO ](CommonUtils.java:setMediaInfo:649) - MediaInfo information : %7B%0A++%22format%22%3A+%22MPEG-4%22%2C%0A++%22duration%22%3A+%22428269%22%2C%0A++%22video.format%22%3A+%22AVC%22%2C%0A++%22video.duration%22%3A+%22428267%22%2C%0A++%22video.bitrate%22%3A+%2246598%22%2C%0A++%22video.width%22%3A+%221280%22%2C%0A++%22video.height%22%3A+%22720%22%2C%0A++%22video.framerate%22%3A+%2230.000%22%2C%0A++%22video.ratio%22%3A+%221.778%22%2C%0A++%22video.rotation%22%3A+%220.000%22%2C%0A++%22video.scantype%22%3A+%22Progressive%22%2C%0A++%22audio.format%22%3A+%22AAC%22%2C%0A++%22audio.bitrate%22%3A+%22128014%22%2C%0A++%22audio.sample.rate%22%3A+%2244100%22%2C%0A++%22audio.duration%22%3A+%22428269%22%0A%7D
+[2022-06-28 13:32:42][INFO ](KusUploadUtils.java:findWorkFileItems:96) - Success to extracted MediaInfo
+[2022-06-28 13:32:42][INFO ](KusUploadUtils.java:findWorkFileItems:99) - Find to item : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"physical_path":"/home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220628-a14c8dc4161fdcbb.mp4","upload_path":"/jungin-kim/20220628-a14c8dc4161fdcbb.mp4","filesize":9557596,"filesize_str":"9.1 MB","lastmodified":1656379200000,"lastmodified_str":"2022-06-28T10:20:00.000+0900","media_information":"%7B%0A++%22format%22%3A+%22MPEG-4%22%2C%0A++%22duration%22%3A+%22428269%22%2C%0A++%22video.format%22%3A+%22AVC%22%2C%0A++%22video.duration%22%3A+%22428267%22%2C%0A++%22video.bitrate%22%3A+%2246598%22%2C%0A++%22video.width%22%3A+%221280%22%2C%0A++%22video.height%22%3A+%22720%22%2C%0A++%22video.framerate%22%3A+%2230.000%22%2C%0A++%22video.ratio%22%3A+%221.778%22%2C%0A++%22video.rotation%22%3A+%220.000%22%2C%0A++%22video.scantype%22%3A+%22Progressive%22%2C%0A++%22audio.format%22%3A+%22AAC%22%2C%0A++%22audio.bitrate%22%3A+%22128014%22%2C%0A++%22audio.sample.rate%22%3A+%2244100%22%2C%0A++%22audio.duration%22%3A+%22428269%22%0A%7D","content_provider_key":"jungin-kim","key":"20220628-a14c8dc4161fdcbb","content_path":"","snapshot_path":"","title":"20220628-a14c8dc4161fdcbb","md5":"","format":"MPEG-4","duration":428269.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-06-28 13:32:43][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220628-a14c8dc4161fdcbb.mp4
+[2022-06-28 13:32:44][INFO ](CommonUtils.java:checkIsMediaContent:567) - physicalPath : /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220628-a14c8dc4161fdcbb.mp4
+[2022-06-28 13:32:44][DEBUG](KusUploadUtils.java:getUploadFullFilePath:38) - getUploadFullFilePath FileList : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"physical_path":"/home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220628-a14c8dc4161fdcbb.mp4","upload_path":"/jungin-kim/20220628-a14c8dc4161fdcbb.mp4","filesize":9557596,"filesize_str":"9.1 MB","lastmodified":1656379200000,"lastmodified_str":"2022-06-28T10:20:00.000+0900","media_information":"%7B%0A++%22format%22%3A+%22MPEG-4%22%2C%0A++%22duration%22%3A+%22428269%22%2C%0A++%22video.format%22%3A+%22AVC%22%2C%0A++%22video.duration%22%3A+%22428267%22%2C%0A++%22video.bitrate%22%3A+%2246598%22%2C%0A++%22video.width%22%3A+%221280%22%2C%0A++%22video.height%22%3A+%22720%22%2C%0A++%22video.framerate%22%3A+%2230.000%22%2C%0A++%22video.ratio%22%3A+%221.778%22%2C%0A++%22video.rotation%22%3A+%220.000%22%2C%0A++%22video.scantype%22%3A+%22Progressive%22%2C%0A++%22audio.format%22%3A+%22AAC%22%2C%0A++%22audio.bitrate%22%3A+%22128014%22%2C%0A++%22audio.sample.rate%22%3A+%2244100%22%2C%0A++%22audio.duration%22%3A+%22428269%22%0A%7D","content_provider_key":"jungin-kim","key":"20220628-a14c8dc4161fdcbb","content_path":"","snapshot_path":"","title":"20220628-a14c8dc4161fdcbb","md5":"","format":"MPEG-4","duration":428269.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-06-28 13:32:46][DEBUG](CommonUtils.java:fromResultSet:401) - /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-e9e93d9cd5c3196b.jpeg
+[2022-06-28 13:32:46][INFO ](CommonUtils.java:pathToTRmpk:720) - [ pathToTRmpk 1/3 ] 20220627-e9e93d9cd5c3196b.jpeg
+[2022-06-28 13:32:46][INFO ](CommonUtils.java:pathToTRmpk:724) - [ pathToTRmpk 2/3 ] 20220627-e9e93d9cd5c3196b
+[2022-06-28 13:32:46][DEBUG](CommonUtils.java:fromResultSet:438) - fromResultSet Add TransCoder : null
+[2022-06-28 13:32:46][DEBUG](CommonUtils.java:fromResultSet:439) - fromResultSet Path : /jungin-kim/20220627-e9e93d9cd5c3196b.jpeg
+[2022-06-28 13:32:46][DEBUG](CommonUtils.java:fromResultSet:440) - fromResultSet item : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"physical_path":"/home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-e9e93d9cd5c3196b.jpeg","upload_path":"/jungin-kim/20220627-e9e93d9cd5c3196b.jpeg","filesize":568634,"filesize_str":"555.3 KB","lastmodified":1656318660000,"lastmodified_str":"2022-06-27T17:31:00.000+0900","content_provider_key":"jungin-kim","key":"20220627-e9e93d9cd5c3196b","content_path":"","snapshot_path":"","title":"20220627-e9e93d9cd5c3196b","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-06-28 13:32:47][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-e9e93d9cd5c3196b.jpeg
+[2022-06-28 13:32:49][INFO ](CommonUtils.java:setMediaInfo:649) - MediaInfo information : %7B%0A++%22format%22%3A+%22JPEG%22%2C%0A++%22video.rotation%22%3A+%220%22%2C%0A++%22image.format%22%3A+%22JPEG%22%2C%0A++%22image.width%22%3A+%221080%22%2C%0A++%22image.height%22%3A+%221440%22%0A%7D
+[2022-06-28 13:32:54][DEBUG](CommonUtils.java:fromResultSet:401) - /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4
+[2022-06-28 13:32:54][INFO ](CommonUtils.java:pathToTRmpk:720) - [ pathToTRmpk 1/3 ] 20220627-80607469f8ba85d8.mp4
+[2022-06-28 13:32:54][INFO ](CommonUtils.java:pathToTRmpk:724) - [ pathToTRmpk 2/3 ] 20220627-80607469f8ba85d8
+[2022-06-28 13:32:54][DEBUG](CommonUtils.java:fromResultSet:438) - fromResultSet Add TransCoder : null
+[2022-06-28 13:32:54][DEBUG](CommonUtils.java:fromResultSet:439) - fromResultSet Path : /jungin-kim/20220627-80607469f8ba85d8.mp4
+[2022-06-28 13:32:54][DEBUG](CommonUtils.java:fromResultSet:440) - fromResultSet item : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"physical_path":"/home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4","upload_path":"/jungin-kim/20220627-80607469f8ba85d8.mp4","filesize":9557596,"filesize_str":"9.1 MB","lastmodified":1656318660000,"lastmodified_str":"2022-06-27T17:31:00.000+0900","content_provider_key":"jungin-kim","key":"20220627-80607469f8ba85d8","content_path":"","snapshot_path":"","title":"20220627-80607469f8ba85d8","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-06-28 13:32:56][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4
+[2022-06-28 13:32:56][INFO ](CommonUtils.java:setMediaInfo:649) - MediaInfo information : null
+[2022-06-28 13:32:56][INFO ](KusUploadUtils.java:findWorkFileItems:96) - Success to extracted MediaInfo
+[2022-06-28 13:32:56][INFO ](KusUploadUtils.java:findWorkFileItems:99) - Find to item : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"physical_path":"/home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4","upload_path":"/jungin-kim/20220627-80607469f8ba85d8.mp4","filesize":9557596,"filesize_str":"9.1 MB","lastmodified":1656318660000,"lastmodified_str":"2022-06-27T17:31:00.000+0900","media_information":"%7B%0A++%22format%22%3A+%22MPEG-4%22%2C%0A++%22duration%22%3A+%22428269%22%2C%0A++%22video.format%22%3A+%22AVC%22%2C%0A++%22video.duration%22%3A+%22428267%22%2C%0A++%22video.bitrate%22%3A+%2246598%22%2C%0A++%22video.width%22%3A+%221280%22%2C%0A++%22video.height%22%3A+%22720%22%2C%0A++%22video.framerate%22%3A+%2230.000%22%2C%0A++%22video.ratio%22%3A+%221.778%22%2C%0A++%22video.rotation%22%3A+%220.000%22%2C%0A++%22video.scantype%22%3A+%22Progressive%22%2C%0A++%22audio.format%22%3A+%22AAC%22%2C%0A++%22audio.bitrate%22%3A+%22128014%22%2C%0A++%22audio.sample.rate%22%3A+%2244100%22%2C%0A++%22audio.duration%22%3A+%22428269%22%0A%7D","content_provider_key":"jungin-kim","key":"20220627-80607469f8ba85d8","content_path":"","snapshot_path":"","title":"20220627-80607469f8ba85d8","md5":"","format":"MPEG-4","duration":428269.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-06-28 13:32:56][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4
+[2022-06-28 13:32:56][INFO ](CommonUtils.java:checkIsMediaContent:567) - physicalPath : /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4
+[2022-06-28 14:27:06][INFO ](Watcher.java:start:94) - [PRG_START]
+[2022-06-28 14:27:06][INFO ](Watcher.java:printVersion:41) - [PRG_VER]null
+[2022-06-28 14:27:07][DEBUG](ThreadSafeClientConnManager.java:getConnection:235) - Get connection: {}->http://api.kr.dev.kollus.com, timeout = 0
+[2022-06-28 14:27:07][DEBUG](ThreadSafeClientConnManager.java:releaseConnection:280) - Released connection is reusable.
+[2022-06-28 14:27:07][INFO ](Config.java:printUrls:234) - URLS [watcher.list.insert] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/register
+[2022-06-28 14:27:07][INFO ](Config.java:printUrls:234) - URLS [watcher.list.complete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/complete
+[2022-06-28 14:27:07][INFO ](Config.java:printUrls:234) - URLS [watcher.list.delete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/remove
+[2022-06-28 14:27:07][INFO ](Config.java:printUrls:234) - URLS [watcher.usage_day_amount.insert] http://api.kr.dev.kollus.com/0/catenoid/usage_day_amount/register
+[2022-06-28 14:27:07][INFO ](Config.java:printUrls:234) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-06-28 14:27:07][INFO ](Config.java:printUrls:234) - URLS [transcoding_job.assign] http://jobmanager-dev-kr.kollus.com:8180/assign
+[2022-06-28 14:27:07][INFO ](Config.java:printUrls:234) - URLS [transcoding_job.manager] http://api.kr.dev.kollus.com/0/catenoid/transcoding_job/manager
+[2022-06-28 14:27:07][INFO ](Config.java:printUrls:234) - URLS [transcoding_file.register] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/register
+[2022-06-28 14:27:07][INFO ](Config.java:printUrls:234) - URLS [transcoding_file.update] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/update
+[2022-06-28 14:27:07][INFO ](Config.java:printUrls:234) - URLS [transcoding_file.complete] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete
+[2022-06-28 14:27:07][INFO ](Config.java:printUrls:234) - URLS [transcoding_file.complete_all] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete_all
+[2022-06-28 14:27:07][INFO ](Config.java:printUrls:234) - URLS [module.check_activated_at] http://api.kr.dev.kollus.com/0/catenoid/module/check_activated_at
+[2022-06-28 14:27:07][INFO ](Config.java:printUrls:234) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-06-28 14:27:07][DEBUG](Watcher.java:setupWatcher:233) - [PRG_CONF]job_watcherfile1=0/10 * * * * ?
+[2022-06-28 14:27:12][DEBUG](LinuxLineParser.java:parser:102) - /home/kollus/upload, /home/kollus/upload/123.txt, 1656393053000, 506
+[2022-06-28 14:27:12][DEBUG](LinuxLineParser.java:parser:102) - /home/kollus/upload, /home/kollus/upload/C언어 쉬운버전인 Go언어를 알아보자.mp4, 1656393064000, 9557596
+[2022-06-28 14:27:12][DEBUG](LinuxLineParser.java:parser:102) - /home/kollus/upload, /home/kollus/upload/sample.webm, 1656393160000, 1148996
+[2022-06-28 14:27:12][DEBUG](LinuxLineParser.java:parser:102) - /home/kollus/upload, /home/kollus/upload/입사동기들3.jpeg, 1656393079000, 568634
+[2022-06-28 14:27:33][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/upload/123.txt
+[2022-06-28 14:27:35][INFO ](CommonUtils.java:checkIsMediaContent:567) - physicalPath : /home/kollus/upload/123.txt
+[2022-06-28 14:27:41][INFO ](CommonUtils.java:checkIsMediaContent:599) - format : 
+[2022-06-28 14:27:41][INFO ](CommonUtils.java:checkIsMediaContent:600) - duration : 
+[2022-06-28 14:27:41][INFO ](CommonUtils.java:checkIsMediaContent:601) - videoDuration : 
+[2022-06-28 14:27:41][INFO ](CommonUtils.java:checkIsMediaContent:602) - videoFormat : 
+[2022-06-28 14:27:41][INFO ](CommonUtils.java:checkIsMediaContent:603) - videoCodec : 
+[2022-06-28 14:27:41][INFO ](CommonUtils.java:checkIsMediaContent:604) - videoBitrate : 
+[2022-06-28 14:27:41][INFO ](CommonUtils.java:checkIsMediaContent:605) - videoWidth : 
+[2022-06-28 14:27:41][INFO ](CommonUtils.java:checkIsMediaContent:606) - videoHeight : 
+[2022-06-28 14:27:41][INFO ](CommonUtils.java:checkIsMediaContent:607) - video frameRate : 
+[2022-06-28 14:27:41][INFO ](CommonUtils.java:checkIsMediaContent:608) - video displayAspectRatio : 
+[2022-06-28 14:27:41][INFO ](CommonUtils.java:checkIsMediaContent:609) - video rotation : 
+[2022-06-28 14:27:41][INFO ](CommonUtils.java:checkIsMediaContent:610) - video scanType : 
+[2022-06-28 14:27:41][INFO ](CommonUtils.java:checkIsMediaContent:611) - audio format : 
+[2022-06-28 14:27:41][INFO ](CommonUtils.java:checkIsMediaContent:612) - audio codec : 
+[2022-06-28 14:27:41][INFO ](CommonUtils.java:checkIsMediaContent:613) - audio bitrate : 
+[2022-06-28 14:27:41][INFO ](CommonUtils.java:checkIsMediaContent:614) - audio samplingRate : 
+[2022-06-28 14:27:41][INFO ](CommonUtils.java:checkIsMediaContent:615) - audio duration : 
+[2022-06-28 14:27:41][INFO ](CommonUtils.java:checkIsMediaContent:616) - image format : 
+[2022-06-28 14:27:41][INFO ](CommonUtils.java:checkIsMediaContent:617) - image width : 
+[2022-06-28 14:27:41][INFO ](CommonUtils.java:checkIsMediaContent:618) - image height : 
+[2022-06-28 14:28:22][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/upload/C언어 쉬운버전인 Go언어를 알아보자.mp4
+[2022-06-28 14:28:26][INFO ](CommonUtils.java:checkIsMediaContent:567) - physicalPath : /home/kollus/upload/C언어 쉬운버전인 Go언어를 알아보자.mp4
+[2022-06-28 14:28:30][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/upload/sample.webm
+[2022-06-28 14:28:34][INFO ](CommonUtils.java:checkIsMediaContent:567) - physicalPath : /home/kollus/upload/sample.webm
+[2022-06-28 14:28:47][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/upload/입사동기들3.jpeg
+[2022-06-28 14:28:50][INFO ](CommonUtils.java:checkIsMediaContent:567) - physicalPath : /home/kollus/upload/입사동기들3.jpeg
+[2022-06-28 14:29:11][DEBUG](FtpUploadDao.java:sendWatchFiles:250) - sql result = rs5: org.h2.result.LocalResult@586a0956 columns: 19 rows: 4 pos: 0
+[2022-06-28 14:29:11][ERROR](ExtFilenameParserDTO.java:parser:170) - not exist filename: /123.txt
+[2022-06-28 14:29:11][DEBUG](CommonUtils.java:fromResultSet:401) - /home/kollus/upload/123.txt
+[2022-06-28 14:29:11][INFO ](CommonUtils.java:pathToTRmpk:726) - [ pathToTRmpk 1/3 ] 123.txt
+[2022-06-28 14:29:11][INFO ](CommonUtils.java:pathToTRmpk:730) - [ pathToTRmpk 2/3 ] 123
+[2022-06-28 14:29:11][ERROR](CommonUtils.java:ExceptionLogPrint:333) - java.lang.NullPointerException
+	at net.catenoid.watcher.upload.utils.CommonUtils.getChannels(CommonUtils.java:945)
+	at net.catenoid.watcher.upload.utils.CommonUtils.fromResultSet(CommonUtils.java:415)
+	at net.catenoid.watcher.uploadDao.FtpUploadDao.sendWatchFiles(FtpUploadDao.java:253)
+	at net.catenoid.watcher.uploadImp.FtpUploadServiceImp.findWorkFileList(FtpUploadServiceImp.java:104)
+	at net.catenoid.watcher.job.Role_Watcher.execute(Role_Watcher.java:157)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:557)
+
+[2022-06-28 14:29:11][ERROR](CommonUtils.java:ExceptionLogPrint:334) - java.lang.NullPointerException
+[2022-06-28 14:31:04][INFO ](Watcher.java:start:94) - [PRG_START]
+[2022-06-28 14:31:04][INFO ](Watcher.java:printVersion:41) - [PRG_VER]null
+[2022-06-28 14:31:04][DEBUG](ThreadSafeClientConnManager.java:getConnection:235) - Get connection: {}->http://api.kr.dev.kollus.com, timeout = 0
+[2022-06-28 14:31:04][DEBUG](ThreadSafeClientConnManager.java:releaseConnection:280) - Released connection is reusable.
+[2022-06-28 14:31:04][INFO ](Config.java:printUrls:234) - URLS [watcher.list.insert] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/register
+[2022-06-28 14:31:04][INFO ](Config.java:printUrls:234) - URLS [watcher.list.complete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/complete
+[2022-06-28 14:31:04][INFO ](Config.java:printUrls:234) - URLS [watcher.list.delete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/remove
+[2022-06-28 14:31:04][INFO ](Config.java:printUrls:234) - URLS [watcher.usage_day_amount.insert] http://api.kr.dev.kollus.com/0/catenoid/usage_day_amount/register
+[2022-06-28 14:31:04][INFO ](Config.java:printUrls:234) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-06-28 14:31:04][INFO ](Config.java:printUrls:234) - URLS [transcoding_job.assign] http://jobmanager-dev-kr.kollus.com:8180/assign
+[2022-06-28 14:31:04][INFO ](Config.java:printUrls:234) - URLS [transcoding_job.manager] http://api.kr.dev.kollus.com/0/catenoid/transcoding_job/manager
+[2022-06-28 14:31:04][INFO ](Config.java:printUrls:234) - URLS [transcoding_file.register] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/register
+[2022-06-28 14:31:04][INFO ](Config.java:printUrls:234) - URLS [transcoding_file.update] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/update
+[2022-06-28 14:31:04][INFO ](Config.java:printUrls:234) - URLS [transcoding_file.complete] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete
+[2022-06-28 14:31:04][INFO ](Config.java:printUrls:234) - URLS [transcoding_file.complete_all] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete_all
+[2022-06-28 14:31:04][INFO ](Config.java:printUrls:234) - URLS [module.check_activated_at] http://api.kr.dev.kollus.com/0/catenoid/module/check_activated_at
+[2022-06-28 14:31:04][INFO ](Config.java:printUrls:234) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-06-28 14:31:04][DEBUG](Watcher.java:setupWatcher:233) - [PRG_CONF]job_watcherfile1=0/10 * * * * ?
+[2022-06-28 14:31:12][DEBUG](LinuxLineParser.java:parser:102) - /home/kollus/upload, /home/kollus/upload/123.txt, 1656393053000, 506
+[2022-06-28 14:31:12][DEBUG](LinuxLineParser.java:parser:102) - /home/kollus/upload, /home/kollus/upload/C언어 쉬운버전인 Go언어를 알아보자.mp4, 1656393064000, 9557596
+[2022-06-28 14:31:12][DEBUG](LinuxLineParser.java:parser:102) - /home/kollus/upload, /home/kollus/upload/sample.webm, 1656393160000, 1148996
+[2022-06-28 14:31:12][DEBUG](LinuxLineParser.java:parser:102) - /home/kollus/upload, /home/kollus/upload/입사동기들3.jpeg, 1656393079000, 568634
+[2022-06-28 14:31:20][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/upload/123.txt
+[2022-06-28 14:31:21][INFO ](CommonUtils.java:checkIsMediaContent:567) - physicalPath : /home/kollus/upload/123.txt
+[2022-06-28 14:31:21][INFO ](CommonUtils.java:checkIsMediaContent:599) - format : 
+[2022-06-28 14:31:21][INFO ](CommonUtils.java:checkIsMediaContent:600) - duration : 
+[2022-06-28 14:31:21][INFO ](CommonUtils.java:checkIsMediaContent:601) - videoDuration : 
+[2022-06-28 14:31:21][INFO ](CommonUtils.java:checkIsMediaContent:602) - videoFormat : 
+[2022-06-28 14:31:21][INFO ](CommonUtils.java:checkIsMediaContent:603) - videoCodec : 
+[2022-06-28 14:31:21][INFO ](CommonUtils.java:checkIsMediaContent:604) - videoBitrate : 
+[2022-06-28 14:31:21][INFO ](CommonUtils.java:checkIsMediaContent:605) - videoWidth : 
+[2022-06-28 14:31:21][INFO ](CommonUtils.java:checkIsMediaContent:606) - videoHeight : 
+[2022-06-28 14:31:21][INFO ](CommonUtils.java:checkIsMediaContent:607) - video frameRate : 
+[2022-06-28 14:31:21][INFO ](CommonUtils.java:checkIsMediaContent:608) - video displayAspectRatio : 
+[2022-06-28 14:31:21][INFO ](CommonUtils.java:checkIsMediaContent:609) - video rotation : 
+[2022-06-28 14:31:21][INFO ](CommonUtils.java:checkIsMediaContent:610) - video scanType : 
+[2022-06-28 14:31:21][INFO ](CommonUtils.java:checkIsMediaContent:611) - audio format : 
+[2022-06-28 14:31:21][INFO ](CommonUtils.java:checkIsMediaContent:612) - audio codec : 
+[2022-06-28 14:31:21][INFO ](CommonUtils.java:checkIsMediaContent:613) - audio bitrate : 
+[2022-06-28 14:31:21][INFO ](CommonUtils.java:checkIsMediaContent:614) - audio samplingRate : 
+[2022-06-28 14:31:21][INFO ](CommonUtils.java:checkIsMediaContent:615) - audio duration : 
+[2022-06-28 14:31:21][INFO ](CommonUtils.java:checkIsMediaContent:616) - image format : 
+[2022-06-28 14:31:21][INFO ](CommonUtils.java:checkIsMediaContent:617) - image width : 
+[2022-06-28 14:31:21][INFO ](CommonUtils.java:checkIsMediaContent:618) - image height : 
+[2022-06-28 14:31:25][DEBUG](FtpUploadServiceImp.java:newFileItems:239) - is not MediaFile : /home/kollus/upload/123.txt
+[2022-06-28 14:31:37][DEBUG](FtpUploadServiceImp.java:newFileItems:241) - Not MediaFile removed
+[2022-06-28 14:31:51][ERROR](FtpUploadDao.java:insertFileItem:154) - INSERT INTO FILES(PATH,DOMAIN,OLD_SIZE,NEW_SIZE,OLD_DATE,NEW_DATE,ERR_DATE,CHK_DATE,COMP_CNT,STATUS,UPLOAD_PATH,CID,CPATH,SNAP_PATH,TITLE,MD5,CHECKSUM_TYPE,POSTER_POS,POSTER_WIDTH,POSTER_HEIGHT) VALUES ('/home/kollus/upload/123.txt','null', 506, 506, '2022-06-28 14:10:53.000', '2022-06-28 14:10:53.000', '1970-01-01 01:01:01.000', '2022-06-28 14:31:10.126', 0, 0,'/123.txt','','','','/123','', 0, -1, -1, -1)
+[2022-06-28 14:31:51][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/upload/C언어 쉬운버전인 Go언어를 알아보자.mp4
+[2022-06-28 14:31:51][INFO ](CommonUtils.java:checkIsMediaContent:567) - physicalPath : /home/kollus/upload/C언어 쉬운버전인 Go언어를 알아보자.mp4
+[2022-06-28 14:31:51][ERROR](CommonUtils.java:ExceptionLogPrint:333) - org.h2.jdbc.JdbcSQLException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-168]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.get(DbException.java:146)
+	at org.h2.message.DbException.get(DbException.java:135)
+	at org.h2.jdbc.JdbcConnection.checkClosed(JdbcConnection.java:1384)
+	at org.h2.jdbc.JdbcStatement.checkClosed(JdbcStatement.java:927)
+	at org.h2.jdbc.JdbcStatement.checkClosedForWrite(JdbcStatement.java:912)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:117)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:110)
+	at net.catenoid.watcher.uploadDao.FtpUploadDao.existFileItem(FtpUploadDao.java:85)
+	at net.catenoid.watcher.uploadImp.FtpUploadServiceImp.newFileItems(FtpUploadServiceImp.java:246)
+	at net.catenoid.watcher.uploadImp.FtpUploadServiceImp.renewWorkFileList(FtpUploadServiceImp.java:83)
+	at net.catenoid.watcher.job.Role_Watcher.execute(Role_Watcher.java:156)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:557)
+
+[2022-06-28 14:31:51][ERROR](CommonUtils.java:ExceptionLogPrint:334) - org.h2.jdbc.JdbcSQLException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-168]
+[2022-06-28 14:31:51][ERROR](CommonUtils.java:ExceptionLogPrint:333) - java.lang.NullPointerException
+	at net.catenoid.watcher.uploadDao.FtpUploadDao.sendWatchFiles(FtpUploadDao.java:313)
+	at net.catenoid.watcher.uploadImp.FtpUploadServiceImp.findWorkFileList(FtpUploadServiceImp.java:104)
+	at net.catenoid.watcher.job.Role_Watcher.execute(Role_Watcher.java:157)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:557)
+
+[2022-06-28 14:31:51][ERROR](CommonUtils.java:ExceptionLogPrint:334) - java.lang.NullPointerException
+[2022-06-28 14:49:23][INFO ](Watcher.java:start:94) - [PRG_START]
+[2022-06-28 14:49:23][INFO ](Watcher.java:printVersion:41) - [PRG_VER]null
+[2022-06-28 14:49:23][DEBUG](ThreadSafeClientConnManager.java:getConnection:235) - Get connection: {}->http://api.kr.dev.kollus.com, timeout = 0
+[2022-06-28 14:49:23][DEBUG](ThreadSafeClientConnManager.java:releaseConnection:280) - Released connection is reusable.
+[2022-06-28 14:49:23][INFO ](Config.java:printUrls:234) - URLS [watcher.list.insert] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/register
+[2022-06-28 14:49:23][INFO ](Config.java:printUrls:234) - URLS [watcher.list.complete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/complete
+[2022-06-28 14:49:23][INFO ](Config.java:printUrls:234) - URLS [watcher.list.delete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/remove
+[2022-06-28 14:49:23][INFO ](Config.java:printUrls:234) - URLS [watcher.usage_day_amount.insert] http://api.kr.dev.kollus.com/0/catenoid/usage_day_amount/register
+[2022-06-28 14:49:23][INFO ](Config.java:printUrls:234) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-06-28 14:49:23][INFO ](Config.java:printUrls:234) - URLS [transcoding_job.assign] http://jobmanager-dev-kr.kollus.com:8180/assign
+[2022-06-28 14:49:23][INFO ](Config.java:printUrls:234) - URLS [transcoding_job.manager] http://api.kr.dev.kollus.com/0/catenoid/transcoding_job/manager
+[2022-06-28 14:49:23][INFO ](Config.java:printUrls:234) - URLS [transcoding_file.register] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/register
+[2022-06-28 14:49:23][INFO ](Config.java:printUrls:234) - URLS [transcoding_file.update] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/update
+[2022-06-28 14:49:23][INFO ](Config.java:printUrls:234) - URLS [transcoding_file.complete] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete
+[2022-06-28 14:49:23][INFO ](Config.java:printUrls:234) - URLS [transcoding_file.complete_all] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete_all
+[2022-06-28 14:49:23][INFO ](Config.java:printUrls:234) - URLS [module.check_activated_at] http://api.kr.dev.kollus.com/0/catenoid/module/check_activated_at
+[2022-06-28 14:49:23][INFO ](Config.java:printUrls:234) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-06-28 14:49:23][DEBUG](Watcher.java:setupWatcher:233) - [PRG_CONF]job_watcherfile2=0/1 * * * * ?
+[2022-06-28 14:49:39][DEBUG](CommonUtils.java:fromResultSet:401) - /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4
+[2022-06-28 14:49:39][INFO ](CommonUtils.java:pathToTRmpk:726) - [ pathToTRmpk 1/3 ] 20220627-80607469f8ba85d8.mp4
+[2022-06-28 14:49:39][INFO ](CommonUtils.java:pathToTRmpk:730) - [ pathToTRmpk 2/3 ] 20220627-80607469f8ba85d8
+[2022-06-28 14:49:39][DEBUG](CommonUtils.java:fromResultSet:438) - fromResultSet Add TransCoder : null
+[2022-06-28 14:49:39][DEBUG](CommonUtils.java:fromResultSet:439) - fromResultSet Path : /http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4
+[2022-06-28 14:49:39][DEBUG](CommonUtils.java:fromResultSet:440) - fromResultSet item : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"physical_path":"/home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4","upload_path":"/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4","filesize":9557596,"filesize_str":"9.1 MB","lastmodified":1656318660000,"lastmodified_str":"2022-06-27T17:31:00.000+0900","content_provider_key":"http_upload","key":"20220627-80607469f8ba85d8","content_path":"","snapshot_path":"","title":"jungin-kim/20220627-80607469f8ba85d8","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-06-28 14:49:42][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4
+[2022-06-28 14:49:43][INFO ](CommonUtils.java:setMediaInfo:655) - MediaInfo information : %7B%0A++%22format%22%3A+%22MPEG-4%22%2C%0A++%22duration%22%3A+%22428269%22%2C%0A++%22video.format%22%3A+%22AVC%22%2C%0A++%22video.duration%22%3A+%22428267%22%2C%0A++%22video.bitrate%22%3A+%2246598%22%2C%0A++%22video.width%22%3A+%221280%22%2C%0A++%22video.height%22%3A+%22720%22%2C%0A++%22video.framerate%22%3A+%2230.000%22%2C%0A++%22video.ratio%22%3A+%221.778%22%2C%0A++%22video.rotation%22%3A+%220.000%22%2C%0A++%22video.scantype%22%3A+%22Progressive%22%2C%0A++%22audio.format%22%3A+%22AAC%22%2C%0A++%22audio.bitrate%22%3A+%22128014%22%2C%0A++%22audio.sample.rate%22%3A+%2244100%22%2C%0A++%22audio.duration%22%3A+%22428269%22%0A%7D
+[2022-06-28 14:49:43][INFO ](KusUploadUtils.java:findWorkFileItems:96) - Success to extracted MediaInfo
+[2022-06-28 14:49:43][INFO ](KusUploadUtils.java:findWorkFileItems:99) - Find to item : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"physical_path":"/home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4","upload_path":"/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4","filesize":9557596,"filesize_str":"9.1 MB","lastmodified":1656318660000,"lastmodified_str":"2022-06-27T17:31:00.000+0900","media_information":"%7B%0A++%22format%22%3A+%22MPEG-4%22%2C%0A++%22duration%22%3A+%22428269%22%2C%0A++%22video.format%22%3A+%22AVC%22%2C%0A++%22video.duration%22%3A+%22428267%22%2C%0A++%22video.bitrate%22%3A+%2246598%22%2C%0A++%22video.width%22%3A+%221280%22%2C%0A++%22video.height%22%3A+%22720%22%2C%0A++%22video.framerate%22%3A+%2230.000%22%2C%0A++%22video.ratio%22%3A+%221.778%22%2C%0A++%22video.rotation%22%3A+%220.000%22%2C%0A++%22video.scantype%22%3A+%22Progressive%22%2C%0A++%22audio.format%22%3A+%22AAC%22%2C%0A++%22audio.bitrate%22%3A+%22128014%22%2C%0A++%22audio.sample.rate%22%3A+%2244100%22%2C%0A++%22audio.duration%22%3A+%22428269%22%0A%7D","content_provider_key":"http_upload","key":"20220627-80607469f8ba85d8","content_path":"","snapshot_path":"","title":"jungin-kim/20220627-80607469f8ba85d8","md5":"","format":"MPEG-4","duration":428269.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-06-28 14:49:55][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4
+[2022-06-28 14:50:01][INFO ](CommonUtils.java:checkIsMediaContent:567) - physicalPath : /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4
+[2022-06-28 14:50:02][DEBUG](KusUploadUtils.java:getUploadFullFilePath:38) - getUploadFullFilePath FileList : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"physical_path":"/home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4","upload_path":"/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4","filesize":9557596,"filesize_str":"9.1 MB","lastmodified":1656318660000,"lastmodified_str":"2022-06-27T17:31:00.000+0900","media_information":"%7B%0A++%22format%22%3A+%22MPEG-4%22%2C%0A++%22duration%22%3A+%22428269%22%2C%0A++%22video.format%22%3A+%22AVC%22%2C%0A++%22video.duration%22%3A+%22428267%22%2C%0A++%22video.bitrate%22%3A+%2246598%22%2C%0A++%22video.width%22%3A+%221280%22%2C%0A++%22video.height%22%3A+%22720%22%2C%0A++%22video.framerate%22%3A+%2230.000%22%2C%0A++%22video.ratio%22%3A+%221.778%22%2C%0A++%22video.rotation%22%3A+%220.000%22%2C%0A++%22video.scantype%22%3A+%22Progressive%22%2C%0A++%22audio.format%22%3A+%22AAC%22%2C%0A++%22audio.bitrate%22%3A+%22128014%22%2C%0A++%22audio.sample.rate%22%3A+%2244100%22%2C%0A++%22audio.duration%22%3A+%22428269%22%0A%7D","content_provider_key":"http_upload","key":"20220627-80607469f8ba85d8","content_path":"","snapshot_path":"","title":"jungin-kim/20220627-80607469f8ba85d8","md5":"","format":"MPEG-4","duration":428269.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-06-28 14:50:18][DEBUG](CommonUtils.java:fromResultSet:401) - /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220628-a14c8dc4161fdcbb.mp4
+[2022-06-28 14:50:18][INFO ](CommonUtils.java:pathToTRmpk:726) - [ pathToTRmpk 1/3 ] 20220628-a14c8dc4161fdcbb.mp4
+[2022-06-28 14:50:18][INFO ](CommonUtils.java:pathToTRmpk:730) - [ pathToTRmpk 2/3 ] 20220628-a14c8dc4161fdcbb
+[2022-06-28 14:50:18][DEBUG](CommonUtils.java:fromResultSet:438) - fromResultSet Add TransCoder : null
+[2022-06-28 14:50:18][DEBUG](CommonUtils.java:fromResultSet:439) - fromResultSet Path : /http_upload/jungin-kim/20220628-a14c8dc4161fdcbb.mp4
+[2022-06-28 14:50:18][DEBUG](CommonUtils.java:fromResultSet:440) - fromResultSet item : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"physical_path":"/home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220628-a14c8dc4161fdcbb.mp4","upload_path":"/http_upload/jungin-kim/20220628-a14c8dc4161fdcbb.mp4","filesize":9557596,"filesize_str":"9.1 MB","lastmodified":1656379200000,"lastmodified_str":"2022-06-28T10:20:00.000+0900","content_provider_key":"http_upload","key":"20220628-a14c8dc4161fdcbb","content_path":"","snapshot_path":"","title":"jungin-kim/20220628-a14c8dc4161fdcbb","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-06-28 14:50:20][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220628-a14c8dc4161fdcbb.mp4
+[2022-06-28 14:50:22][INFO ](CommonUtils.java:setMediaInfo:655) - MediaInfo information : %7B%0A++%22format%22%3A+%22MPEG-4%22%2C%0A++%22duration%22%3A+%22428269%22%2C%0A++%22video.format%22%3A+%22AVC%22%2C%0A++%22video.duration%22%3A+%22428267%22%2C%0A++%22video.bitrate%22%3A+%2246598%22%2C%0A++%22video.width%22%3A+%221280%22%2C%0A++%22video.height%22%3A+%22720%22%2C%0A++%22video.framerate%22%3A+%2230.000%22%2C%0A++%22video.ratio%22%3A+%221.778%22%2C%0A++%22video.rotation%22%3A+%220.000%22%2C%0A++%22video.scantype%22%3A+%22Progressive%22%2C%0A++%22audio.format%22%3A+%22AAC%22%2C%0A++%22audio.bitrate%22%3A+%22128014%22%2C%0A++%22audio.sample.rate%22%3A+%2244100%22%2C%0A++%22audio.duration%22%3A+%22428269%22%0A%7D
+[2022-06-28 14:50:22][INFO ](KusUploadUtils.java:findWorkFileItems:96) - Success to extracted MediaInfo
+[2022-06-28 14:50:22][INFO ](KusUploadUtils.java:findWorkFileItems:99) - Find to item : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"physical_path":"/home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220628-a14c8dc4161fdcbb.mp4","upload_path":"/http_upload/jungin-kim/20220628-a14c8dc4161fdcbb.mp4","filesize":9557596,"filesize_str":"9.1 MB","lastmodified":1656379200000,"lastmodified_str":"2022-06-28T10:20:00.000+0900","media_information":"%7B%0A++%22format%22%3A+%22MPEG-4%22%2C%0A++%22duration%22%3A+%22428269%22%2C%0A++%22video.format%22%3A+%22AVC%22%2C%0A++%22video.duration%22%3A+%22428267%22%2C%0A++%22video.bitrate%22%3A+%2246598%22%2C%0A++%22video.width%22%3A+%221280%22%2C%0A++%22video.height%22%3A+%22720%22%2C%0A++%22video.framerate%22%3A+%2230.000%22%2C%0A++%22video.ratio%22%3A+%221.778%22%2C%0A++%22video.rotation%22%3A+%220.000%22%2C%0A++%22video.scantype%22%3A+%22Progressive%22%2C%0A++%22audio.format%22%3A+%22AAC%22%2C%0A++%22audio.bitrate%22%3A+%22128014%22%2C%0A++%22audio.sample.rate%22%3A+%2244100%22%2C%0A++%22audio.duration%22%3A+%22428269%22%0A%7D","content_provider_key":"http_upload","key":"20220628-a14c8dc4161fdcbb","content_path":"","snapshot_path":"","title":"jungin-kim/20220628-a14c8dc4161fdcbb","md5":"","format":"MPEG-4","duration":428269.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-06-28 14:50:24][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220628-a14c8dc4161fdcbb.mp4
+[2022-06-28 14:50:34][INFO ](CommonUtils.java:checkIsMediaContent:567) - physicalPath : /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220628-a14c8dc4161fdcbb.mp4
+[2022-06-28 14:50:35][DEBUG](KusUploadUtils.java:getUploadFullFilePath:38) - getUploadFullFilePath FileList : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"physical_path":"/home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220628-a14c8dc4161fdcbb.mp4","upload_path":"/http_upload/jungin-kim/20220628-a14c8dc4161fdcbb.mp4","filesize":9557596,"filesize_str":"9.1 MB","lastmodified":1656379200000,"lastmodified_str":"2022-06-28T10:20:00.000+0900","media_information":"%7B%0A++%22format%22%3A+%22MPEG-4%22%2C%0A++%22duration%22%3A+%22428269%22%2C%0A++%22video.format%22%3A+%22AVC%22%2C%0A++%22video.duration%22%3A+%22428267%22%2C%0A++%22video.bitrate%22%3A+%2246598%22%2C%0A++%22video.width%22%3A+%221280%22%2C%0A++%22video.height%22%3A+%22720%22%2C%0A++%22video.framerate%22%3A+%2230.000%22%2C%0A++%22video.ratio%22%3A+%221.778%22%2C%0A++%22video.rotation%22%3A+%220.000%22%2C%0A++%22video.scantype%22%3A+%22Progressive%22%2C%0A++%22audio.format%22%3A+%22AAC%22%2C%0A++%22audio.bitrate%22%3A+%22128014%22%2C%0A++%22audio.sample.rate%22%3A+%2244100%22%2C%0A++%22audio.duration%22%3A+%22428269%22%0A%7D","content_provider_key":"http_upload","key":"20220628-a14c8dc4161fdcbb","content_path":"","snapshot_path":"","title":"jungin-kim/20220628-a14c8dc4161fdcbb","md5":"","format":"MPEG-4","duration":428269.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-06-28 14:50:39][DEBUG](CommonUtils.java:fromResultSet:401) - /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-e9e93d9cd5c3196b.jpeg
+[2022-06-28 14:50:39][INFO ](CommonUtils.java:pathToTRmpk:726) - [ pathToTRmpk 1/3 ] 20220627-e9e93d9cd5c3196b.jpeg
+[2022-06-28 14:50:39][INFO ](CommonUtils.java:pathToTRmpk:730) - [ pathToTRmpk 2/3 ] 20220627-e9e93d9cd5c3196b
+[2022-06-28 14:50:39][DEBUG](CommonUtils.java:fromResultSet:438) - fromResultSet Add TransCoder : null
+[2022-06-28 14:50:39][DEBUG](CommonUtils.java:fromResultSet:439) - fromResultSet Path : /http_upload/jungin-kim/20220627-e9e93d9cd5c3196b.jpeg
+[2022-06-28 14:50:39][DEBUG](CommonUtils.java:fromResultSet:440) - fromResultSet item : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"physical_path":"/home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-e9e93d9cd5c3196b.jpeg","upload_path":"/http_upload/jungin-kim/20220627-e9e93d9cd5c3196b.jpeg","filesize":568634,"filesize_str":"555.3 KB","lastmodified":1656318660000,"lastmodified_str":"2022-06-27T17:31:00.000+0900","content_provider_key":"http_upload","key":"20220627-e9e93d9cd5c3196b","content_path":"","snapshot_path":"","title":"jungin-kim/20220627-e9e93d9cd5c3196b","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-06-28 14:50:41][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-e9e93d9cd5c3196b.jpeg
+[2022-06-28 14:50:42][INFO ](CommonUtils.java:setMediaInfo:655) - MediaInfo information : %7B%0A++%22format%22%3A+%22JPEG%22%2C%0A++%22video.rotation%22%3A+%220%22%2C%0A++%22image.format%22%3A+%22JPEG%22%2C%0A++%22image.width%22%3A+%221080%22%2C%0A++%22image.height%22%3A+%221440%22%0A%7D
+[2022-06-28 14:51:07][DEBUG](CommonUtils.java:fromResultSet:401) - /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4
+[2022-06-28 14:51:07][INFO ](CommonUtils.java:pathToTRmpk:726) - [ pathToTRmpk 1/3 ] 20220627-80607469f8ba85d8.mp4
+[2022-06-28 14:51:07][INFO ](CommonUtils.java:pathToTRmpk:730) - [ pathToTRmpk 2/3 ] 20220627-80607469f8ba85d8
+[2022-06-28 14:51:07][DEBUG](CommonUtils.java:fromResultSet:438) - fromResultSet Add TransCoder : null
+[2022-06-28 14:51:07][DEBUG](CommonUtils.java:fromResultSet:439) - fromResultSet Path : /http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4
+[2022-06-28 14:51:07][DEBUG](CommonUtils.java:fromResultSet:440) - fromResultSet item : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"physical_path":"/home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4","upload_path":"/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4","filesize":9557596,"filesize_str":"9.1 MB","lastmodified":1656318660000,"lastmodified_str":"2022-06-27T17:31:00.000+0900","content_provider_key":"http_upload","key":"20220627-80607469f8ba85d8","content_path":"","snapshot_path":"","title":"jungin-kim/20220627-80607469f8ba85d8","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-06-28 14:51:07][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4
+[2022-06-28 14:51:07][INFO ](CommonUtils.java:setMediaInfo:655) - MediaInfo information : null
+[2022-06-28 14:51:07][INFO ](KusUploadUtils.java:findWorkFileItems:96) - Success to extracted MediaInfo
+[2022-06-28 14:51:07][INFO ](KusUploadUtils.java:findWorkFileItems:99) - Find to item : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"physical_path":"/home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4","upload_path":"/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4","filesize":9557596,"filesize_str":"9.1 MB","lastmodified":1656318660000,"lastmodified_str":"2022-06-27T17:31:00.000+0900","media_information":"%7B%0A++%22format%22%3A+%22MPEG-4%22%2C%0A++%22duration%22%3A+%22428269%22%2C%0A++%22video.format%22%3A+%22AVC%22%2C%0A++%22video.duration%22%3A+%22428267%22%2C%0A++%22video.bitrate%22%3A+%2246598%22%2C%0A++%22video.width%22%3A+%221280%22%2C%0A++%22video.height%22%3A+%22720%22%2C%0A++%22video.framerate%22%3A+%2230.000%22%2C%0A++%22video.ratio%22%3A+%221.778%22%2C%0A++%22video.rotation%22%3A+%220.000%22%2C%0A++%22video.scantype%22%3A+%22Progressive%22%2C%0A++%22audio.format%22%3A+%22AAC%22%2C%0A++%22audio.bitrate%22%3A+%22128014%22%2C%0A++%22audio.sample.rate%22%3A+%2244100%22%2C%0A++%22audio.duration%22%3A+%22428269%22%0A%7D","content_provider_key":"http_upload","key":"20220627-80607469f8ba85d8","content_path":"","snapshot_path":"","title":"jungin-kim/20220627-80607469f8ba85d8","md5":"","format":"MPEG-4","duration":428269.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-06-28 14:51:07][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4
+[2022-06-28 15:31:52][INFO ](Watcher.java:start:94) - [PRG_START]
+[2022-06-28 15:31:52][INFO ](Watcher.java:printVersion:41) - [PRG_VER]null
+[2022-06-28 15:31:52][DEBUG](ThreadSafeClientConnManager.java:getConnection:235) - Get connection: {}->http://api.kr.dev.kollus.com, timeout = 0
+[2022-06-28 15:31:52][DEBUG](ThreadSafeClientConnManager.java:releaseConnection:280) - Released connection is reusable.
+[2022-06-28 15:31:52][INFO ](Config.java:printUrls:234) - URLS [watcher.list.insert] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/register
+[2022-06-28 15:31:52][INFO ](Config.java:printUrls:234) - URLS [watcher.list.complete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/complete
+[2022-06-28 15:31:52][INFO ](Config.java:printUrls:234) - URLS [watcher.list.delete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/remove
+[2022-06-28 15:31:52][INFO ](Config.java:printUrls:234) - URLS [watcher.usage_day_amount.insert] http://api.kr.dev.kollus.com/0/catenoid/usage_day_amount/register
+[2022-06-28 15:31:52][INFO ](Config.java:printUrls:234) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-06-28 15:31:52][INFO ](Config.java:printUrls:234) - URLS [transcoding_job.assign] http://jobmanager-dev-kr.kollus.com:8180/assign
+[2022-06-28 15:31:52][INFO ](Config.java:printUrls:234) - URLS [transcoding_job.manager] http://api.kr.dev.kollus.com/0/catenoid/transcoding_job/manager
+[2022-06-28 15:31:52][INFO ](Config.java:printUrls:234) - URLS [transcoding_file.register] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/register
+[2022-06-28 15:31:52][INFO ](Config.java:printUrls:234) - URLS [transcoding_file.update] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/update
+[2022-06-28 15:31:52][INFO ](Config.java:printUrls:234) - URLS [transcoding_file.complete] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete
+[2022-06-28 15:31:52][INFO ](Config.java:printUrls:234) - URLS [transcoding_file.complete_all] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete_all
+[2022-06-28 15:31:52][INFO ](Config.java:printUrls:234) - URLS [module.check_activated_at] http://api.kr.dev.kollus.com/0/catenoid/module/check_activated_at
+[2022-06-28 15:31:52][INFO ](Config.java:printUrls:234) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-06-28 15:31:52][DEBUG](Watcher.java:setupWatcher:233) - [PRG_CONF]job_watcherfile2=0/1 * * * * ?
+[2022-06-28 15:32:07][DEBUG](CommonUtils.java:fromResultSet:401) - /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4
+[2022-06-28 15:32:07][INFO ](CommonUtils.java:pathToTRmpk:726) - [ pathToTRmpk 1/3 ] 20220627-80607469f8ba85d8.mp4
+[2022-06-28 15:32:07][INFO ](CommonUtils.java:pathToTRmpk:730) - [ pathToTRmpk 2/3 ] 20220627-80607469f8ba85d8
+[2022-06-28 15:32:07][DEBUG](CommonUtils.java:fromResultSet:438) - fromResultSet Add TransCoder : null
+[2022-06-28 15:32:07][DEBUG](CommonUtils.java:fromResultSet:439) - fromResultSet Path : /http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4
+[2022-06-28 15:32:07][DEBUG](CommonUtils.java:fromResultSet:440) - fromResultSet item : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"physical_path":"/home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4","upload_path":"/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4","filesize":9557596,"filesize_str":"9.1 MB","lastmodified":1656318660000,"lastmodified_str":"2022-06-27T17:31:00.000+0900","content_provider_key":"http_upload","key":"20220627-80607469f8ba85d8","content_path":"","snapshot_path":"","title":"jungin-kim/20220627-80607469f8ba85d8","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-06-28 15:32:21][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4
+[2022-06-28 15:32:22][INFO ](CommonUtils.java:setMediaInfo:655) - MediaInfo information : %7B%0A++%22format%22%3A+%22MPEG-4%22%2C%0A++%22duration%22%3A+%22428269%22%2C%0A++%22video.format%22%3A+%22AVC%22%2C%0A++%22video.duration%22%3A+%22428267%22%2C%0A++%22video.bitrate%22%3A+%2246598%22%2C%0A++%22video.width%22%3A+%221280%22%2C%0A++%22video.height%22%3A+%22720%22%2C%0A++%22video.framerate%22%3A+%2230.000%22%2C%0A++%22video.ratio%22%3A+%221.778%22%2C%0A++%22video.rotation%22%3A+%220.000%22%2C%0A++%22video.scantype%22%3A+%22Progressive%22%2C%0A++%22audio.format%22%3A+%22AAC%22%2C%0A++%22audio.bitrate%22%3A+%22128014%22%2C%0A++%22audio.sample.rate%22%3A+%2244100%22%2C%0A++%22audio.duration%22%3A+%22428269%22%0A%7D
+[2022-06-28 15:32:36][INFO ](KusUploadUtils.java:findWorkFileItems:96) - Success to extracted MediaInfo
+[2022-06-28 15:32:36][INFO ](KusUploadUtils.java:findWorkFileItems:99) - Find to item : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"physical_path":"/home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4","upload_path":"/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4","filesize":9557596,"filesize_str":"9.1 MB","lastmodified":1656318660000,"lastmodified_str":"2022-06-27T17:31:00.000+0900","media_information":"%7B%0A++%22format%22%3A+%22MPEG-4%22%2C%0A++%22duration%22%3A+%22428269%22%2C%0A++%22video.format%22%3A+%22AVC%22%2C%0A++%22video.duration%22%3A+%22428267%22%2C%0A++%22video.bitrate%22%3A+%2246598%22%2C%0A++%22video.width%22%3A+%221280%22%2C%0A++%22video.height%22%3A+%22720%22%2C%0A++%22video.framerate%22%3A+%2230.000%22%2C%0A++%22video.ratio%22%3A+%221.778%22%2C%0A++%22video.rotation%22%3A+%220.000%22%2C%0A++%22video.scantype%22%3A+%22Progressive%22%2C%0A++%22audio.format%22%3A+%22AAC%22%2C%0A++%22audio.bitrate%22%3A+%22128014%22%2C%0A++%22audio.sample.rate%22%3A+%2244100%22%2C%0A++%22audio.duration%22%3A+%22428269%22%0A%7D","content_provider_key":"http_upload","key":"20220627-80607469f8ba85d8","content_path":"","snapshot_path":"","title":"jungin-kim/20220627-80607469f8ba85d8","md5":"","format":"MPEG-4","duration":428269.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-06-28 15:32:36][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4
+[2022-06-28 15:32:37][INFO ](CommonUtils.java:checkIsMediaContent:567) - physicalPath : /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4
+[2022-06-28 15:32:39][DEBUG](KusUploadUtils.java:getUploadFullFilePath:38) - getUploadFullFilePath FileList : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"physical_path":"/home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4","upload_path":"/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4","filesize":9557596,"filesize_str":"9.1 MB","lastmodified":1656318660000,"lastmodified_str":"2022-06-27T17:31:00.000+0900","media_information":"%7B%0A++%22format%22%3A+%22MPEG-4%22%2C%0A++%22duration%22%3A+%22428269%22%2C%0A++%22video.format%22%3A+%22AVC%22%2C%0A++%22video.duration%22%3A+%22428267%22%2C%0A++%22video.bitrate%22%3A+%2246598%22%2C%0A++%22video.width%22%3A+%221280%22%2C%0A++%22video.height%22%3A+%22720%22%2C%0A++%22video.framerate%22%3A+%2230.000%22%2C%0A++%22video.ratio%22%3A+%221.778%22%2C%0A++%22video.rotation%22%3A+%220.000%22%2C%0A++%22video.scantype%22%3A+%22Progressive%22%2C%0A++%22audio.format%22%3A+%22AAC%22%2C%0A++%22audio.bitrate%22%3A+%22128014%22%2C%0A++%22audio.sample.rate%22%3A+%2244100%22%2C%0A++%22audio.duration%22%3A+%22428269%22%0A%7D","content_provider_key":"http_upload","key":"20220627-80607469f8ba85d8","content_path":"","snapshot_path":"","title":"jungin-kim/20220627-80607469f8ba85d8","md5":"","format":"MPEG-4","duration":428269.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-06-28 15:32:41][DEBUG](CommonUtils.java:fromResultSet:401) - /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220628-a14c8dc4161fdcbb.mp4
+[2022-06-28 15:32:41][INFO ](CommonUtils.java:pathToTRmpk:726) - [ pathToTRmpk 1/3 ] 20220628-a14c8dc4161fdcbb.mp4
+[2022-06-28 15:32:41][INFO ](CommonUtils.java:pathToTRmpk:730) - [ pathToTRmpk 2/3 ] 20220628-a14c8dc4161fdcbb
+[2022-06-28 15:32:41][DEBUG](CommonUtils.java:fromResultSet:438) - fromResultSet Add TransCoder : null
+[2022-06-28 15:32:41][DEBUG](CommonUtils.java:fromResultSet:439) - fromResultSet Path : /http_upload/jungin-kim/20220628-a14c8dc4161fdcbb.mp4
+[2022-06-28 15:32:41][DEBUG](CommonUtils.java:fromResultSet:440) - fromResultSet item : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"physical_path":"/home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220628-a14c8dc4161fdcbb.mp4","upload_path":"/http_upload/jungin-kim/20220628-a14c8dc4161fdcbb.mp4","filesize":9557596,"filesize_str":"9.1 MB","lastmodified":1656379200000,"lastmodified_str":"2022-06-28T10:20:00.000+0900","content_provider_key":"http_upload","key":"20220628-a14c8dc4161fdcbb","content_path":"","snapshot_path":"","title":"jungin-kim/20220628-a14c8dc4161fdcbb","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-06-28 15:32:45][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220628-a14c8dc4161fdcbb.mp4
+[2022-06-28 15:32:46][INFO ](CommonUtils.java:setMediaInfo:655) - MediaInfo information : %7B%0A++%22format%22%3A+%22MPEG-4%22%2C%0A++%22duration%22%3A+%22428269%22%2C%0A++%22video.format%22%3A+%22AVC%22%2C%0A++%22video.duration%22%3A+%22428267%22%2C%0A++%22video.bitrate%22%3A+%2246598%22%2C%0A++%22video.width%22%3A+%221280%22%2C%0A++%22video.height%22%3A+%22720%22%2C%0A++%22video.framerate%22%3A+%2230.000%22%2C%0A++%22video.ratio%22%3A+%221.778%22%2C%0A++%22video.rotation%22%3A+%220.000%22%2C%0A++%22video.scantype%22%3A+%22Progressive%22%2C%0A++%22audio.format%22%3A+%22AAC%22%2C%0A++%22audio.bitrate%22%3A+%22128014%22%2C%0A++%22audio.sample.rate%22%3A+%2244100%22%2C%0A++%22audio.duration%22%3A+%22428269%22%0A%7D
+[2022-06-28 15:32:49][INFO ](KusUploadUtils.java:findWorkFileItems:96) - Success to extracted MediaInfo
+[2022-06-28 15:32:49][INFO ](KusUploadUtils.java:findWorkFileItems:99) - Find to item : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"physical_path":"/home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220628-a14c8dc4161fdcbb.mp4","upload_path":"/http_upload/jungin-kim/20220628-a14c8dc4161fdcbb.mp4","filesize":9557596,"filesize_str":"9.1 MB","lastmodified":1656379200000,"lastmodified_str":"2022-06-28T10:20:00.000+0900","media_information":"%7B%0A++%22format%22%3A+%22MPEG-4%22%2C%0A++%22duration%22%3A+%22428269%22%2C%0A++%22video.format%22%3A+%22AVC%22%2C%0A++%22video.duration%22%3A+%22428267%22%2C%0A++%22video.bitrate%22%3A+%2246598%22%2C%0A++%22video.width%22%3A+%221280%22%2C%0A++%22video.height%22%3A+%22720%22%2C%0A++%22video.framerate%22%3A+%2230.000%22%2C%0A++%22video.ratio%22%3A+%221.778%22%2C%0A++%22video.rotation%22%3A+%220.000%22%2C%0A++%22video.scantype%22%3A+%22Progressive%22%2C%0A++%22audio.format%22%3A+%22AAC%22%2C%0A++%22audio.bitrate%22%3A+%22128014%22%2C%0A++%22audio.sample.rate%22%3A+%2244100%22%2C%0A++%22audio.duration%22%3A+%22428269%22%0A%7D","content_provider_key":"http_upload","key":"20220628-a14c8dc4161fdcbb","content_path":"","snapshot_path":"","title":"jungin-kim/20220628-a14c8dc4161fdcbb","md5":"","format":"MPEG-4","duration":428269.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-06-28 15:32:50][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220628-a14c8dc4161fdcbb.mp4
+[2022-06-28 15:32:50][INFO ](CommonUtils.java:checkIsMediaContent:567) - physicalPath : /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220628-a14c8dc4161fdcbb.mp4
+[2022-06-28 15:32:51][DEBUG](KusUploadUtils.java:getUploadFullFilePath:38) - getUploadFullFilePath FileList : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"physical_path":"/home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220628-a14c8dc4161fdcbb.mp4","upload_path":"/http_upload/jungin-kim/20220628-a14c8dc4161fdcbb.mp4","filesize":9557596,"filesize_str":"9.1 MB","lastmodified":1656379200000,"lastmodified_str":"2022-06-28T10:20:00.000+0900","media_information":"%7B%0A++%22format%22%3A+%22MPEG-4%22%2C%0A++%22duration%22%3A+%22428269%22%2C%0A++%22video.format%22%3A+%22AVC%22%2C%0A++%22video.duration%22%3A+%22428267%22%2C%0A++%22video.bitrate%22%3A+%2246598%22%2C%0A++%22video.width%22%3A+%221280%22%2C%0A++%22video.height%22%3A+%22720%22%2C%0A++%22video.framerate%22%3A+%2230.000%22%2C%0A++%22video.ratio%22%3A+%221.778%22%2C%0A++%22video.rotation%22%3A+%220.000%22%2C%0A++%22video.scantype%22%3A+%22Progressive%22%2C%0A++%22audio.format%22%3A+%22AAC%22%2C%0A++%22audio.bitrate%22%3A+%22128014%22%2C%0A++%22audio.sample.rate%22%3A+%2244100%22%2C%0A++%22audio.duration%22%3A+%22428269%22%0A%7D","content_provider_key":"http_upload","key":"20220628-a14c8dc4161fdcbb","content_path":"","snapshot_path":"","title":"jungin-kim/20220628-a14c8dc4161fdcbb","md5":"","format":"MPEG-4","duration":428269.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-06-28 15:32:54][DEBUG](CommonUtils.java:fromResultSet:401) - /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-e9e93d9cd5c3196b.jpeg
+[2022-06-28 15:32:54][INFO ](CommonUtils.java:pathToTRmpk:726) - [ pathToTRmpk 1/3 ] 20220627-e9e93d9cd5c3196b.jpeg
+[2022-06-28 15:32:54][INFO ](CommonUtils.java:pathToTRmpk:730) - [ pathToTRmpk 2/3 ] 20220627-e9e93d9cd5c3196b
+[2022-06-28 15:32:54][DEBUG](CommonUtils.java:fromResultSet:438) - fromResultSet Add TransCoder : null
+[2022-06-28 15:32:54][DEBUG](CommonUtils.java:fromResultSet:439) - fromResultSet Path : /http_upload/jungin-kim/20220627-e9e93d9cd5c3196b.jpeg
+[2022-06-28 15:32:54][DEBUG](CommonUtils.java:fromResultSet:440) - fromResultSet item : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"physical_path":"/home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-e9e93d9cd5c3196b.jpeg","upload_path":"/http_upload/jungin-kim/20220627-e9e93d9cd5c3196b.jpeg","filesize":568634,"filesize_str":"555.3 KB","lastmodified":1656318660000,"lastmodified_str":"2022-06-27T17:31:00.000+0900","content_provider_key":"http_upload","key":"20220627-e9e93d9cd5c3196b","content_path":"","snapshot_path":"","title":"jungin-kim/20220627-e9e93d9cd5c3196b","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-06-28 15:32:57][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-e9e93d9cd5c3196b.jpeg
+[2022-06-28 15:32:59][INFO ](CommonUtils.java:setMediaInfo:655) - MediaInfo information : %7B%0A++%22format%22%3A+%22JPEG%22%2C%0A++%22video.rotation%22%3A+%220%22%2C%0A++%22image.format%22%3A+%22JPEG%22%2C%0A++%22image.width%22%3A+%221080%22%2C%0A++%22image.height%22%3A+%221440%22%0A%7D
+[2022-06-28 15:34:01][DEBUG](CommonUtils.java:fromResultSet:401) - /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4
+[2022-06-28 15:34:01][INFO ](CommonUtils.java:pathToTRmpk:726) - [ pathToTRmpk 1/3 ] 20220627-80607469f8ba85d8.mp4
+[2022-06-28 15:34:01][INFO ](CommonUtils.java:pathToTRmpk:730) - [ pathToTRmpk 2/3 ] 20220627-80607469f8ba85d8
+[2022-06-28 15:34:01][DEBUG](CommonUtils.java:fromResultSet:438) - fromResultSet Add TransCoder : null
+[2022-06-28 15:34:01][DEBUG](CommonUtils.java:fromResultSet:439) - fromResultSet Path : /http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4
+[2022-06-28 15:34:01][DEBUG](CommonUtils.java:fromResultSet:440) - fromResultSet item : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"physical_path":"/home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4","upload_path":"/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4","filesize":9557596,"filesize_str":"9.1 MB","lastmodified":1656318660000,"lastmodified_str":"2022-06-27T17:31:00.000+0900","content_provider_key":"http_upload","key":"20220627-80607469f8ba85d8","content_path":"","snapshot_path":"","title":"jungin-kim/20220627-80607469f8ba85d8","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-06-28 15:34:03][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4
+[2022-06-28 15:34:04][INFO ](CommonUtils.java:setMediaInfo:655) - MediaInfo information : %7B%0A++%22format%22%3A+%22MPEG-4%22%2C%0A++%22duration%22%3A+%22428269%22%2C%0A++%22video.format%22%3A+%22AVC%22%2C%0A++%22video.duration%22%3A+%22428267%22%2C%0A++%22video.bitrate%22%3A+%2246598%22%2C%0A++%22video.width%22%3A+%221280%22%2C%0A++%22video.height%22%3A+%22720%22%2C%0A++%22video.framerate%22%3A+%2230.000%22%2C%0A++%22video.ratio%22%3A+%221.778%22%2C%0A++%22video.rotation%22%3A+%220.000%22%2C%0A++%22video.scantype%22%3A+%22Progressive%22%2C%0A++%22audio.format%22%3A+%22AAC%22%2C%0A++%22audio.bitrate%22%3A+%22128014%22%2C%0A++%22audio.sample.rate%22%3A+%2244100%22%2C%0A++%22audio.duration%22%3A+%22428269%22%0A%7D
+[2022-06-28 15:34:43][INFO ](KusUploadUtils.java:findWorkFileItems:96) - Success to extracted MediaInfo
+[2022-06-28 15:34:43][INFO ](KusUploadUtils.java:findWorkFileItems:99) - Find to item : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"physical_path":"/home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4","upload_path":"/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4","filesize":9557596,"filesize_str":"9.1 MB","lastmodified":1656318660000,"lastmodified_str":"2022-06-27T17:31:00.000+0900","media_information":"%7B%0A++%22format%22%3A+%22MPEG-4%22%2C%0A++%22duration%22%3A+%22428269%22%2C%0A++%22video.format%22%3A+%22AVC%22%2C%0A++%22video.duration%22%3A+%22428267%22%2C%0A++%22video.bitrate%22%3A+%2246598%22%2C%0A++%22video.width%22%3A+%221280%22%2C%0A++%22video.height%22%3A+%22720%22%2C%0A++%22video.framerate%22%3A+%2230.000%22%2C%0A++%22video.ratio%22%3A+%221.778%22%2C%0A++%22video.rotation%22%3A+%220.000%22%2C%0A++%22video.scantype%22%3A+%22Progressive%22%2C%0A++%22audio.format%22%3A+%22AAC%22%2C%0A++%22audio.bitrate%22%3A+%22128014%22%2C%0A++%22audio.sample.rate%22%3A+%2244100%22%2C%0A++%22audio.duration%22%3A+%22428269%22%0A%7D","content_provider_key":"http_upload","key":"20220627-80607469f8ba85d8","content_path":"","snapshot_path":"","title":"jungin-kim/20220627-80607469f8ba85d8","md5":"","format":"MPEG-4","duration":428269.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-06-28 15:34:43][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4
+[2022-06-28 15:34:44][INFO ](CommonUtils.java:checkIsMediaContent:567) - physicalPath : /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4
+[2022-06-28 15:34:45][DEBUG](KusUploadUtils.java:getUploadFullFilePath:38) - getUploadFullFilePath FileList : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"physical_path":"/home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4","upload_path":"/http_upload/jungin-kim/20220627-80607469f8ba85d8.mp4","filesize":9557596,"filesize_str":"9.1 MB","lastmodified":1656318660000,"lastmodified_str":"2022-06-27T17:31:00.000+0900","media_information":"%7B%0A++%22format%22%3A+%22MPEG-4%22%2C%0A++%22duration%22%3A+%22428269%22%2C%0A++%22video.format%22%3A+%22AVC%22%2C%0A++%22video.duration%22%3A+%22428267%22%2C%0A++%22video.bitrate%22%3A+%2246598%22%2C%0A++%22video.width%22%3A+%221280%22%2C%0A++%22video.height%22%3A+%22720%22%2C%0A++%22video.framerate%22%3A+%2230.000%22%2C%0A++%22video.ratio%22%3A+%221.778%22%2C%0A++%22video.rotation%22%3A+%220.000%22%2C%0A++%22video.scantype%22%3A+%22Progressive%22%2C%0A++%22audio.format%22%3A+%22AAC%22%2C%0A++%22audio.bitrate%22%3A+%22128014%22%2C%0A++%22audio.sample.rate%22%3A+%2244100%22%2C%0A++%22audio.duration%22%3A+%22428269%22%0A%7D","content_provider_key":"http_upload","key":"20220627-80607469f8ba85d8","content_path":"","snapshot_path":"","title":"jungin-kim/20220627-80607469f8ba85d8","md5":"","format":"MPEG-4","duration":428269.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-06-28 15:34:49][DEBUG](CommonUtils.java:fromResultSet:401) - /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220628-a14c8dc4161fdcbb.mp4
+[2022-06-28 15:34:49][INFO ](CommonUtils.java:pathToTRmpk:726) - [ pathToTRmpk 1/3 ] 20220628-a14c8dc4161fdcbb.mp4
+[2022-06-28 15:34:49][INFO ](CommonUtils.java:pathToTRmpk:730) - [ pathToTRmpk 2/3 ] 20220628-a14c8dc4161fdcbb
+[2022-06-28 15:34:49][DEBUG](CommonUtils.java:fromResultSet:438) - fromResultSet Add TransCoder : null
+[2022-06-28 15:34:49][DEBUG](CommonUtils.java:fromResultSet:439) - fromResultSet Path : /http_upload/jungin-kim/20220628-a14c8dc4161fdcbb.mp4
+[2022-06-28 15:34:49][DEBUG](CommonUtils.java:fromResultSet:440) - fromResultSet item : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"physical_path":"/home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220628-a14c8dc4161fdcbb.mp4","upload_path":"/http_upload/jungin-kim/20220628-a14c8dc4161fdcbb.mp4","filesize":9557596,"filesize_str":"9.1 MB","lastmodified":1656379200000,"lastmodified_str":"2022-06-28T10:20:00.000+0900","content_provider_key":"http_upload","key":"20220628-a14c8dc4161fdcbb","content_path":"","snapshot_path":"","title":"jungin-kim/20220628-a14c8dc4161fdcbb","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-06-28 15:34:51][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220628-a14c8dc4161fdcbb.mp4
+[2022-06-28 15:34:52][INFO ](CommonUtils.java:setMediaInfo:655) - MediaInfo information : %7B%0A++%22format%22%3A+%22MPEG-4%22%2C%0A++%22duration%22%3A+%22428269%22%2C%0A++%22video.format%22%3A+%22AVC%22%2C%0A++%22video.duration%22%3A+%22428267%22%2C%0A++%22video.bitrate%22%3A+%2246598%22%2C%0A++%22video.width%22%3A+%221280%22%2C%0A++%22video.height%22%3A+%22720%22%2C%0A++%22video.framerate%22%3A+%2230.000%22%2C%0A++%22video.ratio%22%3A+%221.778%22%2C%0A++%22video.rotation%22%3A+%220.000%22%2C%0A++%22video.scantype%22%3A+%22Progressive%22%2C%0A++%22audio.format%22%3A+%22AAC%22%2C%0A++%22audio.bitrate%22%3A+%22128014%22%2C%0A++%22audio.sample.rate%22%3A+%2244100%22%2C%0A++%22audio.duration%22%3A+%22428269%22%0A%7D
+[2022-06-28 15:34:54][INFO ](KusUploadUtils.java:findWorkFileItems:96) - Success to extracted MediaInfo
+[2022-06-28 15:34:54][INFO ](KusUploadUtils.java:findWorkFileItems:99) - Find to item : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"physical_path":"/home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220628-a14c8dc4161fdcbb.mp4","upload_path":"/http_upload/jungin-kim/20220628-a14c8dc4161fdcbb.mp4","filesize":9557596,"filesize_str":"9.1 MB","lastmodified":1656379200000,"lastmodified_str":"2022-06-28T10:20:00.000+0900","media_information":"%7B%0A++%22format%22%3A+%22MPEG-4%22%2C%0A++%22duration%22%3A+%22428269%22%2C%0A++%22video.format%22%3A+%22AVC%22%2C%0A++%22video.duration%22%3A+%22428267%22%2C%0A++%22video.bitrate%22%3A+%2246598%22%2C%0A++%22video.width%22%3A+%221280%22%2C%0A++%22video.height%22%3A+%22720%22%2C%0A++%22video.framerate%22%3A+%2230.000%22%2C%0A++%22video.ratio%22%3A+%221.778%22%2C%0A++%22video.rotation%22%3A+%220.000%22%2C%0A++%22video.scantype%22%3A+%22Progressive%22%2C%0A++%22audio.format%22%3A+%22AAC%22%2C%0A++%22audio.bitrate%22%3A+%22128014%22%2C%0A++%22audio.sample.rate%22%3A+%2244100%22%2C%0A++%22audio.duration%22%3A+%22428269%22%0A%7D","content_provider_key":"http_upload","key":"20220628-a14c8dc4161fdcbb","content_path":"","snapshot_path":"","title":"jungin-kim/20220628-a14c8dc4161fdcbb","md5":"","format":"MPEG-4","duration":428269.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-06-28 15:34:55][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220628-a14c8dc4161fdcbb.mp4
+[2022-06-28 15:34:56][INFO ](CommonUtils.java:checkIsMediaContent:567) - physicalPath : /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220628-a14c8dc4161fdcbb.mp4
+[2022-06-28 15:34:56][DEBUG](KusUploadUtils.java:getUploadFullFilePath:38) - getUploadFullFilePath FileList : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"physical_path":"/home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220628-a14c8dc4161fdcbb.mp4","upload_path":"/http_upload/jungin-kim/20220628-a14c8dc4161fdcbb.mp4","filesize":9557596,"filesize_str":"9.1 MB","lastmodified":1656379200000,"lastmodified_str":"2022-06-28T10:20:00.000+0900","media_information":"%7B%0A++%22format%22%3A+%22MPEG-4%22%2C%0A++%22duration%22%3A+%22428269%22%2C%0A++%22video.format%22%3A+%22AVC%22%2C%0A++%22video.duration%22%3A+%22428267%22%2C%0A++%22video.bitrate%22%3A+%2246598%22%2C%0A++%22video.width%22%3A+%221280%22%2C%0A++%22video.height%22%3A+%22720%22%2C%0A++%22video.framerate%22%3A+%2230.000%22%2C%0A++%22video.ratio%22%3A+%221.778%22%2C%0A++%22video.rotation%22%3A+%220.000%22%2C%0A++%22video.scantype%22%3A+%22Progressive%22%2C%0A++%22audio.format%22%3A+%22AAC%22%2C%0A++%22audio.bitrate%22%3A+%22128014%22%2C%0A++%22audio.sample.rate%22%3A+%2244100%22%2C%0A++%22audio.duration%22%3A+%22428269%22%0A%7D","content_provider_key":"http_upload","key":"20220628-a14c8dc4161fdcbb","content_path":"","snapshot_path":"","title":"jungin-kim/20220628-a14c8dc4161fdcbb","md5":"","format":"MPEG-4","duration":428269.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-06-28 15:35:00][DEBUG](CommonUtils.java:fromResultSet:401) - /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-e9e93d9cd5c3196b.jpeg
+[2022-06-28 15:35:00][INFO ](CommonUtils.java:pathToTRmpk:726) - [ pathToTRmpk 1/3 ] 20220627-e9e93d9cd5c3196b.jpeg
+[2022-06-28 15:35:00][INFO ](CommonUtils.java:pathToTRmpk:730) - [ pathToTRmpk 2/3 ] 20220627-e9e93d9cd5c3196b
+[2022-06-28 15:35:00][DEBUG](CommonUtils.java:fromResultSet:438) - fromResultSet Add TransCoder : null
+[2022-06-28 15:35:00][DEBUG](CommonUtils.java:fromResultSet:439) - fromResultSet Path : /http_upload/jungin-kim/20220627-e9e93d9cd5c3196b.jpeg
+[2022-06-28 15:35:00][DEBUG](CommonUtils.java:fromResultSet:440) - fromResultSet item : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"physical_path":"/home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-e9e93d9cd5c3196b.jpeg","upload_path":"/http_upload/jungin-kim/20220627-e9e93d9cd5c3196b.jpeg","filesize":568634,"filesize_str":"555.3 KB","lastmodified":1656318660000,"lastmodified_str":"2022-06-27T17:31:00.000+0900","content_provider_key":"http_upload","key":"20220627-e9e93d9cd5c3196b","content_path":"","snapshot_path":"","title":"jungin-kim/20220627-e9e93d9cd5c3196b","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-06-28 15:35:04][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/kollus-upload-v2/http_upload/jungin-kim/20220627-e9e93d9cd5c3196b.jpeg
+[2022-06-28 15:35:05][INFO ](CommonUtils.java:setMediaInfo:655) - MediaInfo information : %7B%0A++%22format%22%3A+%22JPEG%22%2C%0A++%22video.rotation%22%3A+%220%22%2C%0A++%22image.format%22%3A+%22JPEG%22%2C%0A++%22image.width%22%3A+%221080%22%2C%0A++%22image.height%22%3A+%221440%22%0A%7D
