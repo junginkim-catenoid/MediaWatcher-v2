@@ -321,7 +321,7 @@ public class FtpUploadUtils extends CommonUtils {
             failApiResultOrRegisterProcess(null, item);
         }
 
-        return false;
+        return true;
     }
 
     /*

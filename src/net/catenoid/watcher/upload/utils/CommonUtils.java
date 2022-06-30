@@ -86,7 +86,7 @@ public class CommonUtils {
 
             if (response == null) {
                 log.error(LogAction.HTTP_LOG + url + ", status: connection failed");
-//                transmitErrorReport(503, ModuleConfig.URLS.WATCHER_LIST_DELETE, "", conf);
+                transmitErrorReport(503, ModuleConfig.URLS.WATCHER_LIST_DELETE, "", conf);
             } else {
                 Map<String, Object> resMap = getResponseBody(inputStream, response);
 
@@ -107,7 +107,7 @@ public class CommonUtils {
             log.error(WatcherUtils.getStackTrace(e));
             log.error(responseBody);
             String msgType = apiType == "register" ? ModuleConfig.URLS.WATCHER_LIST_INSERT : ModuleConfig.URLS.WATCHER_LIST_COMPLETE;
-//            transmitErrorReport(5002, "JSON Error: " + msgType, "", conf);
+            transmitErrorReport(5002, "JSON Error: " + msgType, "", conf);
             return null;
 
         } finally {
@@ -594,7 +594,6 @@ public class CommonUtils {
             return true;
         }
 
-        // 이미지도 미디어콘텐츠인 경우
         if (hasText(imageWidth) && hasText(imageHeight)) {
             return true;
         }

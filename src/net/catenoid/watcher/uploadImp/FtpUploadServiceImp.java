@@ -102,29 +102,29 @@ public class FtpUploadServiceImp extends FtpUploadDao implements FtpUploadServic
         // TODO Auto-generated method stub
         try {
             int sendRegistCnt = sendWatchFiles();
-            return;
-//            if (sendRegistCnt > 0) {
-//                log.info("Send to register count : " + sendRegistCnt);
-//            }
-//
-//            /**
-//             * 작업 대상 파일 리스트를 획득한다.
-//             */
-//            ArrayList<FileItemDTO> items = selectCompareOver(check_time);
-//            if (items.size() > 0 && items != null) {
-//                log.info("Working file count : " + items.size());
-//
-//                utils.createSnapFile(items);
-//            }
-//
-//            if (utils.moveToWorkDir(items) > 0) {
-//                postCopyCompleteFiles(items);
-//            }
-////			else {
-////				log.warn("selectCompareOver == item-size: " + items.size() + ", " + utils.info.getName());
-////			}
-//
-//            removeNotExistFile();
+
+            if (sendRegistCnt > 0) {
+                log.info("Send to register count : " + sendRegistCnt);
+            }
+
+            /**
+             * 작업 대상 파일 리스트를 획득한다.
+             */
+            ArrayList<FileItemDTO> items = selectCompareOver(check_time);
+            if (items.size() > 0 && items != null) {
+                log.info("Working file count : " + items.size());
+
+                utils.createSnapFile(items);
+            }
+
+            if (utils.moveToWorkDir(items) > 0) {
+                postCopyCompleteFiles(items);
+            }
+//			else {
+//				log.warn("selectCompareOver == item-size: " + items.size() + ", " + utils.info.getName());
+//			}
+
+            removeNotExistFile();
 
         } catch (Exception e) {
             // TODO: handle exception
@@ -221,19 +221,7 @@ public class FtpUploadServiceImp extends FtpUploadDao implements FtpUploadServic
                 continue;
             }
 
-//            if (utils.getMediaContentInfo(f)) {
-//
-//            }
-//
-//            if (f.getMediaInfo() == null) {
-//                log.debug("is not MediaFile : " + f.getPhysicalPath());
-////                if (file.delete()) {
-////                    log.debug("Not MediaFile removed");
-////                }
-//            }
-
             // 미디어파일 여부를 조사한 후 로깅 및 삭제처리
-//             콘솔 업로드 여부에 따라 Physical Path 분기처리 필요여부 확인 필요
             boolean isMediaContentFile = utils.checkIsMediaContent(f.getPhysicalPath());
             if (!isMediaContentFile) {
                 log.debug("is not MediaFile : " + f.toString());
@@ -257,11 +245,11 @@ public class FtpUploadServiceImp extends FtpUploadDao implements FtpUploadServic
          * charset이 다른 파일이 존재하는것으로 보임.
          */
         if (insert_count == 0 && update_count == 0 && error_count > 0) {
-//            log.debug("convert not matched charset filename");
-//
-//            ConvertMove convmv = new ConvertMove(conf, rootPath);
-//
-//            convmv.run();
+            log.debug("convert not matched charset filename");
+
+            ConvertMove convmv = new ConvertMove(conf, rootPath);
+
+            convmv.run();
         }
     }
 
