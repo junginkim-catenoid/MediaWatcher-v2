@@ -6,15 +6,15 @@ import net.catenoid.watcher.upload.config.LineParser;
 import net.catenoid.watcher.upload.config.LinuxLineParser;
 import net.catenoid.watcher.upload.config.WindowsLineParser;
 import net.catenoid.watcher.upload.dto.FileItemDTO;
-
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.io.*;
 import java.util.ArrayList;
 
 public class LSParser {
 
-    private static Logger log = Logger.getLogger(LSParser.class);
+    private static Logger log = LogManager.getLogger(LSParser.class);
 
     static boolean isWindows = false;
 

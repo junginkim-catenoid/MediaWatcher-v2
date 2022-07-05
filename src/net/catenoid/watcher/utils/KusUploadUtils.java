@@ -5,7 +5,8 @@ import net.catenoid.watcher.config.WatcherFolder;
 import net.catenoid.watcher.upload.dto.FileItemDTO;
 import net.catenoid.watcher.upload.dto.SendFileItemsDTO;
 import net.catenoid.watcher.upload.utils.CommonUtils;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -17,7 +18,7 @@ import java.util.List;
 
 public class KusUploadUtils extends CommonUtils {
 
-    private static Logger log = Logger.getLogger(KusUploadUtils.class);
+    private static Logger log = LogManager.getLogger(KusUploadUtils.class);
 
     public KusUploadUtils(WatcherFolder info, Config conf) {
         // TODO Auto-generated constructor stub

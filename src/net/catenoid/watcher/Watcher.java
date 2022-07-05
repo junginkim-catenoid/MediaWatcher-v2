@@ -1,5 +1,19 @@
 package net.catenoid.watcher;
 
+import com.sun.net.httpserver.HttpContext;
+import com.sun.net.httpserver.HttpServer;
+import net.catenoid.watcher.config.Config;
+import net.catenoid.watcher.config.HttpServerConf;
+import net.catenoid.watcher.config.WatcherFolder;
+import net.catenoid.watcher.http.*;
+import net.catenoid.watcher.job.Role_Watcher;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.core.LoggerContext;
+import org.apache.logging.log4j.core.config.Configurator;
+import org.quartz.*;
+import org.quartz.impl.StdSchedulerFactory;
+
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
@@ -11,26 +25,13 @@ import java.util.jar.Attributes;
 import java.util.jar.JarFile;
 import java.util.jar.Manifest;
 
-import com.sun.net.httpserver.HttpContext;
-import com.sun.net.httpserver.HttpServer;
-import net.catenoid.watcher.config.Config;
-import net.catenoid.watcher.config.HttpServerConf;
-import net.catenoid.watcher.config.WatcherFolder;
-import net.catenoid.watcher.http.*;
-import net.catenoid.watcher.job.Role_Watcher;
-import net.catenoid.watcher.utils.WatcherUtils;
-import org.apache.log4j.Logger;
-import org.apache.log4j.PropertyConfigurator;
-import org.quartz.*;
-import org.quartz.impl.StdSchedulerFactory;
-
 import static org.quartz.CronScheduleBuilder.cronSchedule;
 import static org.quartz.JobBuilder.newJob;
 import static org.quartz.TriggerBuilder.newTrigger;
 
 public class Watcher {
 
-    private static Logger log = Logger.getLogger(Watcher.class);
+    private static Logger log;
     public static String VERSION = getManifestInfo();
 //	public static String VERSION ="1.6-b415 [gson]";
 
@@ -47,20 +48,25 @@ public class Watcher {
      */
     public static void main(String[] args) throws Exception {
 
-        String user_dir = System.getProperty("user.dir");
 
-        String[] paths = {
-                user_dir + "/log4j.properties",
-                user_dir + "/bin/log4j.properties",
-                user_dir + "/conf/log4j.properties"
-        };
+        loadLog4jConfigFile();
+        log = LogManager.getLogger(Watcher.class);
 
-        for(String path : paths) {
-            File propFile = new File(path);
-            if (propFile.exists()) {
-                PropertyConfigurator.configureAndWatch(path, 60000L);
-            }
-        }
+
+//        String user_dir = System.getProperty("user.dir");
+//
+//        String[] paths = {
+//                user_dir + "/log4j.properties",
+//                user_dir + "/bin/log4j.properties",
+//                user_dir + "/conf/log4j.properties"
+//        };
+//
+//        for(String path : paths) {
+//            File propFile = new File(path);
+//            if (propFile.exists()) {
+//                PropertyConfigurator.configureAndWatch(path, 60000L);
+//            }
+//        }
 
 //		PropertyConfigurator.configure( path + "/log4j.properties" );
 
@@ -270,5 +276,14 @@ public class Watcher {
             // Silently ignore wrong manifests on classpath?
         }
         return null;
+    }
+
+    private static void loadLog4jConfigFile() {
+        String path = System.getProperty("user.dir") + "/conf/log4j2.xml";
+
+        Configurator.initialize("log4j2.xml", path);
+        LoggerContext context = (LoggerContext) LogManager.getContext(false);
+        File log4j2XmlFile = new File(path);
+        context.setConfigLocation(log4j2XmlFile.toURI());
     }
 }

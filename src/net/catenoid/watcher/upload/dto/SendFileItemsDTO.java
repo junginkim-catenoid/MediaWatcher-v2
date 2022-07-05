@@ -2,7 +2,8 @@ package net.catenoid.watcher.upload.dto;
 
 import com.google.gson.Gson;
 import com.kollus.json_data.BaseCommand;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.util.ArrayList;
 
@@ -11,7 +12,7 @@ public class SendFileItemsDTO extends ArrayList<FileItemDTO>  {
     private static final long serialVersionUID = -9066947625019002093L;
 
     @SuppressWarnings("unused")
-    private static Logger log = Logger.getLogger(SendFileItemsDTO.class);
+    private static Logger log = LogManager.getLogger(SendFileItemsDTO.class);
 
     public String toString(int watcher_file_kind) {
         for(FileItemDTO item : this) {

@@ -1,14 +1,15 @@
 package net.catenoid.watcher.upload.dto;
 
 import net.catenoid.watcher.utils.WatcherUtils;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 
 public class ExtFilenameParserDTO {
 
-    private static Logger log = Logger.getLogger(ExtFilenameParserDTO.class);
+    private static Logger log = LogManager.getLogger(ExtFilenameParserDTO.class);
     private final char extensionSeparator = '.';
     private static final int MAX_CATEGORY = 3;
 

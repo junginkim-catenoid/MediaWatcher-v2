@@ -3,7 +3,8 @@ package net.catenoid.watcher.upload.utils;
 import net.catenoid.watcher.config.Config;
 import net.catenoid.watcher.upload.dto.FileItemDTO;
 import net.catenoid.watcher.utils.WatcherUtils;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.io.*;
 import java.text.SimpleDateFormat;
@@ -20,7 +21,7 @@ import java.util.Map;
  */
 public class SnapCreator {
 
-    private static Logger log = Logger.getLogger(SnapCreator.class);
+    private static Logger log = LogManager.getLogger(SnapCreator.class);
     private static final String TEMP_SNAP_FILE_NAME = "CONTENT_CHECK_TEMP_SNAP";
     public static final String TEMP_SNAP_FILE_EXT = "JPEG";
 

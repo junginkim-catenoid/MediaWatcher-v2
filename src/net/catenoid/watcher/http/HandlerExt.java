@@ -6,7 +6,8 @@ import net.catenoid.watcher.LogAction;
 import net.catenoid.watcher.Watcher;
 import net.catenoid.watcher.config.Config;
 import org.apache.commons.io.FilenameUtils;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.io.File;
 import java.io.IOException;
@@ -17,7 +18,7 @@ import java.util.Map;
 
 public class HandlerExt implements HttpHandler {
 
-    private static Logger log = Logger.getLogger(HandlerExt.class);
+    private static Logger log = LogManager.getLogger(HandlerExt.class);
 
     protected Config conf = null;
     protected String message;

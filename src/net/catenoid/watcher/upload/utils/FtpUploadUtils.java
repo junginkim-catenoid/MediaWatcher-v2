@@ -22,7 +22,8 @@ import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.message.BasicNameValuePair;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -37,7 +38,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FtpUploadUtils extends CommonUtils {
-    private static Logger log = Logger.getLogger(FtpUploadUtils.class);
+    private static Logger log = LogManager.getLogger(FtpUploadUtils.class);
 //	private static SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
 
     private static final int H2_TRACE_LEVEL = 0;

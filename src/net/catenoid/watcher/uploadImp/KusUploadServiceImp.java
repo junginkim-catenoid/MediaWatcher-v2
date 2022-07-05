@@ -5,9 +5,11 @@ import com.kollus.json_data.BaseCommand;
 import net.catenoid.watcher.config.Config;
 import net.catenoid.watcher.config.WatcherFolder;
 import net.catenoid.watcher.upload.KusUploadService;
-import net.catenoid.watcher.upload.dto.*;
+import net.catenoid.watcher.upload.dto.KollusApiWatchersDTO;
+import net.catenoid.watcher.upload.dto.SendFileItemsDTO;
 import net.catenoid.watcher.utils.KusUploadUtils;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -15,7 +17,7 @@ import java.util.List;
 
 public class KusUploadServiceImp implements KusUploadService {
 
-    private static Logger log = Logger.getLogger(KusUploadServiceImp.class);
+    private static Logger log = LogManager.getLogger(KusUploadServiceImp.class);
 
     private SendFileItemsDTO fileList = null;
     private List<String> dirList = null;
