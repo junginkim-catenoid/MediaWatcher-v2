@@ -55,7 +55,7 @@ public class TranscodingFileHandler extends HandlerExt {
             try {
                 thumbnail_files = gson.fromJson(str_thumbnail_files, typeOfFiles);
             } catch (JsonSyntaxException e) {
-                log.error("thubmail_file json error: " + str_thumbnail_files);
+                log.error("thubmail_file org.json error: " + str_thumbnail_files);
                 return false;
             }
 
@@ -82,7 +82,7 @@ public class TranscodingFileHandler extends HandlerExt {
 						}
 					}
 				} catch (JSONException e) {
-					log.error("thubmail_file json error: " + str_thumbnail_files);
+					log.error("thubmail_file org.json error: " + str_thumbnail_files);
 					return false;
 				}
 			}

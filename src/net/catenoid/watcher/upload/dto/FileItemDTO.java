@@ -528,9 +528,9 @@ public class FileItemDTO implements Comparable<FileItemDTO> {
      */
 //	public static FileItemDTO fromApiResult(KollusApiWatcherContentDTO item) {
 //		Gson gson = BaseCommand.gson(false);
-//		String json = gson.toJson(item);
-//		log.debug("register 반환값 (fileItem) = " + json);
-//		ApiResult_WatcherFileRegister r = gson.fromJson(json, ApiResult_WatcherFileRegister.class);
+//		String org.json = gson.toJson(item);
+//		log.debug("register 반환값 (fileItem) = " + org.json);
+//		ApiResult_WatcherFileRegister r = gson.fromJson(org.json, ApiResult_WatcherFileRegister.class);
 //		return r.result;
 //	}
 

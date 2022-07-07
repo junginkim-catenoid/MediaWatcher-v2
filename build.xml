@@ -17,7 +17,7 @@
         <pathelement location="libs/httpcore-nio-4.1.3.jar"/>
         <pathelement location="libs/commons-lang3-3.1.jar"/>
         <pathelement location="libs/commons-net-3.1.jar"/>
-        <pathelement location="libs/gson-2.3.jar"/>
+        <pathelement location="libs/gson-2.8.5.jar"/>
         <pathelement location="libs/kollus_utils.jar"/>
         <pathelement location="libs/httpclient-4.3.3.jar"/>
         <pathelement location="libs/httpclient-cache-4.3.3.jar"/>
