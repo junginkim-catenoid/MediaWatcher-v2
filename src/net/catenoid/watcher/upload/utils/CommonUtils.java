@@ -20,8 +20,7 @@ import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.message.BasicNameValuePair;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.apache.log4j.Logger;
 
 import java.io.*;
 import java.net.URISyntaxException;
@@ -33,7 +32,7 @@ import java.sql.ResultSet;
 import java.util.*;
 
 public class CommonUtils {
-    private static Logger log = LogManager.getLogger(CommonUtils.class);
+    private static Logger log = Logger.getLogger(CommonUtils.class);
 
     /**
      * HTTP 통신에 사용될 기본 문자열 CHARSET 설정 (UTF-8)

@@ -9,8 +9,7 @@ import com.kollus.json_data.config.BaseConfig;
 import com.kollus.json_data.config.KollusApi;
 import com.kollus.utils.ConfigException;
 import org.apache.http.client.ClientProtocolException;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.apache.log4j.Logger;
 
 import java.io.*;
 import java.util.Iterator;
@@ -18,7 +17,7 @@ import java.util.Map;
 
 public class Config extends BaseConfig {
 
-    private static Logger log = LogManager.getLogger(Config.class);
+    private static Logger log = Logger.getLogger(Config.class);
 
     /**
      * 환경 설정 파일명

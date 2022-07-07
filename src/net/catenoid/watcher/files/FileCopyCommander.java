@@ -1,7 +1,6 @@
 package net.catenoid.watcher.files;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.apache.log4j.Logger;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -15,7 +14,7 @@ import java.util.ArrayList;
  */
 public class FileCopyCommander {
 
-    private static Logger log = LogManager.getLogger(FileCopyCommander.class);
+    private static Logger log = Logger.getLogger(FileCopyCommander.class);
 
     private static final int BUFFER_SIZE = 2048;
     private boolean isUseRsync = false;

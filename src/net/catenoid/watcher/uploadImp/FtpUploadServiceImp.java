@@ -11,8 +11,7 @@ import net.catenoid.watcher.upload.dto.SendFileItemsDTO;
 import net.catenoid.watcher.upload.utils.FtpUploadUtils;
 import net.catenoid.watcher.upload.utils.LSParser;
 import net.catenoid.watcher.uploadDao.FtpUploadDao;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.apache.log4j.Logger;
 
 import java.io.File;
 import java.sql.ResultSet;
@@ -23,7 +22,7 @@ import java.util.Date;
 
 public class FtpUploadServiceImp extends FtpUploadDao implements FtpUploadService  {
 
-    private static Logger log = LogManager.getLogger(FtpUploadServiceImp.class);
+    private static Logger log = Logger.getLogger(FtpUploadServiceImp.class);
     private static SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
 
     private ArrayList<FileItemDTO> lsFiles = null;

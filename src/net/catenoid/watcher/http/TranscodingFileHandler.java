@@ -8,8 +8,7 @@ import com.google.gson.reflect.TypeToken;
 import com.kollus.json_data.BaseCommand;
 import net.catenoid.watcher.LogAction;
 import net.catenoid.watcher.utils.WatcherUtils;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.apache.log4j.Logger;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
@@ -17,7 +16,7 @@ import java.util.Map;
 
 public class TranscodingFileHandler extends HandlerExt {
 
-    private static Logger log = LogManager.getLogger(TranscodingFileHandler.class);
+    private static Logger log = Logger.getLogger(TranscodingFileHandler.class);
 
     private interface PARAMS {
         public final String COMMAND = "cmd";

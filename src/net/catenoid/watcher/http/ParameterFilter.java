@@ -2,8 +2,7 @@ package net.catenoid.watcher.http;
 
 import com.sun.net.httpserver.Filter;
 import com.sun.net.httpserver.HttpExchange;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.apache.log4j.Logger;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -18,7 +17,7 @@ import java.util.Map;
 
 public class ParameterFilter extends Filter {
 
-    private static Logger log = LogManager.getLogger(ParameterFilter.class);
+    private static Logger log = Logger.getLogger(ParameterFilter.class);
 
     @Override
     public String description() {

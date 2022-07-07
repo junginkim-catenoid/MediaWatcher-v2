@@ -2,8 +2,7 @@ package net.catenoid.watcher.http;
 
 import net.catenoid.watcher.LogAction;
 import net.catenoid.watcher.config.Config;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.apache.log4j.Logger;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -13,7 +12,7 @@ import java.util.ArrayList;
 
 public class LinuxExecute {
 
-    private static Logger log = LogManager.getLogger(LinuxExecute.class);
+    private static Logger log = Logger.getLogger(LinuxExecute.class);
     private ArrayList<String> _cmdArray = null;
     private boolean stdout_off = false;
 

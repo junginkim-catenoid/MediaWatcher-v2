@@ -224,3 +224,192 @@ Caused by: java.net.ConnectException: Connection refused (Connection refused)
 [2022-07-05 18:03:57][DEBUG](CommonUtils.java:fromResultSet:440) - fromResultSet item : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/sample.webm","upload_path":"/jungin-kim/_None/sample.webm","filesize":1148996,"filesize_str":"1.1 MB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"sample","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}
 [2022-07-05 18:03:57][DEBUG](FtpUploadDao.java:sendWatchFiles:279) - file register 보내는값 = [{"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/SAMPLE_2.MP3","upload_path":"/jungin-kim/_None/SAMPLE_2.MP3","filesize":724289,"filesize_str":"707.3 KB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"SAMPLE_2","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}, {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/sample.webm","upload_path":"/jungin-kim/_None/sample.webm","filesize":1148996,"filesize_str":"1.1 MB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"sample","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}]
 [2022-07-05 18:03:57][DEBUG](CommonUtils.java:getHttpResponse:176) - Post Requests Transfer Content : watcher_files=[{"kind":1,"module_key":"watcherfile1","is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/SAMPLE_2.MP3","upload_path":"/jungin-kim/_None/SAMPLE_2.MP3","filesize":724289,"filesize_str":"707.3 KB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"SAMPLE_2","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""},{"kind":1,"module_key":"watcherfile1","is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/sample.webm","upload_path":"/jungin-kim/_None/sample.webm","filesize":1148996,"filesize_str":"1.1 MB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"sample","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}]
+[2022-07-07 14:10:29][INFO ](Watcher.java:start:98) - [PRG_START]
+[2022-07-07 14:10:30][INFO ](Watcher.java:printVersion:40) - [PRG_VER]null
+[2022-07-07 14:10:34][DEBUG](ThreadSafeClientConnManager.java:getConnection:235) - Get connection: {}->http://api.kr.dev.kollus.com, timeout = 0
+[2022-07-07 14:10:34][DEBUG](ThreadSafeClientConnManager.java:releaseConnection:280) - Released connection is reusable.
+[2022-07-07 14:10:41][INFO ](Config.java:printUrls:234) - URLS [watcher.list.insert] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/register
+[2022-07-07 14:10:41][INFO ](Config.java:printUrls:234) - URLS [watcher.list.complete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/complete
+[2022-07-07 14:10:41][INFO ](Config.java:printUrls:234) - URLS [watcher.list.delete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/remove
+[2022-07-07 14:10:41][INFO ](Config.java:printUrls:234) - URLS [watcher.usage_day_amount.insert] http://api.kr.dev.kollus.com/0/catenoid/usage_day_amount/register
+[2022-07-07 14:10:41][INFO ](Config.java:printUrls:234) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-07-07 14:10:41][INFO ](Config.java:printUrls:234) - URLS [transcoding_job.assign] http://jobmanager-dev-kr.kollus.com:8180/assign
+[2022-07-07 14:10:41][INFO ](Config.java:printUrls:234) - URLS [transcoding_job.manager] http://api.kr.dev.kollus.com/0/catenoid/transcoding_job/manager
+[2022-07-07 14:10:41][INFO ](Config.java:printUrls:234) - URLS [transcoding_file.register] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/register
+[2022-07-07 14:10:41][INFO ](Config.java:printUrls:234) - URLS [transcoding_file.update] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/update
+[2022-07-07 14:10:41][INFO ](Config.java:printUrls:234) - URLS [transcoding_file.complete] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete
+[2022-07-07 14:10:41][INFO ](Config.java:printUrls:234) - URLS [transcoding_file.complete_all] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete_all
+[2022-07-07 14:10:41][INFO ](Config.java:printUrls:234) - URLS [module.check_activated_at] http://api.kr.dev.kollus.com/0/catenoid/module/check_activated_at
+[2022-07-07 14:10:41][INFO ](Config.java:printUrls:234) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-07-07 14:10:41][DEBUG](Watcher.java:setupWatcher:237) - [PRG_CONF]job_watcherfile1=0/10 * * * * ?
+[2022-07-07 14:10:50][DEBUG](CommonUtils.java:fromResultSet:397) - /home/kollus/upload/jungin-kim/_None/SAMPLE_1.MP3
+[2022-07-07 14:10:50][INFO ](CommonUtils.java:pathToTRmpk:725) - [ pathToTRmpk 1/3 ] SAMPLE_1.MP3
+[2022-07-07 14:10:50][INFO ](CommonUtils.java:pathToTRmpk:729) - [ pathToTRmpk 2/3 ] SAMPLE_1
+[2022-07-07 14:10:50][DEBUG](CommonUtils.java:fromResultSet:434) - fromResultSet Add TransCoder : null
+[2022-07-07 14:10:50][DEBUG](CommonUtils.java:fromResultSet:435) - fromResultSet Path : /jungin-kim/_None/SAMPLE_1.MP3
+[2022-07-07 14:10:50][DEBUG](CommonUtils.java:fromResultSet:436) - fromResultSet item : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/SAMPLE_1.MP3","upload_path":"/jungin-kim/_None/SAMPLE_1.MP3","filesize":635682,"filesize_str":"620.8 KB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"uploadKey","content_path":"/jungin-kim","snapshot_path":"","title":"SAMPLE_1","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-07-07 14:10:54][ERROR](FtpUploadUtils.java:postRemoveFileItem:204) - org.apache.http.conn.HttpHostConnectException: Connect to localhost:3002 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:140)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:314)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:363)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:219)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
+	at net.catenoid.watcher.upload.utils.FtpUploadUtils.postRemoveFileItem(FtpUploadUtils.java:201)
+	at net.catenoid.watcher.upload.utils.FtpUploadUtils.sendDeleteFileList(FtpUploadUtils.java:157)
+	at net.catenoid.watcher.uploadDao.FtpUploadDao.deleteUnknownItem(FtpUploadDao.java:194)
+	at net.catenoid.watcher.uploadImp.FtpUploadServiceImp.renewWorkFileList(FtpUploadServiceImp.java:84)
+	at net.catenoid.watcher.job.Role_Watcher.execute(Role_Watcher.java:156)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:557)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:72)
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:117)
+	... 17 more
+
+[2022-07-07 14:10:54][DEBUG](FtpUploadUtils.java:postRemoveFileItem:212) - postRemoveFileItem CMS API(http://localhost:3002/delete) connection retry(1)
+[2022-07-07 14:10:59][ERROR](FtpUploadUtils.java:postRemoveFileItem:204) - org.apache.http.conn.HttpHostConnectException: Connect to localhost:3002 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:140)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:314)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:363)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:219)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
+	at net.catenoid.watcher.upload.utils.FtpUploadUtils.postRemoveFileItem(FtpUploadUtils.java:201)
+	at net.catenoid.watcher.upload.utils.FtpUploadUtils.sendDeleteFileList(FtpUploadUtils.java:157)
+	at net.catenoid.watcher.uploadDao.FtpUploadDao.deleteUnknownItem(FtpUploadDao.java:194)
+	at net.catenoid.watcher.uploadImp.FtpUploadServiceImp.renewWorkFileList(FtpUploadServiceImp.java:84)
+	at net.catenoid.watcher.job.Role_Watcher.execute(Role_Watcher.java:156)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:557)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:72)
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:117)
+	... 17 more
+
+[2022-07-07 14:10:59][DEBUG](FtpUploadUtils.java:postRemoveFileItem:212) - postRemoveFileItem CMS API(http://localhost:3002/delete) connection retry(2)
+[2022-07-07 14:11:04][ERROR](FtpUploadUtils.java:postRemoveFileItem:204) - org.apache.http.conn.HttpHostConnectException: Connect to localhost:3002 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:140)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:314)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:363)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:219)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
+	at net.catenoid.watcher.upload.utils.FtpUploadUtils.postRemoveFileItem(FtpUploadUtils.java:201)
+	at net.catenoid.watcher.upload.utils.FtpUploadUtils.sendDeleteFileList(FtpUploadUtils.java:157)
+	at net.catenoid.watcher.uploadDao.FtpUploadDao.deleteUnknownItem(FtpUploadDao.java:194)
+	at net.catenoid.watcher.uploadImp.FtpUploadServiceImp.renewWorkFileList(FtpUploadServiceImp.java:84)
+	at net.catenoid.watcher.job.Role_Watcher.execute(Role_Watcher.java:156)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:557)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:72)
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:117)
+	... 17 more
+
+[2022-07-07 14:11:04][DEBUG](FtpUploadUtils.java:postRemoveFileItem:212) - postRemoveFileItem CMS API(http://localhost:3002/delete) connection retry(3)
+[2022-07-07 14:11:05][ERROR](FtpUploadUtils.java:postRemoveFileItem:221) - [HTTP_LOG]http://localhost:3002/delete, status: connection failed
+[2022-07-07 14:11:05][ERROR](FtpUploadDao.java:deleteUnknownItem:195) - SEND Error: DELETE FileItem - [{"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/SAMPLE_1.MP3","upload_path":"/jungin-kim/_None/SAMPLE_1.MP3","filesize":635682,"filesize_str":"620.8 KB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"uploadKey","content_path":"/jungin-kim","snapshot_path":"","title":"SAMPLE_1","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}]
+[2022-07-07 14:11:05][DEBUG](FtpUploadDao.java:sendWatchFiles:249) - sql result = rs5: org.h2.result.LocalResult@3264c826 columns: 19 rows: 2 pos: 0
+[2022-07-07 14:11:05][DEBUG](CommonUtils.java:fromResultSet:397) - /home/kollus/upload/jungin-kim/_None/SAMPLE_2.MP3
+[2022-07-07 14:11:05][INFO ](CommonUtils.java:pathToTRmpk:725) - [ pathToTRmpk 1/3 ] SAMPLE_2.MP3
+[2022-07-07 14:11:05][INFO ](CommonUtils.java:pathToTRmpk:729) - [ pathToTRmpk 2/3 ] SAMPLE_2
+[2022-07-07 14:11:05][DEBUG](CommonUtils.java:fromResultSet:434) - fromResultSet Add TransCoder : null
+[2022-07-07 14:11:05][DEBUG](CommonUtils.java:fromResultSet:435) - fromResultSet Path : /jungin-kim/_None/SAMPLE_2.MP3
+[2022-07-07 14:11:05][DEBUG](CommonUtils.java:fromResultSet:436) - fromResultSet item : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/SAMPLE_2.MP3","upload_path":"/jungin-kim/_None/SAMPLE_2.MP3","filesize":724289,"filesize_str":"707.3 KB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"SAMPLE_2","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-07-07 14:11:05][DEBUG](FtpUploadDao.java:sendWatchFiles:249) - sql result = rs5: org.h2.result.LocalResult@3264c826 columns: 19 rows: 2 pos: 1
+[2022-07-07 14:11:05][DEBUG](CommonUtils.java:fromResultSet:397) - /home/kollus/upload/jungin-kim/_None/sample.webm
+[2022-07-07 14:11:05][INFO ](CommonUtils.java:pathToTRmpk:725) - [ pathToTRmpk 1/3 ] sample.webm
+[2022-07-07 14:11:05][INFO ](CommonUtils.java:pathToTRmpk:729) - [ pathToTRmpk 2/3 ] sample
+[2022-07-07 14:11:05][DEBUG](CommonUtils.java:fromResultSet:434) - fromResultSet Add TransCoder : null
+[2022-07-07 14:11:05][DEBUG](CommonUtils.java:fromResultSet:435) - fromResultSet Path : /jungin-kim/_None/sample.webm
+[2022-07-07 14:11:05][DEBUG](CommonUtils.java:fromResultSet:436) - fromResultSet item : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/sample.webm","upload_path":"/jungin-kim/_None/sample.webm","filesize":1148996,"filesize_str":"1.1 MB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"sample","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-07-07 14:11:05][DEBUG](FtpUploadDao.java:sendWatchFiles:278) - file register 보내는값 = [{"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/SAMPLE_2.MP3","upload_path":"/jungin-kim/_None/SAMPLE_2.MP3","filesize":724289,"filesize_str":"707.3 KB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"SAMPLE_2","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}, {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/sample.webm","upload_path":"/jungin-kim/_None/sample.webm","filesize":1148996,"filesize_str":"1.1 MB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"sample","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}]
+[2022-07-07 14:11:05][DEBUG](CommonUtils.java:getHttpResponse:172) - Post Requests Transfer Content : watcher_files=[{"kind":1,"module_key":"watcherfile1","is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/SAMPLE_2.MP3","upload_path":"/jungin-kim/_None/SAMPLE_2.MP3","filesize":724289,"filesize_str":"707.3 KB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"SAMPLE_2","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""},{"kind":1,"module_key":"watcherfile1","is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/sample.webm","upload_path":"/jungin-kim/_None/sample.webm","filesize":1148996,"filesize_str":"1.1 MB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"sample","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}]
+[2022-07-07 14:11:09][ERROR](CommonUtils.java:sendPostToApi:103) - org.apache.http.conn.HttpHostConnectException: Connect to localhost:3002 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:140)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:314)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:363)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:219)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
+	at net.catenoid.watcher.upload.utils.CommonUtils.getHttpResponse(CommonUtils.java:174)
+	at net.catenoid.watcher.upload.utils.CommonUtils.sendPostToApi(CommonUtils.java:78)
+	at net.catenoid.watcher.upload.utils.FtpUploadUtils.sendFtpRegisterApi(FtpUploadUtils.java:296)
+	at net.catenoid.watcher.uploadDao.FtpUploadDao.sendWatchFiles(FtpUploadDao.java:281)
+	at net.catenoid.watcher.uploadImp.FtpUploadServiceImp.findWorkFileList(FtpUploadServiceImp.java:103)
+	at net.catenoid.watcher.job.Role_Watcher.execute(Role_Watcher.java:157)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:557)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:72)
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:117)
+	... 18 more
+
+[2022-07-07 14:11:09][ERROR](CommonUtils.java:sendPostToApi:104) - 
+[2022-07-07 14:11:09][ERROR](FtpUploadDao.java:sendWatchFiles:307) - server return != 200 or data error
+[2022-07-07 14:11:09][DEBUG](CommonUtils.java:fromResultSet:397) - /home/kollus/upload/jungin-kim/_None/SAMPLE_1.MP3
+[2022-07-07 14:11:09][INFO ](CommonUtils.java:pathToTRmpk:725) - [ pathToTRmpk 1/3 ] SAMPLE_1.MP3
+[2022-07-07 14:11:09][INFO ](CommonUtils.java:pathToTRmpk:729) - [ pathToTRmpk 2/3 ] SAMPLE_1
+[2022-07-07 14:11:09][DEBUG](CommonUtils.java:fromResultSet:434) - fromResultSet Add TransCoder : null
+[2022-07-07 14:11:09][DEBUG](CommonUtils.java:fromResultSet:435) - fromResultSet Path : /jungin-kim/_None/SAMPLE_1.MP3
+[2022-07-07 14:11:09][DEBUG](CommonUtils.java:fromResultSet:436) - fromResultSet item : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/SAMPLE_1.MP3","upload_path":"/jungin-kim/_None/SAMPLE_1.MP3","filesize":635682,"filesize_str":"620.8 KB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"uploadKey","content_path":"/jungin-kim","snapshot_path":"","title":"SAMPLE_1","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-07-07 14:11:09][DEBUG](FtpUploadDao.java:selectCompareOver:402) - Select work file: {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/SAMPLE_1.MP3","upload_path":"/jungin-kim/_None/SAMPLE_1.MP3","filesize":635682,"filesize_str":"620.8 KB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"uploadKey","content_path":"/jungin-kim","snapshot_path":"","title":"SAMPLE_1","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-07-07 14:11:09][DEBUG](CommonUtils.java:fromResultSet:397) - /home/kollus/upload/jungin-kim/_None/SAMPLE_1.MP3
+[2022-07-07 14:11:09][INFO ](CommonUtils.java:pathToTRmpk:725) - [ pathToTRmpk 1/3 ] SAMPLE_1.MP3
+[2022-07-07 14:11:09][INFO ](CommonUtils.java:pathToTRmpk:729) - [ pathToTRmpk 2/3 ] SAMPLE_1
+[2022-07-07 14:11:09][DEBUG](CommonUtils.java:fromResultSet:434) - fromResultSet Add TransCoder : null
+[2022-07-07 14:11:09][DEBUG](CommonUtils.java:fromResultSet:435) - fromResultSet Path : /jungin-kim/_None/SAMPLE_1.MP3
+[2022-07-07 14:11:09][DEBUG](CommonUtils.java:fromResultSet:436) - fromResultSet item : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/SAMPLE_1.MP3","upload_path":"/jungin-kim/_None/SAMPLE_1.MP3","filesize":635682,"filesize_str":"620.8 KB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"uploadKey","content_path":"/jungin-kim","snapshot_path":"","title":"SAMPLE_1","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}
