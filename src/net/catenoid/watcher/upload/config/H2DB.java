@@ -1,15 +1,14 @@
 package net.catenoid.watcher.upload.config;
 
 import net.catenoid.watcher.config.WatcherFolder;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.apache.log4j.Logger;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 
 public class H2DB {
 
-    private static Logger log= LogManager.getLogger(H2DB.class);
+    private static Logger log= Logger.getLogger(H2DB.class);
     private static final int H2_TRACE_LEVEL = 0;
 
     /**

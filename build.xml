@@ -13,32 +13,28 @@
         <pathelement location="libs/commons-logging-1.1.3.jar"/>
         <pathelement location="libs/commons-logging-adapters-1.1.1.jar"/>
         <pathelement location="libs/commons-logging-api-1.1.1.jar"/>
-        <pathelement location="libs/commons-io-1.2.jar" />
         <pathelement location="libs/httpcore-nio-4.1.3.jar"/>
         <pathelement location="libs/commons-lang3-3.1.jar"/>
         <pathelement location="libs/commons-net-3.1.jar"/>
-        <pathelement location="libs/gson-2.8.5.jar"/>
+        <pathelement location="libs/gson-2.3.jar"/>
         <pathelement location="libs/kollus_utils.jar"/>
         <pathelement location="libs/httpclient-4.3.3.jar"/>
         <pathelement location="libs/httpclient-cache-4.3.3.jar"/>
         <pathelement location="libs/httpcore-4.3.2.jar"/>
         <pathelement location="libs/httpmime-4.3.3.jar"/>
+        <pathelement location="libs/log4j-1.2.16.jar"/>
         <pathelement location="libs/quartz-all-2.1.3.jar"/>
         <pathelement location="libs/jna-3.0.9.jar"/>
         <pathelement location="libs/JNative.jar"/>
         <pathelement location="libs/h2-1.3.168.jar"/>
         <pathelement location="libs/commons-daemon-1.0.10.jar"/>
         <pathelement location="libs/spymemcached-2.8.4.jar"/>
+        <pathelement location="libs/slf4j-log4j12-1.6.1.jar"/>
+        <pathelement location="libs/slf4j-api-1.6.1.jar"/>
         <pathelement location="libs/commons-pool-1.6.jar"/>
         <pathelement location="libs/jedis-2.2.1.jar"/>
         <pathelement location="libs/mail.jar"/>
         <pathelement location="libs/junit-4.11.jar"/>
-        <pathelement location="libs/jackson-annotations-2.12.3.jar" />
-        <pathelement location="libs/jackson-core-2.12.3.jar" />
-        <pathelement location="libs/jackson-databind-2.12.3.jar" />
-        <pathelement location="libs/log4j-api-2.12.4.jar" />
-        <pathelement location="libs/log4j-core-2.12.4.jar" />
-        <pathelement location="libs/log4j-slf4j-impl-2.12.4.jar" />
         <path refid="DERBY_CONTAINER.libraryclasspath"/>
     </path>
 

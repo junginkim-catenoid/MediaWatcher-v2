@@ -6,11 +6,10 @@ import com.sun.jna.WString;
 import net.catenoid.watcher.upload.config.InfoKind;
 import net.catenoid.watcher.upload.config.MediaInfoDLL_Internal;
 import net.catenoid.watcher.upload.config.StreamKind;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.apache.log4j.Logger;
 
 public class MediaInfo {
-    private static Logger log = LogManager.getLogger(MediaInfo.class);
+    private static Logger log = Logger.getLogger(MediaInfo.class);
 
     private Pointer Handle;
 
@@ -27,7 +26,7 @@ public class MediaInfo {
 //				System.loadLibrary("zen");
             }
         } catch (LinkageError e) {
-            Logger log = LogManager.getLogger(MediaInfo.class);
+            Logger log = Logger.getLogger(MediaInfo.class);
             log.warn("Failed to preload libzen");
         }
     }
@@ -36,7 +35,7 @@ public class MediaInfo {
     public MediaInfo() {
         Handle = MediaInfoDLL_Internal.INSTANCE.New();
         if (Handle == null) {
-            Logger log = LogManager.getLogger(MediaInfo.class);
+            Logger log = Logger.getLogger(MediaInfo.class);
             log.warn("MediaInfoDLL_Internal.INSTANCE.New() Error");
         }
     }

@@ -2,8 +2,7 @@ package net.catenoid.watcher.upload.config;
 
 import net.catenoid.watcher.upload.dto.FileItemDTO;
 import net.catenoid.watcher.upload.utils.CommonUtils;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.apache.log4j.Logger;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -12,7 +11,7 @@ import java.util.Date;
 
 public class LinuxLineParser implements LineParser {
 
-    private static Logger log = LogManager.getLogger(LinuxLineParser.class);
+    private static Logger log = Logger.getLogger(LinuxLineParser.class);
     private String strLastPath;
     private static SimpleDateFormat dateFmt;
 

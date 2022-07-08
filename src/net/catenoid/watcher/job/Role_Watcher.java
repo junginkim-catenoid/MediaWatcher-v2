@@ -7,8 +7,7 @@ import net.catenoid.watcher.upload.KusUploadService;
 import net.catenoid.watcher.upload.utils.CommonUtils;
 import net.catenoid.watcher.uploadImp.FtpUploadServiceImp;
 import net.catenoid.watcher.uploadImp.KusUploadServiceImp;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.apache.log4j.Logger;
 import org.quartz.*;
 
 import java.io.File;
@@ -19,7 +18,7 @@ import java.util.TimeZone;
 public class Role_Watcher implements InterruptableJob  {
 
 
-    private static Logger log = LogManager.getLogger(Role_Watcher.class);
+    private static Logger log = Logger.getLogger(Role_Watcher.class);
     private static SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
 
     static {

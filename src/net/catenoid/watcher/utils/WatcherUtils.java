@@ -1,7 +1,6 @@
 package net.catenoid.watcher.utils;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.apache.log4j.Logger;
 
 import java.io.File;
 import java.io.IOException;
@@ -18,7 +17,7 @@ import java.util.Set;
 
 public class WatcherUtils {
 
-    private static Logger log = LogManager.getLogger(WatcherUtils.class);
+    private static Logger log = Logger.getLogger(WatcherUtils.class);
 
 //	public static String millisecoundsToTimeformat(long millis) {
 //		return String.format("%02d:%02d:%02d", TimeUnit.MILLISECONDS.toHours(millis),

@@ -8,8 +8,7 @@ import net.catenoid.watcher.upload.utils.FtpUploadUtils;
 import net.catenoid.watcher.upload.utils.Poster;
 import net.catenoid.watcher.utils.WatcherUtils;
 import org.apache.http.client.ClientProtocolException;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.apache.log4j.Logger;
 import org.h2.store.fs.FileUtils;
 
 import java.io.File;
@@ -21,7 +20,7 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class FtpUploadDao {
-    private static Logger log = LogManager.getLogger(FtpUploadDao.class);
+    private static Logger log = Logger.getLogger(FtpUploadDao.class);
     private static SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
 
     protected Statement stmt = null;

@@ -9,8 +9,7 @@ import net.catenoid.watcher.config.Config;
 import net.catenoid.watcher.config.WatcherFolder;
 import net.catenoid.watcher.upload.utils.Poster;
 import net.catenoid.watcher.utils.WatcherUtils;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.apache.log4j.Logger;
 
 import java.io.File;
 import java.io.UnsupportedEncodingException;
@@ -20,7 +19,7 @@ import java.util.Date;
 
 public class FileItemDTO implements Comparable<FileItemDTO> {
 
-    private static Logger log = LogManager.getLogger(FileItemDTO.class);
+    private static Logger log = Logger.getLogger(FileItemDTO.class);
     private static SimpleDateFormat dateFmt;
     @SuppressWarnings("unused")
     private static String NEW_LINE;

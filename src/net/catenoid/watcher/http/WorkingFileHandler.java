@@ -2,15 +2,14 @@ package net.catenoid.watcher.http;
 
 import net.catenoid.watcher.LogAction;
 import net.catenoid.watcher.utils.WatcherUtils;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.apache.log4j.Logger;
 
 import java.util.ArrayList;
 import java.util.Map;
 
 public class WorkingFileHandler extends HandlerExt {
 
-    private static Logger log = LogManager.getLogger(WorkingFileHandler.class);
+    private static Logger log = Logger.getLogger(WorkingFileHandler.class);
 
     private interface PARAMS {
         public final String COMMAND = "cmd";
