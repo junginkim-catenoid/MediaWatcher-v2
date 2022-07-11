@@ -7,6 +7,8 @@ import net.catenoid.watcher.config.WatcherFolder;
 import net.catenoid.watcher.upload.KusUploadService;
 import net.catenoid.watcher.upload.dto.KollusApiWatchersDTO;
 import net.catenoid.watcher.upload.dto.SendFileItemsDTO;
+import net.catenoid.watcher.upload.dto.UploadProcessLogDTO;
+import net.catenoid.watcher.upload.types.UploadMode;
 import net.catenoid.watcher.utils.KusUploadUtils;
 import org.apache.log4j.Logger;
 
@@ -17,6 +19,8 @@ import java.util.List;
 public class KusUploadServiceImp implements KusUploadService {
 
     private static Logger log = Logger.getLogger(KusUploadServiceImp.class);
+
+    private static Logger uploadProcessLog = Logger.getLogger("UploadProcessLog");
 
     private SendFileItemsDTO fileList = null;
     private List<String> dirList = null;
@@ -40,6 +44,10 @@ public class KusUploadServiceImp implements KusUploadService {
         if(fileList.size() == 0) {
             return;
         }
+
+        UploadProcessLogDTO step1Msg = new UploadProcessLogDTO(UploadMode.KUS, "01", "LS Parsing STEP", "directories : " + this.dirList.toString(), this.fileList);
+        uploadProcessLog.info(step1Msg.getJsonObjectMessage());
+
         sendToHttpApi(fileList, "register");
     }
 

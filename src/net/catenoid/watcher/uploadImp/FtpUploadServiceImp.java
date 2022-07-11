@@ -323,13 +323,14 @@ public class FtpUploadServiceImp extends FtpUploadDao implements FtpUploadServic
                         f.delete();
                         successCnt += 1;
                         log.info("complete 성공한 파일 삭제 (" + successCnt + ") : " + item.getPhysicalPath());
+                        UploadProcessLogDTO step8ErrorMsg = new UploadProcessLogDTO(UploadMode.FTP, "08-" + item.getPhysicalPath(), "complete 성공한 파일 삭제", "", sendItem);
+                        uploadProcessLog.info(step8ErrorMsg.getJsonObjectMessage());
                     } else {
                         successCnt += 1;
                         log.info("complete 성공 갯수(" + successCnt+ ") : " + item.getPhysicalPath());
+                        UploadProcessLogDTO step8ErrorMsg = new UploadProcessLogDTO(UploadMode.FTP, "08-" + item.getPhysicalPath(), "complete 성공 갯수", "", sendItem);
+                        uploadProcessLog.info(step8ErrorMsg.getJsonObjectMessage());
                     }
-
-                    UploadProcessLogDTO step8ErrorMsg = new UploadProcessLogDTO(UploadMode.FTP, "08-" + item.getUploadFileKey(), "Fail Post Complete Error", "", sendItem);
-                    uploadProcessLog.info(step8ErrorMsg.getJsonObjectMessage());
                 }
             }
         }

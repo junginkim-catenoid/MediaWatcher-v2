@@ -1,10 +1,7 @@
 package net.catenoid.watcher.uploadDao;
 
 import com.kollus.json_data.config.ModuleConfig;
-import net.catenoid.watcher.upload.dto.FileItemDTO;
-import net.catenoid.watcher.upload.dto.KollusApiWatchersDTO;
-import net.catenoid.watcher.upload.dto.SendFileItemsDTO;
-import net.catenoid.watcher.upload.dto.UploadProcessLogDTO;
+import net.catenoid.watcher.upload.dto.*;
 import net.catenoid.watcher.upload.types.UploadMode;
 import net.catenoid.watcher.upload.utils.CommonUtils;
 import net.catenoid.watcher.upload.utils.FtpUploadUtils;
@@ -543,48 +540,48 @@ public class FtpUploadDao {
         int cnt = 0;
         KollusApiWatchersDTO apiResult = utils.sendFtpCompleteApi(sendItem);
 
-//        for (KollusApiWatcherContentDTO item : apiResult.result.watcher_files) {
-//            if (item.error == 0) {
-//                // error가 아닌 경우만 media_content_id가 있으나 사용처가 없어 삭제함
-//                FileItemDTO findItem = utils.findSendItem(sendItem, item.result.key);
-//                if (findItem == null) {
-//                    log.error("FileItem  파일 정보를 찾을 수 없습니다. [" + item.result.key + "]");
-//
-//                }
-//                db_delete_item_pysicalpath(findItem.getPhysicalPath());
-//                cnt += 1;
-//                continue;
-//            }
-//
-//            log.error("error code: " + item.error + ", error message: " + item.message);
-//
-//            if (item.result == null) {
-//                continue;
-//            }
-//
-//            FileItemDTO findItem = utils.findSendItem(sendItem, item.result.key);
-//
-//            if (findItem == null) {
-//                log.error("실패한 파일 정보를 찾을 수 없습니다. [" + item.result.key + "]");
-//                continue;
-//            }
-//
-//            // working file 삭제 및 snapshot 삭제
-//            utils.transcodeCancel(findItem);
-//            boolean isDeleted = db_delete_item_pysicalpath(findItem.getPhysicalPath());
-//            if (!isDeleted) {
-//                log.warn("Fail to deleted data from h2 : " + findItem.getPhysicalPath());
-//            }
-//            findItem.setCompleteFail(true);
-//
-//            /**
-//             * error_code가 반환되면 추가 처리함.
-//             */
-//            if (item.result.error_code > 0) {
-//                utils.sendErrorReport(item.result.error_code, item.result.error_detail, "");
-//            }
-//
-//        }
+        for (KollusApiWatcherContentDTO item : apiResult.result.watcher_files) {
+            if (item.error == 0) {
+                // error가 아닌 경우만 media_content_id가 있으나 사용처가 없어 삭제함
+                FileItemDTO findItem = utils.findSendItem(sendItem, item.result.key);
+                if (findItem == null) {
+                    log.error("FileItem  파일 정보를 찾을 수 없습니다. [" + item.result.key + "]");
+
+                }
+                db_delete_item_pysicalpath(findItem.getPhysicalPath());
+                cnt += 1;
+                continue;
+            }
+
+            log.error("error code: " + item.error + ", error message: " + item.message);
+
+            if (item.result == null) {
+                continue;
+            }
+
+            FileItemDTO findItem = utils.findSendItem(sendItem, item.result.key);
+
+            if (findItem == null) {
+                log.error("실패한 파일 정보를 찾을 수 없습니다. [" + item.result.key + "]");
+                continue;
+            }
+
+            // working file 삭제 및 snapshot 삭제
+            utils.transcodeCancel(findItem);
+            boolean isDeleted = db_delete_item_pysicalpath(findItem.getPhysicalPath());
+            if (!isDeleted) {
+                log.warn("Fail to deleted data from h2 : " + findItem.getPhysicalPath());
+            }
+            findItem.setCompleteFail(true);
+
+            /**
+             * error_code가 반환되면 추가 처리함.
+             */
+            if (item.result.error_code > 0) {
+                utils.sendErrorReport(item.result.error_code, item.result.error_detail, "");
+            }
+
+        }
         return cnt;
     }
 
