@@ -8,8 +8,10 @@ import net.catenoid.watcher.upload.FtpUploadService;
 import net.catenoid.watcher.upload.config.H2DB;
 import net.catenoid.watcher.upload.dto.FileItemDTO;
 import net.catenoid.watcher.upload.dto.SendFileItemsDTO;
+import net.catenoid.watcher.upload.types.UploadMode;
 import net.catenoid.watcher.upload.utils.FtpUploadUtils;
 import net.catenoid.watcher.upload.utils.LSParser;
+import net.catenoid.watcher.upload.dto.UploadProcessLogDTO;
 import net.catenoid.watcher.uploadDao.FtpUploadDao;
 import org.apache.log4j.Logger;
 
@@ -23,6 +25,8 @@ import java.util.Date;
 public class FtpUploadServiceImp extends FtpUploadDao implements FtpUploadService  {
 
     private static Logger log = Logger.getLogger(FtpUploadServiceImp.class);
+
+    private static Logger uploadProcessLog = Logger.getLogger("UploadProcessLog");
     private static SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
 
     private ArrayList<FileItemDTO> lsFiles = null;
@@ -116,9 +120,15 @@ public class FtpUploadServiceImp extends FtpUploadDao implements FtpUploadServic
                 utils.createSnapFile(items);
             }
 
-            if (utils.moveToWorkDir(items) > 0) {
+            int moveFileCnt = utils.moveToWorkDir(items);
+
+            UploadProcessLogDTO step7Msg = new UploadProcessLogDTO(UploadMode.FTP, "07", "Work File Move Directory STEP", "move file size : " + moveFileCnt);
+            uploadProcessLog.info(step7Msg.getJsonMessage());
+
+            if (moveFileCnt > 0) {
                 postCopyCompleteFiles(items);
             }
+
 //			else {
 //				log.warn("selectCompareOver == item-size: " + items.size() + ", " + utils.info.getName());
 //			}
@@ -210,6 +220,9 @@ public class FtpUploadServiceImp extends FtpUploadDao implements FtpUploadServic
          */
         int error_count = 0;
 
+        UploadProcessLogDTO step1Msg = new UploadProcessLogDTO(UploadMode.FTP, "01", "LS Parsing STEP", "parsing files : " + files.size());
+        uploadProcessLog.info(step1Msg);
+
         for (FileItemDTO f : files) {
             f.setPhysicalPath(f.getPhysicalPath().replaceAll("\\\"", "\""));
             f.setPhysicalPath(f.getPhysicalPath().replaceAll("/\"", "\""));
@@ -239,6 +252,10 @@ public class FtpUploadServiceImp extends FtpUploadDao implements FtpUploadServic
                 }
             }
         }
+
+        UploadProcessLogDTO step2Msg = new UploadProcessLogDTO(UploadMode.FTP, "02", "H2 DB UPDATE STEP",
+                "insertCount : " + insert_count + ", updateCount : " + update_count + ", errorCount : " + error_count);
+        uploadProcessLog.info(step2Msg.getJsonMessage());
 
         /**
          * charset이 다른 파일이 존재하는것으로 보임.
@@ -279,7 +296,12 @@ public class FtpUploadServiceImp extends FtpUploadDao implements FtpUploadServic
             }
         }
 
-        if (sendFtpCompleteApiCnt(sendItem) == 0) {
+        int sendFtpCompleteApiCnt = sendFtpCompleteApiCnt(sendItem);
+        UploadProcessLogDTO step8Msg = new UploadProcessLogDTO(UploadMode.FTP, "08", "WORK File Info Send Http Server", "file size : " + sendFtpCompleteApiCnt);
+        uploadProcessLog.info(step8Msg.getJsonMessage());
+
+
+        if (sendFtpCompleteApiCnt == 0) {
             for (FileItemDTO item : sendItem) {
                 // 오류일 경우 재 전송을 위해 STATUS값을 1로 rollback 시킨다.
                 this.db_update_file_status(item.getPhysicalPath(), 1, item.getUploadFileKey(),

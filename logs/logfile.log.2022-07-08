@@ -1,0 +1,532 @@
+[2022-07-08 14:58:47][INFO ](Watcher.java:start:94) - [PRG_START]
+[2022-07-08 14:58:48][INFO ](Watcher.java:printVersion:40) - [PRG_VER]null
+[2022-07-08 14:58:50][DEBUG](ThreadSafeClientConnManager.java:getConnection:235) - Get connection: {}->http://api.kr.dev.kollus.com, timeout = 0
+[2022-07-08 14:58:50][DEBUG](ThreadSafeClientConnManager.java:releaseConnection:280) - Released connection is reusable.
+[2022-07-08 14:58:51][INFO ](Config.java:printUrls:234) - URLS [watcher.list.insert] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/register
+[2022-07-08 14:58:51][INFO ](Config.java:printUrls:234) - URLS [watcher.list.complete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/complete
+[2022-07-08 14:58:51][INFO ](Config.java:printUrls:234) - URLS [watcher.list.delete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/remove
+[2022-07-08 14:58:51][INFO ](Config.java:printUrls:234) - URLS [watcher.usage_day_amount.insert] http://api.kr.dev.kollus.com/0/catenoid/usage_day_amount/register
+[2022-07-08 14:58:51][INFO ](Config.java:printUrls:234) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-07-08 14:58:51][INFO ](Config.java:printUrls:234) - URLS [transcoding_job.assign] http://jobmanager-dev-kr.kollus.com:8180/assign
+[2022-07-08 14:58:51][INFO ](Config.java:printUrls:234) - URLS [transcoding_job.manager] http://api.kr.dev.kollus.com/0/catenoid/transcoding_job/manager
+[2022-07-08 14:58:51][INFO ](Config.java:printUrls:234) - URLS [transcoding_file.register] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/register
+[2022-07-08 14:58:51][INFO ](Config.java:printUrls:234) - URLS [transcoding_file.update] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/update
+[2022-07-08 14:58:51][INFO ](Config.java:printUrls:234) - URLS [transcoding_file.complete] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete
+[2022-07-08 14:58:51][INFO ](Config.java:printUrls:234) - URLS [transcoding_file.complete_all] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete_all
+[2022-07-08 14:58:51][INFO ](Config.java:printUrls:234) - URLS [module.check_activated_at] http://api.kr.dev.kollus.com/0/catenoid/module/check_activated_at
+[2022-07-08 14:58:51][INFO ](Config.java:printUrls:234) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-07-08 14:58:55][DEBUG](Watcher.java:setupWatcher:233) - [PRG_CONF]job_watcherfile1=0/10 * * * * ?
+[2022-07-08 14:59:23][DEBUG](CommonUtils.java:fromResultSet:397) - /home/kollus/upload/jungin-kim/_None/SAMPLE_1.MP3
+[2022-07-08 14:59:23][INFO ](CommonUtils.java:pathToTRmpk:725) - [ pathToTRmpk 1/3 ] SAMPLE_1.MP3
+[2022-07-08 14:59:23][INFO ](CommonUtils.java:pathToTRmpk:729) - [ pathToTRmpk 2/3 ] SAMPLE_1
+[2022-07-08 14:59:23][DEBUG](CommonUtils.java:fromResultSet:434) - fromResultSet Add TransCoder : null
+[2022-07-08 14:59:23][DEBUG](CommonUtils.java:fromResultSet:435) - fromResultSet Path : /jungin-kim/_None/SAMPLE_1.MP3
+[2022-07-08 14:59:23][DEBUG](CommonUtils.java:fromResultSet:436) - fromResultSet item : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/SAMPLE_1.MP3","upload_path":"/jungin-kim/_None/SAMPLE_1.MP3","filesize":635682,"filesize_str":"620.8 KB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"uploadKey","content_path":"/jungin-kim","snapshot_path":"","title":"SAMPLE_1","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-07-08 14:59:27][ERROR](FtpUploadUtils.java:postRemoveFileItem:204) - org.apache.http.conn.HttpHostConnectException: Connect to localhost:3002 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:140)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:314)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:363)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:219)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
+	at net.catenoid.watcher.upload.utils.FtpUploadUtils.postRemoveFileItem(FtpUploadUtils.java:201)
+	at net.catenoid.watcher.upload.utils.FtpUploadUtils.sendDeleteFileList(FtpUploadUtils.java:157)
+	at net.catenoid.watcher.uploadDao.FtpUploadDao.deleteUnknownItem(FtpUploadDao.java:194)
+	at net.catenoid.watcher.uploadImp.FtpUploadServiceImp.renewWorkFileList(FtpUploadServiceImp.java:84)
+	at net.catenoid.watcher.job.Role_Watcher.execute(Role_Watcher.java:156)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:557)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:72)
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:117)
+	... 17 more
+
+[2022-07-08 14:59:27][DEBUG](FtpUploadUtils.java:postRemoveFileItem:212) - postRemoveFileItem CMS API(http://localhost:3002/delete) connection retry(1)
+[2022-07-08 14:59:32][ERROR](FtpUploadUtils.java:postRemoveFileItem:204) - org.apache.http.conn.HttpHostConnectException: Connect to localhost:3002 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:140)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:314)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:363)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:219)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
+	at net.catenoid.watcher.upload.utils.FtpUploadUtils.postRemoveFileItem(FtpUploadUtils.java:201)
+	at net.catenoid.watcher.upload.utils.FtpUploadUtils.sendDeleteFileList(FtpUploadUtils.java:157)
+	at net.catenoid.watcher.uploadDao.FtpUploadDao.deleteUnknownItem(FtpUploadDao.java:194)
+	at net.catenoid.watcher.uploadImp.FtpUploadServiceImp.renewWorkFileList(FtpUploadServiceImp.java:84)
+	at net.catenoid.watcher.job.Role_Watcher.execute(Role_Watcher.java:156)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:557)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:339)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:200)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:182)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:579)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:72)
+	at org.apache.http.impl.conn.HttpClientConnectionOperator.connect(HttpClientConnectionOperator.java:117)
+	... 17 more
+
+[2022-07-08 14:59:32][DEBUG](FtpUploadUtils.java:postRemoveFileItem:212) - postRemoveFileItem CMS API(http://localhost:3002/delete) connection retry(2)
+[2022-07-08 15:28:41][INFO ](Watcher.java:start:94) - [PRG_START]
+[2022-07-08 15:28:41][INFO ](Watcher.java:printVersion:40) - [PRG_VER]null
+[2022-07-08 15:28:45][DEBUG](ThreadSafeClientConnManager.java:getConnection:235) - Get connection: {}->http://api.kr.dev.kollus.com, timeout = 0
+[2022-07-08 15:28:45][DEBUG](ThreadSafeClientConnManager.java:releaseConnection:280) - Released connection is reusable.
+[2022-07-08 15:28:57][INFO ](Config.java:printUrls:234) - URLS [watcher.list.insert] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/register
+[2022-07-08 15:28:57][INFO ](Config.java:printUrls:234) - URLS [watcher.list.complete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/complete
+[2022-07-08 15:28:57][INFO ](Config.java:printUrls:234) - URLS [watcher.list.delete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/remove
+[2022-07-08 15:28:57][INFO ](Config.java:printUrls:234) - URLS [watcher.usage_day_amount.insert] http://api.kr.dev.kollus.com/0/catenoid/usage_day_amount/register
+[2022-07-08 15:28:57][INFO ](Config.java:printUrls:234) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-07-08 15:28:57][INFO ](Config.java:printUrls:234) - URLS [transcoding_job.assign] http://jobmanager-dev-kr.kollus.com:8180/assign
+[2022-07-08 15:28:57][INFO ](Config.java:printUrls:234) - URLS [transcoding_job.manager] http://api.kr.dev.kollus.com/0/catenoid/transcoding_job/manager
+[2022-07-08 15:28:57][INFO ](Config.java:printUrls:234) - URLS [transcoding_file.register] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/register
+[2022-07-08 15:28:57][INFO ](Config.java:printUrls:234) - URLS [transcoding_file.update] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/update
+[2022-07-08 15:28:57][INFO ](Config.java:printUrls:234) - URLS [transcoding_file.complete] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete
+[2022-07-08 15:28:57][INFO ](Config.java:printUrls:234) - URLS [transcoding_file.complete_all] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete_all
+[2022-07-08 15:28:57][INFO ](Config.java:printUrls:234) - URLS [module.check_activated_at] http://api.kr.dev.kollus.com/0/catenoid/module/check_activated_at
+[2022-07-08 15:28:57][INFO ](Config.java:printUrls:234) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-07-08 15:28:57][DEBUG](Watcher.java:setupWatcher:233) - [PRG_CONF]job_watcherfile1=0/10 * * * * ?
+[2022-07-08 15:29:02][DEBUG](LinuxLineParser.java:parser:101) - /home/kollus/upload, /home/kollus/upload/jungin-kim/_None/SAMPLE_1.MP3, 1656649897000, 635682
+[2022-07-08 15:29:02][DEBUG](LinuxLineParser.java:parser:101) - /home/kollus/upload, /home/kollus/upload/jungin-kim/_None/SAMPLE_2.MP3, 1656649900000, 724289
+[2022-07-08 15:29:02][DEBUG](LinuxLineParser.java:parser:101) - /home/kollus/upload, /home/kollus/upload/jungin-kim/_None/sample.webm, 1656637476000, 1148996
+[2022-07-08 15:38:02][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/upload/jungin-kim/_None/SAMPLE_1.MP3
+[2022-07-08 15:52:48][INFO ](Watcher.java:start:94) - [PRG_START]
+[2022-07-08 15:52:48][INFO ](Watcher.java:printVersion:40) - [PRG_VER]null
+[2022-07-08 15:52:50][DEBUG](ThreadSafeClientConnManager.java:getConnection:235) - Get connection: {}->http://api.kr.dev.kollus.com, timeout = 0
+[2022-07-08 15:52:50][DEBUG](ThreadSafeClientConnManager.java:releaseConnection:280) - Released connection is reusable.
+[2022-07-08 15:52:50][INFO ](Config.java:printUrls:234) - URLS [watcher.list.insert] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/register
+[2022-07-08 15:52:50][INFO ](Config.java:printUrls:234) - URLS [watcher.list.complete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/complete
+[2022-07-08 15:52:50][INFO ](Config.java:printUrls:234) - URLS [watcher.list.delete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/remove
+[2022-07-08 15:52:50][INFO ](Config.java:printUrls:234) - URLS [watcher.usage_day_amount.insert] http://api.kr.dev.kollus.com/0/catenoid/usage_day_amount/register
+[2022-07-08 15:52:50][INFO ](Config.java:printUrls:234) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-07-08 15:52:50][INFO ](Config.java:printUrls:234) - URLS [transcoding_job.assign] http://jobmanager-dev-kr.kollus.com:8180/assign
+[2022-07-08 15:52:50][INFO ](Config.java:printUrls:234) - URLS [transcoding_job.manager] http://api.kr.dev.kollus.com/0/catenoid/transcoding_job/manager
+[2022-07-08 15:52:50][INFO ](Config.java:printUrls:234) - URLS [transcoding_file.register] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/register
+[2022-07-08 15:52:50][INFO ](Config.java:printUrls:234) - URLS [transcoding_file.update] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/update
+[2022-07-08 15:52:50][INFO ](Config.java:printUrls:234) - URLS [transcoding_file.complete] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete
+[2022-07-08 15:52:50][INFO ](Config.java:printUrls:234) - URLS [transcoding_file.complete_all] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete_all
+[2022-07-08 15:52:50][INFO ](Config.java:printUrls:234) - URLS [module.check_activated_at] http://api.kr.dev.kollus.com/0/catenoid/module/check_activated_at
+[2022-07-08 15:52:50][INFO ](Config.java:printUrls:234) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-07-08 15:52:50][DEBUG](Watcher.java:setupWatcher:233) - [PRG_CONF]job_watcherfile1=0/10 * * * * ?
+[2022-07-08 15:52:53][DEBUG](LinuxLineParser.java:parser:101) - /home/kollus/upload, /home/kollus/upload/jungin-kim/_None/SAMPLE_1.MP3, 1656649897000, 635682
+[2022-07-08 15:52:53][DEBUG](LinuxLineParser.java:parser:101) - /home/kollus/upload, /home/kollus/upload/jungin-kim/_None/SAMPLE_2.MP3, 1656649900000, 724289
+[2022-07-08 15:52:53][DEBUG](LinuxLineParser.java:parser:101) - /home/kollus/upload, /home/kollus/upload/jungin-kim/_None/sample.webm, 1656637476000, 1148996
+[2022-07-08 15:52:53][INFO ](UploadProcessLog.java:infoJsonLog:41) - {"uploadMode":"FTP","currentStep":"01","totalStep":"10","title":"LS Parsing STEP","description":"parsing files : 3"}
+[2022-07-08 15:53:08][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/upload/jungin-kim/_None/SAMPLE_1.MP3
+[2022-07-08 15:53:08][INFO ](CommonUtils.java:checkIsMediaContent:565) - physicalPath : /home/kollus/upload/jungin-kim/_None/SAMPLE_1.MP3
+[2022-07-08 15:53:15][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/upload/jungin-kim/_None/SAMPLE_2.MP3
+[2022-07-08 15:53:15][INFO ](CommonUtils.java:checkIsMediaContent:565) - physicalPath : /home/kollus/upload/jungin-kim/_None/SAMPLE_2.MP3
+[2022-07-08 15:53:20][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/upload/jungin-kim/_None/sample.webm
+[2022-07-08 15:53:20][INFO ](CommonUtils.java:checkIsMediaContent:565) - physicalPath : /home/kollus/upload/jungin-kim/_None/sample.webm
+[2022-07-08 15:53:23][INFO ](UploadProcessLog.java:infoJsonLog:41) - {"uploadMode":"FTP","currentStep":"02","totalStep":"10","title":"H2 DB UPDATE STEP","description":"insertCount : 3, updateCount : 0, errorCount : 0"}
+[2022-07-08 15:53:35][DEBUG](FtpUploadDao.java:sendWatchFiles:249) - sql result = rs5: org.h2.result.LocalResult@ff78415 columns: 19 rows: 3 pos: 0
+[2022-07-08 15:53:35][DEBUG](CommonUtils.java:fromResultSet:397) - /home/kollus/upload/jungin-kim/_None/SAMPLE_1.MP3
+[2022-07-08 15:53:35][INFO ](CommonUtils.java:pathToTRmpk:725) - [ pathToTRmpk 1/3 ] SAMPLE_1.MP3
+[2022-07-08 15:53:35][INFO ](CommonUtils.java:pathToTRmpk:729) - [ pathToTRmpk 2/3 ] SAMPLE_1
+[2022-07-08 15:53:35][DEBUG](CommonUtils.java:fromResultSet:434) - fromResultSet Add TransCoder : null
+[2022-07-08 15:53:35][DEBUG](CommonUtils.java:fromResultSet:435) - fromResultSet Path : /jungin-kim/_None/SAMPLE_1.MP3
+[2022-07-08 15:53:35][DEBUG](CommonUtils.java:fromResultSet:436) - fromResultSet item : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/SAMPLE_1.MP3","upload_path":"/jungin-kim/_None/SAMPLE_1.MP3","filesize":635682,"filesize_str":"620.8 KB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"SAMPLE_1","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-07-08 15:53:35][DEBUG](FtpUploadDao.java:sendWatchFiles:249) - sql result = rs5: org.h2.result.LocalResult@ff78415 columns: 19 rows: 3 pos: 1
+[2022-07-08 15:53:35][DEBUG](CommonUtils.java:fromResultSet:397) - /home/kollus/upload/jungin-kim/_None/SAMPLE_2.MP3
+[2022-07-08 15:53:35][INFO ](CommonUtils.java:pathToTRmpk:725) - [ pathToTRmpk 1/3 ] SAMPLE_2.MP3
+[2022-07-08 15:53:35][INFO ](CommonUtils.java:pathToTRmpk:729) - [ pathToTRmpk 2/3 ] SAMPLE_2
+[2022-07-08 15:53:35][DEBUG](CommonUtils.java:fromResultSet:434) - fromResultSet Add TransCoder : null
+[2022-07-08 15:53:35][DEBUG](CommonUtils.java:fromResultSet:435) - fromResultSet Path : /jungin-kim/_None/SAMPLE_2.MP3
+[2022-07-08 15:53:35][DEBUG](CommonUtils.java:fromResultSet:436) - fromResultSet item : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/SAMPLE_2.MP3","upload_path":"/jungin-kim/_None/SAMPLE_2.MP3","filesize":724289,"filesize_str":"707.3 KB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"SAMPLE_2","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-07-08 15:53:35][ERROR](CommonUtils.java:ExceptionLogPrint:329) - org.h2.jdbc.JdbcSQLException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-168]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.get(DbException.java:146)
+	at org.h2.message.DbException.get(DbException.java:135)
+	at org.h2.jdbc.JdbcConnection.checkClosed(JdbcConnection.java:1384)
+	at org.h2.jdbc.JdbcStatement.checkClosed(JdbcStatement.java:927)
+	at org.h2.jdbc.JdbcStatement.checkClosed(JdbcStatement.java:901)
+	at org.h2.jdbc.JdbcResultSet.checkClosed(JdbcResultSet.java:2948)
+	at org.h2.jdbc.JdbcResultSet.next(JdbcResultSet.java:123)
+	at net.catenoid.watcher.uploadDao.FtpUploadDao.sendWatchFiles(FtpUploadDao.java:248)
+	at net.catenoid.watcher.uploadImp.FtpUploadServiceImp.findWorkFileList(FtpUploadServiceImp.java:105)
+	at net.catenoid.watcher.job.Role_Watcher.execute(Role_Watcher.java:157)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:557)
+
+[2022-07-08 15:53:35][ERROR](CommonUtils.java:ExceptionLogPrint:330) - org.h2.jdbc.JdbcSQLException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-168]
+[2022-07-08 16:22:26][INFO ](Watcher.java:start:94) - [PRG_START]
+[2022-07-08 16:22:26][INFO ](Watcher.java:printVersion:40) - [PRG_VER]null
+[2022-07-08 16:22:29][DEBUG](ThreadSafeClientConnManager.java:getConnection:235) - Get connection: {}->http://api.kr.dev.kollus.com, timeout = 0
+[2022-07-08 16:22:29][DEBUG](ThreadSafeClientConnManager.java:releaseConnection:280) - Released connection is reusable.
+[2022-07-08 16:22:29][INFO ](Config.java:printUrls:234) - URLS [watcher.list.insert] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/register
+[2022-07-08 16:22:29][INFO ](Config.java:printUrls:234) - URLS [watcher.list.complete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/complete
+[2022-07-08 16:22:29][INFO ](Config.java:printUrls:234) - URLS [watcher.list.delete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/remove
+[2022-07-08 16:22:29][INFO ](Config.java:printUrls:234) - URLS [watcher.usage_day_amount.insert] http://api.kr.dev.kollus.com/0/catenoid/usage_day_amount/register
+[2022-07-08 16:22:29][INFO ](Config.java:printUrls:234) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-07-08 16:22:29][INFO ](Config.java:printUrls:234) - URLS [transcoding_job.assign] http://jobmanager-dev-kr.kollus.com:8180/assign
+[2022-07-08 16:22:29][INFO ](Config.java:printUrls:234) - URLS [transcoding_job.manager] http://api.kr.dev.kollus.com/0/catenoid/transcoding_job/manager
+[2022-07-08 16:22:29][INFO ](Config.java:printUrls:234) - URLS [transcoding_file.register] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/register
+[2022-07-08 16:22:29][INFO ](Config.java:printUrls:234) - URLS [transcoding_file.update] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/update
+[2022-07-08 16:22:29][INFO ](Config.java:printUrls:234) - URLS [transcoding_file.complete] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete
+[2022-07-08 16:22:29][INFO ](Config.java:printUrls:234) - URLS [transcoding_file.complete_all] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete_all
+[2022-07-08 16:22:29][INFO ](Config.java:printUrls:234) - URLS [module.check_activated_at] http://api.kr.dev.kollus.com/0/catenoid/module/check_activated_at
+[2022-07-08 16:22:29][INFO ](Config.java:printUrls:234) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-07-08 16:22:29][DEBUG](Watcher.java:setupWatcher:233) - [PRG_CONF]job_watcherfile1=0/10 * * * * ?
+[2022-07-08 16:22:31][DEBUG](LinuxLineParser.java:parser:101) - /home/kollus/upload, /home/kollus/upload/jungin-kim/_None/SAMPLE_1.MP3, 1656649897000, 635682
+[2022-07-08 16:22:31][DEBUG](LinuxLineParser.java:parser:101) - /home/kollus/upload, /home/kollus/upload/jungin-kim/_None/SAMPLE_2.MP3, 1656649900000, 724289
+[2022-07-08 16:22:31][DEBUG](LinuxLineParser.java:parser:101) - /home/kollus/upload, /home/kollus/upload/jungin-kim/_None/sample.webm, 1656637476000, 1148996
+[2022-07-08 16:22:31][INFO ](FtpUploadServiceImp.java:newFileItems:218) - {"uploadMode":"FTP","currentStep":"01","totalStep":"10","title":"LS Parsing STEP","description":"parsing files : 3"}
+[2022-07-08 16:22:34][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/upload/jungin-kim/_None/SAMPLE_1.MP3
+[2022-07-08 16:22:34][INFO ](CommonUtils.java:checkIsMediaContent:565) - physicalPath : /home/kollus/upload/jungin-kim/_None/SAMPLE_1.MP3
+[2022-07-08 16:22:37][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/upload/jungin-kim/_None/SAMPLE_2.MP3
+[2022-07-08 16:22:37][INFO ](CommonUtils.java:checkIsMediaContent:565) - physicalPath : /home/kollus/upload/jungin-kim/_None/SAMPLE_2.MP3
+[2022-07-08 16:22:45][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/upload/jungin-kim/_None/sample.webm
+[2022-07-08 16:22:45][INFO ](CommonUtils.java:checkIsMediaContent:565) - physicalPath : /home/kollus/upload/jungin-kim/_None/sample.webm
+[2022-07-08 16:22:48][INFO ](FtpUploadServiceImp.java:newFileItems:252) - {"uploadMode":"FTP","currentStep":"02","totalStep":"10","title":"H2 DB UPDATE STEP","description":"insertCount : 0, updateCount : 3, errorCount : 0"}
+[2022-07-08 16:22:49][INFO ](FtpUploadDao.java:deleteUnknownItem:195) - {"uploadMode":"FTP","currentStep":"03","totalStep":"10","title":"UNKNOWN DATA REMOVE STEP","description":"checkTime : 2022-07-08 16:22:30.065, Remove File Size : 0"}
+[2022-07-08 16:22:54][DEBUG](FtpUploadDao.java:sendWatchFiles:256) - sql result = rs5: org.h2.result.LocalResult@2851d296 columns: 19 rows: 3 pos: 0
+[2022-07-08 16:22:54][DEBUG](CommonUtils.java:fromResultSet:397) - /home/kollus/upload/jungin-kim/_None/SAMPLE_1.MP3
+[2022-07-08 16:22:54][INFO ](CommonUtils.java:pathToTRmpk:725) - [ pathToTRmpk 1/3 ] SAMPLE_1.MP3
+[2022-07-08 16:22:54][INFO ](CommonUtils.java:pathToTRmpk:729) - [ pathToTRmpk 2/3 ] SAMPLE_1
+[2022-07-08 16:22:54][DEBUG](CommonUtils.java:fromResultSet:434) - fromResultSet Add TransCoder : null
+[2022-07-08 16:22:54][DEBUG](CommonUtils.java:fromResultSet:435) - fromResultSet Path : /jungin-kim/_None/SAMPLE_1.MP3
+[2022-07-08 16:22:54][DEBUG](CommonUtils.java:fromResultSet:436) - fromResultSet item : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/SAMPLE_1.MP3","upload_path":"/jungin-kim/_None/SAMPLE_1.MP3","filesize":635682,"filesize_str":"620.8 KB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"SAMPLE_1","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-07-08 16:22:54][DEBUG](FtpUploadDao.java:sendWatchFiles:256) - sql result = rs5: org.h2.result.LocalResult@2851d296 columns: 19 rows: 3 pos: 1
+[2022-07-08 16:22:54][DEBUG](CommonUtils.java:fromResultSet:397) - /home/kollus/upload/jungin-kim/_None/SAMPLE_2.MP3
+[2022-07-08 16:22:54][INFO ](CommonUtils.java:pathToTRmpk:725) - [ pathToTRmpk 1/3 ] SAMPLE_2.MP3
+[2022-07-08 16:22:54][INFO ](CommonUtils.java:pathToTRmpk:729) - [ pathToTRmpk 2/3 ] SAMPLE_2
+[2022-07-08 16:22:54][DEBUG](CommonUtils.java:fromResultSet:434) - fromResultSet Add TransCoder : null
+[2022-07-08 16:22:54][DEBUG](CommonUtils.java:fromResultSet:435) - fromResultSet Path : /jungin-kim/_None/SAMPLE_2.MP3
+[2022-07-08 16:22:54][DEBUG](CommonUtils.java:fromResultSet:436) - fromResultSet item : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/SAMPLE_2.MP3","upload_path":"/jungin-kim/_None/SAMPLE_2.MP3","filesize":724289,"filesize_str":"707.3 KB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"SAMPLE_2","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-07-08 16:22:54][DEBUG](FtpUploadDao.java:sendWatchFiles:256) - sql result = rs5: org.h2.result.LocalResult@2851d296 columns: 19 rows: 3 pos: 2
+[2022-07-08 16:22:54][DEBUG](CommonUtils.java:fromResultSet:397) - /home/kollus/upload/jungin-kim/_None/sample.webm
+[2022-07-08 16:22:54][INFO ](CommonUtils.java:pathToTRmpk:725) - [ pathToTRmpk 1/3 ] sample.webm
+[2022-07-08 16:22:54][INFO ](CommonUtils.java:pathToTRmpk:729) - [ pathToTRmpk 2/3 ] sample
+[2022-07-08 16:22:54][DEBUG](CommonUtils.java:fromResultSet:434) - fromResultSet Add TransCoder : null
+[2022-07-08 16:22:54][DEBUG](CommonUtils.java:fromResultSet:435) - fromResultSet Path : /jungin-kim/_None/sample.webm
+[2022-07-08 16:22:54][DEBUG](CommonUtils.java:fromResultSet:436) - fromResultSet item : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/sample.webm","upload_path":"/jungin-kim/_None/sample.webm","filesize":1148996,"filesize_str":"1.1 MB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"sample","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-07-08 16:22:54][DEBUG](FtpUploadDao.java:sendWatchFiles:285) - file register 보내는값 = [{"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/SAMPLE_1.MP3","upload_path":"/jungin-kim/_None/SAMPLE_1.MP3","filesize":635682,"filesize_str":"620.8 KB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"SAMPLE_1","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}, {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/SAMPLE_2.MP3","upload_path":"/jungin-kim/_None/SAMPLE_2.MP3","filesize":724289,"filesize_str":"707.3 KB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"SAMPLE_2","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}, {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/sample.webm","upload_path":"/jungin-kim/_None/sample.webm","filesize":1148996,"filesize_str":"1.1 MB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"sample","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}]
+[2022-07-08 16:22:54][DEBUG](CommonUtils.java:getHttpResponse:172) - Post Requests Transfer Content : watcher_files=[{"kind":1,"module_key":"watcherfile1","is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/SAMPLE_1.MP3","upload_path":"/jungin-kim/_None/SAMPLE_1.MP3","filesize":635682,"filesize_str":"620.8 KB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"SAMPLE_1","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""},{"kind":1,"module_key":"watcherfile1","is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/SAMPLE_2.MP3","upload_path":"/jungin-kim/_None/SAMPLE_2.MP3","filesize":724289,"filesize_str":"707.3 KB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"SAMPLE_2","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""},{"kind":1,"module_key":"watcherfile1","is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/sample.webm","upload_path":"/jungin-kim/_None/sample.webm","filesize":1148996,"filesize_str":"1.1 MB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"sample","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}]
+[2022-07-08 16:43:37][INFO ](Watcher.java:start:94) - [PRG_START]
+[2022-07-08 16:43:37][INFO ](Watcher.java:printVersion:40) - [PRG_VER]null
+[2022-07-08 16:44:05][DEBUG](ThreadSafeClientConnManager.java:getConnection:235) - Get connection: {}->http://api.kr.dev.kollus.com, timeout = 0
+[2022-07-08 16:44:06][DEBUG](ThreadSafeClientConnManager.java:releaseConnection:280) - Released connection is reusable.
+[2022-07-08 16:44:06][INFO ](Config.java:printUrls:234) - URLS [watcher.list.insert] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/register
+[2022-07-08 16:44:06][INFO ](Config.java:printUrls:234) - URLS [watcher.list.complete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/complete
+[2022-07-08 16:44:06][INFO ](Config.java:printUrls:234) - URLS [watcher.list.delete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/remove
+[2022-07-08 16:44:06][INFO ](Config.java:printUrls:234) - URLS [watcher.usage_day_amount.insert] http://api.kr.dev.kollus.com/0/catenoid/usage_day_amount/register
+[2022-07-08 16:44:06][INFO ](Config.java:printUrls:234) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-07-08 16:44:06][INFO ](Config.java:printUrls:234) - URLS [transcoding_job.assign] http://jobmanager-dev-kr.kollus.com:8180/assign
+[2022-07-08 16:44:06][INFO ](Config.java:printUrls:234) - URLS [transcoding_job.manager] http://api.kr.dev.kollus.com/0/catenoid/transcoding_job/manager
+[2022-07-08 16:44:06][INFO ](Config.java:printUrls:234) - URLS [transcoding_file.register] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/register
+[2022-07-08 16:44:06][INFO ](Config.java:printUrls:234) - URLS [transcoding_file.update] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/update
+[2022-07-08 16:44:06][INFO ](Config.java:printUrls:234) - URLS [transcoding_file.complete] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete
+[2022-07-08 16:44:06][INFO ](Config.java:printUrls:234) - URLS [transcoding_file.complete_all] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete_all
+[2022-07-08 16:44:06][INFO ](Config.java:printUrls:234) - URLS [module.check_activated_at] http://api.kr.dev.kollus.com/0/catenoid/module/check_activated_at
+[2022-07-08 16:44:06][INFO ](Config.java:printUrls:234) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-07-08 16:44:06][DEBUG](Watcher.java:setupWatcher:233) - [PRG_CONF]job_watcherfile1=0/10 * * * * ?
+[2022-07-08 16:44:13][DEBUG](LinuxLineParser.java:parser:101) - /home/kollus/upload, /home/kollus/upload/jungin-kim/_None/SAMPLE_1.MP3, 1656649897000, 635682
+[2022-07-08 16:44:13][DEBUG](LinuxLineParser.java:parser:101) - /home/kollus/upload, /home/kollus/upload/jungin-kim/_None/SAMPLE_2.MP3, 1656649900000, 724289
+[2022-07-08 16:44:13][DEBUG](LinuxLineParser.java:parser:101) - /home/kollus/upload, /home/kollus/upload/jungin-kim/_None/sample.webm, 1656637476000, 1148996
+[2022-07-08 16:44:13][INFO ](FtpUploadServiceImp.java:newFileItems:224) - {"uploadMode":"FTP","currentStep":"01","totalStep":"10","title":"LS Parsing STEP","description":"parsing files : 3"}
+[2022-07-08 16:44:15][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/upload/jungin-kim/_None/SAMPLE_1.MP3
+[2022-07-08 16:44:15][INFO ](CommonUtils.java:checkIsMediaContent:574) - physicalPath : /home/kollus/upload/jungin-kim/_None/SAMPLE_1.MP3
+[2022-07-08 16:44:21][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/upload/jungin-kim/_None/SAMPLE_2.MP3
+[2022-07-08 16:44:21][INFO ](CommonUtils.java:checkIsMediaContent:574) - physicalPath : /home/kollus/upload/jungin-kim/_None/SAMPLE_2.MP3
+[2022-07-08 16:44:25][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/upload/jungin-kim/_None/sample.webm
+[2022-07-08 16:44:25][INFO ](CommonUtils.java:checkIsMediaContent:574) - physicalPath : /home/kollus/upload/jungin-kim/_None/sample.webm
+[2022-07-08 16:44:27][INFO ](FtpUploadServiceImp.java:newFileItems:258) - {"uploadMode":"FTP","currentStep":"02","totalStep":"10","title":"H2 DB UPDATE STEP","description":"insertCount : 0, updateCount : 3, errorCount : 0"}
+[2022-07-08 16:44:28][INFO ](FtpUploadDao.java:deleteUnknownItem:195) - {"uploadMode":"FTP","currentStep":"03","totalStep":"10","title":"UNKNOWN DATA REMOVE STEP","description":"checkTime : 2022-07-08 16:44:10.079, Remove File Size : 0"}
+[2022-07-08 16:44:31][DEBUG](FtpUploadDao.java:sendWatchFiles:256) - sql result = rs5: org.h2.result.LocalResult@371dae79 columns: 19 rows: 3 pos: 0
+[2022-07-08 16:44:34][DEBUG](CommonUtils.java:fromResultSet:400) - /home/kollus/upload/jungin-kim/_None/SAMPLE_1.MP3
+[2022-07-08 16:44:34][INFO ](CommonUtils.java:pathToTRmpk:734) - [ pathToTRmpk 1/3 ] SAMPLE_1.MP3
+[2022-07-08 16:44:34][INFO ](CommonUtils.java:pathToTRmpk:738) - [ pathToTRmpk 2/3 ] SAMPLE_1
+[2022-07-08 16:44:34][DEBUG](CommonUtils.java:fromResultSet:437) - fromResultSet Add TransCoder : null
+[2022-07-08 16:44:34][DEBUG](CommonUtils.java:fromResultSet:438) - fromResultSet Path : /jungin-kim/_None/SAMPLE_1.MP3
+[2022-07-08 16:44:34][DEBUG](CommonUtils.java:fromResultSet:439) - fromResultSet item : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/SAMPLE_1.MP3","upload_path":"/jungin-kim/_None/SAMPLE_1.MP3","filesize":635682,"filesize_str":"620.8 KB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"SAMPLE_1","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-07-08 16:44:36][DEBUG](FtpUploadDao.java:sendWatchFiles:256) - sql result = rs5: org.h2.result.LocalResult@371dae79 columns: 19 rows: 3 pos: 1
+[2022-07-08 16:44:36][DEBUG](CommonUtils.java:fromResultSet:400) - /home/kollus/upload/jungin-kim/_None/SAMPLE_2.MP3
+[2022-07-08 16:44:37][INFO ](CommonUtils.java:pathToTRmpk:734) - [ pathToTRmpk 1/3 ] SAMPLE_2.MP3
+[2022-07-08 16:44:37][INFO ](CommonUtils.java:pathToTRmpk:738) - [ pathToTRmpk 2/3 ] SAMPLE_2
+[2022-07-08 16:44:37][DEBUG](CommonUtils.java:fromResultSet:437) - fromResultSet Add TransCoder : null
+[2022-07-08 16:44:37][DEBUG](CommonUtils.java:fromResultSet:438) - fromResultSet Path : /jungin-kim/_None/SAMPLE_2.MP3
+[2022-07-08 16:44:37][DEBUG](CommonUtils.java:fromResultSet:439) - fromResultSet item : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/SAMPLE_2.MP3","upload_path":"/jungin-kim/_None/SAMPLE_2.MP3","filesize":724289,"filesize_str":"707.3 KB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"SAMPLE_2","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-07-08 16:44:38][DEBUG](FtpUploadDao.java:sendWatchFiles:256) - sql result = rs5: org.h2.result.LocalResult@371dae79 columns: 19 rows: 3 pos: 2
+[2022-07-08 16:44:39][DEBUG](CommonUtils.java:fromResultSet:400) - /home/kollus/upload/jungin-kim/_None/sample.webm
+[2022-07-08 16:44:40][INFO ](CommonUtils.java:pathToTRmpk:734) - [ pathToTRmpk 1/3 ] sample.webm
+[2022-07-08 16:44:40][INFO ](CommonUtils.java:pathToTRmpk:738) - [ pathToTRmpk 2/3 ] sample
+[2022-07-08 16:44:40][DEBUG](CommonUtils.java:fromResultSet:437) - fromResultSet Add TransCoder : null
+[2022-07-08 16:44:40][DEBUG](CommonUtils.java:fromResultSet:438) - fromResultSet Path : /jungin-kim/_None/sample.webm
+[2022-07-08 16:44:40][DEBUG](CommonUtils.java:fromResultSet:439) - fromResultSet item : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/sample.webm","upload_path":"/jungin-kim/_None/sample.webm","filesize":1148996,"filesize_str":"1.1 MB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"sample","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-07-08 16:44:42][DEBUG](FtpUploadDao.java:sendWatchFiles:285) - file register 보내는값 = [{"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/SAMPLE_1.MP3","upload_path":"/jungin-kim/_None/SAMPLE_1.MP3","filesize":635682,"filesize_str":"620.8 KB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"SAMPLE_1","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}, {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/SAMPLE_2.MP3","upload_path":"/jungin-kim/_None/SAMPLE_2.MP3","filesize":724289,"filesize_str":"707.3 KB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"SAMPLE_2","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}, {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/sample.webm","upload_path":"/jungin-kim/_None/sample.webm","filesize":1148996,"filesize_str":"1.1 MB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"sample","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}]
+[2022-07-08 16:44:44][DEBUG](CommonUtils.java:getHttpResponse:175) - Post Requests Transfer Content : watcher_files=[{"kind":1,"module_key":"watcherfile1","is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/SAMPLE_1.MP3","upload_path":"/jungin-kim/_None/SAMPLE_1.MP3","filesize":635682,"filesize_str":"620.8 KB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"SAMPLE_1","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""},{"kind":1,"module_key":"watcherfile1","is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/SAMPLE_2.MP3","upload_path":"/jungin-kim/_None/SAMPLE_2.MP3","filesize":724289,"filesize_str":"707.3 KB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"SAMPLE_2","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""},{"kind":1,"module_key":"watcherfile1","is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/sample.webm","upload_path":"/jungin-kim/_None/sample.webm","filesize":1148996,"filesize_str":"1.1 MB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"sample","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}]
+[2022-07-08 16:44:48][DEBUG](CommonUtils.java:sendPostToApi:96) - Post Response Transfer Content [register] : {"error":0,"message":"","watcher_file":{"error":0,"message":"","result":{"error_code":0,"error_detail":"","content_provider_key":"","key":"","media_content_id":0,"content_path":"","upload_path":"","is_audio_file":0,"checksum_type":0,"snapshot_path":"","physical_path":"","delete_watcher_file_upload_url":"","poster":{"second":0}}},"result":{"error_code":0,"error_detail":"","watcher_files":[{"error":0,"message":"ok","result":{"error_code":0,"error_detail":"","content_provider_key":"jungin-kim","key":"uploadKey","media_content_id":0,"content_path":"/jungin-kim","upload_path":"/jungin-kim/_None/SAMPLE_1.MP3","is_audio_file":0,"checksum_type":0,"snapshot_path":"","physical_path":"/home/kollus/upload/jungin-kim/_None/SAMPLE_1.MP3","delete_watcher_file_upload_url":"","poster":{"second":0}}}]}}
+
+[2022-07-08 16:44:50][DEBUG](CommonUtils.java:convertResultApiItem:265) - register 반환값 (fileItem) = {"error":0,"message":"ok","result":{"error_code":0,"error_detail":"","content_provider_key":"jungin-kim","key":"uploadKey","media_content_id":0,"content_path":"/jungin-kim","upload_path":"/jungin-kim/_None/SAMPLE_1.MP3","is_audio_file":0,"checksum_type":0,"snapshot_path":"","physical_path":"/home/kollus/upload/jungin-kim/_None/SAMPLE_1.MP3","poster":{"second":0,"width":0,"height":0}}}
+[2022-07-08 16:44:52][INFO ](FtpUploadDao.java:sendWatchFiles:293) - {"uploadMode":"FTP","currentStep":"04","totalStep":"10","title":"HTTP Register Server Send STEP","description":"sendItem Size : 3"}
+[2022-07-08 16:44:54][DEBUG](FtpUploadDao.java:sendWatchFiles:302) - 등록성공: uploadKey, {"kind":1,"module_key":"watcherfile1","is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/SAMPLE_1.MP3","upload_path":"/jungin-kim/_None/SAMPLE_1.MP3","filesize":635682,"filesize_str":"620.8 KB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"uploadKey","content_path":"/jungin-kim","snapshot_path":"","title":"SAMPLE_1","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-07-08 16:44:57][DEBUG](FtpUploadDao.java:sendWatchFiles:310) - 등록실패: 
+[2022-07-08 16:45:01][DEBUG](FtpUploadDao.java:sendWatchFiles:310) - 등록실패: 
+[2022-07-08 16:45:03][INFO ](FtpUploadDao.java:sendWatchFiles:325) - postWatcherFileRegister End : watcherfile1
+[2022-07-08 16:45:04][INFO ](FtpUploadServiceImp.java:findWorkFileList:110) - Send to register count : 3
+[2022-07-08 16:45:06][DEBUG](CommonUtils.java:fromResultSet:400) - /home/kollus/upload/jungin-kim/_None/SAMPLE_1.MP3
+[2022-07-08 16:45:07][INFO ](CommonUtils.java:pathToTRmpk:734) - [ pathToTRmpk 1/3 ] SAMPLE_1.MP3
+[2022-07-08 16:45:07][INFO ](CommonUtils.java:pathToTRmpk:738) - [ pathToTRmpk 2/3 ] SAMPLE_1
+[2022-07-08 16:45:07][DEBUG](CommonUtils.java:fromResultSet:437) - fromResultSet Add TransCoder : null
+[2022-07-08 16:45:07][DEBUG](CommonUtils.java:fromResultSet:438) - fromResultSet Path : /jungin-kim/_None/SAMPLE_1.MP3
+[2022-07-08 16:45:07][DEBUG](CommonUtils.java:fromResultSet:439) - fromResultSet item : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/SAMPLE_1.MP3","upload_path":"/jungin-kim/_None/SAMPLE_1.MP3","filesize":635682,"filesize_str":"620.8 KB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"uploadKey","content_path":"/jungin-kim","snapshot_path":"","title":"SAMPLE_1","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-07-08 16:45:08][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/upload/jungin-kim/_None/SAMPLE_1.MP3
+[2022-07-08 16:45:09][INFO ](CommonUtils.java:setMediaInfo:663) - MediaInfo information : %7B%0A++%22format%22%3A+%22MPEG+Audio%22%2C%0A++%22duration%22%3A+%2239706%22%2C%0A++%22video.rotation%22%3A+%220%22%2C%0A++%22audio.format%22%3A+%22MPEG+Audio%22%2C%0A++%22audio.bitrate%22%3A+%22128000%22%2C%0A++%22audio.sample.rate%22%3A+%2244100%22%2C%0A++%22audio.duration%22%3A+%2239706%22%0A%7D
+[2022-07-08 16:45:11][DEBUG](FtpUploadDao.java:selectCompareOver:417) - Select work file: {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/SAMPLE_1.MP3","upload_path":"/jungin-kim/_None/SAMPLE_1.MP3","filesize":635682,"filesize_str":"620.8 KB","lastmodified":1656649897000,"lastmodified_str":"2022-07-01T13:31:37.000+0900","media_information":"%7B%0A++%22format%22%3A+%22MPEG+Audio%22%2C%0A++%22duration%22%3A+%2239706%22%2C%0A++%22video.rotation%22%3A+%220%22%2C%0A++%22audio.format%22%3A+%22MPEG+Audio%22%2C%0A++%22audio.bitrate%22%3A+%22128000%22%2C%0A++%22audio.sample.rate%22%3A+%2244100%22%2C%0A++%22audio.duration%22%3A+%2239706%22%0A%7D","content_provider_key":"jungin-kim","key":"uploadKey","content_path":"/jungin-kim","snapshot_path":"","title":"SAMPLE_1","md5":"","format":"MPEG Audio","duration":39706.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-07-08 16:45:12][INFO ](FtpUploadDao.java:selectCompareOver:426) - {"uploadMode":"FTP","currentStep":"05","totalStep":"10","title":"Get Work File List STEP","description":"sendItem size : 1"}
+[2022-07-08 16:45:12][DEBUG](FtpUploadDao.java:selectCompareOver:444) - item.path:/home/kollus/upload/jungin-kim/_None/SAMPLE_1.MP3, item.md5 is off
+[2022-07-08 16:45:14][INFO ](FtpUploadServiceImp.java:findWorkFileList:118) - Working file count : 1
+[2022-07-08 16:45:15][INFO ](CommonUtils.java:createSnapFile:537) - {"uploadMode":"FTP","currentStep":"06","totalStep":"10","title":"CREATE SNAPFile STEP","description":"created snapFile size : 0"}
+[2022-07-08 16:45:23][ERROR](CommonUtils.java:ExceptionLogPrint:332) - java.nio.file.FileAlreadyExistsException: /mnt/medianas/working/jungin-kim
+	at sun.nio.fs.UnixException.translateToIOException(UnixException.java:88)
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:102)
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:107)
+	at sun.nio.fs.UnixFileSystemProvider.createDirectory(UnixFileSystemProvider.java:384)
+	at java.nio.file.Files.createDirectory(Files.java:674)
+	at java.nio.file.Files.createAndCheckIsDirectory(Files.java:781)
+	at java.nio.file.Files.createDirectories(Files.java:727)
+	at net.catenoid.watcher.upload.utils.CommonUtils.moveToWorkDir(CommonUtils.java:838)
+	at net.catenoid.watcher.uploadImp.FtpUploadServiceImp.findWorkFileList(FtpUploadServiceImp.java:123)
+	at net.catenoid.watcher.job.Role_Watcher.execute(Role_Watcher.java:157)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:557)
+
+[2022-07-08 16:45:23][ERROR](CommonUtils.java:ExceptionLogPrint:333) - java.nio.file.FileAlreadyExistsException: /mnt/medianas/working/jungin-kim
+[2022-07-08 16:45:37][DEBUG](LinuxLineParser.java:parser:101) - /home/kollus/upload, /home/kollus/upload/jungin-kim/_None/SAMPLE_1.MP3, 1656649897000, 635682
+[2022-07-08 16:45:37][DEBUG](LinuxLineParser.java:parser:101) - /home/kollus/upload, /home/kollus/upload/jungin-kim/_None/SAMPLE_2.MP3, 1656649900000, 724289
+[2022-07-08 16:45:37][DEBUG](LinuxLineParser.java:parser:101) - /home/kollus/upload, /home/kollus/upload/jungin-kim/_None/sample.webm, 1656637476000, 1148996
+[2022-07-08 16:45:37][INFO ](FtpUploadServiceImp.java:newFileItems:224) - {"uploadMode":"FTP","currentStep":"01","totalStep":"10","title":"LS Parsing STEP","description":"parsing files : 3"}
+[2022-07-08 16:45:37][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/upload/jungin-kim/_None/SAMPLE_1.MP3
+[2022-07-08 16:45:37][INFO ](CommonUtils.java:checkIsMediaContent:574) - physicalPath : /home/kollus/upload/jungin-kim/_None/SAMPLE_1.MP3
+[2022-07-08 16:45:37][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/upload/jungin-kim/_None/SAMPLE_2.MP3
+[2022-07-08 16:45:37][INFO ](CommonUtils.java:checkIsMediaContent:574) - physicalPath : /home/kollus/upload/jungin-kim/_None/SAMPLE_2.MP3
+[2022-07-08 16:49:45][INFO ](Watcher.java:start:94) - [PRG_START]
+[2022-07-08 16:49:45][INFO ](Watcher.java:printVersion:40) - [PRG_VER]null
+[2022-07-08 16:49:46][DEBUG](ThreadSafeClientConnManager.java:getConnection:235) - Get connection: {}->http://api.kr.dev.kollus.com, timeout = 0
+[2022-07-08 16:49:46][DEBUG](ThreadSafeClientConnManager.java:releaseConnection:280) - Released connection is reusable.
+[2022-07-08 16:49:46][INFO ](Config.java:printUrls:234) - URLS [watcher.list.insert] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/register
+[2022-07-08 16:49:46][INFO ](Config.java:printUrls:234) - URLS [watcher.list.complete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/complete
+[2022-07-08 16:49:46][INFO ](Config.java:printUrls:234) - URLS [watcher.list.delete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/remove
+[2022-07-08 16:49:46][INFO ](Config.java:printUrls:234) - URLS [watcher.usage_day_amount.insert] http://api.kr.dev.kollus.com/0/catenoid/usage_day_amount/register
+[2022-07-08 16:49:46][INFO ](Config.java:printUrls:234) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-07-08 16:49:46][INFO ](Config.java:printUrls:234) - URLS [transcoding_job.assign] http://jobmanager-dev-kr.kollus.com:8180/assign
+[2022-07-08 16:49:46][INFO ](Config.java:printUrls:234) - URLS [transcoding_job.manager] http://api.kr.dev.kollus.com/0/catenoid/transcoding_job/manager
+[2022-07-08 16:49:46][INFO ](Config.java:printUrls:234) - URLS [transcoding_file.register] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/register
+[2022-07-08 16:49:46][INFO ](Config.java:printUrls:234) - URLS [transcoding_file.update] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/update
+[2022-07-08 16:49:46][INFO ](Config.java:printUrls:234) - URLS [transcoding_file.complete] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete
+[2022-07-08 16:49:46][INFO ](Config.java:printUrls:234) - URLS [transcoding_file.complete_all] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete_all
+[2022-07-08 16:49:46][INFO ](Config.java:printUrls:234) - URLS [module.check_activated_at] http://api.kr.dev.kollus.com/0/catenoid/module/check_activated_at
+[2022-07-08 16:49:46][INFO ](Config.java:printUrls:234) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-07-08 16:49:46][DEBUG](Watcher.java:setupWatcher:233) - [PRG_CONF]job_watcherfile1=0/10 * * * * ?
+[2022-07-08 16:49:52][DEBUG](LinuxLineParser.java:parser:101) - /home/kollus/upload, /home/kollus/upload/jungin-kim/_None/SAMPLE_1.MP3, 1656649897000, 635682
+[2022-07-08 16:49:52][DEBUG](LinuxLineParser.java:parser:101) - /home/kollus/upload, /home/kollus/upload/jungin-kim/_None/SAMPLE_2.MP3, 1656649900000, 724289
+[2022-07-08 16:49:52][DEBUG](LinuxLineParser.java:parser:101) - /home/kollus/upload, /home/kollus/upload/jungin-kim/_None/sample.webm, 1656637476000, 1148996
+[2022-07-08 16:49:52][INFO ](FtpUploadServiceImp.java:newFileItems:224) - net.catenoid.watcher.upload.dto.UploadProcessLogDTO@60183ab5
+[2022-07-08 17:55:33][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/upload/jungin-kim/_None/SAMPLE_1.MP3
+[2022-07-08 17:55:41][INFO ](Watcher.java:start:94) - [PRG_START]
+[2022-07-08 17:55:41][INFO ](Watcher.java:printVersion:40) - [PRG_VER]null
+[2022-07-08 17:55:44][DEBUG](ThreadSafeClientConnManager.java:getConnection:235) - Get connection: {}->http://api.kr.dev.kollus.com, timeout = 0
+[2022-07-08 17:55:44][DEBUG](ThreadSafeClientConnManager.java:releaseConnection:280) - Released connection is reusable.
+[2022-07-08 17:55:44][INFO ](Config.java:printUrls:234) - URLS [watcher.list.insert] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/register
+[2022-07-08 17:55:44][INFO ](Config.java:printUrls:234) - URLS [watcher.list.complete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/complete
+[2022-07-08 17:55:44][INFO ](Config.java:printUrls:234) - URLS [watcher.list.delete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/remove
+[2022-07-08 17:55:44][INFO ](Config.java:printUrls:234) - URLS [watcher.usage_day_amount.insert] http://api.kr.dev.kollus.com/0/catenoid/usage_day_amount/register
+[2022-07-08 17:55:44][INFO ](Config.java:printUrls:234) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-07-08 17:55:44][INFO ](Config.java:printUrls:234) - URLS [transcoding_job.assign] http://jobmanager-dev-kr.kollus.com:8180/assign
+[2022-07-08 17:55:44][INFO ](Config.java:printUrls:234) - URLS [transcoding_job.manager] http://api.kr.dev.kollus.com/0/catenoid/transcoding_job/manager
+[2022-07-08 17:55:44][INFO ](Config.java:printUrls:234) - URLS [transcoding_file.register] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/register
+[2022-07-08 17:55:44][INFO ](Config.java:printUrls:234) - URLS [transcoding_file.update] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/update
+[2022-07-08 17:55:44][INFO ](Config.java:printUrls:234) - URLS [transcoding_file.complete] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete
+[2022-07-08 17:55:44][INFO ](Config.java:printUrls:234) - URLS [transcoding_file.complete_all] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete_all
+[2022-07-08 17:55:44][INFO ](Config.java:printUrls:234) - URLS [module.check_activated_at] http://api.kr.dev.kollus.com/0/catenoid/module/check_activated_at
+[2022-07-08 17:55:44][INFO ](Config.java:printUrls:234) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-07-08 17:55:44][DEBUG](Watcher.java:setupWatcher:233) - [PRG_CONF]job_watcherfile1=0/10 * * * * ?
+[2022-07-08 17:55:51][DEBUG](LinuxLineParser.java:parser:101) - /home/kollus/upload, /home/kollus/upload/jungin-kim/_None/SAMPLE_1.MP3, 1656649897000, 635682
+[2022-07-08 17:55:51][DEBUG](LinuxLineParser.java:parser:101) - /home/kollus/upload, /home/kollus/upload/jungin-kim/_None/SAMPLE_2.MP3, 1656649900000, 724289
+[2022-07-08 17:55:51][DEBUG](LinuxLineParser.java:parser:101) - /home/kollus/upload, /home/kollus/upload/jungin-kim/_None/sample.webm, 1656637476000, 1148996
+[2022-07-08 17:55:51][INFO ](FtpUploadServiceImp.java:newFileItems:224) - net.catenoid.watcher.upload.dto.UploadProcessLogDTO@dd9030c
+[2022-07-08 17:55:52][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/upload/jungin-kim/_None/SAMPLE_1.MP3
+[2022-07-08 17:55:52][INFO ](CommonUtils.java:checkIsMediaContent:574) - physicalPath : /home/kollus/upload/jungin-kim/_None/SAMPLE_1.MP3
+[2022-07-08 17:55:55][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/upload/jungin-kim/_None/SAMPLE_2.MP3
+[2022-07-08 17:55:55][INFO ](CommonUtils.java:checkIsMediaContent:574) - physicalPath : /home/kollus/upload/jungin-kim/_None/SAMPLE_2.MP3
+[2022-07-08 17:55:58][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/upload/jungin-kim/_None/sample.webm
+[2022-07-08 17:55:58][INFO ](CommonUtils.java:checkIsMediaContent:574) - physicalPath : /home/kollus/upload/jungin-kim/_None/sample.webm
+[2022-07-08 17:56:00][INFO ](FtpUploadServiceImp.java:newFileItems:258) - {"uploadMode":"FTP","currentStep":"02","totalStep":"10","title":"H2 DB UPDATE STEP","description":"insertCount : 2, updateCount : 1, errorCount : 0"}
+[2022-07-08 17:56:03][INFO ](FtpUploadDao.java:deleteUnknownItem:195) - {"uploadMode":"FTP","currentStep":"03","totalStep":"10","title":"UNKNOWN DATA REMOVE STEP","description":"checkTime : 2022-07-08 17:55:50.075, Remove File Size : 0"}
+[2022-07-08 17:56:04][DEBUG](FtpUploadDao.java:sendWatchFiles:256) - sql result = rs5: org.h2.result.LocalResult@56c6e044 columns: 19 rows: 2 pos: 0
+[2022-07-08 17:56:04][DEBUG](CommonUtils.java:fromResultSet:400) - /home/kollus/upload/jungin-kim/_None/SAMPLE_2.MP3
+[2022-07-08 17:56:04][INFO ](CommonUtils.java:pathToTRmpk:734) - [ pathToTRmpk 1/3 ] SAMPLE_2.MP3
+[2022-07-08 17:56:04][INFO ](CommonUtils.java:pathToTRmpk:738) - [ pathToTRmpk 2/3 ] SAMPLE_2
+[2022-07-08 17:56:04][DEBUG](CommonUtils.java:fromResultSet:437) - fromResultSet Add TransCoder : null
+[2022-07-08 17:56:04][DEBUG](CommonUtils.java:fromResultSet:438) - fromResultSet Path : /jungin-kim/_None/SAMPLE_2.MP3
+[2022-07-08 17:56:04][DEBUG](CommonUtils.java:fromResultSet:439) - fromResultSet item : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/SAMPLE_2.MP3","upload_path":"/jungin-kim/_None/SAMPLE_2.MP3","filesize":724289,"filesize_str":"707.3 KB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"SAMPLE_2","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-07-08 17:56:05][DEBUG](FtpUploadDao.java:sendWatchFiles:256) - sql result = rs5: org.h2.result.LocalResult@56c6e044 columns: 19 rows: 2 pos: 1
+[2022-07-08 17:56:05][DEBUG](CommonUtils.java:fromResultSet:400) - /home/kollus/upload/jungin-kim/_None/sample.webm
+[2022-07-08 17:56:05][INFO ](CommonUtils.java:pathToTRmpk:734) - [ pathToTRmpk 1/3 ] sample.webm
+[2022-07-08 17:56:05][INFO ](CommonUtils.java:pathToTRmpk:738) - [ pathToTRmpk 2/3 ] sample
+[2022-07-08 17:56:05][DEBUG](CommonUtils.java:fromResultSet:437) - fromResultSet Add TransCoder : null
+[2022-07-08 17:56:05][DEBUG](CommonUtils.java:fromResultSet:438) - fromResultSet Path : /jungin-kim/_None/sample.webm
+[2022-07-08 17:56:05][DEBUG](CommonUtils.java:fromResultSet:439) - fromResultSet item : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/sample.webm","upload_path":"/jungin-kim/_None/sample.webm","filesize":1148996,"filesize_str":"1.1 MB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"sample","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-07-08 17:56:05][DEBUG](FtpUploadDao.java:sendWatchFiles:285) - file register 보내는값 = [{"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/SAMPLE_2.MP3","upload_path":"/jungin-kim/_None/SAMPLE_2.MP3","filesize":724289,"filesize_str":"707.3 KB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"SAMPLE_2","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}, {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/sample.webm","upload_path":"/jungin-kim/_None/sample.webm","filesize":1148996,"filesize_str":"1.1 MB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"sample","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}]
+[2022-07-08 17:56:06][DEBUG](CommonUtils.java:getHttpResponse:175) - Post Requests Transfer Content : watcher_files=[{"kind":1,"module_key":"watcherfile1","is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/SAMPLE_2.MP3","upload_path":"/jungin-kim/_None/SAMPLE_2.MP3","filesize":724289,"filesize_str":"707.3 KB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"SAMPLE_2","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""},{"kind":1,"module_key":"watcherfile1","is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/sample.webm","upload_path":"/jungin-kim/_None/sample.webm","filesize":1148996,"filesize_str":"1.1 MB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"sample","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}]
+[2022-07-08 17:56:07][DEBUG](CommonUtils.java:sendPostToApi:96) - Post Response Transfer Content [register] : {"error":0,"message":"","watcher_file":{"error":0,"message":"","result":{"error_code":0,"error_detail":"","content_provider_key":"","key":"","media_content_id":0,"content_path":"","upload_path":"","is_audio_file":0,"checksum_type":0,"snapshot_path":"","physical_path":"","delete_watcher_file_upload_url":"","poster":{"second":0}}},"result":{"error_code":0,"error_detail":"","watcher_files":[{"error":0,"message":"ok","result":{"error_code":0,"error_detail":"","content_provider_key":"jungin-kim","key":"uploadKey","media_content_id":0,"content_path":"/jungin-kim","upload_path":"/jungin-kim/_None/SAMPLE_2.MP3","is_audio_file":0,"checksum_type":0,"snapshot_path":"","physical_path":"/home/kollus/upload/jungin-kim/_None/SAMPLE_2.MP3","delete_watcher_file_upload_url":"","poster":{"second":0}}}]}}
+
+[2022-07-08 17:56:07][DEBUG](CommonUtils.java:convertResultApiItem:265) - register 반환값 (fileItem) = {"error":0,"message":"ok","result":{"error_code":0,"error_detail":"","content_provider_key":"jungin-kim","key":"uploadKey","media_content_id":0,"content_path":"/jungin-kim","upload_path":"/jungin-kim/_None/SAMPLE_2.MP3","is_audio_file":0,"checksum_type":0,"snapshot_path":"","physical_path":"/home/kollus/upload/jungin-kim/_None/SAMPLE_2.MP3","poster":{"second":0,"width":0,"height":0}}}
+[2022-07-08 17:56:07][INFO ](FtpUploadDao.java:sendWatchFiles:293) - {"uploadMode":"FTP","currentStep":"04","totalStep":"10","title":"HTTP Register Server Send STEP","description":"sendItem Size : 2"}
+[2022-07-08 17:56:08][DEBUG](FtpUploadDao.java:sendWatchFiles:302) - 등록성공: uploadKey, {"kind":1,"module_key":"watcherfile1","is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/SAMPLE_2.MP3","upload_path":"/jungin-kim/_None/SAMPLE_2.MP3","filesize":724289,"filesize_str":"707.3 KB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"uploadKey","content_path":"/jungin-kim","snapshot_path":"","title":"SAMPLE_2","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-07-08 17:56:09][DEBUG](FtpUploadDao.java:sendWatchFiles:310) - 등록실패: 
+[2022-07-08 17:56:10][INFO ](FtpUploadDao.java:sendWatchFiles:325) - postWatcherFileRegister End : watcherfile1
+[2022-07-08 17:56:10][INFO ](FtpUploadServiceImp.java:findWorkFileList:110) - Send to register count : 2
+[2022-07-08 17:56:11][DEBUG](CommonUtils.java:fromResultSet:400) - /home/kollus/upload/jungin-kim/_None/SAMPLE_1.MP3
+[2022-07-08 17:56:11][INFO ](CommonUtils.java:pathToTRmpk:734) - [ pathToTRmpk 1/3 ] SAMPLE_1.MP3
+[2022-07-08 17:56:11][INFO ](CommonUtils.java:pathToTRmpk:738) - [ pathToTRmpk 2/3 ] SAMPLE_1
+[2022-07-08 17:56:11][DEBUG](CommonUtils.java:fromResultSet:437) - fromResultSet Add TransCoder : null
+[2022-07-08 17:56:11][DEBUG](CommonUtils.java:fromResultSet:438) - fromResultSet Path : /jungin-kim/_None/SAMPLE_1.MP3
+[2022-07-08 17:56:11][DEBUG](CommonUtils.java:fromResultSet:439) - fromResultSet item : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/SAMPLE_1.MP3","upload_path":"/jungin-kim/_None/SAMPLE_1.MP3","filesize":635682,"filesize_str":"620.8 KB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"uploadKey","content_path":"/jungin-kim","snapshot_path":"","title":"SAMPLE_1","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-07-08 17:56:12][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/upload/jungin-kim/_None/SAMPLE_1.MP3
+[2022-07-08 17:56:12][INFO ](CommonUtils.java:setMediaInfo:663) - MediaInfo information : null
+[2022-07-08 17:56:12][DEBUG](FtpUploadDao.java:selectCompareOver:417) - Select work file: {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/SAMPLE_1.MP3","upload_path":"/jungin-kim/_None/SAMPLE_1.MP3","filesize":635682,"filesize_str":"620.8 KB","lastmodified":1656649897000,"lastmodified_str":"2022-07-01T13:31:37.000+0900","media_information":"%7B%0A++%22format%22%3A+%22MPEG+Audio%22%2C%0A++%22duration%22%3A+%2239706%22%2C%0A++%22video.rotation%22%3A+%220%22%2C%0A++%22audio.format%22%3A+%22MPEG+Audio%22%2C%0A++%22audio.bitrate%22%3A+%22128000%22%2C%0A++%22audio.sample.rate%22%3A+%2244100%22%2C%0A++%22audio.duration%22%3A+%2239706%22%0A%7D","content_provider_key":"jungin-kim","key":"uploadKey","content_path":"/jungin-kim","snapshot_path":"","title":"SAMPLE_1","md5":"","format":"MPEG Audio","duration":39706.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-07-08 17:56:12][DEBUG](CommonUtils.java:fromResultSet:400) - /home/kollus/upload/jungin-kim/_None/SAMPLE_2.MP3
+[2022-07-08 17:56:12][INFO ](CommonUtils.java:pathToTRmpk:734) - [ pathToTRmpk 1/3 ] SAMPLE_2.MP3
+[2022-07-08 17:56:12][INFO ](CommonUtils.java:pathToTRmpk:738) - [ pathToTRmpk 2/3 ] SAMPLE_2
+[2022-07-08 17:56:12][DEBUG](CommonUtils.java:fromResultSet:437) - fromResultSet Add TransCoder : null
+[2022-07-08 17:56:12][DEBUG](CommonUtils.java:fromResultSet:438) - fromResultSet Path : /jungin-kim/_None/SAMPLE_2.MP3
+[2022-07-08 17:56:12][DEBUG](CommonUtils.java:fromResultSet:439) - fromResultSet item : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/SAMPLE_2.MP3","upload_path":"/jungin-kim/_None/SAMPLE_2.MP3","filesize":724289,"filesize_str":"707.3 KB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"uploadKey","content_path":"/jungin-kim","snapshot_path":"","title":"SAMPLE_2","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-07-08 17:56:12][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/upload/jungin-kim/_None/SAMPLE_2.MP3
+[2022-07-08 17:56:12][INFO ](CommonUtils.java:setMediaInfo:663) - MediaInfo information : null
+[2022-07-08 17:56:12][DEBUG](FtpUploadDao.java:selectCompareOver:417) - Select work file: {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/SAMPLE_2.MP3","upload_path":"/jungin-kim/_None/SAMPLE_2.MP3","filesize":724289,"filesize_str":"707.3 KB","lastmodified":1656649900000,"lastmodified_str":"2022-07-01T13:31:40.000+0900","media_information":"%7B%0A++%22format%22%3A+%22MPEG+Audio%22%2C%0A++%22duration%22%3A+%2245244%22%2C%0A++%22video.rotation%22%3A+%220%22%2C%0A++%22audio.format%22%3A+%22MPEG+Audio%22%2C%0A++%22audio.bitrate%22%3A+%22128000%22%2C%0A++%22audio.sample.rate%22%3A+%2244100%22%2C%0A++%22audio.duration%22%3A+%2245244%22%0A%7D","content_provider_key":"jungin-kim","key":"uploadKey","content_path":"/jungin-kim","snapshot_path":"","title":"SAMPLE_2","md5":"","format":"MPEG Audio","duration":45244.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-07-08 17:56:12][INFO ](FtpUploadDao.java:selectCompareOver:426) - net.catenoid.watcher.upload.dto.UploadProcessLogDTO@5c2af437
+[2022-07-08 17:56:12][DEBUG](FtpUploadDao.java:selectCompareOver:444) - item.path:/home/kollus/upload/jungin-kim/_None/SAMPLE_1.MP3, item.md5 is off
+[2022-07-08 17:56:12][DEBUG](FtpUploadDao.java:selectCompareOver:444) - item.path:/home/kollus/upload/jungin-kim/_None/SAMPLE_2.MP3, item.md5 is off
+[2022-07-08 17:56:12][INFO ](FtpUploadServiceImp.java:findWorkFileList:118) - Working file count : 2
+[2022-07-08 17:56:12][INFO ](CommonUtils.java:createSnapFile:537) - {"uploadMode":"FTP","currentStep":"06","totalStep":"10","title":"CREATE SNAPFile STEP","description":"created snapFile size : 0"}
+[2022-07-08 17:56:12][ERROR](CommonUtils.java:ExceptionLogPrint:332) - java.nio.file.FileAlreadyExistsException: /mnt/medianas/working/jungin-kim
+	at sun.nio.fs.UnixException.translateToIOException(UnixException.java:88)
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:102)
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:107)
+	at sun.nio.fs.UnixFileSystemProvider.createDirectory(UnixFileSystemProvider.java:384)
+	at java.nio.file.Files.createDirectory(Files.java:674)
+	at java.nio.file.Files.createAndCheckIsDirectory(Files.java:781)
+	at java.nio.file.Files.createDirectories(Files.java:727)
+	at net.catenoid.watcher.upload.utils.CommonUtils.moveToWorkDir(CommonUtils.java:838)
+	at net.catenoid.watcher.uploadImp.FtpUploadServiceImp.findWorkFileList(FtpUploadServiceImp.java:123)
+	at net.catenoid.watcher.job.Role_Watcher.execute(Role_Watcher.java:157)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:557)
+
+[2022-07-08 17:56:12][ERROR](CommonUtils.java:ExceptionLogPrint:333) - java.nio.file.FileAlreadyExistsException: /mnt/medianas/working/jungin-kim
+[2022-07-08 17:58:41][INFO ](Watcher.java:start:94) - [PRG_START]
+[2022-07-08 17:58:41][INFO ](Watcher.java:printVersion:40) - [PRG_VER]null
+[2022-07-08 17:58:43][DEBUG](ThreadSafeClientConnManager.java:getConnection:235) - Get connection: {}->http://api.kr.dev.kollus.com, timeout = 0
+[2022-07-08 17:58:43][DEBUG](ThreadSafeClientConnManager.java:releaseConnection:280) - Released connection is reusable.
+[2022-07-08 17:58:43][INFO ](Config.java:printUrls:234) - URLS [watcher.list.insert] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/register
+[2022-07-08 17:58:43][INFO ](Config.java:printUrls:234) - URLS [watcher.list.complete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/complete
+[2022-07-08 17:58:43][INFO ](Config.java:printUrls:234) - URLS [watcher.list.delete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/remove
+[2022-07-08 17:58:43][INFO ](Config.java:printUrls:234) - URLS [watcher.usage_day_amount.insert] http://api.kr.dev.kollus.com/0/catenoid/usage_day_amount/register
+[2022-07-08 17:58:43][INFO ](Config.java:printUrls:234) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-07-08 17:58:43][INFO ](Config.java:printUrls:234) - URLS [transcoding_job.assign] http://jobmanager-dev-kr.kollus.com:8180/assign
+[2022-07-08 17:58:43][INFO ](Config.java:printUrls:234) - URLS [transcoding_job.manager] http://api.kr.dev.kollus.com/0/catenoid/transcoding_job/manager
+[2022-07-08 17:58:43][INFO ](Config.java:printUrls:234) - URLS [transcoding_file.register] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/register
+[2022-07-08 17:58:43][INFO ](Config.java:printUrls:234) - URLS [transcoding_file.update] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/update
+[2022-07-08 17:58:43][INFO ](Config.java:printUrls:234) - URLS [transcoding_file.complete] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete
+[2022-07-08 17:58:43][INFO ](Config.java:printUrls:234) - URLS [transcoding_file.complete_all] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete_all
+[2022-07-08 17:58:43][INFO ](Config.java:printUrls:234) - URLS [module.check_activated_at] http://api.kr.dev.kollus.com/0/catenoid/module/check_activated_at
+[2022-07-08 17:58:43][INFO ](Config.java:printUrls:234) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-07-08 17:58:43][DEBUG](Watcher.java:setupWatcher:233) - [PRG_CONF]job_watcherfile1=0/10 * * * * ?
+[2022-07-08 17:58:52][DEBUG](LinuxLineParser.java:parser:101) - /home/kollus/upload, /home/kollus/upload/jungin-kim/_None/SAMPLE_1.MP3, 1656649897000, 635682
+[2022-07-08 17:58:52][DEBUG](LinuxLineParser.java:parser:101) - /home/kollus/upload, /home/kollus/upload/jungin-kim/_None/SAMPLE_2.MP3, 1656649900000, 724289
+[2022-07-08 17:58:52][DEBUG](LinuxLineParser.java:parser:101) - /home/kollus/upload, /home/kollus/upload/jungin-kim/_None/sample.webm, 1656637476000, 1148996
+[2022-07-08 17:58:52][INFO ](FtpUploadServiceImp.java:newFileItems:224) - net.catenoid.watcher.upload.dto.UploadProcessLogDTO@4ec3953f
+[2022-07-08 17:58:53][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/upload/jungin-kim/_None/SAMPLE_1.MP3
+[2022-07-08 17:58:53][INFO ](CommonUtils.java:checkIsMediaContent:574) - physicalPath : /home/kollus/upload/jungin-kim/_None/SAMPLE_1.MP3
+[2022-07-08 17:58:56][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/upload/jungin-kim/_None/SAMPLE_2.MP3
+[2022-07-08 17:58:56][INFO ](CommonUtils.java:checkIsMediaContent:574) - physicalPath : /home/kollus/upload/jungin-kim/_None/SAMPLE_2.MP3
+[2022-07-08 17:58:59][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/upload/jungin-kim/_None/sample.webm
+[2022-07-08 17:58:59][INFO ](CommonUtils.java:checkIsMediaContent:574) - physicalPath : /home/kollus/upload/jungin-kim/_None/sample.webm
+[2022-07-08 17:59:00][INFO ](FtpUploadServiceImp.java:newFileItems:258) - {"uploadMode":"FTP","currentStep":"02","totalStep":"10","title":"H2 DB UPDATE STEP","description":"insertCount : 1, updateCount : 2, errorCount : 0"}
+[2022-07-08 17:59:01][INFO ](FtpUploadDao.java:deleteUnknownItem:195) - {"uploadMode":"FTP","currentStep":"03","totalStep":"10","title":"UNKNOWN DATA REMOVE STEP","description":"checkTime : 2022-07-08 17:58:50.090, Remove File Size : 0"}
+[2022-07-08 17:59:01][DEBUG](FtpUploadDao.java:sendWatchFiles:256) - sql result = rs5: org.h2.result.LocalResult@5d93e6dc columns: 19 rows: 1 pos: 0
+[2022-07-08 17:59:02][DEBUG](CommonUtils.java:fromResultSet:400) - /home/kollus/upload/jungin-kim/_None/sample.webm
+[2022-07-08 17:59:02][INFO ](CommonUtils.java:pathToTRmpk:734) - [ pathToTRmpk 1/3 ] sample.webm
+[2022-07-08 17:59:02][INFO ](CommonUtils.java:pathToTRmpk:738) - [ pathToTRmpk 2/3 ] sample
+[2022-07-08 17:59:02][DEBUG](CommonUtils.java:fromResultSet:437) - fromResultSet Add TransCoder : null
+[2022-07-08 17:59:02][DEBUG](CommonUtils.java:fromResultSet:438) - fromResultSet Path : /jungin-kim/_None/sample.webm
+[2022-07-08 17:59:02][DEBUG](CommonUtils.java:fromResultSet:439) - fromResultSet item : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/sample.webm","upload_path":"/jungin-kim/_None/sample.webm","filesize":1148996,"filesize_str":"1.1 MB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"sample","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-07-08 17:59:03][DEBUG](FtpUploadDao.java:sendWatchFiles:285) - file register 보내는값 = [{"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/sample.webm","upload_path":"/jungin-kim/_None/sample.webm","filesize":1148996,"filesize_str":"1.1 MB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"sample","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}]
+[2022-07-08 17:59:03][DEBUG](CommonUtils.java:getHttpResponse:175) - Post Requests Transfer Content : watcher_files=[{"kind":1,"module_key":"watcherfile1","is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/sample.webm","upload_path":"/jungin-kim/_None/sample.webm","filesize":1148996,"filesize_str":"1.1 MB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"sample","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}]
+[2022-07-08 17:59:04][DEBUG](CommonUtils.java:sendPostToApi:96) - Post Response Transfer Content [register] : {"error":0,"message":"","watcher_file":{"error":0,"message":"","result":{"error_code":0,"error_detail":"","content_provider_key":"","key":"","media_content_id":0,"content_path":"","upload_path":"","is_audio_file":0,"checksum_type":0,"snapshot_path":"","physical_path":"","delete_watcher_file_upload_url":"","poster":{"second":0}}},"result":{"error_code":0,"error_detail":"","watcher_files":[{"error":0,"message":"ok","result":{"error_code":0,"error_detail":"","content_provider_key":"jungin-kim","key":"uploadKey","media_content_id":0,"content_path":"/jungin-kim","upload_path":"/jungin-kim/_None/sample.webm","is_audio_file":0,"checksum_type":0,"snapshot_path":"","physical_path":"/home/kollus/upload/jungin-kim/_None/sample.webm","delete_watcher_file_upload_url":"","poster":{"second":0}}}]}}
+
+[2022-07-08 17:59:04][DEBUG](CommonUtils.java:convertResultApiItem:265) - register 반환값 (fileItem) = {"error":0,"message":"ok","result":{"error_code":0,"error_detail":"","content_provider_key":"jungin-kim","key":"uploadKey","media_content_id":0,"content_path":"/jungin-kim","upload_path":"/jungin-kim/_None/sample.webm","is_audio_file":0,"checksum_type":0,"snapshot_path":"","physical_path":"/home/kollus/upload/jungin-kim/_None/sample.webm","poster":{"second":0,"width":0,"height":0}}}
+[2022-07-08 17:59:05][INFO ](FtpUploadDao.java:sendWatchFiles:293) - {"uploadMode":"FTP","currentStep":"04","totalStep":"10","title":"HTTP Register Server Send STEP","description":"sendItem Size : 1"}
+[2022-07-08 17:59:06][DEBUG](FtpUploadDao.java:sendWatchFiles:302) - 등록성공: uploadKey, {"kind":1,"module_key":"watcherfile1","is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/sample.webm","upload_path":"/jungin-kim/_None/sample.webm","filesize":1148996,"filesize_str":"1.1 MB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"uploadKey","content_path":"/jungin-kim","snapshot_path":"","title":"sample","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-07-08 17:59:06][INFO ](FtpUploadDao.java:sendWatchFiles:325) - postWatcherFileRegister End : watcherfile1
+[2022-07-08 17:59:07][INFO ](FtpUploadServiceImp.java:findWorkFileList:110) - Send to register count : 1
+[2022-07-08 17:59:07][DEBUG](CommonUtils.java:fromResultSet:400) - /home/kollus/upload/jungin-kim/_None/SAMPLE_1.MP3
+[2022-07-08 17:59:08][INFO ](CommonUtils.java:pathToTRmpk:734) - [ pathToTRmpk 1/3 ] SAMPLE_1.MP3
+[2022-07-08 17:59:08][INFO ](CommonUtils.java:pathToTRmpk:738) - [ pathToTRmpk 2/3 ] SAMPLE_1
+[2022-07-08 17:59:08][DEBUG](CommonUtils.java:fromResultSet:437) - fromResultSet Add TransCoder : null
+[2022-07-08 17:59:08][DEBUG](CommonUtils.java:fromResultSet:438) - fromResultSet Path : /jungin-kim/_None/SAMPLE_1.MP3
+[2022-07-08 17:59:08][DEBUG](CommonUtils.java:fromResultSet:439) - fromResultSet item : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/SAMPLE_1.MP3","upload_path":"/jungin-kim/_None/SAMPLE_1.MP3","filesize":635682,"filesize_str":"620.8 KB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"uploadKey","content_path":"/jungin-kim","snapshot_path":"","title":"SAMPLE_1","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-07-08 17:59:08][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/upload/jungin-kim/_None/SAMPLE_1.MP3
+[2022-07-08 17:59:08][INFO ](CommonUtils.java:setMediaInfo:663) - MediaInfo information : %7B%0A++%22format%22%3A+%22MPEG+Audio%22%2C%0A++%22duration%22%3A+%2239706%22%2C%0A++%22video.rotation%22%3A+%220%22%2C%0A++%22audio.format%22%3A+%22MPEG+Audio%22%2C%0A++%22audio.bitrate%22%3A+%22128000%22%2C%0A++%22audio.sample.rate%22%3A+%2244100%22%2C%0A++%22audio.duration%22%3A+%2239706%22%0A%7D
+[2022-07-08 17:59:09][DEBUG](FtpUploadDao.java:selectCompareOver:417) - Select work file: {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/SAMPLE_1.MP3","upload_path":"/jungin-kim/_None/SAMPLE_1.MP3","filesize":635682,"filesize_str":"620.8 KB","lastmodified":1656649897000,"lastmodified_str":"2022-07-01T13:31:37.000+0900","media_information":"%7B%0A++%22format%22%3A+%22MPEG+Audio%22%2C%0A++%22duration%22%3A+%2239706%22%2C%0A++%22video.rotation%22%3A+%220%22%2C%0A++%22audio.format%22%3A+%22MPEG+Audio%22%2C%0A++%22audio.bitrate%22%3A+%22128000%22%2C%0A++%22audio.sample.rate%22%3A+%2244100%22%2C%0A++%22audio.duration%22%3A+%2239706%22%0A%7D","content_provider_key":"jungin-kim","key":"uploadKey","content_path":"/jungin-kim","snapshot_path":"","title":"SAMPLE_1","md5":"","format":"MPEG Audio","duration":39706.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-07-08 17:59:10][DEBUG](CommonUtils.java:fromResultSet:400) - /home/kollus/upload/jungin-kim/_None/SAMPLE_2.MP3
+[2022-07-08 17:59:10][INFO ](CommonUtils.java:pathToTRmpk:734) - [ pathToTRmpk 1/3 ] SAMPLE_2.MP3
+[2022-07-08 17:59:10][INFO ](CommonUtils.java:pathToTRmpk:738) - [ pathToTRmpk 2/3 ] SAMPLE_2
+[2022-07-08 17:59:10][DEBUG](CommonUtils.java:fromResultSet:437) - fromResultSet Add TransCoder : null
+[2022-07-08 17:59:10][DEBUG](CommonUtils.java:fromResultSet:438) - fromResultSet Path : /jungin-kim/_None/SAMPLE_2.MP3
+[2022-07-08 17:59:10][DEBUG](CommonUtils.java:fromResultSet:439) - fromResultSet item : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/SAMPLE_2.MP3","upload_path":"/jungin-kim/_None/SAMPLE_2.MP3","filesize":724289,"filesize_str":"707.3 KB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"uploadKey","content_path":"/jungin-kim","snapshot_path":"","title":"SAMPLE_2","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-07-08 17:59:11][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/upload/jungin-kim/_None/SAMPLE_2.MP3
+[2022-07-08 17:59:12][INFO ](CommonUtils.java:setMediaInfo:663) - MediaInfo information : %7B%0A++%22format%22%3A+%22MPEG+Audio%22%2C%0A++%22duration%22%3A+%2245244%22%2C%0A++%22video.rotation%22%3A+%220%22%2C%0A++%22audio.format%22%3A+%22MPEG+Audio%22%2C%0A++%22audio.bitrate%22%3A+%22128000%22%2C%0A++%22audio.sample.rate%22%3A+%2244100%22%2C%0A++%22audio.duration%22%3A+%2245244%22%0A%7D
+[2022-07-08 17:59:12][DEBUG](FtpUploadDao.java:selectCompareOver:417) - Select work file: {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/SAMPLE_2.MP3","upload_path":"/jungin-kim/_None/SAMPLE_2.MP3","filesize":724289,"filesize_str":"707.3 KB","lastmodified":1656649900000,"lastmodified_str":"2022-07-01T13:31:40.000+0900","media_information":"%7B%0A++%22format%22%3A+%22MPEG+Audio%22%2C%0A++%22duration%22%3A+%2245244%22%2C%0A++%22video.rotation%22%3A+%220%22%2C%0A++%22audio.format%22%3A+%22MPEG+Audio%22%2C%0A++%22audio.bitrate%22%3A+%22128000%22%2C%0A++%22audio.sample.rate%22%3A+%2244100%22%2C%0A++%22audio.duration%22%3A+%2245244%22%0A%7D","content_provider_key":"jungin-kim","key":"uploadKey","content_path":"/jungin-kim","snapshot_path":"","title":"SAMPLE_2","md5":"","format":"MPEG Audio","duration":45244.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-07-08 17:59:12][DEBUG](CommonUtils.java:fromResultSet:400) - /home/kollus/upload/jungin-kim/_None/sample.webm
+[2022-07-08 17:59:12][INFO ](CommonUtils.java:pathToTRmpk:734) - [ pathToTRmpk 1/3 ] sample.webm
+[2022-07-08 17:59:12][INFO ](CommonUtils.java:pathToTRmpk:738) - [ pathToTRmpk 2/3 ] sample
+[2022-07-08 17:59:12][DEBUG](CommonUtils.java:fromResultSet:437) - fromResultSet Add TransCoder : null
+[2022-07-08 17:59:12][DEBUG](CommonUtils.java:fromResultSet:438) - fromResultSet Path : /jungin-kim/_None/sample.webm
+[2022-07-08 17:59:12][DEBUG](CommonUtils.java:fromResultSet:439) - fromResultSet item : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/sample.webm","upload_path":"/jungin-kim/_None/sample.webm","filesize":1148996,"filesize_str":"1.1 MB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"uploadKey","content_path":"/jungin-kim","snapshot_path":"","title":"sample","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-07-08 17:59:12][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/upload/jungin-kim/_None/sample.webm
+[2022-07-08 17:59:12][INFO ](CommonUtils.java:setMediaInfo:663) - MediaInfo information : null
+[2022-07-08 17:59:12][DEBUG](FtpUploadDao.java:selectCompareOver:417) - Select work file: {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/sample.webm","upload_path":"/jungin-kim/_None/sample.webm","filesize":1148996,"filesize_str":"1.1 MB","lastmodified":1656637476000,"lastmodified_str":"2022-07-01T10:04:36.000+0900","media_information":"%7B%0A++%22format%22%3A+%22Matroska%22%2C%0A++%22video.format%22%3A+%22AVC%22%2C%0A++%22video.width%22%3A+%221280%22%2C%0A++%22video.height%22%3A+%22720%22%2C%0A++%22video.ratio%22%3A+%221.778%22%2C%0A++%22video.rotation%22%3A+%220%22%2C%0A++%22audio.format%22%3A+%22Opus%22%2C%0A++%22audio.sample.rate%22%3A+%2248000%22%0A%7D","content_provider_key":"jungin-kim","key":"uploadKey","content_path":"/jungin-kim","snapshot_path":"","title":"sample","md5":"","format":"Matroska","duration":0.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-07-08 17:59:12][INFO ](FtpUploadDao.java:selectCompareOver:426) - net.catenoid.watcher.upload.dto.UploadProcessLogDTO@150dcce4
+[2022-07-08 17:59:12][DEBUG](FtpUploadDao.java:selectCompareOver:444) - item.path:/home/kollus/upload/jungin-kim/_None/SAMPLE_1.MP3, item.md5 is off
+[2022-07-08 17:59:12][DEBUG](FtpUploadDao.java:selectCompareOver:444) - item.path:/home/kollus/upload/jungin-kim/_None/SAMPLE_2.MP3, item.md5 is off
+[2022-07-08 17:59:12][DEBUG](FtpUploadDao.java:selectCompareOver:444) - item.path:/home/kollus/upload/jungin-kim/_None/sample.webm, item.md5 is off
+[2022-07-08 17:59:12][INFO ](FtpUploadServiceImp.java:findWorkFileList:118) - Working file count : 3
+[2022-07-08 17:59:12][INFO ](CommonUtils.java:createSnapFile:537) - {"uploadMode":"FTP","currentStep":"06","totalStep":"10","title":"CREATE SNAPFile STEP","description":"created snapFile size : 0"}
+[2022-07-08 17:59:12][ERROR](CommonUtils.java:ExceptionLogPrint:332) - java.nio.file.FileAlreadyExistsException: /mnt/medianas/working/jungin-kim
+	at sun.nio.fs.UnixException.translateToIOException(UnixException.java:88)
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:102)
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:107)
+	at sun.nio.fs.UnixFileSystemProvider.createDirectory(UnixFileSystemProvider.java:384)
+	at java.nio.file.Files.createDirectory(Files.java:674)
+	at java.nio.file.Files.createAndCheckIsDirectory(Files.java:781)
+	at java.nio.file.Files.createDirectories(Files.java:727)
+	at net.catenoid.watcher.upload.utils.CommonUtils.moveToWorkDir(CommonUtils.java:838)
+	at net.catenoid.watcher.uploadImp.FtpUploadServiceImp.findWorkFileList(FtpUploadServiceImp.java:123)
+	at net.catenoid.watcher.job.Role_Watcher.execute(Role_Watcher.java:157)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:557)
+
+[2022-07-08 17:59:12][ERROR](CommonUtils.java:ExceptionLogPrint:333) - java.nio.file.FileAlreadyExistsException: /mnt/medianas/working/jungin-kim

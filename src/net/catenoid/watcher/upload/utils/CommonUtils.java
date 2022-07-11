@@ -10,6 +10,7 @@ import net.catenoid.watcher.config.WatcherFolder;
 import net.catenoid.watcher.job.Role_Watcher;
 import net.catenoid.watcher.upload.config.StreamKind;
 import net.catenoid.watcher.upload.dto.*;
+import net.catenoid.watcher.upload.types.UploadMode;
 import net.catenoid.watcher.utils.WatcherUtils;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
@@ -33,6 +34,8 @@ import java.util.*;
 
 public class CommonUtils {
     private static Logger log = Logger.getLogger(CommonUtils.class);
+
+    private static Logger uploadProcessLog = Logger.getLogger("UploadProcessLog");
 
     /**
      * HTTP 통신에 사용될 기본 문자열 CHARSET 설정 (UTF-8)
@@ -446,6 +449,8 @@ public class CommonUtils {
      * @param items
      */
     public void createSnapFile(ArrayList<FileItemDTO> items) throws Exception {
+
+        int snapshotCnt = 0;
         for (FileItemDTO item : items) {
             if (item.isExistPhysicalPath() == false) {
                 continue;
@@ -510,6 +515,7 @@ public class CommonUtils {
 
                 // CMS에서 snapshot을 삭제할 수 있도록 요청받음.
                 WatcherUtils.chmod777(destPath);
+                snapshotCnt++;
 
                 continue;
             } else if (WatcherUtils.isEmpty(item.getMediaInfo().getAudioFormat())) {
@@ -526,6 +532,9 @@ public class CommonUtils {
              */
             log.error("unsupport media file: " + item.getPhysicalPath());
         }
+
+        UploadProcessLogDTO step6Msg = new UploadProcessLogDTO(UploadMode.FTP, "06", "CREATE SNAPFile STEP", "created snapFile size : " + snapshotCnt);
+        uploadProcessLog.info(step6Msg.getJsonMessage());
     }
 
     /**

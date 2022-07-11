@@ -10,5 +10,6 @@
     <orderEntry type="library" name="libs" level="project" />
     <orderEntry type="module" module-name="h2" />
     <orderEntry type="library" name="libs" level="project" />
+    <orderEntry type="library" name="libs" level="project" />
   </component>
 </module>

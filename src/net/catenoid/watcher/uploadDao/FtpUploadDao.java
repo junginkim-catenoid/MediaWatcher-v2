@@ -3,6 +3,8 @@ package net.catenoid.watcher.uploadDao;
 import net.catenoid.watcher.upload.dto.FileItemDTO;
 import net.catenoid.watcher.upload.dto.KollusApiWatchersDTO;
 import net.catenoid.watcher.upload.dto.SendFileItemsDTO;
+import net.catenoid.watcher.upload.dto.UploadProcessLogDTO;
+import net.catenoid.watcher.upload.types.UploadMode;
 import net.catenoid.watcher.upload.utils.CommonUtils;
 import net.catenoid.watcher.upload.utils.FtpUploadUtils;
 import net.catenoid.watcher.upload.utils.Poster;
@@ -21,6 +23,8 @@ import java.util.Date;
 
 public class FtpUploadDao {
     private static Logger log = Logger.getLogger(FtpUploadDao.class);
+
+    private static Logger uploadProcessLog = Logger.getLogger("UploadProcessLog");
     private static SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
 
     protected Statement stmt = null;
@@ -187,6 +191,9 @@ public class FtpUploadDao {
                 }
             }
 
+            UploadProcessLogDTO step3Msg = new UploadProcessLogDTO(UploadMode.FTP, "03", "UNKNOWN DATA REMOVE STEP", "checkTime : " + chk_time + ", Remove File Size : " + sendItem.size());
+            uploadProcessLog.info(step3Msg.getJsonMessage());
+
             /**
              * 이전에 존재했으나 현재 삭제된것으로 파악된 파일리스트를 서버에 통보한다.
              */
@@ -281,6 +288,10 @@ public class FtpUploadDao {
             boolean isSend = utils.sendFtpRegisterApi(sendItem);
             if (isSend) {
                 log.trace("sendItem size: " + sendItem.size());
+
+                UploadProcessLogDTO step4Msg = new UploadProcessLogDTO(UploadMode.FTP, "04", "HTTP Register Server Send STEP", "sendItem Size : " + sendItem.size());
+                uploadProcessLog.info(step4Msg.getJsonMessage());
+
                 for (int i = 0; i < sendItem.size(); i++) {
                     FileItemDTO item = sendItem.get(i);
                     log.trace("" + i + " : " + item.toString());
@@ -304,6 +315,10 @@ public class FtpUploadDao {
                     }
                 }
             } else {
+
+                UploadProcessLogDTO errorStep4Msg = new UploadProcessLogDTO(UploadMode.FTP, "04", "HTTP Register Server Send STEP", "server return != 200 or data error");
+                uploadProcessLog.error(errorStep4Msg.getJsonMessage());
+
                 log.error("server return != 200 or data error");
                 return 0;
             }
@@ -406,6 +421,10 @@ public class FtpUploadDao {
                     break;
                 }
             }
+
+            UploadProcessLogDTO step5Msg = new UploadProcessLogDTO(UploadMode.FTP, "05", "Get Work File List STEP", "sendItem size : " + selectItems.size());
+            uploadProcessLog.info(step5Msg);
+
 
             /**
              * selectItems에 포함된 FileItem중 md5정보가 없는 정보에 대한 작업 수행 1. md5 checksum 구하기(md5가
