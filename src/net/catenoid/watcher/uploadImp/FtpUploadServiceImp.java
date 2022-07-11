@@ -122,8 +122,8 @@ public class FtpUploadServiceImp extends FtpUploadDao implements FtpUploadServic
 
             int moveFileCnt = utils.moveToWorkDir(items);
 
-            UploadProcessLogDTO step7Msg = new UploadProcessLogDTO(UploadMode.FTP, "07", "Work File Move Directory STEP", "move file size : " + moveFileCnt);
-            uploadProcessLog.info(step7Msg.getJsonMessage());
+            UploadProcessLogDTO step7Msg = new UploadProcessLogDTO(UploadMode.FTP, "07", "Work File Move Directory STEP", "move file size : " + moveFileCnt, items);
+            uploadProcessLog.info(step7Msg.getJsonObjectMessage());
 
             if (moveFileCnt > 0) {
                 postCopyCompleteFiles(items);
@@ -220,8 +220,13 @@ public class FtpUploadServiceImp extends FtpUploadDao implements FtpUploadServic
          */
         int error_count = 0;
 
-        UploadProcessLogDTO step1Msg = new UploadProcessLogDTO(UploadMode.FTP, "01", "LS Parsing STEP", "parsing files : " + files.size());
-        uploadProcessLog.info(step1Msg);
+        UploadProcessLogDTO step1Msg = new UploadProcessLogDTO(
+                UploadMode.FTP,
+                "01",
+                "LS Parsing STEP",
+                "parsing files : " + files.toString() + ", directories : " + dirs.toString() + ", rootPath : " + rootPath
+        );
+        uploadProcessLog.info(step1Msg.getJsonObjectMessage());
 
         for (FileItemDTO f : files) {
             f.setPhysicalPath(f.getPhysicalPath().replaceAll("\\\"", "\""));
@@ -255,7 +260,7 @@ public class FtpUploadServiceImp extends FtpUploadDao implements FtpUploadServic
 
         UploadProcessLogDTO step2Msg = new UploadProcessLogDTO(UploadMode.FTP, "02", "H2 DB UPDATE STEP",
                 "insertCount : " + insert_count + ", updateCount : " + update_count + ", errorCount : " + error_count);
-        uploadProcessLog.info(step2Msg.getJsonMessage());
+        uploadProcessLog.info(step2Msg.getJsonObjectMessage());
 
         /**
          * charset이 다른 파일이 존재하는것으로 보임.
@@ -297,8 +302,8 @@ public class FtpUploadServiceImp extends FtpUploadDao implements FtpUploadServic
         }
 
         int sendFtpCompleteApiCnt = sendFtpCompleteApiCnt(sendItem);
-        UploadProcessLogDTO step8Msg = new UploadProcessLogDTO(UploadMode.FTP, "08", "WORK File Info Send Http Server", "file size : " + sendFtpCompleteApiCnt);
-        uploadProcessLog.info(step8Msg.getJsonMessage());
+        UploadProcessLogDTO step8Msg = new UploadProcessLogDTO(UploadMode.FTP, "08", "WORK File Info Send Http Server", "sendFtpCompleteApiCnt : " + sendFtpCompleteApiCnt, sendItem);
+        uploadProcessLog.info(step8Msg.getJsonObjectMessage());
 
 
         if (sendFtpCompleteApiCnt == 0) {
@@ -322,6 +327,9 @@ public class FtpUploadServiceImp extends FtpUploadDao implements FtpUploadServic
                         successCnt += 1;
                         log.info("complete 성공 갯수(" + successCnt+ ") : " + item.getPhysicalPath());
                     }
+
+                    UploadProcessLogDTO step8ErrorMsg = new UploadProcessLogDTO(UploadMode.FTP, "08-" + item.getUploadFileKey(), "Fail Post Complete Error", "", sendItem);
+                    uploadProcessLog.info(step8ErrorMsg.getJsonObjectMessage());
                 }
             }
         }

@@ -534,7 +534,7 @@ public class CommonUtils {
         }
 
         UploadProcessLogDTO step6Msg = new UploadProcessLogDTO(UploadMode.FTP, "06", "CREATE SNAPFile STEP", "created snapFile size : " + snapshotCnt);
-        uploadProcessLog.info(step6Msg.getJsonMessage());
+        uploadProcessLog.info(step6Msg.getJsonObjectMessage());
     }
 
     /**

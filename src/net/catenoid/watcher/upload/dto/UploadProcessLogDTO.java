@@ -3,23 +3,26 @@ package net.catenoid.watcher.upload.dto;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import net.catenoid.watcher.upload.types.UploadMode;
-import org.apache.log4j.Logger;
 
 import java.security.InvalidParameterException;
 
 public class UploadProcessLogDTO {
 
-    private static Logger log = Logger.getLogger(UploadProcessLogDTO.class);
-
     private final UploadMode uploadMode;
-
     private final String currentStep;
-
     private final String totalStep;
-
     private final String title;
-
     private String description;
+    private Object fileObject;
+
+    public UploadProcessLogDTO(UploadMode uploadMode, String currentStep, String title, String description, Object fileObject) {
+        this.uploadMode = uploadMode;
+        this.currentStep = currentStep;
+        this.totalStep = getTotalStep(uploadMode);
+        this.title = title;
+        this.description = description;
+        this.fileObject = fileObject;
+    }
 
     public UploadProcessLogDTO(UploadMode uploadMode, String currentStep, String title) {
         this.uploadMode = uploadMode;
@@ -33,19 +36,17 @@ public class UploadProcessLogDTO {
         this.currentStep = currentStep;
         this.totalStep = getTotalStep(uploadMode);
         this.title = title;
-        this.description = getDescriptionJson();
+        this.description = description;
     }
 
-    public String getJsonMessage() {
+    public String getJsonStringMessage() {
         Gson gson = new Gson();
         return gson.toJson(this);
     }
 
-    private String getDescriptionJson() {
+    public JsonObject getJsonObjectMessage() {
         Gson gson = new Gson();
-        JsonObject jsonObject = new JsonObject();
-        jsonObject.addProperty("ddd", "ddd");
-        return gson.toJson(jsonObject);
+        return (JsonObject) gson.toJsonTree(this);
     }
 
     private String getTotalStep(UploadMode uploadMode) {

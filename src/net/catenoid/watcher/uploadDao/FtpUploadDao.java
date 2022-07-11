@@ -1,5 +1,6 @@
 package net.catenoid.watcher.uploadDao;
 
+import com.kollus.json_data.config.ModuleConfig;
 import net.catenoid.watcher.upload.dto.FileItemDTO;
 import net.catenoid.watcher.upload.dto.KollusApiWatchersDTO;
 import net.catenoid.watcher.upload.dto.SendFileItemsDTO;
@@ -191,8 +192,8 @@ public class FtpUploadDao {
                 }
             }
 
-            UploadProcessLogDTO step3Msg = new UploadProcessLogDTO(UploadMode.FTP, "03", "UNKNOWN DATA REMOVE STEP", "checkTime : " + chk_time + ", Remove File Size : " + sendItem.size());
-            uploadProcessLog.info(step3Msg.getJsonMessage());
+            UploadProcessLogDTO step3Msg = new UploadProcessLogDTO(UploadMode.FTP, "03", "UNKNOWN DATA REMOVE STEP", "checkTime : " + chk_time, sendItem);
+            uploadProcessLog.info(step3Msg.getJsonObjectMessage());
 
             /**
              * 이전에 존재했으나 현재 삭제된것으로 파악된 파일리스트를 서버에 통보한다.
@@ -289,8 +290,14 @@ public class FtpUploadDao {
             if (isSend) {
                 log.trace("sendItem size: " + sendItem.size());
 
-                UploadProcessLogDTO step4Msg = new UploadProcessLogDTO(UploadMode.FTP, "04", "HTTP Register Server Send STEP", "sendItem Size : " + sendItem.size());
-                uploadProcessLog.info(step4Msg.getJsonMessage());
+                UploadProcessLogDTO step4Msg = new UploadProcessLogDTO(
+                        UploadMode.FTP,
+                        "04",
+                        "HTTP Register Server Send STEP",
+                        "",
+                        sendItem
+                );
+                uploadProcessLog.info(step4Msg.getJsonObjectMessage());
 
                 for (int i = 0; i < sendItem.size(); i++) {
                     FileItemDTO item = sendItem.get(i);
@@ -300,6 +307,16 @@ public class FtpUploadDao {
                      */
                     if (item.getUploadFileKey() != null && item.getUploadFileKey().length() > 0) {
                         log.debug("등록성공: " + item.getUploadFileKey() + ", " + item.toString());
+
+                        UploadProcessLogDTO step4SubMsg = new UploadProcessLogDTO(
+                                UploadMode.FTP,
+                                "04-" + i,
+                                "HTTP Register Server Send STEP",
+                                "등록성공 : " + item.getUploadFileKey(),
+                                item
+                        );
+                        uploadProcessLog.info(step4SubMsg.getJsonObjectMessage());
+
                         isUploadOrDelete = db_update_file_status(item.getPhysicalPath(), 1, item.getUploadFileKey(),
                                 item.getContentPath(), item.getSnapshotPath(), item.getChecksumType(),
                                 item.getPoster());
@@ -308,16 +325,35 @@ public class FtpUploadDao {
                         }
                     } else {
                         log.debug("등록실패: " + item.getUploadFileKey());
+                        UploadProcessLogDTO step4SubMsg = new UploadProcessLogDTO(
+                                UploadMode.FTP,
+                                "04-" + i,
+                                "HTTP Register Server Send STEP",
+                                "등록실패 : " + item.getUploadFileKey(),
+                                item.toString()
+                        );
+                        uploadProcessLog.info(step4SubMsg.getJsonObjectMessage());
+
+
                         isUploadOrDelete = db_delete_item_pysicalpath(item.getPhysicalPath());
                         if (!isUploadOrDelete) {
                             log.warn("등록 안된 파일 삭제 실패 : " + item.getUploadFileKey());
+
+                            UploadProcessLogDTO step4SubErrorMsg = new UploadProcessLogDTO(
+                                    UploadMode.FTP,
+                                    "04-" + i,
+                                    "HTTP Register Server Send STEP",
+                                    "등록 안된 파일 삭제 실패 : " + item.getUploadFileKey(),
+                                    item
+                            );
+                            uploadProcessLog.warn(step4SubErrorMsg.getJsonObjectMessage());
                         }
                     }
                 }
             } else {
 
                 UploadProcessLogDTO errorStep4Msg = new UploadProcessLogDTO(UploadMode.FTP, "04", "HTTP Register Server Send STEP", "server return != 200 or data error");
-                uploadProcessLog.error(errorStep4Msg.getJsonMessage());
+                uploadProcessLog.error(errorStep4Msg.getJsonObjectMessage());
 
                 log.error("server return != 200 or data error");
                 return 0;
@@ -422,7 +458,7 @@ public class FtpUploadDao {
                 }
             }
 
-            UploadProcessLogDTO step5Msg = new UploadProcessLogDTO(UploadMode.FTP, "05", "Get Work File List STEP", "sendItem size : " + selectItems.size());
+            UploadProcessLogDTO step5Msg = new UploadProcessLogDTO(UploadMode.FTP, "05", "Get Work File List STEP", "", selectItems);
             uploadProcessLog.info(step5Msg);
 
 
