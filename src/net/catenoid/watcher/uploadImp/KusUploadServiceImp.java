@@ -5,9 +5,7 @@ import com.kollus.json_data.BaseCommand;
 import net.catenoid.watcher.config.Config;
 import net.catenoid.watcher.config.WatcherFolder;
 import net.catenoid.watcher.upload.KusUploadService;
-import net.catenoid.watcher.upload.dto.KollusApiWatchersDTO;
-import net.catenoid.watcher.upload.dto.SendFileItemsDTO;
-import net.catenoid.watcher.upload.dto.UploadProcessLogDTO;
+import net.catenoid.watcher.upload.dto.*;
 import net.catenoid.watcher.upload.types.UploadMode;
 import net.catenoid.watcher.utils.KusUploadUtils;
 import org.apache.log4j.Logger;
@@ -60,12 +58,16 @@ public class KusUploadServiceImp implements KusUploadService {
         }
 
         utils.createSnapFile(fileList);
+        UploadProcessLogDTO step3Msg = new UploadProcessLogDTO(UploadMode.KUS, "03", "CREATE SNAPFile STEP", "", fileList);
+        uploadProcessLog.info(step3Msg.getJsonObjectMessage());
 
         if(fileList.size() == 0) {
             return;
         }
 
         utils.moveToWorkDir(fileList);
+        UploadProcessLogDTO step4Msg = new UploadProcessLogDTO(UploadMode.KUS, "04", "Work File Move Directory STEP", "move file size : " + fileList.size(), fileList);
+        uploadProcessLog.info(step4Msg.getJsonObjectMessage());
     }
 
     @Override
@@ -91,47 +93,55 @@ public class KusUploadServiceImp implements KusUploadService {
             return cnt;
         }
 
-//        for (KollusApiWatcherContentDTO item : apiResult.result.watcher_files) {
-//            if (item.error == 0) {
-//                // error가 아닌 경우만 media_content_id가 있으나 사용처가 없어 삭제함
-//                FileItemDTO findItem = utils.findSendItem(fileList, item.result.key);
-//                if (findItem == null) {
-//                    log.error("FileItem  파일 정보를 찾을 수 없습니다. [" + item.result.key + "]");
-//
-//                }
-//                cnt += 1;
-//                continue;
-//            }
-//
-//            log.warn("warn code: " + item.error + ", warn message: " + item.message);
-//
-//            if (item.result == null) {
-//                continue;
-//            }
-//
-//            FileItemDTO findItem = utils.findSendItem(fileList, item.result.key);
-//
-//            if (findItem == null) {
-//                log.error("실패한 파일 정보를 찾을 수 없습니다. [" + item.result.key + "]");
-//                continue;
-//            }
-//            List<String> msgList = new ArrayList<String>();
-//
-//            msgList.add("FAIL");
-//            msgList.add("Fail to API transfered 삭제 성공" + findItem.getPhysicalPath());
-//            msgList.add("Fail to API transfered 삭제 실패" + findItem.getPhysicalPath());
-//
-//            String completePath = findItem.getPhysicalPath() + "_complete";
-//            if (findItem.isConsoleUpload()) {
-//                completePath = "";
-//            }
-//
-//            log.warn("Complete Api is deleted to status is failed" + findItem.toString());
-//
-//            utils.removeToIndividuaFile(findItem.getPhysicalPath(), findItem.getSnapshotPath(), completePath, msgList);
-//
-//            findItem.setCompleteFail(true);
-//        }
+        UploadProcessLogDTO step5Msg = new UploadProcessLogDTO(UploadMode.KUS, "05", "WORK File Info Send Http Server", "sendFtpCompleteApiCnt : " + apiResult.result.watcher_files.length, apiResult.result.watcher_files);
+        uploadProcessLog.info(step5Msg.getJsonObjectMessage());
+
+        for (int i = 0; i < apiResult.result.watcher_files.length; i++) {
+
+            KollusApiWatcherContentDTO item = apiResult.result.watcher_files[i];
+            if (item.error == 0) {
+                // error가 아닌 경우만 media_content_id가 있으나 사용처가 없어 삭제함
+                FileItemDTO findItem = utils.findSendItem(fileList, item.result.key);
+                if (findItem == null) {
+                    log.error("FileItem  파일 정보를 찾을 수 없습니다. [" + item.result.key + "]");
+                }
+                cnt += 1;
+                UploadProcessLogDTO step5SubMsg = new UploadProcessLogDTO(UploadMode.KUS, "05-" + (i+1), "complete 성공", "", findItem);
+                uploadProcessLog.info(step5SubMsg.getJsonObjectMessage());
+                continue;
+            }
+
+            log.warn("warn code: " + item.error + ", warn message: " + item.message);
+            UploadProcessLogDTO step5SubMsg = new UploadProcessLogDTO(UploadMode.KUS, "05-" + (i+1), "complete 전송 실패", "warn code: " + item.error + ", warn message: " + item.message, item);
+            uploadProcessLog.warn(step5SubMsg.getJsonObjectMessage());
+
+            if (item.result == null) {
+                continue;
+            }
+
+            FileItemDTO findItem = utils.findSendItem(fileList, item.result.key);
+
+            if (findItem == null) {
+                log.error("실패한 파일 정보를 찾을 수 없습니다. [" + item.result.key + "]");
+                continue;
+            }
+            List<String> msgList = new ArrayList<String>();
+
+            msgList.add("FAIL");
+            msgList.add("Fail to API transfered 삭제 성공" + findItem.getPhysicalPath());
+            msgList.add("Fail to API transfered 삭제 실패" + findItem.getPhysicalPath());
+
+            String completePath = findItem.getPhysicalPath() + "_complete";
+            if (findItem.isConsoleUpload()) {
+                completePath = "";
+            }
+
+            log.warn("Complete Api is deleted to status is failed" + findItem.toString());
+
+            utils.removeToIndividuaFile(findItem.getPhysicalPath(), findItem.getSnapshotPath(), completePath, msgList);
+
+            findItem.setCompleteFail(true);
+        }
 
         return cnt;
     }
@@ -181,19 +191,29 @@ public class KusUploadServiceImp implements KusUploadService {
             return;
         }
 
-//        for (KollusApiWatcherContentDTO item : apiResult.result.watcher_files) {
-//            if (item.error == 0) {
-//                /**
-//                 * error == 0인 등록에 성공한 파일
-//                 */
-//                FileItemDTO f = utils.convertResultApiItem(item);
-//                items.update(f);
-//                continue;
-//            }
-//
-//            log.error(item.message);
-//
-//            utils.failApiResultOrRegisterProcess(null, item);
-//        }
+        UploadProcessLogDTO step2Msg = new UploadProcessLogDTO(UploadMode.KUS, "02", "HTTP Register Server Send STEP", "", apiResult.result.watcher_files);
+        uploadProcessLog.info(step2Msg.getJsonObjectMessage());
+
+        for (int i = 0; i < apiResult.result.watcher_files.length; i++) {
+
+            KollusApiWatcherContentDTO item = apiResult.result.watcher_files[i];
+            FileItemDTO f = utils.convertResultApiItem(item);
+
+            if (item.error == 0) {
+                /**
+                 * error == 0인 등록에 성공한 파일
+                 */
+                items.update(f);
+                UploadProcessLogDTO step2SubMsg = new UploadProcessLogDTO(UploadMode.KUS, "02-" + (i+1), "HTTP Register Server Send STEP", "등록성공 : " + f.getUploadFileKey(), f);
+                uploadProcessLog.info(step2SubMsg.getJsonObjectMessage());
+                continue;
+            }
+
+            log.error(item.message);
+
+            UploadProcessLogDTO step2SubMsg = new UploadProcessLogDTO(UploadMode.KUS, "02-" + (i+1), "HTTP Register Server Send STEP", "등록실패 : " + f.getUploadFileKey(), f);
+            uploadProcessLog.error(step2SubMsg.getJsonObjectMessage());
+            utils.failApiResultOrRegisterProcess(null, item);
+        }
     }
 }

@@ -55,11 +55,11 @@ public class UploadProcessLogDTO {
         }
 
         if (uploadMode == UploadMode.FTP) {
-            return "10";
+            return "08";
         }
 
         if (uploadMode == UploadMode.KUS) {
-            return "12";
+            return "05";
         }
 
         throw new InvalidParameterException();

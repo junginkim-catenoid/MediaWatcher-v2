@@ -329,7 +329,7 @@ public class FtpUploadDao {
                                 "등록실패 : " + item.getUploadFileKey(),
                                 item.toString()
                         );
-                        uploadProcessLog.info(step4SubMsg.getJsonObjectMessage());
+                        uploadProcessLog.error(step4SubMsg.getJsonObjectMessage());
 
 
                         isUploadOrDelete = db_delete_item_pysicalpath(item.getPhysicalPath());

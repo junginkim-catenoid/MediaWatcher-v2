@@ -118,6 +118,9 @@ public class FtpUploadServiceImp extends FtpUploadDao implements FtpUploadServic
                 log.info("Working file count : " + items.size());
 
                 utils.createSnapFile(items);
+
+                UploadProcessLogDTO step6Msg = new UploadProcessLogDTO(UploadMode.FTP, "06", "CREATE SNAPFile STEP", "", items);
+                uploadProcessLog.info(step6Msg.getJsonObjectMessage());
             }
 
             int moveFileCnt = utils.moveToWorkDir(items);
@@ -323,13 +326,13 @@ public class FtpUploadServiceImp extends FtpUploadDao implements FtpUploadServic
                         f.delete();
                         successCnt += 1;
                         log.info("complete 성공한 파일 삭제 (" + successCnt + ") : " + item.getPhysicalPath());
-                        UploadProcessLogDTO step8ErrorMsg = new UploadProcessLogDTO(UploadMode.FTP, "08-" + item.getPhysicalPath(), "complete 성공한 파일 삭제", "", sendItem);
-                        uploadProcessLog.info(step8ErrorMsg.getJsonObjectMessage());
+                        UploadProcessLogDTO step8SubMsg = new UploadProcessLogDTO(UploadMode.FTP, "08-" + item.getPhysicalPath(), "complete 성공한 파일 삭제", "", sendItem);
+                        uploadProcessLog.info(step8SubMsg.getJsonObjectMessage());
                     } else {
                         successCnt += 1;
                         log.info("complete 성공 갯수(" + successCnt+ ") : " + item.getPhysicalPath());
-                        UploadProcessLogDTO step8ErrorMsg = new UploadProcessLogDTO(UploadMode.FTP, "08-" + item.getPhysicalPath(), "complete 성공 갯수", "", sendItem);
-                        uploadProcessLog.info(step8ErrorMsg.getJsonObjectMessage());
+                        UploadProcessLogDTO step8SubMsg = new UploadProcessLogDTO(UploadMode.FTP, "08-" + item.getPhysicalPath(), "complete 성공 갯수", "", sendItem);
+                        uploadProcessLog.info(step8SubMsg.getJsonObjectMessage());
                     }
                 }
             }

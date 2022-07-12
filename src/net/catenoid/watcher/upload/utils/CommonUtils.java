@@ -532,9 +532,6 @@ public class CommonUtils {
              */
             log.error("unsupport media file: " + item.getPhysicalPath());
         }
-
-        UploadProcessLogDTO step6Msg = new UploadProcessLogDTO(UploadMode.FTP, "06", "CREATE SNAPFile STEP", "created snapFile size : " + snapshotCnt);
-        uploadProcessLog.info(step6Msg.getJsonObjectMessage());
     }
 
     /**
