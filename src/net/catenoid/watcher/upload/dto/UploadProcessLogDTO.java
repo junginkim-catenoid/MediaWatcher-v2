@@ -3,8 +3,10 @@ package net.catenoid.watcher.upload.dto;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import net.catenoid.watcher.upload.types.UploadMode;
+import org.apache.log4j.MDC;
 
 import java.security.InvalidParameterException;
+import java.util.ArrayList;
 
 public class UploadProcessLogDTO {
 
@@ -39,14 +41,35 @@ public class UploadProcessLogDTO {
         this.description = description;
     }
 
-    public String getJsonStringMessage() {
-        Gson gson = new Gson();
-        return gson.toJson(this);
+    public String getJsonLogMsg() {
+        putMdcUploadInfo();
+        return this.title;
+    }
+    private void putMdcUploadInfo() {
+        MDC.clear();
+        MDC.remove("fileObject");
+
+        MDC.put("uploadMode", this.uploadMode);
+        MDC.put("currentStep", this.currentStep);
+        MDC.put("totalStep", this.totalStep);
+
+        if (hasText(this.description)) {
+            MDC.put("description", this.description);
+        }
+
+        if (this.fileObject != null) {
+            MDC.put("fileObject", convertJsonStringMessage(this.fileObject));
+        }
     }
 
-    public JsonObject getJsonObjectMessage() {
+    public String convertJsonStringMessage(Object fileObject) {
         Gson gson = new Gson();
-        return (JsonObject) gson.toJsonTree(this);
+        return gson.toJson(fileObject);
+    }
+
+    public JsonObject getJsonObjectMessage(Object fileObject) {
+        Gson gson = new Gson();
+        return (JsonObject) gson.toJsonTree(fileObject);
     }
 
     private String getTotalStep(UploadMode uploadMode) {
@@ -55,7 +78,7 @@ public class UploadProcessLogDTO {
         }
 
         if (uploadMode == UploadMode.FTP) {
-            return "08";
+            return "05";
         }
 
         if (uploadMode == UploadMode.KUS) {
@@ -63,6 +86,13 @@ public class UploadProcessLogDTO {
         }
 
         throw new InvalidParameterException();
+    }
+
+    private static boolean hasText(String s) {
+        if (s == null || s.length() == 0) {
+            return false;
+        }
+        return true;
     }
 
 }

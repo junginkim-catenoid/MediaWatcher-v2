@@ -44,7 +44,7 @@ public class KusUploadServiceImp implements KusUploadService {
         }
 
         UploadProcessLogDTO step1Msg = new UploadProcessLogDTO(UploadMode.KUS, "01", "LS Parsing STEP", "directories : " + this.dirList.toString(), this.fileList);
-        uploadProcessLog.info(step1Msg.getJsonObjectMessage());
+        uploadProcessLog.info(step1Msg.getJsonLogMsg());
 
         sendToHttpApi(fileList, "register");
     }
@@ -59,7 +59,7 @@ public class KusUploadServiceImp implements KusUploadService {
 
         utils.createSnapFile(fileList);
         UploadProcessLogDTO step3Msg = new UploadProcessLogDTO(UploadMode.KUS, "03", "CREATE SNAPFile STEP", "", fileList);
-        uploadProcessLog.info(step3Msg.getJsonObjectMessage());
+        uploadProcessLog.info(step3Msg.getJsonLogMsg());
 
         if(fileList.size() == 0) {
             return;
@@ -67,7 +67,7 @@ public class KusUploadServiceImp implements KusUploadService {
 
         utils.moveToWorkDir(fileList);
         UploadProcessLogDTO step4Msg = new UploadProcessLogDTO(UploadMode.KUS, "04", "Work File Move Directory STEP", "move file size : " + fileList.size(), fileList);
-        uploadProcessLog.info(step4Msg.getJsonObjectMessage());
+        uploadProcessLog.info(step4Msg.getJsonLogMsg());
     }
 
     @Override
@@ -94,7 +94,7 @@ public class KusUploadServiceImp implements KusUploadService {
         }
 
         UploadProcessLogDTO step5Msg = new UploadProcessLogDTO(UploadMode.KUS, "05", "WORK File Info Send Http Server", "sendFtpCompleteApiCnt : " + apiResult.result.watcher_files.length, apiResult.result.watcher_files);
-        uploadProcessLog.info(step5Msg.getJsonObjectMessage());
+        uploadProcessLog.info(step5Msg.getJsonLogMsg());
 
         for (int i = 0; i < apiResult.result.watcher_files.length; i++) {
 
@@ -107,13 +107,13 @@ public class KusUploadServiceImp implements KusUploadService {
                 }
                 cnt += 1;
                 UploadProcessLogDTO step5SubMsg = new UploadProcessLogDTO(UploadMode.KUS, "05-" + (i+1), "complete 성공", "", findItem);
-                uploadProcessLog.info(step5SubMsg.getJsonObjectMessage());
+                uploadProcessLog.info(step5SubMsg.getJsonLogMsg());
                 continue;
             }
 
             log.warn("warn code: " + item.error + ", warn message: " + item.message);
             UploadProcessLogDTO step5SubMsg = new UploadProcessLogDTO(UploadMode.KUS, "05-" + (i+1), "complete 전송 실패", "warn code: " + item.error + ", warn message: " + item.message, item);
-            uploadProcessLog.warn(step5SubMsg.getJsonObjectMessage());
+            uploadProcessLog.warn(step5SubMsg.getJsonLogMsg());
 
             if (item.result == null) {
                 continue;
@@ -192,7 +192,7 @@ public class KusUploadServiceImp implements KusUploadService {
         }
 
         UploadProcessLogDTO step2Msg = new UploadProcessLogDTO(UploadMode.KUS, "02", "HTTP Register Server Send STEP", "", apiResult.result.watcher_files);
-        uploadProcessLog.info(step2Msg.getJsonObjectMessage());
+        uploadProcessLog.info(step2Msg.getJsonLogMsg());
 
         for (int i = 0; i < apiResult.result.watcher_files.length; i++) {
 
@@ -205,14 +205,14 @@ public class KusUploadServiceImp implements KusUploadService {
                  */
                 items.update(f);
                 UploadProcessLogDTO step2SubMsg = new UploadProcessLogDTO(UploadMode.KUS, "02-" + (i+1), "HTTP Register Server Send STEP", "등록성공 : " + f.getUploadFileKey(), f);
-                uploadProcessLog.info(step2SubMsg.getJsonObjectMessage());
+                uploadProcessLog.info(step2SubMsg.getJsonLogMsg());
                 continue;
             }
 
             log.error(item.message);
 
             UploadProcessLogDTO step2SubMsg = new UploadProcessLogDTO(UploadMode.KUS, "02-" + (i+1), "HTTP Register Server Send STEP", "등록실패 : " + f.getUploadFileKey(), f);
-            uploadProcessLog.error(step2SubMsg.getJsonObjectMessage());
+            uploadProcessLog.error(step2SubMsg.getJsonLogMsg());
             utils.failApiResultOrRegisterProcess(null, item);
         }
     }

@@ -68,11 +68,11 @@ public class CommonUtils {
         String responseBody = "";
         int nStatus = 0;
 
-//        String url = apiType == "register" ? conf.get_kollus_api().get_url(ModuleConfig.URLS.WATCHER_LIST_INSERT)
-//                : conf.get_kollus_api().get_url(ModuleConfig.URLS.WATCHER_LIST_COMPLETE);
+        String url = apiType == "register" ? conf.get_kollus_api().get_url(ModuleConfig.URLS.WATCHER_LIST_INSERT)
+                : conf.get_kollus_api().get_url(ModuleConfig.URLS.WATCHER_LIST_COMPLETE);
 
-        String url = apiType == "register" ? "http://localhost:3002/register"
-                : "http://localhost:3002/complete";
+//        String url = apiType == "register" ? "http://localhost:3002/register"
+//                : "http://localhost:3002/complete";
 
         try {
             // Body Param을 채우기
