@@ -279,30 +279,14 @@ public class FtpUploadDao {
              */
             log.debug("file register 보내는값 = " + sendItem.toString());
 
-            UploadProcessLogDTO step2Main1Msg = new UploadProcessLogDTO(
-                    UploadMode.FTP,
-                    "02",
-                    "HTTP Register Server Send Before STEP",
-                    "Request Param",
-                    sendItem
-            );
-            uploadProcessLog.info(step2Main1Msg.getJsonLogMsg());
-
-
             boolean isUploadOrDelete = false;
 
             boolean isSend = utils.sendFtpRegisterApi(sendItem);
             if (isSend) {
                 log.trace("sendItem size: " + sendItem.size());
 
-                UploadProcessLogDTO stepMain2Msg = new UploadProcessLogDTO(
-                        UploadMode.FTP,
-                        "02",
-                        "HTTP Register Server Send After STEP",
-                        "Response",
-                        sendItem
-                );
-                uploadProcessLog.info(stepMain2Msg.getJsonLogMsg());
+                UploadProcessLogDTO step2Main2Msg = new UploadProcessLogDTO(UploadMode.FTP, "02", "HTTP Register Server Send STEP", "", sendItem);
+                uploadProcessLog.info(step2Main2Msg.getJsonLogMsg());
 
                 for (int i = 0; i < sendItem.size(); i++) {
                     FileItemDTO item = sendItem.get(i);
@@ -313,13 +297,7 @@ public class FtpUploadDao {
                     if (item.getUploadFileKey() != null && item.getUploadFileKey().length() > 0) {
                         log.debug("등록성공: " + item.getUploadFileKey() + ", " + item.toString());
 
-                        UploadProcessLogDTO step2SubMsg = new UploadProcessLogDTO(
-                                UploadMode.FTP,
-                                "02-" + (i+1),
-                                "HTTP Register Server Send STEP",
-                                "등록성공 : " + item.getUploadFileKey(),
-                                item
-                        );
+                        UploadProcessLogDTO step2SubMsg = new UploadProcessLogDTO(UploadMode.FTP, "02-" + (i+1), "HTTP Register Server Send STEP", "등록성공 : " + item.getUploadFileKey(), item);
                         uploadProcessLog.info(step2SubMsg.getJsonLogMsg());
 
                         isUploadOrDelete = db_update_file_status(item.getPhysicalPath(), 1, item.getUploadFileKey(),
@@ -330,13 +308,7 @@ public class FtpUploadDao {
                         }
                     } else {
                         log.debug("등록실패: " + item.getUploadFileKey());
-                        UploadProcessLogDTO step2SubMsg = new UploadProcessLogDTO(
-                                UploadMode.FTP,
-                                "02-" + i,
-                                "HTTP Register Server Send STEP",
-                                "등록실패 : " + item.getUploadFileKey(),
-                                item
-                        );
+                        UploadProcessLogDTO step2SubMsg = new UploadProcessLogDTO(UploadMode.FTP, "02-" + i, "HTTP Register Server Send STEP", "등록실패 : " + item.getUploadFileKey(), item);
                         uploadProcessLog.error(step2SubMsg.getJsonLogMsg());
 
 
@@ -344,13 +316,7 @@ public class FtpUploadDao {
                         if (!isUploadOrDelete) {
                             log.warn("등록 안된 파일 삭제 실패 : " + item.getUploadFileKey());
 
-                            UploadProcessLogDTO step2SubErrorMsg = new UploadProcessLogDTO(
-                                    UploadMode.FTP,
-                                    "02-" + i,
-                                    "HTTP Register Server Send STEP",
-                                    "등록 안된 파일 삭제 실패 : " + item.getUploadFileKey(),
-                                    item
-                            );
+                            UploadProcessLogDTO step2SubErrorMsg = new UploadProcessLogDTO(UploadMode.FTP, "02-" + i, "HTTP Register Server Send STEP", "등록 안된 파일 삭제 실패 : " + item.getUploadFileKey(), item);
                             uploadProcessLog.warn(step2SubErrorMsg.getJsonLogMsg());
                         }
                     }

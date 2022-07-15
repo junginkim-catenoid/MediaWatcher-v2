@@ -8,6 +8,10 @@ import net.catenoid.watcher.upload.KusUploadService;
 import net.catenoid.watcher.upload.dto.*;
 import net.catenoid.watcher.upload.types.UploadMode;
 import net.catenoid.watcher.utils.KusUploadUtils;
+import net.logstash.log4j.JSONEventLayoutV1;
+import org.apache.log4j.Appender;
+import org.apache.log4j.AppenderSkeleton;
+import org.apache.log4j.Layout;
 import org.apache.log4j.Logger;
 
 import java.io.File;
@@ -33,6 +37,10 @@ public class KusUploadServiceImp implements KusUploadService {
 
     @Override
     public void findWorkFileList() throws Exception {
+
+
+
+
         // TODO Auto-generated method stub
         this.fileList = new SendFileItemsDTO();
         this.dirList = new ArrayList<String>();
@@ -43,7 +51,7 @@ public class KusUploadServiceImp implements KusUploadService {
             return;
         }
 
-        UploadProcessLogDTO step1Msg = new UploadProcessLogDTO(UploadMode.KUS, "01", "LS Parsing STEP", "directories : " + this.dirList.toString(), this.fileList);
+        UploadProcessLogDTO step1Msg = new UploadProcessLogDTO(UploadMode.KUS, "01", "LS Parsing STEP", "Ls parsing file cnt : " + this.fileList.size(), this.fileList);
         uploadProcessLog.info(step1Msg.getJsonLogMsg());
 
         sendToHttpApi(fileList, "register");
@@ -57,17 +65,19 @@ public class KusUploadServiceImp implements KusUploadService {
             return;
         }
 
-        utils.createSnapFile(fileList);
-        UploadProcessLogDTO step3Msg = new UploadProcessLogDTO(UploadMode.KUS, "03", "CREATE SNAPFile STEP", "", fileList);
+        int snapShotCnt = utils.createSnapFile(fileList);
+        UploadProcessLogDTO step3Msg = new UploadProcessLogDTO(UploadMode.KUS, "03", "CREATE Snapshot File Create STEP", "snapshotCnt : " + snapShotCnt, fileList);
         uploadProcessLog.info(step3Msg.getJsonLogMsg());
 
         if(fileList.size() == 0) {
             return;
         }
 
-        utils.moveToWorkDir(fileList);
-        UploadProcessLogDTO step4Msg = new UploadProcessLogDTO(UploadMode.KUS, "04", "Work File Move Directory STEP", "move file size : " + fileList.size(), fileList);
+        UploadProcessLogDTO step4Msg = new UploadProcessLogDTO(UploadMode.KUS, "04", "Work File Move Directory STEP", "move file count : " + fileList.size(), fileList);
         uploadProcessLog.info(step4Msg.getJsonLogMsg());
+
+        utils.moveToWorkDir(fileList, UploadMode.KUS);
+
     }
 
     @Override

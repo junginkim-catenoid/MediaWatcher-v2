@@ -1,5 +1,6 @@
 package net.catenoid.watcher.uploadImp;
 
+import com.google.gson.Gson;
 import com.kollus.json_data.config.ModuleConfig;
 import net.catenoid.watcher.config.Config;
 import net.catenoid.watcher.config.WatcherFolder;
@@ -14,8 +15,11 @@ import net.catenoid.watcher.upload.utils.LSParser;
 import net.catenoid.watcher.upload.dto.UploadProcessLogDTO;
 import net.catenoid.watcher.uploadDao.FtpUploadDao;
 import net.logstash.log4j.JSONEventLayoutV1;
+import org.apache.log4j.Appender;
+import org.apache.log4j.AppenderSkeleton;
 import org.apache.log4j.Logger;
 import org.apache.log4j.MDC;
+import org.apache.log4j.spi.LoggingEvent;
 
 import java.io.File;
 import java.sql.ResultSet;
@@ -112,6 +116,10 @@ public class FtpUploadServiceImp extends FtpUploadDao implements FtpUploadServic
                 log.info("Send to register count : " + sendRegistCnt);
             }
 
+//            Appender appender = uploadProcessLog.getAppender("uploadProcessFile");
+//            JSONEventLayoutV1 layoutV1 = (JSONEventLayoutV1) appender.getLayout();
+
+
             /**
              * 작업 대상 파일 리스트를 획득한다.
              */
@@ -119,16 +127,18 @@ public class FtpUploadServiceImp extends FtpUploadDao implements FtpUploadServic
             if (items.size() > 0 && items != null) {
                 log.info("Working file count : " + items.size());
 
-                utils.createSnapFile(items);
+                int snapShotCnt = utils.createSnapFile(items);
 
-                UploadProcessLogDTO step3Msg = new UploadProcessLogDTO(UploadMode.FTP, "03", "CREATE SNAPFile STEP", "", items);
+                UploadProcessLogDTO step3Msg = new UploadProcessLogDTO(UploadMode.FTP, "03", "CREATE Snapshot File Create STEP", "snapshotCnt : " + snapShotCnt, items);
                 uploadProcessLog.info(step3Msg.getJsonLogMsg());
             }
 
-            int moveFileCnt = utils.moveToWorkDir(items);
-
-            UploadProcessLogDTO step4Msg = new UploadProcessLogDTO(UploadMode.FTP, "04", "Work File Move Directory STEP", "move file size : " + moveFileCnt, items);
+            UploadProcessLogDTO step4Msg = new UploadProcessLogDTO(UploadMode.FTP, "04", "Work File Move Directory STEP", "move file count : " + items.size(), items);
             uploadProcessLog.info(step4Msg.getJsonLogMsg());
+
+            int moveFileCnt = utils.moveToWorkDir(items, UploadMode.FTP);
+
+
 
             if (moveFileCnt > 0) {
                 postCopyCompleteFiles(items);
@@ -225,16 +235,9 @@ public class FtpUploadServiceImp extends FtpUploadDao implements FtpUploadServic
          */
         int error_count = 0;
 
-        UploadProcessLogDTO step1Msg = new UploadProcessLogDTO(
-                UploadMode.FTP,
-                "01",
-                "LS Parsing STEP",
-                "parsing files : " + files.size() + ", directories : " + dirs.size() + ", rootPath : " + rootPath,
-                files
-        );
+        UploadProcessLogDTO step1Msg = new UploadProcessLogDTO(UploadMode.FTP, "01",
+                "LS Parsing STEP", "Ls parsing file cnt : " + files.size(), files);
         uploadProcessLog.info(step1Msg.getJsonLogMsg());
-
-
 
         for (FileItemDTO f : files) {
             f.setPhysicalPath(f.getPhysicalPath().replaceAll("\\\"", "\""));
@@ -306,7 +309,7 @@ public class FtpUploadServiceImp extends FtpUploadDao implements FtpUploadServic
         }
 
         int sendFtpCompleteApiCnt = sendFtpCompleteApiCnt(sendItem);
-        UploadProcessLogDTO step5Msg = new UploadProcessLogDTO(UploadMode.FTP, "05", "WORK File Info Send Http Server", "sendFtpCompleteApiCnt : " + sendFtpCompleteApiCnt, sendItem);
+        UploadProcessLogDTO step5Msg = new UploadProcessLogDTO(UploadMode.FTP, "05", "WORK File Info Send Http Server STEP", "sendFtpCompleteApiCnt : " + sendItem.size(), sendItem);
         uploadProcessLog.info(step5Msg.getJsonLogMsg());
 
 
@@ -317,24 +320,30 @@ public class FtpUploadServiceImp extends FtpUploadDao implements FtpUploadServic
                         item.getContentPath(), item.getSnapshotPath(), item.getChecksumType(), item.getPoster());
             }
             log.error(url + " - error");
+
+            UploadProcessLogDTO errorStep5Msg = new UploadProcessLogDTO(UploadMode.FTP, "05", "WORK File Info Send Http Server STEP", url + " - error");
+            uploadProcessLog.error(errorStep5Msg.getJsonLogMsg());
+
         } else {
             // post complete 오류 일때 파일 삭제하는 경우 방지를 위해 complete_fail 확인
             int successCnt = 0;
-            for (FileItemDTO item : items) {
+            for (int i=0; i < items.size(); i++) {
+                FileItemDTO item = items.get(i);
+
                 if (item.isCopyComplete() == true && !item.isCompleteFail()) {
                     File f = new File(item.getPhysicalPath());
                     if (f.exists()) {
                         f.delete();
                         successCnt += 1;
                         log.info("complete 성공한 파일 삭제 (" + successCnt + ") : " + item.getPhysicalPath());
-                        UploadProcessLogDTO step5SubMsg = new UploadProcessLogDTO(UploadMode.FTP, "05-" + item.getPhysicalPath(), "complete 성공한 파일 삭제", "", sendItem);
-                        uploadProcessLog.info(step5SubMsg.getJsonLogMsg());
+
                     } else {
                         successCnt += 1;
                         log.info("complete 성공 갯수(" + successCnt+ ") : " + item.getPhysicalPath());
-                        UploadProcessLogDTO step5SubMsg = new UploadProcessLogDTO(UploadMode.FTP, "05-" + item.getPhysicalPath(), "complete 성공 갯수", "", sendItem);
-                        uploadProcessLog.info(step5SubMsg.getJsonLogMsg());
                     }
+
+                    UploadProcessLogDTO step5SubMsg = new UploadProcessLogDTO(UploadMode.FTP, "05-" + (i+1), "WORK File Info Send Http Server STEP", "complete 성공" + item.getPhysicalPath(), item);
+                    uploadProcessLog.info(step5SubMsg.getJsonLogMsg());
                 }
             }
         }

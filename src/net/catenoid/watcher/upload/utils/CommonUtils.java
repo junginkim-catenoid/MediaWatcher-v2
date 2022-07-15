@@ -68,11 +68,11 @@ public class CommonUtils {
         String responseBody = "";
         int nStatus = 0;
 
-        String url = apiType == "register" ? conf.get_kollus_api().get_url(ModuleConfig.URLS.WATCHER_LIST_INSERT)
-                : conf.get_kollus_api().get_url(ModuleConfig.URLS.WATCHER_LIST_COMPLETE);
+//        String url = apiType == "register" ? conf.get_kollus_api().get_url(ModuleConfig.URLS.WATCHER_LIST_INSERT)
+//                : conf.get_kollus_api().get_url(ModuleConfig.URLS.WATCHER_LIST_COMPLETE);
 
-//        String url = apiType == "register" ? "http://localhost:3002/register"
-//                : "http://localhost:3002/complete";
+        String url = apiType == "register" ? "http://localhost:3002/register"
+                : "http://localhost:3002/complete";
 
         try {
             // Body Param을 채우기
@@ -448,7 +448,7 @@ public class CommonUtils {
      *
      * @param items
      */
-    public void createSnapFile(ArrayList<FileItemDTO> items) throws Exception {
+    public int createSnapFile(ArrayList<FileItemDTO> items) throws Exception {
 
         int snapshotCnt = 0;
         for (FileItemDTO item : items) {
@@ -532,6 +532,8 @@ public class CommonUtils {
              */
             log.error("unsupport media file: " + item.getPhysicalPath());
         }
+
+        return snapshotCnt;
     }
 
     /**
@@ -809,9 +811,12 @@ public class CommonUtils {
      * @return
      * @throws Exception
      */
-    public int moveToWorkDir(ArrayList<FileItemDTO> items) throws Exception {
+    public int moveToWorkDir(ArrayList<FileItemDTO> items, UploadMode uploadMode) throws Exception {
         int fileCnt = 0;
-        for (FileItemDTO item : items) {
+
+        for (int i=0; i < items.size(); i++) {
+            FileItemDTO item = items.get(i);
+
             Path src = Paths.get(item.getPhysicalPath());
             if (!Files.exists(src)) {
                 item.setCopyComplete(false);
@@ -838,8 +843,11 @@ public class CommonUtils {
             String workFilePath = info.getWorkDir() + item.getContentPath();
             Path dst = Paths.get(workFilePath);
 
-            log.debug(String.format("move from %s to %s", src, dst));;
+            log.debug(String.format("move from %s to %s", src, dst));
             Path result = Files.move(src, dst, StandardCopyOption.REPLACE_EXISTING);
+
+            UploadProcessLogDTO step4SubMsg = new UploadProcessLogDTO(uploadMode, "04-" + (i+1), "WORK File Info Send Http Server STEP", String.format("move from %s to %s", src, dst), item);
+            uploadProcessLog.info(step4SubMsg.getJsonLogMsg());
 
             String completePath = item.getPhysicalPath() + "_complete";
             Path completeSrc = Paths.get(completePath);
