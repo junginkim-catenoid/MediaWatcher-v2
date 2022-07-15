@@ -41,19 +41,6 @@ public class UploadProcessLogDTO {
         }
     }
 
-    private String getContentProviderKey(ArrayList<FileItemDTO> files) {
-        return files.get(0).getContentProviderKey();
-    }
-
-    public UploadProcessLogDTO(UploadMode uploadMode, String currentStep, String title, String description, Object fileObject) {
-        this.uploadMode = uploadMode;
-        this.currentStep = currentStep;
-        this.totalStep = getTotalStep(uploadMode);
-        this.title = title;
-        this.description = description;
-//        this.fileObject = fileObject;
-    }
-
     public UploadProcessLogDTO(UploadMode uploadMode, String currentStep, String title, String description, FileItemDTO item) {
         this.uploadMode = uploadMode;
         this.currentStep = currentStep;
@@ -63,12 +50,31 @@ public class UploadProcessLogDTO {
         setFileItemDto(item);
     }
 
-    public UploadProcessLogDTO(UploadMode uploadMode, String currentStep, String title) {
+    public UploadProcessLogDTO(UploadMode uploadMode, String currentStep, String title, String description, KollusApiWatcherContentDTO[] contentsDTO) {
         this.uploadMode = uploadMode;
         this.currentStep = currentStep;
         this.totalStep = getTotalStep(uploadMode);
         this.title = title;
+        this.description = description;
+
+        if (contentsDTO.length > 0) {
+            this.contentProviderKey = contentsDTO[0].result.content_provider_key;
+        }
     }
+
+    public UploadProcessLogDTO(UploadMode uploadMode, String currentStep, String title, String description, KollusApiWatcherContentDTO contentDTO) {
+        this.uploadMode = uploadMode;
+        this.currentStep = currentStep;
+        this.totalStep = getTotalStep(uploadMode);
+        this.title = title;
+        this.description = description;
+
+        if (contentDTO != null) {
+            this.contentProviderKey = contentDTO.result.content_provider_key;
+        }
+    }
+
+
 
     public UploadProcessLogDTO(UploadMode uploadMode, String currentStep, String title, String description) {
         this.uploadMode = uploadMode;
@@ -76,6 +82,10 @@ public class UploadProcessLogDTO {
         this.totalStep = getTotalStep(uploadMode);
         this.title = title;
         this.description = description;
+    }
+
+    private String getContentProviderKey(ArrayList<FileItemDTO> files) {
+        return files.get(0).getContentProviderKey();
     }
 
     public String getJsonLogMsg() {
@@ -111,13 +121,13 @@ public class UploadProcessLogDTO {
 
 
 
-        if (this.fileObject != null) {
-            HashMap nestedMdc = new HashMap<String, String>();
-            nestedMdc.put("bar","baz");
-            MDC.put("foo",nestedMdc);
-
-            MDC.put("fileObject", this.fileObject);
-        }
+//        if (this.fileObject != null) {
+//            HashMap nestedMdc = new HashMap<String, String>();
+//            nestedMdc.put("bar","baz");
+//            MDC.put("foo",nestedMdc);
+//
+//            MDC.put("fileObject", this.fileObject);
+//        }
 
 
     }
