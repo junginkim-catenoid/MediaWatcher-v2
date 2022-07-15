@@ -1,22 +1,29 @@
 package net.catenoid.watcher.upload.dto;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
+import com.kollus.json_data.BaseCommand;
 import net.catenoid.watcher.upload.types.UploadMode;
 import org.apache.log4j.MDC;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 import java.security.InvalidParameterException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class UploadProcessLogDTO {
 
     private final UploadMode uploadMode;
     private final String currentStep;
     private final String totalStep;
-    private final String title;
+
+    private String stepName;
+    private String title;
     private String description;
 
     private String contentProviderKey;
@@ -29,11 +36,13 @@ public class UploadProcessLogDTO {
 
     private Object fileObject;
 
-    public UploadProcessLogDTO(UploadMode uploadMode, String currentStep, String title, String description, ArrayList<FileItemDTO> files) {
+    private ContentInfoDTO mediaInfo;
+
+    public UploadProcessLogDTO(UploadMode uploadMode, String currentStep, String stepName, String description, ArrayList<FileItemDTO> files) {
         this.uploadMode = uploadMode;
         this.currentStep = currentStep;
         this.totalStep = getTotalStep(uploadMode);
-        this.title = title;
+        this.stepName = stepName;
         this.description = description;
 
         if (files.size() > 0) {
@@ -41,20 +50,20 @@ public class UploadProcessLogDTO {
         }
     }
 
-    public UploadProcessLogDTO(UploadMode uploadMode, String currentStep, String title, String description, FileItemDTO item) {
+    public UploadProcessLogDTO(UploadMode uploadMode, String currentStep, String stepName, String description, FileItemDTO item) {
         this.uploadMode = uploadMode;
         this.currentStep = currentStep;
         this.totalStep = getTotalStep(uploadMode);
-        this.title = title;
+        this.stepName = stepName;
         this.description = description;
         setFileItemDto(item);
     }
 
-    public UploadProcessLogDTO(UploadMode uploadMode, String currentStep, String title, String description, KollusApiWatcherContentDTO[] contentsDTO) {
+    public UploadProcessLogDTO(UploadMode uploadMode, String currentStep, String stepName, String description, KollusApiWatcherContentDTO[] contentsDTO) {
         this.uploadMode = uploadMode;
         this.currentStep = currentStep;
         this.totalStep = getTotalStep(uploadMode);
-        this.title = title;
+        this.stepName = stepName;
         this.description = description;
 
         if (contentsDTO.length > 0) {
@@ -62,11 +71,11 @@ public class UploadProcessLogDTO {
         }
     }
 
-    public UploadProcessLogDTO(UploadMode uploadMode, String currentStep, String title, String description, KollusApiWatcherContentDTO contentDTO) {
+    public UploadProcessLogDTO(UploadMode uploadMode, String currentStep, String stepName, String description, KollusApiWatcherContentDTO contentDTO) {
         this.uploadMode = uploadMode;
         this.currentStep = currentStep;
         this.totalStep = getTotalStep(uploadMode);
-        this.title = title;
+        this.stepName = stepName;
         this.description = description;
 
         if (contentDTO != null) {
@@ -76,11 +85,11 @@ public class UploadProcessLogDTO {
 
 
 
-    public UploadProcessLogDTO(UploadMode uploadMode, String currentStep, String title, String description) {
+    public UploadProcessLogDTO(UploadMode uploadMode, String currentStep, String stepName, String description) {
         this.uploadMode = uploadMode;
         this.currentStep = currentStep;
         this.totalStep = getTotalStep(uploadMode);
-        this.title = title;
+        this.stepName = stepName;
         this.description = description;
     }
 
@@ -88,23 +97,24 @@ public class UploadProcessLogDTO {
         return files.get(0).getContentProviderKey();
     }
 
-    public String getJsonLogMsg() {
+    public String getJsonLogMsg() throws UnsupportedEncodingException {
         putMdcUploadInfo();
-        return this.title;
+        return this.stepName;
     }
-    private void putMdcUploadInfo() {
+    private void putMdcUploadInfo() throws UnsupportedEncodingException {
         MDC.clear();
 
         MDC.put("uploadMode", this.uploadMode);
         MDC.put("currentStep", this.currentStep);
         MDC.put("totalStep", this.totalStep);
-
-        if (hasText(this.description)) {
-            MDC.put("description", this.description);
-        }
+        MDC.put("description", hasText(this.description) ? this.description : "");
 
         if (hasText(this.contentProviderKey)) {
             MDC.put("contentProviderKey", this.contentProviderKey);
+        }
+
+        if (hasText(this.title)) {
+            MDC.put("title", this.title);
         }
 
         if (hasText(this.uploadPath)) {
@@ -119,15 +129,21 @@ public class UploadProcessLogDTO {
             MDC.put("uploadFileKey", this.uploadFileKey);
         }
 
+        if (this.mediaInfo != null) {
+//            ObjectMapper objectMapper = new ObjectMapper();
+//            Map result = objectMapper.convertValue(this.mediaInfo, Map.class);
+            MDC.put("mediaInfo", this.mediaInfo);
+        }
 
+        if (this.fileObject != null) {
 
-//        if (this.fileObject != null) {
-//            HashMap nestedMdc = new HashMap<String, String>();
-//            nestedMdc.put("bar","baz");
-//            MDC.put("foo",nestedMdc);
-//
-//            MDC.put("fileObject", this.fileObject);
-//        }
+//            HashMap nestedMdc = new HashMap<String, Object>();
+//            nestedMdc.put("bar",this.fileObject);
+//            MDC.put("foo", nestedMdc);
+//            ObjectMapper objectMapper = new ObjectMapper();
+//            HashMap result = objectMapper.convertValue(this.fileObject, HashMap.class);
+//            MDC.put("fileObject", result);
+        }
 
 
     }
@@ -137,10 +153,15 @@ public class UploadProcessLogDTO {
         this.uploadPath = item.getUploadPath();
         this.contentProviderKey = item.getContentProviderKey();
         this.uploadFileKey = item.getUploadFileKey();
+        this.title = item.getTitle();
+
+        if (item.getMediaInfo() != null) {
+            this.mediaInfo = item.getMediaInfo();
+        }
     }
 
-    public String convertJsonStringMessage(Object fileObject) {
-        Gson gson = new Gson();
+    public String convertJsonStringMessage(Object fileObject) throws UnsupportedEncodingException {
+        Gson gson = BaseCommand.gson(true);
         return gson.toJson(fileObject);
     }
 
@@ -176,11 +197,11 @@ public class UploadProcessLogDTO {
         }
 
         if (uploadMode == UploadMode.FTP) {
-            return "05";
+            return "5";
         }
 
         if (uploadMode == UploadMode.KUS) {
-            return "05";
+            return "5";
         }
 
         throw new InvalidParameterException();
@@ -191,6 +212,10 @@ public class UploadProcessLogDTO {
             return false;
         }
         return true;
+    }
+
+    public String toJSONEncodedString(String str) throws UnsupportedEncodingException {
+        return URLEncoder.encode(str, "UTF-8");
     }
 
 }

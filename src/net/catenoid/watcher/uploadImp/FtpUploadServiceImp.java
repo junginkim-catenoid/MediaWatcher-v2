@@ -127,19 +127,19 @@ public class FtpUploadServiceImp extends FtpUploadDao implements FtpUploadServic
             if (items.size() > 0 && items != null) {
                 log.info("Working file count : " + items.size());
 
-                int snapShotCnt = utils.createSnapFile(items);
-
-                UploadProcessLogDTO step3Msg = new UploadProcessLogDTO(UploadMode.FTP, "03", "CREATE Snapshot File Create STEP", "snapshotCnt : " + snapShotCnt, items);
+                int snapFileCnt = utils.createSnapFile(items);
+                UploadProcessLogDTO step3Msg = new UploadProcessLogDTO(UploadMode.FTP, "3", "Create SnapFile Create STEP", "snapFileCnt : " + snapFileCnt, items);
                 uploadProcessLog.info(step3Msg.getJsonLogMsg());
             }
 
-            UploadProcessLogDTO step4Msg = new UploadProcessLogDTO(UploadMode.FTP, "04", "Work File Move Directory STEP", "move file count : " + items.size(), items);
-            uploadProcessLog.info(step4Msg.getJsonLogMsg());
+
+
+            if (items.size() > 0) {
+                UploadProcessLogDTO step4Msg = new UploadProcessLogDTO(UploadMode.FTP, "4", "Work File Move Directory STEP", "move file count : " + items.size(), items);
+                uploadProcessLog.info(step4Msg.getJsonLogMsg());
+            }
 
             int moveFileCnt = utils.moveToWorkDir(items, UploadMode.FTP);
-
-
-
             if (moveFileCnt > 0) {
                 postCopyCompleteFiles(items);
             }
@@ -235,9 +235,10 @@ public class FtpUploadServiceImp extends FtpUploadDao implements FtpUploadServic
          */
         int error_count = 0;
 
-        UploadProcessLogDTO step1Msg = new UploadProcessLogDTO(UploadMode.FTP, "01",
-                "LS Parsing STEP", "Ls parsing file cnt : " + files.size(), files);
-        uploadProcessLog.info(step1Msg.getJsonLogMsg());
+        if (files.size() > 0) {
+            UploadProcessLogDTO step1Msg = new UploadProcessLogDTO(UploadMode.FTP, "1", "Ls Parsing New File Items STEP", "Ls parsing file cnt : " + files.size()  + ", dirs cnt : " + dirs.size(), files);
+            uploadProcessLog.info(step1Msg.getJsonLogMsg());
+        }
 
         for (FileItemDTO f : files) {
             f.setPhysicalPath(f.getPhysicalPath().replaceAll("\\\"", "\""));
@@ -253,6 +254,10 @@ public class FtpUploadServiceImp extends FtpUploadDao implements FtpUploadServic
             boolean isMediaContentFile = utils.checkIsMediaContent(f.getPhysicalPath());
             if (!isMediaContentFile) {
                 log.debug("is not MediaFile : " + f.toString());
+
+                UploadProcessLogDTO step1ErrorMsg = new UploadProcessLogDTO(UploadMode.FTP, "1", "Ls Parsing New File Items STEP", "is not MediaFile : " + f.getTitle(), f);
+                uploadProcessLog.error(step1ErrorMsg.getJsonLogMsg());
+
                 if (file.delete()) {
                     log.debug("Not MediaFile removed");
                 }
@@ -309,7 +314,7 @@ public class FtpUploadServiceImp extends FtpUploadDao implements FtpUploadServic
         }
 
         int sendFtpCompleteApiCnt = sendFtpCompleteApiCnt(sendItem);
-        UploadProcessLogDTO step5Msg = new UploadProcessLogDTO(UploadMode.FTP, "05", "WORK File Info Send Http Server STEP", "sendFtpCompleteApiCnt : " + sendItem.size(), sendItem);
+        UploadProcessLogDTO step5Msg = new UploadProcessLogDTO(UploadMode.FTP, "5", "WORK File Info Send Http Server STEP", "sendFtpCompleteApiCnt : " + sendFtpCompleteApiCnt, sendItem);
         uploadProcessLog.info(step5Msg.getJsonLogMsg());
 
 
@@ -321,7 +326,7 @@ public class FtpUploadServiceImp extends FtpUploadDao implements FtpUploadServic
             }
             log.error(url + " - error");
 
-            UploadProcessLogDTO errorStep5Msg = new UploadProcessLogDTO(UploadMode.FTP, "05", "WORK File Info Send Http Server STEP", url + " - error");
+            UploadProcessLogDTO errorStep5Msg = new UploadProcessLogDTO(UploadMode.FTP, "5", "WORK File Info Send Http Server STEP", url + " - error");
             uploadProcessLog.error(errorStep5Msg.getJsonLogMsg());
 
         } else {
@@ -342,8 +347,11 @@ public class FtpUploadServiceImp extends FtpUploadDao implements FtpUploadServic
                         log.info("complete 성공 갯수(" + successCnt+ ") : " + item.getPhysicalPath());
                     }
 
-                    UploadProcessLogDTO step5SubMsg = new UploadProcessLogDTO(UploadMode.FTP, "05-" + (i+1), "WORK File Info Send Http Server STEP", "complete 성공" + item.getPhysicalPath(), item);
+                    UploadProcessLogDTO step5SubMsg = new UploadProcessLogDTO(UploadMode.FTP, "5-" + (i+1), "WORK File Info Send Http Server STEP", "complete 성공" + item.getPhysicalPath(), item);
                     uploadProcessLog.info(step5SubMsg.getJsonLogMsg());
+                } else {
+                    UploadProcessLogDTO step5SubMsg = new UploadProcessLogDTO(UploadMode.FTP, "5-" + (i+1), "WORK File Info Send Http Server STEP", "complete 실패" + item.getUploadFileKey(), item);
+                    uploadProcessLog.error(step5SubMsg.getJsonLogMsg());
                 }
             }
         }

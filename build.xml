@@ -36,6 +36,10 @@
         <pathelement location="libs/jedis-2.2.1.jar"/>
         <pathelement location="libs/mail.jar"/>
         <pathelement location="libs/junit-4.11.jar"/>
+        <pathelement location="libs/jsonevent-layout-1.7.jar"/>
+        <pathelement location="libs/asm-1.0.2.jar"/>
+        <pathelement location="libs/json-smart-2.3.jar"/>
+        <pathelement location="libs/commons-lang-2.6.jar"/>
         <path refid="DERBY_CONTAINER.libraryclasspath"/>
     </path>
 

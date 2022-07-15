@@ -813,7 +813,6 @@ public class CommonUtils {
      */
     public int moveToWorkDir(ArrayList<FileItemDTO> items, UploadMode uploadMode) throws Exception {
         int fileCnt = 0;
-
         for (int i=0; i < items.size(); i++) {
             FileItemDTO item = items.get(i);
 
@@ -846,7 +845,7 @@ public class CommonUtils {
             log.debug(String.format("move from %s to %s", src, dst));
             Path result = Files.move(src, dst, StandardCopyOption.REPLACE_EXISTING);
 
-            UploadProcessLogDTO step4SubMsg = new UploadProcessLogDTO(uploadMode, "04-" + (i+1), "WORK File Info Send Http Server STEP", String.format("move from %s to %s", src, dst), item);
+            UploadProcessLogDTO step4SubMsg = new UploadProcessLogDTO(uploadMode, "4-" + (i+1), "WORK File Info Send Http Server STEP", String.format("move from %s to %s", src, dst), item);
             uploadProcessLog.info(step4SubMsg.getJsonLogMsg());
 
             String completePath = item.getPhysicalPath() + "_complete";
