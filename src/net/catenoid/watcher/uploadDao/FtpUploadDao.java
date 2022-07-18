@@ -3,6 +3,7 @@ package net.catenoid.watcher.uploadDao;
 import com.kollus.json_data.config.ModuleConfig;
 import net.catenoid.watcher.upload.dto.*;
 import net.catenoid.watcher.upload.types.UploadMode;
+import net.catenoid.watcher.upload.types.UploadProcessStep;
 import net.catenoid.watcher.upload.utils.CommonUtils;
 import net.catenoid.watcher.upload.utils.FtpUploadUtils;
 import net.catenoid.watcher.upload.utils.Poster;
@@ -285,7 +286,7 @@ public class FtpUploadDao {
             if (isSend) {
                 log.trace("sendItem size: " + sendItem.size());
 
-                UploadProcessLogDTO step2Msg = new UploadProcessLogDTO(UploadMode.FTP, "2", "HTTP Register Server Send STEP", "sendItem size: " + sendItem.size(), sendItem);
+                UploadProcessLogDTO step2Msg = new UploadProcessLogDTO(UploadMode.FTP, UploadProcessStep.HTTP_REGISTER_SERVER_SEND, "HTTP Register Server Send STEP", "sendItem size: " + sendItem.size(), sendItem);
                 uploadProcessLog.info(step2Msg.getJsonLogMsg());
 
                 for (int i = 0; i < sendItem.size(); i++) {
@@ -297,8 +298,8 @@ public class FtpUploadDao {
                     if (item.getUploadFileKey() != null && item.getUploadFileKey().length() > 0) {
                         log.debug("등록성공: " + item.getUploadFileKey() + ", " + item.toString());
 
-                        UploadProcessLogDTO step2SubMsg = new UploadProcessLogDTO(UploadMode.FTP, "2-" + (i+1), "HTTP Register Server Send STEP", "등록성공 : " + item.getUploadFileKey(), item);
-                        uploadProcessLog.info(item.getUploadPath());
+                        UploadProcessLogDTO step2SubMsg = new UploadProcessLogDTO(UploadMode.FTP, UploadProcessStep.HTTP_REGISTER_SERVER_SEND_SUB, i+1, "HTTP Register Server Send STEP", "등록성공 : " + item.getUploadFileKey(), item);
+                        uploadProcessLog.info(step2SubMsg.getJsonLogMsg());
 
                         isUploadOrDelete = db_update_file_status(item.getPhysicalPath(), 1, item.getUploadFileKey(),
                                 item.getContentPath(), item.getSnapshotPath(), item.getChecksumType(),
@@ -308,7 +309,7 @@ public class FtpUploadDao {
                         }
                     } else {
                         log.debug("등록실패: " + item.getUploadFileKey());
-                        UploadProcessLogDTO step2SubMsg = new UploadProcessLogDTO(UploadMode.FTP, "2-" + i, "HTTP Register Server Send STEP", "등록실패 : " + item.getUploadFileKey(), item);
+                        UploadProcessLogDTO step2SubMsg = new UploadProcessLogDTO(UploadMode.FTP, UploadProcessStep.HTTP_REGISTER_SERVER_SEND_SUB, i+1, "HTTP Register Server Send STEP", "등록실패 : " + item.getUploadFileKey(), item);
                         uploadProcessLog.error(step2SubMsg.getJsonLogMsg());
 
 
@@ -316,14 +317,14 @@ public class FtpUploadDao {
                         if (!isUploadOrDelete) {
                             log.warn("등록 안된 파일 삭제 실패 : " + item.getUploadFileKey());
 
-                            UploadProcessLogDTO step2SubErrorMsg = new UploadProcessLogDTO(UploadMode.FTP, "2-" + i, "HTTP Register Server Send STEP", "등록 안된 파일 삭제 실패 : " + item.getUploadFileKey(), item);
+                            UploadProcessLogDTO step2SubErrorMsg = new UploadProcessLogDTO(UploadMode.FTP, UploadProcessStep.HTTP_REGISTER_SERVER_SEND_SUB, i+1, "HTTP Register Server Send STEP", "등록 안된 파일 삭제 실패 : " + item.getUploadFileKey(), item);
                             uploadProcessLog.error(step2SubErrorMsg.getJsonLogMsg());
                         }
                     }
                 }
             } else {
 
-                UploadProcessLogDTO errorStep2Msg = new UploadProcessLogDTO(UploadMode.FTP, "02", "HTTP Register Server Send STEP", "server return != 200 or data error");
+                UploadProcessLogDTO errorStep2Msg = new UploadProcessLogDTO(UploadMode.FTP, UploadProcessStep.HTTP_REGISTER_SERVER_SEND, "HTTP Register Server Send STEP", "server return != 200 or data error");
                 uploadProcessLog.error(errorStep2Msg.getJsonLogMsg());
 
                 log.error("server return != 200 or data error");

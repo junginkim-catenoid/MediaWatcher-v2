@@ -1,6 +1,5 @@
 package net.catenoid.watcher.uploadImp;
 
-import com.google.gson.Gson;
 import com.kollus.json_data.config.ModuleConfig;
 import net.catenoid.watcher.config.Config;
 import net.catenoid.watcher.config.WatcherFolder;
@@ -9,17 +8,13 @@ import net.catenoid.watcher.upload.FtpUploadService;
 import net.catenoid.watcher.upload.config.H2DB;
 import net.catenoid.watcher.upload.dto.FileItemDTO;
 import net.catenoid.watcher.upload.dto.SendFileItemsDTO;
+import net.catenoid.watcher.upload.dto.UploadProcessLogDTO;
 import net.catenoid.watcher.upload.types.UploadMode;
+import net.catenoid.watcher.upload.types.UploadProcessStep;
 import net.catenoid.watcher.upload.utils.FtpUploadUtils;
 import net.catenoid.watcher.upload.utils.LSParser;
-import net.catenoid.watcher.upload.dto.UploadProcessLogDTO;
 import net.catenoid.watcher.uploadDao.FtpUploadDao;
-import net.logstash.log4j.JSONEventLayoutV1;
-import org.apache.log4j.Appender;
-import org.apache.log4j.AppenderSkeleton;
 import org.apache.log4j.Logger;
-import org.apache.log4j.MDC;
-import org.apache.log4j.spi.LoggingEvent;
 
 import java.io.File;
 import java.sql.ResultSet;
@@ -128,14 +123,14 @@ public class FtpUploadServiceImp extends FtpUploadDao implements FtpUploadServic
                 log.info("Working file count : " + items.size());
 
                 int snapFileCnt = utils.createSnapFile(items);
-                UploadProcessLogDTO step3Msg = new UploadProcessLogDTO(UploadMode.FTP, "3", "Create SnapFile Create STEP", "snapFileCnt : " + snapFileCnt, items);
+                UploadProcessLogDTO step3Msg = new UploadProcessLogDTO(UploadMode.FTP, UploadProcessStep.CREATE_SNAP_FILE, "Create SnapFile Create STEP", "snapFileCnt : " + snapFileCnt, items);
                 uploadProcessLog.info(step3Msg.getJsonLogMsg());
             }
 
 
 
             if (items.size() > 0) {
-                UploadProcessLogDTO step4Msg = new UploadProcessLogDTO(UploadMode.FTP, "4", "Work File Move Directory STEP", "move file count : " + items.size(), items);
+                UploadProcessLogDTO step4Msg = new UploadProcessLogDTO(UploadMode.FTP, UploadProcessStep.WORK_FILE_MOVE_DIRECTORY, "Work File Move Directory STEP", "move file count : " + items.size(), items);
                 uploadProcessLog.info(step4Msg.getJsonLogMsg());
             }
 
@@ -236,7 +231,7 @@ public class FtpUploadServiceImp extends FtpUploadDao implements FtpUploadServic
         int error_count = 0;
 
         if (files.size() > 0) {
-            UploadProcessLogDTO step1Msg = new UploadProcessLogDTO(UploadMode.FTP, "1", "Ls Parsing New File Items STEP", "Ls parsing file cnt : " + files.size()  + ", dirs cnt : " + dirs.size(), files);
+            UploadProcessLogDTO step1Msg = new UploadProcessLogDTO(UploadMode.FTP, UploadProcessStep.LS_PARSING_NEW_FILES, "Ls Parsing New File Items STEP", "Ls parsing file cnt : " + files.size()  + ", dirs cnt : " + dirs.size(), files);
             uploadProcessLog.info(step1Msg.getJsonLogMsg());
         }
 
@@ -255,7 +250,7 @@ public class FtpUploadServiceImp extends FtpUploadDao implements FtpUploadServic
             if (!isMediaContentFile) {
                 log.debug("is not MediaFile : " + f.toString());
 
-                UploadProcessLogDTO step1ErrorMsg = new UploadProcessLogDTO(UploadMode.FTP, "1", "Ls Parsing New File Items STEP", "is not MediaFile : " + f.getTitle(), f);
+                UploadProcessLogDTO step1ErrorMsg = new UploadProcessLogDTO(UploadMode.FTP, UploadProcessStep.LS_PARSING_NEW_FILES, "Ls Parsing New File Items STEP", "is not MediaFile : " + f.getTitle(), f);
                 uploadProcessLog.error(step1ErrorMsg.getJsonLogMsg());
 
                 if (file.delete()) {
@@ -314,7 +309,7 @@ public class FtpUploadServiceImp extends FtpUploadDao implements FtpUploadServic
         }
 
         int sendFtpCompleteApiCnt = sendFtpCompleteApiCnt(sendItem);
-        UploadProcessLogDTO step5Msg = new UploadProcessLogDTO(UploadMode.FTP, "5", "WORK File Info Send Http Server STEP", "sendFtpCompleteApiCnt : " + sendFtpCompleteApiCnt, sendItem);
+        UploadProcessLogDTO step5Msg = new UploadProcessLogDTO(UploadMode.FTP, UploadProcessStep.HTTP_COMPLETE_SERVER_SEND, "WORK File Info Send Http Server STEP", "sendFtpCompleteApiCnt : " + sendFtpCompleteApiCnt, sendItem);
         uploadProcessLog.info(step5Msg.getJsonLogMsg());
 
 
@@ -326,7 +321,7 @@ public class FtpUploadServiceImp extends FtpUploadDao implements FtpUploadServic
             }
             log.error(url + " - error");
 
-            UploadProcessLogDTO errorStep5Msg = new UploadProcessLogDTO(UploadMode.FTP, "5", "WORK File Info Send Http Server STEP", url + " - error");
+            UploadProcessLogDTO errorStep5Msg = new UploadProcessLogDTO(UploadMode.FTP, UploadProcessStep.HTTP_COMPLETE_SERVER_SEND, "WORK File Info Send Http Server STEP", url + " - error");
             uploadProcessLog.error(errorStep5Msg.getJsonLogMsg());
 
         } else {
@@ -347,10 +342,10 @@ public class FtpUploadServiceImp extends FtpUploadDao implements FtpUploadServic
                         log.info("complete 성공 갯수(" + successCnt+ ") : " + item.getPhysicalPath());
                     }
 
-                    UploadProcessLogDTO step5SubMsg = new UploadProcessLogDTO(UploadMode.FTP, "5-" + (i+1), "WORK File Info Send Http Server STEP", "complete 성공" + item.getPhysicalPath(), item);
+                    UploadProcessLogDTO step5SubMsg = new UploadProcessLogDTO(UploadMode.FTP, UploadProcessStep.HTTP_COMPLETE_SERVER_SEND_SUB, i+1, "WORK File Info Send Http Server STEP", "complete 성공 : " + item.getPhysicalPath(), item);
                     uploadProcessLog.info(step5SubMsg.getJsonLogMsg());
                 } else {
-                    UploadProcessLogDTO step5SubMsg = new UploadProcessLogDTO(UploadMode.FTP, "5-" + (i+1), "WORK File Info Send Http Server STEP", "complete 실패" + item.getUploadFileKey(), item);
+                    UploadProcessLogDTO step5SubMsg = new UploadProcessLogDTO(UploadMode.FTP, UploadProcessStep.HTTP_COMPLETE_SERVER_SEND_SUB, i+1, "WORK File Info Send Http Server STEP", "complete 실패 : " + item.getUploadFileKey(), item);
                     uploadProcessLog.error(step5SubMsg.getJsonLogMsg());
                 }
             }

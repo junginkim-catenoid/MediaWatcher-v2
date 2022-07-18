@@ -7,6 +7,7 @@ import net.catenoid.watcher.config.WatcherFolder;
 import net.catenoid.watcher.upload.KusUploadService;
 import net.catenoid.watcher.upload.dto.*;
 import net.catenoid.watcher.upload.types.UploadMode;
+import net.catenoid.watcher.upload.types.UploadProcessStep;
 import net.catenoid.watcher.utils.KusUploadUtils;
 import net.logstash.log4j.JSONEventLayoutV1;
 import org.apache.log4j.Appender;
@@ -39,8 +40,6 @@ public class KusUploadServiceImp implements KusUploadService {
     public void findWorkFileList() throws Exception {
 
 
-
-
         // TODO Auto-generated method stub
         this.fileList = new SendFileItemsDTO();
         this.dirList = new ArrayList<String>();
@@ -51,7 +50,7 @@ public class KusUploadServiceImp implements KusUploadService {
             return;
         }
 
-        UploadProcessLogDTO step1Msg = new UploadProcessLogDTO(UploadMode.KUS, "1", "Ls Parsing New File Items STEP", "Ls parsing file cnt : " + this.fileList.size(), this.fileList);
+        UploadProcessLogDTO step1Msg = new UploadProcessLogDTO(UploadMode.KUS, UploadProcessStep.LS_PARSING_NEW_FILES, "Ls Parsing New File Items STEP", "Ls parsing file cnt : " + this.fileList.size(), this.fileList);
         uploadProcessLog.info(step1Msg.getJsonLogMsg());
 
         sendToHttpApi(fileList, "register");
@@ -66,14 +65,14 @@ public class KusUploadServiceImp implements KusUploadService {
         }
 
         int snapFileCnt = utils.createSnapFile(fileList);
-        UploadProcessLogDTO step3Msg = new UploadProcessLogDTO(UploadMode.KUS, "3", "CREATE Snapshot File Create STEP", "snapshotCnt : " + snapFileCnt, fileList);
+        UploadProcessLogDTO step3Msg = new UploadProcessLogDTO(UploadMode.KUS, UploadProcessStep.CREATE_SNAP_FILE, "CREATE Snapshot File Create STEP", "snapshotCnt : " + snapFileCnt, fileList);
         uploadProcessLog.info(step3Msg.getJsonLogMsg());
 
         if(fileList.size() == 0) {
             return;
         }
 
-        UploadProcessLogDTO step4Msg = new UploadProcessLogDTO(UploadMode.KUS, "4", "Work File Move Directory STEP", "move file count : " + fileList.size(), fileList);
+        UploadProcessLogDTO step4Msg = new UploadProcessLogDTO(UploadMode.KUS, UploadProcessStep.WORK_FILE_MOVE_DIRECTORY, "Work File Move Directory STEP", "move file count : " + fileList.size(), fileList);
         uploadProcessLog.info(step4Msg.getJsonLogMsg());
 
         utils.moveToWorkDir(fileList, UploadMode.KUS);
@@ -97,12 +96,12 @@ public class KusUploadServiceImp implements KusUploadService {
         Gson gson = BaseCommand.gson(false);
         KollusApiWatchersDTO apiResult = gson.fromJson(responseBody, KollusApiWatchersDTO.class);
 
-        UploadProcessLogDTO step5Msg = new UploadProcessLogDTO(UploadMode.KUS, "5", "WORK File Info Send Http Server", "sendFtpCompleteApiCnt : " + apiResult.result.watcher_files.length, apiResult.result.watcher_files);
+        UploadProcessLogDTO step5Msg = new UploadProcessLogDTO(UploadMode.KUS, UploadProcessStep.HTTP_COMPLETE_SERVER_SEND, "WORK File Info Send Http Server", "sendFtpCompleteApiCnt : " + apiResult.result.watcher_files.length, apiResult.result.watcher_files);
         uploadProcessLog.info(step5Msg.getJsonLogMsg());
 
         if (apiResult.error != 0) {
             log.error(responseBody);
-            UploadProcessLogDTO step5ErrMsg = new UploadProcessLogDTO(UploadMode.KUS, "5", "WORK File Info Send Http Server STEP","error : " + responseBody);
+            UploadProcessLogDTO step5ErrMsg = new UploadProcessLogDTO(UploadMode.KUS, UploadProcessStep.HTTP_COMPLETE_SERVER_SEND, "WORK File Info Send Http Server STEP","error : " + responseBody);
             uploadProcessLog.error(step5ErrMsg.getJsonLogMsg());
             utils.failApiResultOrRegisterProcess(apiResult, null);
             return cnt;
@@ -116,17 +115,17 @@ public class KusUploadServiceImp implements KusUploadService {
                 FileItemDTO findItem = utils.findSendItem(fileList, item.result.key);
                 if (findItem == null) {
                     log.error("FileItem  파일 정보를 찾을 수 없습니다. [" + item.result.key + "]");
-                    UploadProcessLogDTO step5SubMsg = new UploadProcessLogDTO(UploadMode.KUS, "5-" + (i+1), "WORK File Info Send Http Server STEP", "Complete 실패, FileItem  파일 정보를 찾을 수 없습니다. [" + item.result.key + "]", item);
+                    UploadProcessLogDTO step5SubMsg = new UploadProcessLogDTO(UploadMode.KUS, UploadProcessStep.HTTP_COMPLETE_SERVER_SEND_SUB, i+1, "WORK File Info Send Http Server STEP", "Complete 실패, FileItem  파일 정보를 찾을 수 없습니다. [" + item.result.key + "]", item);
                     uploadProcessLog.error(step5SubMsg.getJsonLogMsg());
                 }
                 cnt += 1;
-                UploadProcessLogDTO step5SubMsg = new UploadProcessLogDTO(UploadMode.KUS, "5-" + (i+1), "WORK File Info Send Http Server STEP","complete 성공" + findItem.getUploadFileKey(), findItem);
+                UploadProcessLogDTO step5SubMsg = new UploadProcessLogDTO(UploadMode.KUS, UploadProcessStep.HTTP_COMPLETE_SERVER_SEND_SUB, i+1, "WORK File Info Send Http Server STEP","complete 성공 : " + findItem.getUploadFileKey(), findItem);
                 uploadProcessLog.info(step5SubMsg.getJsonLogMsg());
                 continue;
             }
 
             log.warn("warn code: " + item.error + ", warn message: " + item.message);
-            UploadProcessLogDTO step5SubMsg = new UploadProcessLogDTO(UploadMode.KUS, "5-" + (i+1), "WORK File Info Send Http Server STEP", "complete 전송 실패, warn code: " + item.error + ", warn message: " + item.message, item);
+            UploadProcessLogDTO step5SubMsg = new UploadProcessLogDTO(UploadMode.KUS, UploadProcessStep.HTTP_COMPLETE_SERVER_SEND_SUB, i+1, "WORK File Info Send Http Server STEP", "complete 전송 실패, warn code: " + item.error + ", warn message: " + item.message, item);
             uploadProcessLog.error(step5SubMsg.getJsonLogMsg());
 
             if (item.result == null) {
@@ -137,7 +136,7 @@ public class KusUploadServiceImp implements KusUploadService {
 
             if (findItem == null) {
                 log.error("실패한 파일 정보를 찾을 수 없습니다. [" + item.result.key + "]");
-                UploadProcessLogDTO step5ErrMsg = new UploadProcessLogDTO(UploadMode.KUS, "5-" + (i+1), "WORK File Info Send Http Server STEP", "Complete 실패, FileItem  파일 정보를 찾을 수 없습니다. [" + item.result.key + "]", item);
+                UploadProcessLogDTO step5ErrMsg = new UploadProcessLogDTO(UploadMode.KUS, UploadProcessStep.HTTP_COMPLETE_SERVER_SEND_SUB, i+1, "WORK File Info Send Http Server STEP", "Complete 실패, FileItem  파일 정보를 찾을 수 없습니다. [" + item.result.key + "]", item);
                 uploadProcessLog.error(step5ErrMsg.getJsonLogMsg());
                 continue;
             }
@@ -153,7 +152,7 @@ public class KusUploadServiceImp implements KusUploadService {
             }
 
             log.warn("Complete Api is deleted to status is failed" + findItem.toString());
-            UploadProcessLogDTO step5ErrMsg = new UploadProcessLogDTO(UploadMode.KUS, "5-" + (i+1), "WORK File Info Send Http Server STEP", "Complete Api is deleted to status is failed", findItem);
+            UploadProcessLogDTO step5ErrMsg = new UploadProcessLogDTO(UploadMode.KUS, UploadProcessStep.HTTP_COMPLETE_SERVER_SEND_SUB, i+1, "WORK File Info Send Http Server STEP", "Complete Api is deleted to status is failed", findItem);
             uploadProcessLog.error(step5ErrMsg.getJsonLogMsg());
             utils.removeToIndividuaFile(findItem.getPhysicalPath(), findItem.getSnapshotPath(), completePath, msgList);
 
@@ -203,11 +202,11 @@ public class KusUploadServiceImp implements KusUploadService {
         Gson gson = BaseCommand.gson(false);
         KollusApiWatchersDTO apiResult = gson.fromJson(responseBody, KollusApiWatchersDTO.class);
 
-        UploadProcessLogDTO step2Msg = new UploadProcessLogDTO(UploadMode.KUS, "2", "HTTP Register Server Send STEP", "sendItem size: " + apiResult.result.watcher_files.length, apiResult.result.watcher_files);
+        UploadProcessLogDTO step2Msg = new UploadProcessLogDTO(UploadMode.KUS, UploadProcessStep.HTTP_REGISTER_SERVER_SEND, "HTTP Register Server Send STEP", "sendItem size: " + apiResult.result.watcher_files.length, apiResult.result.watcher_files);
         uploadProcessLog.info(step2Msg.getJsonLogMsg());
 
         if (apiResult.error != 0) {
-            UploadProcessLogDTO errorStep2Msg = new UploadProcessLogDTO(UploadMode.KUS, "2", "HTTP Register Server Send STEP", "server return != 200 or data error");
+            UploadProcessLogDTO errorStep2Msg = new UploadProcessLogDTO(UploadMode.KUS, UploadProcessStep.HTTP_REGISTER_SERVER_SEND, "HTTP Register Server Send STEP", "server return != 200 or data error");
             uploadProcessLog.error(errorStep2Msg.getJsonLogMsg());
 
             utils.failApiResultOrRegisterProcess(apiResult, null);
@@ -226,15 +225,15 @@ public class KusUploadServiceImp implements KusUploadService {
                  * error == 0인 등록에 성공한 파일
                  */
                 items.update(f);
-                UploadProcessLogDTO step2SubMsg = new UploadProcessLogDTO(UploadMode.KUS, "2-" + (i+1), "HTTP Register Server Send STEP", "등록성공 : " + f.getUploadFileKey(), f);
+                UploadProcessLogDTO step2SubMsg = new UploadProcessLogDTO(UploadMode.KUS, UploadProcessStep.HTTP_REGISTER_SERVER_SEND_SUB, i+1, "HTTP Register Server Send STEP", "등록성공 : " + f.getUploadFileKey(), f);
                 uploadProcessLog.info(step2SubMsg.getJsonLogMsg());
                 continue;
             }
 
             log.error(item.message);
 
-            UploadProcessLogDTO step2SubMsg = new UploadProcessLogDTO(UploadMode.KUS, "2-" + (i+1), "HTTP Register Server Send STEP", "등록실패 : " + f.getUploadFileKey(), f);
-            uploadProcessLog.error(step2SubMsg.getJsonLogMsg());
+            UploadProcessLogDTO step2ErrMsg = new UploadProcessLogDTO(UploadMode.KUS, UploadProcessStep.HTTP_REGISTER_SERVER_SEND_SUB, i+1, "HTTP Register Server Send STEP", "등록실패 : " + f.getUploadFileKey(), f);
+            uploadProcessLog.error(step2ErrMsg.getJsonLogMsg());
             utils.failApiResultOrRegisterProcess(null, item);
         }
     }

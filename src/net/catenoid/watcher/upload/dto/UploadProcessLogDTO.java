@@ -6,6 +6,7 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.kollus.json_data.BaseCommand;
 import net.catenoid.watcher.upload.types.UploadMode;
+import net.catenoid.watcher.upload.types.UploadProcessStep;
 import org.apache.log4j.MDC;
 
 import java.io.UnsupportedEncodingException;
@@ -18,30 +19,23 @@ import java.util.Map;
 
 public class UploadProcessLogDTO {
 
-    private final UploadMode uploadMode;
-    private final String currentStep;
-    private final String totalStep;
-
+    private UploadMode uploadMode;
+    private String currentStep;
+    private String totalStep;
     private String stepName;
-    private String title;
     private String description;
-
+    private String title;
     private String contentProviderKey;
-
     private String physicalPath;
-
     private String uploadPath;
-
     private String uploadFileKey;
-
-    private Object fileObject;
-
     private ContentInfoDTO mediaInfo;
 
-    public UploadProcessLogDTO(UploadMode uploadMode, String currentStep, String stepName, String description, ArrayList<FileItemDTO> files) {
+    public UploadProcessLogDTO(UploadMode uploadMode, UploadProcessStep uploadProcessStep, String stepName,
+                               String description, ArrayList<FileItemDTO> files) {
         this.uploadMode = uploadMode;
-        this.currentStep = currentStep;
-        this.totalStep = getTotalStep(uploadMode);
+        this.currentStep = uploadProcessStep.getCurrentStep();
+        this.totalStep = uploadProcessStep.getTotalStep(uploadMode);
         this.stepName = stepName;
         this.description = description;
 
@@ -50,58 +44,80 @@ public class UploadProcessLogDTO {
         }
     }
 
-    public UploadProcessLogDTO(UploadMode uploadMode, String currentStep, String stepName, String description, FileItemDTO item) {
+    public UploadProcessLogDTO(UploadMode uploadMode, UploadProcessStep uploadProcessStep, int fileOrder, String stepName,
+                               String description, FileItemDTO item) {
         this.uploadMode = uploadMode;
-        this.currentStep = currentStep;
-        this.totalStep = getTotalStep(uploadMode);
+        this.currentStep = uploadProcessStep.getCurrentStep() + fileOrder;
+        this.totalStep = uploadProcessStep.getTotalStep(uploadMode);
         this.stepName = stepName;
         this.description = description;
         setFileItemDto(item);
     }
 
-    public UploadProcessLogDTO(UploadMode uploadMode, String currentStep, String stepName, String description, KollusApiWatcherContentDTO[] contentsDTO) {
+    public UploadProcessLogDTO(UploadMode uploadMode, UploadProcessStep uploadProcessStep, String stepName,
+                               String description, FileItemDTO item) {
         this.uploadMode = uploadMode;
-        this.currentStep = currentStep;
-        this.totalStep = getTotalStep(uploadMode);
+        this.currentStep = uploadProcessStep.getCurrentStep();
+        this.totalStep = uploadProcessStep.getTotalStep(uploadMode);
         this.stepName = stepName;
         this.description = description;
+        setFileItemDto(item);
+    }
 
+    public UploadProcessLogDTO(UploadMode uploadMode, UploadProcessStep uploadProcessStep, String stepName, String description, KollusApiWatcherContentDTO[] contentsDTO) {
+        this.uploadMode = uploadMode;
+        this.currentStep = uploadProcessStep.getCurrentStep();
+        this.totalStep = uploadProcessStep.getTotalStep(uploadMode);
+        this.stepName = stepName;
+        this.description = description;
         if (contentsDTO.length > 0) {
             this.contentProviderKey = contentsDTO[0].result.content_provider_key;
         }
     }
 
-    public UploadProcessLogDTO(UploadMode uploadMode, String currentStep, String stepName, String description, KollusApiWatcherContentDTO contentDTO) {
+    public UploadProcessLogDTO(UploadMode uploadMode, UploadProcessStep uploadProcessStep, String stepName, String description, KollusApiWatcherContentDTO contentDTO) {
         this.uploadMode = uploadMode;
-        this.currentStep = currentStep;
-        this.totalStep = getTotalStep(uploadMode);
+        this.currentStep = uploadProcessStep.getCurrentStep();
+        this.totalStep = uploadProcessStep.getTotalStep(uploadMode);
         this.stepName = stepName;
         this.description = description;
-
         if (contentDTO != null) {
             this.contentProviderKey = contentDTO.result.content_provider_key;
         }
     }
 
-
-
-    public UploadProcessLogDTO(UploadMode uploadMode, String currentStep, String stepName, String description) {
+    public UploadProcessLogDTO(UploadMode uploadMode, UploadProcessStep uploadProcessStep, int fileOrder, String stepName, String description, KollusApiWatcherContentDTO contentDTO) {
         this.uploadMode = uploadMode;
-        this.currentStep = currentStep;
-        this.totalStep = getTotalStep(uploadMode);
+        this.currentStep = uploadProcessStep.getCurrentStep() + fileOrder;
+        this.totalStep = uploadProcessStep.getTotalStep(uploadMode);
+        this.stepName = stepName;
+        this.description = description;
+        if (contentDTO != null) {
+            this.contentProviderKey = contentDTO.result.content_provider_key;
+        }
+    }
+
+    public UploadProcessLogDTO(UploadMode uploadMode, UploadProcessStep uploadProcessStep, String stepName, String description) {
+        this.uploadMode = uploadMode;
+        this.currentStep = uploadProcessStep.getCurrentStep();
+        this.totalStep = uploadProcessStep.getTotalStep(uploadMode);
         this.stepName = stepName;
         this.description = description;
     }
 
-    private String getContentProviderKey(ArrayList<FileItemDTO> files) {
-        return files.get(0).getContentProviderKey();
+    private void setFileItemDto(FileItemDTO item) {
+        this.physicalPath = item.getPhysicalPath();
+        this.uploadPath = item.getUploadPath();
+        this.contentProviderKey = item.getContentProviderKey();
+        this.uploadFileKey = item.getUploadFileKey();
+        this.title = item.getTitle();
+
+        if (item.getMediaInfo() != null) {
+            this.mediaInfo = item.getMediaInfo();
+        }
     }
 
-    public String getJsonLogMsg() throws UnsupportedEncodingException {
-        putMdcUploadInfo();
-        return this.stepName;
-    }
-    private void putMdcUploadInfo() throws UnsupportedEncodingException {
+    private void putMdcUploadInfo() {
         MDC.clear();
 
         MDC.put("uploadMode", this.uploadMode);
@@ -130,81 +146,20 @@ public class UploadProcessLogDTO {
         }
 
         if (this.mediaInfo != null) {
-//            ObjectMapper objectMapper = new ObjectMapper();
-//            Map result = objectMapper.convertValue(this.mediaInfo, Map.class);
             MDC.put("mediaInfo", this.mediaInfo);
         }
-
-        if (this.fileObject != null) {
-
-//            HashMap nestedMdc = new HashMap<String, Object>();
-//            nestedMdc.put("bar",this.fileObject);
-//            MDC.put("foo", nestedMdc);
-//            ObjectMapper objectMapper = new ObjectMapper();
-//            HashMap result = objectMapper.convertValue(this.fileObject, HashMap.class);
-//            MDC.put("fileObject", result);
-        }
-
-
     }
 
-    private void setFileItemDto(FileItemDTO item) {
-        this.physicalPath = item.getPhysicalPath();
-        this.uploadPath = item.getUploadPath();
-        this.contentProviderKey = item.getContentProviderKey();
-        this.uploadFileKey = item.getUploadFileKey();
-        this.title = item.getTitle();
-
-        if (item.getMediaInfo() != null) {
-            this.mediaInfo = item.getMediaInfo();
-        }
+    public String getJsonLogMsg() {
+        putMdcUploadInfo();
+        return this.stepName;
     }
 
-    public String convertJsonStringMessage(Object fileObject) throws UnsupportedEncodingException {
-        Gson gson = BaseCommand.gson(true);
-        return gson.toJson(fileObject);
-    }
-
-    // Object 형태가 아니라서 안됨
-    public JsonObject getJsonObjectMessage(Object fileObject) {
-        Gson gson = new Gson();
-        return gson.toJsonTree(fileObject).getAsJsonObject();
-    }
-
-    // JsonArray 는 로그로 안찍힘
-    public JsonArray getJsonObjectMessage2(Object fileObject) {
-        Gson gson = new Gson();
-        return gson.toJsonTree(fileObject).getAsJsonArray();
-    }
-
-    public JsonArray getJsonArrayMessage(Object fileObject) {
-        Gson gson = new Gson();
-        JsonArray jsonArray = new JsonArray();
-        List<FileItemDTO> fileItemDTOS = (List<FileItemDTO>) fileObject;
-
-        for (FileItemDTO item : fileItemDTOS) {
-            String json = gson.toJson(item);
-            JsonObject convertedObject = new Gson().fromJson(json, JsonObject.class);
-            jsonArray.add(convertedObject);
-        }
-
-        return jsonArray;
-    }
-
-    private String getTotalStep(UploadMode uploadMode) {
-        if (uploadMode == null) {
+    private String getContentProviderKey(ArrayList<FileItemDTO> files) {
+        if (files.size() == 0) {
             throw new InvalidParameterException();
         }
-
-        if (uploadMode == UploadMode.FTP) {
-            return "5";
-        }
-
-        if (uploadMode == UploadMode.KUS) {
-            return "5";
-        }
-
-        throw new InvalidParameterException();
+        return files.get(0).getContentProviderKey();
     }
 
     private static boolean hasText(String s) {
@@ -213,9 +168,4 @@ public class UploadProcessLogDTO {
         }
         return true;
     }
-
-    public String toJSONEncodedString(String str) throws UnsupportedEncodingException {
-        return URLEncoder.encode(str, "UTF-8");
-    }
-
 }

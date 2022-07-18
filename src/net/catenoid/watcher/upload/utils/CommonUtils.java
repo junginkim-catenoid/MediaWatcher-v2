@@ -11,6 +11,7 @@ import net.catenoid.watcher.job.Role_Watcher;
 import net.catenoid.watcher.upload.config.StreamKind;
 import net.catenoid.watcher.upload.dto.*;
 import net.catenoid.watcher.upload.types.UploadMode;
+import net.catenoid.watcher.upload.types.UploadProcessStep;
 import net.catenoid.watcher.utils.WatcherUtils;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
@@ -845,7 +846,7 @@ public class CommonUtils {
             log.debug(String.format("move from %s to %s", src, dst));
             Path result = Files.move(src, dst, StandardCopyOption.REPLACE_EXISTING);
 
-            UploadProcessLogDTO step4SubMsg = new UploadProcessLogDTO(uploadMode, "4-" + (i+1), "WORK File Info Send Http Server STEP", String.format("move from %s to %s", src, dst), item);
+            UploadProcessLogDTO step4SubMsg = new UploadProcessLogDTO(uploadMode, UploadProcessStep.WORK_FILE_MOVE_DIRECTORY, i+1, "WORK File Info Send Http Server STEP", String.format("move from %s to %s", src, dst), item);
             uploadProcessLog.info(step4SubMsg.getJsonLogMsg());
 
             String completePath = item.getPhysicalPath() + "_complete";
