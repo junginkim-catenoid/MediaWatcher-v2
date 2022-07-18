@@ -298,7 +298,7 @@ public class FtpUploadDao {
                         log.debug("등록성공: " + item.getUploadFileKey() + ", " + item.toString());
 
                         UploadProcessLogDTO step2SubMsg = new UploadProcessLogDTO(UploadMode.FTP, "2-" + (i+1), "HTTP Register Server Send STEP", "등록성공 : " + item.getUploadFileKey(), item);
-                        uploadProcessLog.info(step2SubMsg.getJsonLogMsg());
+                        uploadProcessLog.info(item.getUploadPath());
 
                         isUploadOrDelete = db_update_file_status(item.getPhysicalPath(), 1, item.getUploadFileKey(),
                                 item.getContentPath(), item.getSnapshotPath(), item.getChecksumType(),

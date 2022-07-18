@@ -107,7 +107,7 @@ public class UploadProcessLogDTO {
         MDC.put("uploadMode", this.uploadMode);
         MDC.put("currentStep", this.currentStep);
         MDC.put("totalStep", this.totalStep);
-        MDC.put("description", hasText(this.description) ? this.description : "");
+        MDC.put("description", this.description);
 
         if (hasText(this.contentProviderKey)) {
             MDC.put("contentProviderKey", this.contentProviderKey);
