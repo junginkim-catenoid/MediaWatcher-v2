@@ -14,6 +14,8 @@ import net.catenoid.watcher.upload.types.UploadProcessStep;
 import net.catenoid.watcher.upload.utils.FtpUploadUtils;
 import net.catenoid.watcher.upload.utils.LSParser;
 import net.catenoid.watcher.uploadDao.FtpUploadDao;
+import net.logstash.log4j.JSONEventLayoutV1;
+import org.apache.log4j.Appender;
 import org.apache.log4j.Logger;
 
 import java.io.File;
@@ -110,9 +112,6 @@ public class FtpUploadServiceImp extends FtpUploadDao implements FtpUploadServic
             if (sendRegistCnt > 0) {
                 log.info("Send to register count : " + sendRegistCnt);
             }
-
-//            Appender appender = uploadProcessLog.getAppender("uploadProcessFile");
-//            JSONEventLayoutV1 layoutV1 = (JSONEventLayoutV1) appender.getLayout();
 
 
             /**
@@ -229,6 +228,10 @@ public class FtpUploadServiceImp extends FtpUploadDao implements FtpUploadServic
          * 파일 존재확인 실패수
          */
         int error_count = 0;
+
+        Appender appender = uploadProcessLog.getAppender("uploadProcessFile");
+        JSONEventLayoutV1 layoutV1 = (JSONEventLayoutV1) appender.getLayout();
+        layoutV1.setUserFields("@version=1");
 
         if (files.size() > 0) {
             UploadProcessLogDTO step1Msg = new UploadProcessLogDTO(UploadMode.FTP, UploadProcessStep.LS_PARSING_NEW_FILES, "Ls Parsing New File Items STEP", "Ls parsing file cnt : " + files.size()  + ", dirs cnt : " + dirs.size(), files);
