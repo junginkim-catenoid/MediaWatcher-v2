@@ -101,7 +101,7 @@ public class KusUploadServiceImp implements KusUploadService {
 
         if (apiResult.error != 0) {
             log.error(responseBody);
-            UploadProcessLogDTO step5ErrMsg = new UploadProcessLogDTO(UploadMode.KUS, UploadProcessStep.HTTP_COMPLETE_SERVER_SEND, "WORK File Info Send Http Server STEP","error : " + responseBody);
+            UploadProcessLogDTO step5ErrMsg = new UploadProcessLogDTO(UploadMode.KUS, UploadProcessStep.HTTP_COMPLETE_SERVER_SEND, "[ERROR] WORK File Info Send Http Server STEP","error code : " + apiResult.error);
             uploadProcessLog.error(step5ErrMsg.getJsonLogMsg());
             utils.failApiResultOrRegisterProcess(apiResult, null);
             return cnt;
@@ -110,12 +110,12 @@ public class KusUploadServiceImp implements KusUploadService {
         for (int i = 0; i < apiResult.result.watcher_files.length; i++) {
 
             KollusApiWatcherContentDTO item = apiResult.result.watcher_files[i];
-            if (item.error == 0) {
+            if (item.error != 0) {
                 // error가 아닌 경우만 media_content_id가 있으나 사용처가 없어 삭제함
                 FileItemDTO findItem = utils.findSendItem(fileList, item.result.key);
                 if (findItem == null) {
                     log.error("FileItem  파일 정보를 찾을 수 없습니다. [" + item.result.key + "]");
-                    UploadProcessLogDTO step5SubMsg = new UploadProcessLogDTO(UploadMode.KUS, UploadProcessStep.HTTP_COMPLETE_SERVER_SEND_SUB, i+1, "WORK File Info Send Http Server STEP", "Complete 실패, FileItem  파일 정보를 찾을 수 없습니다. [" + item.result.key + "]", item);
+                    UploadProcessLogDTO step5SubMsg = new UploadProcessLogDTO(UploadMode.KUS, UploadProcessStep.HTTP_COMPLETE_SERVER_SEND_SUB, i+1, "[ERROR] WORK File Info Send Http Server STEP", "Complete 실패, FileItem  파일 정보를 찾을 수 없습니다. [" + item.result.key + "]", item);
                     uploadProcessLog.error(step5SubMsg.getJsonLogMsg());
                 }
                 cnt += 1;
@@ -125,7 +125,7 @@ public class KusUploadServiceImp implements KusUploadService {
             }
 
             log.warn("warn code: " + item.error + ", warn message: " + item.message);
-            UploadProcessLogDTO step5SubMsg = new UploadProcessLogDTO(UploadMode.KUS, UploadProcessStep.HTTP_COMPLETE_SERVER_SEND_SUB, i+1, "WORK File Info Send Http Server STEP", "complete 전송 실패, warn code: " + item.error + ", warn message: " + item.message, item);
+            UploadProcessLogDTO step5SubMsg = new UploadProcessLogDTO(UploadMode.KUS, UploadProcessStep.HTTP_COMPLETE_SERVER_SEND_SUB, i+1, "[ERROR] WORK File Info Send Http Server STEP", "complete 전송 실패, warn code: " + item.error + ", warn message: " + item.message, item);
             uploadProcessLog.error(step5SubMsg.getJsonLogMsg());
 
             if (item.result == null) {
@@ -136,7 +136,7 @@ public class KusUploadServiceImp implements KusUploadService {
 
             if (findItem == null) {
                 log.error("실패한 파일 정보를 찾을 수 없습니다. [" + item.result.key + "]");
-                UploadProcessLogDTO step5ErrMsg = new UploadProcessLogDTO(UploadMode.KUS, UploadProcessStep.HTTP_COMPLETE_SERVER_SEND_SUB, i+1, "WORK File Info Send Http Server STEP", "Complete 실패, FileItem  파일 정보를 찾을 수 없습니다. [" + item.result.key + "]", item);
+                UploadProcessLogDTO step5ErrMsg = new UploadProcessLogDTO(UploadMode.KUS, UploadProcessStep.HTTP_COMPLETE_SERVER_SEND_SUB, i+1, "[ERROR] WORK File Info Send Http Server STEP", "Complete 실패, FileItem  파일 정보를 찾을 수 없습니다. [" + item.result.key + "]", item);
                 uploadProcessLog.error(step5ErrMsg.getJsonLogMsg());
                 continue;
             }
@@ -152,7 +152,7 @@ public class KusUploadServiceImp implements KusUploadService {
             }
 
             log.warn("Complete Api is deleted to status is failed" + findItem.toString());
-            UploadProcessLogDTO step5ErrMsg = new UploadProcessLogDTO(UploadMode.KUS, UploadProcessStep.HTTP_COMPLETE_SERVER_SEND_SUB, i+1, "WORK File Info Send Http Server STEP", "Complete Api is deleted to status is failed", findItem);
+            UploadProcessLogDTO step5ErrMsg = new UploadProcessLogDTO(UploadMode.KUS, UploadProcessStep.HTTP_COMPLETE_SERVER_SEND_SUB, i+1, "[ERROR] WORK File Info Send Http Server STEP", "Complete Api is deleted to status is failed", findItem);
             uploadProcessLog.error(step5ErrMsg.getJsonLogMsg());
             utils.removeToIndividuaFile(findItem.getPhysicalPath(), findItem.getSnapshotPath(), completePath, msgList);
 
@@ -206,7 +206,7 @@ public class KusUploadServiceImp implements KusUploadService {
         uploadProcessLog.info(step2Msg.getJsonLogMsg());
 
         if (apiResult.error != 0) {
-            UploadProcessLogDTO errorStep2Msg = new UploadProcessLogDTO(UploadMode.KUS, UploadProcessStep.HTTP_REGISTER_SERVER_SEND, "HTTP Register Server Send STEP", "server return != 200 or data error");
+            UploadProcessLogDTO errorStep2Msg = new UploadProcessLogDTO(UploadMode.KUS, UploadProcessStep.HTTP_REGISTER_SERVER_SEND, "[ERROR] HTTP Register Server Send STEP", "server return != 200 or data error");
             uploadProcessLog.error(errorStep2Msg.getJsonLogMsg());
 
             utils.failApiResultOrRegisterProcess(apiResult, null);
@@ -232,7 +232,7 @@ public class KusUploadServiceImp implements KusUploadService {
 
             log.error(item.message);
 
-            UploadProcessLogDTO step2ErrMsg = new UploadProcessLogDTO(UploadMode.KUS, UploadProcessStep.HTTP_REGISTER_SERVER_SEND_SUB, i+1, "HTTP Register Server Send STEP", "등록실패 : " + f.getUploadFileKey(), f);
+            UploadProcessLogDTO step2ErrMsg = new UploadProcessLogDTO(UploadMode.KUS, UploadProcessStep.HTTP_REGISTER_SERVER_SEND_SUB, i+1, "[ERROR] HTTP Register Server Send STEP", "등록실패 : " + f.getUploadFileKey(), f);
             uploadProcessLog.error(step2ErrMsg.getJsonLogMsg());
             utils.failApiResultOrRegisterProcess(null, item);
         }

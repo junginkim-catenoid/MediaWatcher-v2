@@ -1,6 +1,7 @@
 package net.catenoid.watcher.uploadImp;
 
 import com.kollus.json_data.config.ModuleConfig;
+import net.catenoid.watcher.Watcher;
 import net.catenoid.watcher.config.Config;
 import net.catenoid.watcher.config.WatcherFolder;
 import net.catenoid.watcher.files.ConvertMove;
@@ -234,7 +235,9 @@ public class FtpUploadServiceImp extends FtpUploadDao implements FtpUploadServic
             uploadProcessLog.info(step1Msg.getJsonLogMsg());
         }
 
-        for (FileItemDTO f : files) {
+        for (int i=0; i<files.size(); i++) {
+            FileItemDTO f = files.get(i);
+
             f.setPhysicalPath(f.getPhysicalPath().replaceAll("\\\"", "\""));
             f.setPhysicalPath(f.getPhysicalPath().replaceAll("/\"", "\""));
             File file = new File(f.getPhysicalPath());
@@ -249,11 +252,12 @@ public class FtpUploadServiceImp extends FtpUploadDao implements FtpUploadServic
             if (!isMediaContentFile) {
                 log.debug("is not MediaFile : " + f.toString());
 
-                UploadProcessLogDTO step1ErrorMsg = new UploadProcessLogDTO(UploadMode.FTP, UploadProcessStep.LS_PARSING_NEW_FILES, "Ls Parsing New File Items STEP", "is not MediaFile : " + f.getTitle(), f);
+                UploadProcessLogDTO step1ErrorMsg = new UploadProcessLogDTO(UploadMode.FTP, UploadProcessStep.LS_PARSING_NEW_FILES_SUB, i+1, "[ERROR] Ls Parsing New File Items STEP", "is not MediaFile : " + f.getTitle(), f);
                 uploadProcessLog.error(step1ErrorMsg.getJsonLogMsg());
 
                 if (file.delete()) {
                     log.debug("Not MediaFile removed");
+                    files.remove(f);
                 }
             }
 
@@ -311,7 +315,6 @@ public class FtpUploadServiceImp extends FtpUploadDao implements FtpUploadServic
         UploadProcessLogDTO step5Msg = new UploadProcessLogDTO(UploadMode.FTP, UploadProcessStep.HTTP_COMPLETE_SERVER_SEND, "WORK File Info Send Http Server STEP", "sendFtpCompleteApiCnt : " + sendFtpCompleteApiCnt, sendItem);
         uploadProcessLog.info(step5Msg.getJsonLogMsg());
 
-
         if (sendFtpCompleteApiCnt == 0) {
             for (FileItemDTO item : sendItem) {
                 // 오류일 경우 재 전송을 위해 STATUS값을 1로 rollback 시킨다.
@@ -320,7 +323,7 @@ public class FtpUploadServiceImp extends FtpUploadDao implements FtpUploadServic
             }
             log.error(url + " - error");
 
-            UploadProcessLogDTO errorStep5Msg = new UploadProcessLogDTO(UploadMode.FTP, UploadProcessStep.HTTP_COMPLETE_SERVER_SEND, "WORK File Info Send Http Server STEP", url + " - error");
+            UploadProcessLogDTO errorStep5Msg = new UploadProcessLogDTO(UploadMode.FTP, UploadProcessStep.HTTP_COMPLETE_SERVER_SEND, "[ERROR] WORK File Info Send Http Server STEP", url + " - error");
             uploadProcessLog.error(errorStep5Msg.getJsonLogMsg());
 
         } else {
@@ -344,7 +347,7 @@ public class FtpUploadServiceImp extends FtpUploadDao implements FtpUploadServic
                     UploadProcessLogDTO step5SubMsg = new UploadProcessLogDTO(UploadMode.FTP, UploadProcessStep.HTTP_COMPLETE_SERVER_SEND_SUB, i+1, "WORK File Info Send Http Server STEP", "complete 성공 : " + item.getPhysicalPath(), item);
                     uploadProcessLog.info(step5SubMsg.getJsonLogMsg());
                 } else {
-                    UploadProcessLogDTO step5SubMsg = new UploadProcessLogDTO(UploadMode.FTP, UploadProcessStep.HTTP_COMPLETE_SERVER_SEND_SUB, i+1, "WORK File Info Send Http Server STEP", "complete 실패 : " + item.getUploadFileKey(), item);
+                    UploadProcessLogDTO step5SubMsg = new UploadProcessLogDTO(UploadMode.FTP, UploadProcessStep.HTTP_COMPLETE_SERVER_SEND_SUB, i+1, "[ERROR] WORK File Info Send Http Server STEP", "complete 실패 : " + item.getUploadFileKey(), item);
                     uploadProcessLog.error(step5SubMsg.getJsonLogMsg());
                 }
             }

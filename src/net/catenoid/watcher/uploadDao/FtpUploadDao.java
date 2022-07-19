@@ -309,22 +309,22 @@ public class FtpUploadDao {
                         }
                     } else {
                         log.debug("등록실패: " + item.getUploadFileKey());
-                        UploadProcessLogDTO step2SubMsg = new UploadProcessLogDTO(UploadMode.FTP, UploadProcessStep.HTTP_REGISTER_SERVER_SEND_SUB, i+1, "HTTP Register Server Send STEP", "등록실패 : " + item.getUploadFileKey(), item);
+                        UploadProcessLogDTO step2SubMsg = new UploadProcessLogDTO(UploadMode.FTP, UploadProcessStep.HTTP_REGISTER_SERVER_SEND_SUB, i+1, "[ERROR] HTTP Register Server Send STEP", "등록실패 : " + item.getPhysicalPath(), item);
                         uploadProcessLog.error(step2SubMsg.getJsonLogMsg());
 
 
                         isUploadOrDelete = db_delete_item_pysicalpath(item.getPhysicalPath());
-                        if (!isUploadOrDelete) {
+                        if (isUploadOrDelete) {
                             log.warn("등록 안된 파일 삭제 실패 : " + item.getUploadFileKey());
 
-                            UploadProcessLogDTO step2SubErrorMsg = new UploadProcessLogDTO(UploadMode.FTP, UploadProcessStep.HTTP_REGISTER_SERVER_SEND_SUB, i+1, "HTTP Register Server Send STEP", "등록 안된 파일 삭제 실패 : " + item.getUploadFileKey(), item);
+                            UploadProcessLogDTO step2SubErrorMsg = new UploadProcessLogDTO(UploadMode.FTP, UploadProcessStep.HTTP_REGISTER_SERVER_SEND_SUB, i+1, "[ERROR] HTTP Register Server Send STEP", "등록 안된 파일 삭제 실패 : " + item.getPhysicalPath(), item);
                             uploadProcessLog.error(step2SubErrorMsg.getJsonLogMsg());
                         }
                     }
                 }
             } else {
 
-                UploadProcessLogDTO errorStep2Msg = new UploadProcessLogDTO(UploadMode.FTP, UploadProcessStep.HTTP_REGISTER_SERVER_SEND, "HTTP Register Server Send STEP", "server return != 200 or data error");
+                UploadProcessLogDTO errorStep2Msg = new UploadProcessLogDTO(UploadMode.FTP, UploadProcessStep.HTTP_REGISTER_SERVER_SEND, "[ERROR] HTTP Register Server Send STEP", "server return != 200 or data error");
                 uploadProcessLog.error(errorStep2Msg.getJsonLogMsg());
 
                 log.error("server return != 200 or data error");

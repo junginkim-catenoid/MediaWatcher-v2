@@ -1,14 +1,22 @@
 package net.catenoid.watcher.upload.dto;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import net.catenoid.watcher.upload.types.UploadMode;
 import net.catenoid.watcher.upload.types.UploadProcessStep;
+import net.logstash.log4j.JSONEventLayoutV1;
+import org.apache.log4j.Appender;
+import org.apache.log4j.Logger;
 import org.apache.log4j.MDC;
 
 import java.security.InvalidParameterException;
-import java.util.ArrayList;
+import java.util.*;
+
+import static net.catenoid.watcher.Watcher.VERSION;
 
 public class UploadProcessLogDTO {
 
+    private static Logger uploadProcessLog = Logger.getLogger("UploadProcessLog");
     private UploadMode uploadMode;
     private String currentStep;
     private String totalStep;
@@ -19,7 +27,7 @@ public class UploadProcessLogDTO {
     private String physicalPath;
     private String uploadPath;
     private String uploadFileKey;
-    private ContentInfoDTO mediaInfo;
+    private Map<String,String> mediaInfo;
 
     public UploadProcessLogDTO(UploadMode uploadMode, UploadProcessStep uploadProcessStep, String stepName,
                                String description, ArrayList<FileItemDTO> files) {
@@ -65,17 +73,6 @@ public class UploadProcessLogDTO {
         }
     }
 
-    public UploadProcessLogDTO(UploadMode uploadMode, UploadProcessStep uploadProcessStep, String stepName, String description, KollusApiWatcherContentDTO contentDTO) {
-        this.uploadMode = uploadMode;
-        this.currentStep = uploadProcessStep.getCurrentStep();
-        this.totalStep = uploadProcessStep.getTotalStep(uploadMode);
-        this.stepName = stepName;
-        this.description = description;
-        if (contentDTO != null) {
-            this.contentProviderKey = contentDTO.result.content_provider_key;
-        }
-    }
-
     public UploadProcessLogDTO(UploadMode uploadMode, UploadProcessStep uploadProcessStep, int fileOrder, String stepName, String description, KollusApiWatcherContentDTO contentDTO) {
         this.uploadMode = uploadMode;
         this.currentStep = uploadProcessStep.getCurrentStep() + fileOrder;
@@ -95,6 +92,12 @@ public class UploadProcessLogDTO {
         this.description = description;
     }
 
+    public String getJsonLogMsg() {
+        setContextCustomFields();
+        putMdcUploadInfo();
+        return this.stepName;
+    }
+
     private void setFileItemDto(FileItemDTO item) {
         this.physicalPath = item.getPhysicalPath();
         this.uploadPath = item.getUploadPath();
@@ -103,7 +106,7 @@ public class UploadProcessLogDTO {
         this.title = item.getTitle();
 
         if (item.getMediaInfo() != null) {
-            this.mediaInfo = item.getMediaInfo();
+            setMediaInfoToMap(item.getMediaInfo());
         }
     }
 
@@ -114,10 +117,6 @@ public class UploadProcessLogDTO {
         MDC.put("currentStep", this.currentStep);
         MDC.put("totalStep", this.totalStep);
         MDC.put("description", this.description);
-
-        if (hasText(this.contentProviderKey)) {
-            MDC.put("contentProviderKey", this.contentProviderKey);
-        }
 
         if (hasText(this.title)) {
             MDC.put("title", this.title);
@@ -139,10 +138,35 @@ public class UploadProcessLogDTO {
             MDC.put("mediaInfo", this.mediaInfo);
         }
     }
+    private void setMediaInfoToMap(ContentInfoDTO mediaInfo) {
+        ObjectMapper mapper = new ObjectMapper();
+        mapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
+        this.mediaInfo = mapper.convertValue(mediaInfo, Map.class);
+    }
 
-    public String getJsonLogMsg() {
-        putMdcUploadInfo();
-        return this.stepName;
+    private void setContextCustomFields() {
+        Appender appender = uploadProcessLog.getAppender("uploadProcessFile");
+        JSONEventLayoutV1 layoutV1 = (JSONEventLayoutV1) appender.getLayout();
+        List<String> customFields = new ArrayList<>();
+
+        if (hasText(VERSION)) {
+            customFields.add("version:" + VERSION);
+        }
+        if (hasText(this.contentProviderKey)) {
+            customFields.add("cpk:" + this.contentProviderKey);
+        }
+
+        StringBuilder sb = new StringBuilder();
+        for (int i=0; i<customFields.size(); i++) {
+            sb.append(customFields.get(i));
+            if (i < customFields.size()-1) {
+                sb.append(",");
+            }
+        }
+
+        if (hasText(sb.toString())) {
+            layoutV1.setUserFields(sb.toString());
+        }
     }
 
     private String getContentProviderKey(ArrayList<FileItemDTO> files) {

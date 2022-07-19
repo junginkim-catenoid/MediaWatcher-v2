@@ -5,6 +5,7 @@ import java.security.InvalidParameterException;
 public enum UploadProcessStep {
 
     LS_PARSING_NEW_FILES("1"),
+    LS_PARSING_NEW_FILES_SUB("1-"),
     HTTP_REGISTER_SERVER_SEND("2"),
     HTTP_REGISTER_SERVER_SEND_SUB("2-"),
     CREATE_SNAP_FILE("3"),

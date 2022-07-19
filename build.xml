@@ -40,6 +40,9 @@
         <pathelement location="libs/asm-1.0.2.jar"/>
         <pathelement location="libs/json-smart-2.3.jar"/>
         <pathelement location="libs/commons-lang-2.6.jar"/>
+        <pathelement location="libs/jackson-databind-2.12.3.jar"/>
+        <pathelement location="libs/jackson-core-2.12.3.jar"/>
+        <pathelement location="libs/jackson-annotations-2.12.3.jar"/>
         <path refid="DERBY_CONTAINER.libraryclasspath"/>
     </path>
 
