@@ -7,6 +7,8 @@ import net.catenoid.watcher.config.HttpServerConf;
 import net.catenoid.watcher.config.WatcherFolder;
 import net.catenoid.watcher.http.*;
 import net.catenoid.watcher.job.Role_Watcher;
+import net.logstash.log4j.JSONEventLayoutV1;
+import org.apache.log4j.Appender;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.quartz.*;
@@ -30,6 +32,7 @@ import static org.quartz.TriggerBuilder.newTrigger;
 public class Watcher {
 
     private static Logger log = Logger.getLogger(Watcher.class);
+    private static Logger uploadProcessLog = Logger.getLogger("UploadProcessLog");
     public static String VERSION = getManifestInfo();
 //	public static String VERSION ="1.6-b415 [gson]";
 
@@ -63,6 +66,8 @@ public class Watcher {
         }
 
 //		PropertyConfigurator.configure( path + "/log4j.properties" );
+
+        setUploadLoggerContextInfo();
 
         String mode = null;
 
@@ -270,5 +275,13 @@ public class Watcher {
             // Silently ignore wrong manifests on classpath?
         }
         return null;
+    }
+
+    private static void setUploadLoggerContextInfo() {
+
+        Appender appender = uploadProcessLog.getAppender("uploadProcessFile");
+        JSONEventLayoutV1 layoutV1 = (JSONEventLayoutV1) appender.getLayout();
+        layoutV1.setUserFields("@version:" + VERSION);
+
     }
 }

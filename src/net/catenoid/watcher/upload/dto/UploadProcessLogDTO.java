@@ -1,21 +1,11 @@
 package net.catenoid.watcher.upload.dto;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.google.gson.Gson;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonObject;
-import com.kollus.json_data.BaseCommand;
 import net.catenoid.watcher.upload.types.UploadMode;
 import net.catenoid.watcher.upload.types.UploadProcessStep;
 import org.apache.log4j.MDC;
 
-import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
 import java.security.InvalidParameterException;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 public class UploadProcessLogDTO {
 

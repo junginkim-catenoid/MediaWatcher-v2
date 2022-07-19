@@ -229,10 +229,6 @@ public class FtpUploadServiceImp extends FtpUploadDao implements FtpUploadServic
          */
         int error_count = 0;
 
-        Appender appender = uploadProcessLog.getAppender("uploadProcessFile");
-        JSONEventLayoutV1 layoutV1 = (JSONEventLayoutV1) appender.getLayout();
-        layoutV1.setUserFields("@version=1");
-
         if (files.size() > 0) {
             UploadProcessLogDTO step1Msg = new UploadProcessLogDTO(UploadMode.FTP, UploadProcessStep.LS_PARSING_NEW_FILES, "Ls Parsing New File Items STEP", "Ls parsing file cnt : " + files.size()  + ", dirs cnt : " + dirs.size(), files);
             uploadProcessLog.info(step1Msg.getJsonLogMsg());
