@@ -562,10 +562,19 @@ public class CommonUtils {
 
     /**
      * File 의 MediaInfo 여부를 확인한다.
-     * @param physicalPath
+     * @param FileItemDTO f
      * @return
      */
-    public boolean checkIsMediaContent(String physicalPath) {
+    public boolean checkIsMediaContent(FileItemDTO f) {
+        log.info("MediaInfo Start Time " + new Date().toString());
+        String physicalPath = f.getPhysicalPath();
+
+        FileExtTransfer fileExtTransfer = new FileExtTransfer(conf.getTransferFileExtConf(), f.getContentProviderKey(), WatcherUtils.getFileExtention(physicalPath));
+        if (fileExtTransfer.isTarget()) {
+            log.info("is Target Provider");
+            physicalPath = fileExtTransfer.run(physicalPath);
+        }
+
         MediaInfo MI = new MediaInfo();
         if (MI.Open(physicalPath) == 0) {
             return false;
@@ -586,6 +595,8 @@ public class CommonUtils {
         String imageHeight = empty2null(MI.Get(StreamKind.Image, 0, "Height"));
 
         MI.Close();
+
+        log.info("MediaInfo End Time " + new Date().toString());
 
         if (hasText(duration)) {
             return true;
@@ -629,6 +640,9 @@ public class CommonUtils {
     }
 
     private boolean setMediaInfo(FileItemDTO f) {
+
+
+
         MediaInfo MI = new MediaInfo();
 
         if (MI.Open(f.getPhysicalPath()) == 0) {

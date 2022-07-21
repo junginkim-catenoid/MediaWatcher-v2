@@ -114,6 +114,17 @@
     "edge-sentinel-key" : "kollus",
     "password" : "",
     "redis-database" : 0
-  }
+  },
+  "transfer_file_ext" : [
+    {
+      "cpk" : "jungin-kim",
+      "transfer_target_ext" : [
+        {
+          "from": ".webm",
+          "to": ".mkv"
+        }
+      ]
+    }
+  ]
 }
 

@@ -247,8 +247,9 @@ public class FtpUploadServiceImp extends FtpUploadDao implements FtpUploadServic
                 continue;
             }
 
+
             // 미디어파일 여부를 조사한 후 로깅 및 삭제처리
-            boolean isMediaContentFile = utils.checkIsMediaContent(f.getPhysicalPath());
+            boolean isMediaContentFile = utils.checkIsMediaContent(f);
             if (!isMediaContentFile) {
                 log.debug("is not MediaFile : " + f.toString());
 

@@ -844,3 +844,363 @@ Caused by: java.lang.NumberFormatException: empty String
 [2022-07-21 14:38:01][INFO ](FtpUploadServiceImp.java:postCopyCompleteFiles:316) - WORK File Info Send Http Server STEP
 [2022-07-21 14:38:02][INFO ](FtpUploadServiceImp.java:postCopyCompleteFiles:344) - complete 성공 갯수(1) : /home/kollus/upload/jungin-kim/_None/sample.webm
 [2022-07-21 14:38:03][INFO ](FtpUploadServiceImp.java:postCopyCompleteFiles:348) - WORK File Info Send Http Server STEP
+[2022-07-21 16:59:43][INFO ](Watcher.java:start:94) - [PRG_START]
+[2022-07-21 16:59:43][INFO ](Watcher.java:printVersion:40) - [PRG_VER]null
+[2022-07-21 16:59:49][DEBUG](ThreadSafeClientConnManager.java:getConnection:235) - Get connection: {}->http://api.kr.dev.kollus.com, timeout = 0
+[2022-07-21 16:59:49][DEBUG](ThreadSafeClientConnManager.java:releaseConnection:280) - Released connection is reusable.
+[2022-07-21 17:00:05][INFO ](Config.java:printUrls:238) - URLS [watcher.list.insert] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/register
+[2022-07-21 17:00:05][INFO ](Config.java:printUrls:238) - URLS [watcher.list.complete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/complete
+[2022-07-21 17:00:05][INFO ](Config.java:printUrls:238) - URLS [watcher.list.delete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/remove
+[2022-07-21 17:00:05][INFO ](Config.java:printUrls:238) - URLS [watcher.usage_day_amount.insert] http://api.kr.dev.kollus.com/0/catenoid/usage_day_amount/register
+[2022-07-21 17:00:05][INFO ](Config.java:printUrls:238) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-07-21 17:00:05][INFO ](Config.java:printUrls:238) - URLS [transcoding_job.assign] http://jobmanager-dev-kr.kollus.com:8180/assign
+[2022-07-21 17:00:05][INFO ](Config.java:printUrls:238) - URLS [transcoding_job.manager] http://api.kr.dev.kollus.com/0/catenoid/transcoding_job/manager
+[2022-07-21 17:00:05][INFO ](Config.java:printUrls:238) - URLS [transcoding_file.register] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/register
+[2022-07-21 17:00:05][INFO ](Config.java:printUrls:238) - URLS [transcoding_file.update] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/update
+[2022-07-21 17:00:05][INFO ](Config.java:printUrls:238) - URLS [transcoding_file.complete] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete
+[2022-07-21 17:00:05][INFO ](Config.java:printUrls:238) - URLS [transcoding_file.complete_all] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete_all
+[2022-07-21 17:00:05][INFO ](Config.java:printUrls:238) - URLS [module.check_activated_at] http://api.kr.dev.kollus.com/0/catenoid/module/check_activated_at
+[2022-07-21 17:00:05][INFO ](Config.java:printUrls:238) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-07-21 17:00:06][DEBUG](Watcher.java:setupWatcher:233) - [PRG_CONF]job_watcherfile1=0/10 * * * * ?
+[2022-07-21 17:02:45][DEBUG](LinuxLineParser.java:parser:101) - /home/kollus/upload, /home/kollus/upload/jungin-kim/_None/sample.webm, 1658386173000, 1148996
+[2022-07-21 17:02:48][INFO ](FtpUploadServiceImp.java:newFileItems:235) - Ls Parsing New File Items STEP
+[2022-07-21 17:04:04][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/upload/jungin-kim/_None/sample.webm
+[2022-07-21 17:04:04][INFO ](CommonUtils.java:checkIsMediaContent:574) - physicalPath : /home/kollus/upload/jungin-kim/_None/sample.webm
+[2022-07-21 17:04:04][ERROR](CommonUtils.java:ExceptionLogPrint:333) - org.h2.jdbc.JdbcSQLException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-168]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.get(DbException.java:146)
+	at org.h2.message.DbException.get(DbException.java:135)
+	at org.h2.jdbc.JdbcConnection.checkClosed(JdbcConnection.java:1384)
+	at org.h2.jdbc.JdbcStatement.checkClosed(JdbcStatement.java:927)
+	at org.h2.jdbc.JdbcStatement.checkClosedForWrite(JdbcStatement.java:912)
+	at org.h2.jdbc.JdbcStatement.executeUpdateInternal(JdbcStatement.java:117)
+	at org.h2.jdbc.JdbcStatement.executeUpdate(JdbcStatement.java:110)
+	at net.catenoid.watcher.uploadDao.FtpUploadDao.existFileItem(FtpUploadDao.java:87)
+	at net.catenoid.watcher.uploadImp.FtpUploadServiceImp.newFileItems(FtpUploadServiceImp.java:265)
+	at net.catenoid.watcher.uploadImp.FtpUploadServiceImp.renewWorkFileList(FtpUploadServiceImp.java:90)
+	at net.catenoid.watcher.job.Role_Watcher.execute(Role_Watcher.java:156)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:557)
+
+[2022-07-21 17:04:04][ERROR](CommonUtils.java:ExceptionLogPrint:334) - org.h2.jdbc.JdbcSQLException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-168]
+[2022-07-21 17:04:04][ERROR](CommonUtils.java:ExceptionLogPrint:333) - java.lang.NullPointerException
+	at net.catenoid.watcher.uploadDao.FtpUploadDao.sendWatchFiles(FtpUploadDao.java:335)
+	at net.catenoid.watcher.uploadImp.FtpUploadServiceImp.findWorkFileList(FtpUploadServiceImp.java:111)
+	at net.catenoid.watcher.job.Role_Watcher.execute(Role_Watcher.java:157)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:557)
+
+[2022-07-21 17:04:04][ERROR](CommonUtils.java:ExceptionLogPrint:334) - java.lang.NullPointerException
+[2022-07-21 17:04:30][INFO ](Watcher.java:start:94) - [PRG_START]
+[2022-07-21 17:04:30][INFO ](Watcher.java:printVersion:40) - [PRG_VER]null
+[2022-07-21 17:04:33][DEBUG](ThreadSafeClientConnManager.java:getConnection:235) - Get connection: {}->http://api.kr.dev.kollus.com, timeout = 0
+[2022-07-21 17:04:33][DEBUG](ThreadSafeClientConnManager.java:releaseConnection:280) - Released connection is reusable.
+[2022-07-21 17:04:33][INFO ](Config.java:printUrls:238) - URLS [watcher.list.insert] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/register
+[2022-07-21 17:04:33][INFO ](Config.java:printUrls:238) - URLS [watcher.list.complete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/complete
+[2022-07-21 17:04:33][INFO ](Config.java:printUrls:238) - URLS [watcher.list.delete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/remove
+[2022-07-21 17:04:33][INFO ](Config.java:printUrls:238) - URLS [watcher.usage_day_amount.insert] http://api.kr.dev.kollus.com/0/catenoid/usage_day_amount/register
+[2022-07-21 17:04:33][INFO ](Config.java:printUrls:238) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-07-21 17:04:33][INFO ](Config.java:printUrls:238) - URLS [transcoding_job.assign] http://jobmanager-dev-kr.kollus.com:8180/assign
+[2022-07-21 17:04:33][INFO ](Config.java:printUrls:238) - URLS [transcoding_job.manager] http://api.kr.dev.kollus.com/0/catenoid/transcoding_job/manager
+[2022-07-21 17:04:33][INFO ](Config.java:printUrls:238) - URLS [transcoding_file.register] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/register
+[2022-07-21 17:04:33][INFO ](Config.java:printUrls:238) - URLS [transcoding_file.update] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/update
+[2022-07-21 17:04:33][INFO ](Config.java:printUrls:238) - URLS [transcoding_file.complete] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete
+[2022-07-21 17:04:33][INFO ](Config.java:printUrls:238) - URLS [transcoding_file.complete_all] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete_all
+[2022-07-21 17:04:33][INFO ](Config.java:printUrls:238) - URLS [module.check_activated_at] http://api.kr.dev.kollus.com/0/catenoid/module/check_activated_at
+[2022-07-21 17:04:33][INFO ](Config.java:printUrls:238) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-07-21 17:04:33][DEBUG](Watcher.java:setupWatcher:233) - [PRG_CONF]job_watcherfile1=0/10 * * * * ?
+[2022-07-21 17:04:42][DEBUG](LinuxLineParser.java:parser:101) - /home/kollus/upload, /home/kollus/upload/jungin-kim/_None/sample.webm, 1658386173000, 1148996
+[2022-07-21 17:04:44][INFO ](FtpUploadServiceImp.java:newFileItems:235) - Ls Parsing New File Items STEP
+[2022-07-21 17:04:46][INFO ](CommonUtils.java:checkIsMediaContent:569) - MediaInfo Start Time Thu Jul 21 17:04:46 KST 2022
+[2022-07-21 17:04:52][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/upload/jungin-kim/_None/sample.webm
+[2022-07-21 17:04:52][INFO ](CommonUtils.java:checkIsMediaContent:576) - physicalPath : /home/kollus/upload/jungin-kim/_None/sample.webm
+[2022-07-21 17:04:52][INFO ](CommonUtils.java:checkIsMediaContent:592) - MediaInfo End Time Thu Jul 21 17:04:52 KST 2022
+[2022-07-21 17:05:02][DEBUG](FtpUploadDao.java:sendWatchFiles:252) - sql result = rs5: org.h2.result.LocalResult@45cb47e6 columns: 19 rows: 1 pos: 0
+[2022-07-21 17:05:02][DEBUG](CommonUtils.java:fromResultSet:401) - /home/kollus/upload/jungin-kim/_None/sample.webm
+[2022-07-21 17:05:02][INFO ](CommonUtils.java:pathToTRmpk:738) - [ pathToTRmpk 1/3 ] sample.webm
+[2022-07-21 17:05:02][INFO ](CommonUtils.java:pathToTRmpk:742) - [ pathToTRmpk 2/3 ] sample
+[2022-07-21 17:05:02][DEBUG](CommonUtils.java:fromResultSet:438) - fromResultSet Add TransCoder : null
+[2022-07-21 17:05:02][DEBUG](CommonUtils.java:fromResultSet:439) - fromResultSet Path : /jungin-kim/_None/sample.webm
+[2022-07-21 17:05:02][DEBUG](CommonUtils.java:fromResultSet:440) - fromResultSet item : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/sample.webm","upload_path":"/jungin-kim/_None/sample.webm","filesize":1148996,"filesize_str":"1.1 MB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"sample","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-07-21 17:05:02][DEBUG](FtpUploadDao.java:sendWatchFiles:281) - file register 보내는값 = [{"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/sample.webm","upload_path":"/jungin-kim/_None/sample.webm","filesize":1148996,"filesize_str":"1.1 MB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"sample","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}]
+[2022-07-21 17:05:02][DEBUG](CommonUtils.java:getHttpResponse:176) - Post Requests Transfer Content : watcher_files=[{"kind":1,"module_key":"watcherfile1","is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/sample.webm","upload_path":"/jungin-kim/_None/sample.webm","filesize":1148996,"filesize_str":"1.1 MB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"sample","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}]
+[2022-07-21 17:05:08][INFO ](Watcher.java:start:94) - [PRG_START]
+[2022-07-21 17:05:08][INFO ](Watcher.java:printVersion:40) - [PRG_VER]null
+[2022-07-21 17:05:08][DEBUG](ThreadSafeClientConnManager.java:getConnection:235) - Get connection: {}->http://api.kr.dev.kollus.com, timeout = 0
+[2022-07-21 17:05:09][DEBUG](ThreadSafeClientConnManager.java:releaseConnection:280) - Released connection is reusable.
+[2022-07-21 17:05:09][INFO ](Config.java:printUrls:238) - URLS [watcher.list.insert] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/register
+[2022-07-21 17:05:09][INFO ](Config.java:printUrls:238) - URLS [watcher.list.complete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/complete
+[2022-07-21 17:05:09][INFO ](Config.java:printUrls:238) - URLS [watcher.list.delete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/remove
+[2022-07-21 17:05:09][INFO ](Config.java:printUrls:238) - URLS [watcher.usage_day_amount.insert] http://api.kr.dev.kollus.com/0/catenoid/usage_day_amount/register
+[2022-07-21 17:05:09][INFO ](Config.java:printUrls:238) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-07-21 17:05:09][INFO ](Config.java:printUrls:238) - URLS [transcoding_job.assign] http://jobmanager-dev-kr.kollus.com:8180/assign
+[2022-07-21 17:05:09][INFO ](Config.java:printUrls:238) - URLS [transcoding_job.manager] http://api.kr.dev.kollus.com/0/catenoid/transcoding_job/manager
+[2022-07-21 17:05:09][INFO ](Config.java:printUrls:238) - URLS [transcoding_file.register] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/register
+[2022-07-21 17:05:09][INFO ](Config.java:printUrls:238) - URLS [transcoding_file.update] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/update
+[2022-07-21 17:05:09][INFO ](Config.java:printUrls:238) - URLS [transcoding_file.complete] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete
+[2022-07-21 17:05:09][INFO ](Config.java:printUrls:238) - URLS [transcoding_file.complete_all] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete_all
+[2022-07-21 17:05:09][INFO ](Config.java:printUrls:238) - URLS [module.check_activated_at] http://api.kr.dev.kollus.com/0/catenoid/module/check_activated_at
+[2022-07-21 17:05:09][INFO ](Config.java:printUrls:238) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-07-21 17:05:09][DEBUG](Watcher.java:setupWatcher:233) - [PRG_CONF]job_watcherfile1=0/10 * * * * ?
+[2022-07-21 17:05:12][DEBUG](LinuxLineParser.java:parser:101) - /home/kollus/upload, /home/kollus/upload/jungin-kim/_None/sample.webm, 1658386173000, 1148996
+[2022-07-21 17:05:15][INFO ](FtpUploadServiceImp.java:newFileItems:235) - Ls Parsing New File Items STEP
+[2022-07-21 17:05:15][INFO ](CommonUtils.java:checkIsMediaContent:569) - MediaInfo Start Time Thu Jul 21 17:05:15 KST 2022
+[2022-07-21 17:05:15][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/upload/jungin-kim/_None/sample.webm
+[2022-07-21 17:05:15][INFO ](CommonUtils.java:checkIsMediaContent:576) - physicalPath : /home/kollus/upload/jungin-kim/_None/sample.webm
+[2022-07-21 17:05:15][INFO ](CommonUtils.java:checkIsMediaContent:592) - MediaInfo End Time Thu Jul 21 17:05:15 KST 2022
+[2022-07-21 17:05:27][DEBUG](FtpUploadDao.java:sendWatchFiles:252) - sql result = rs5: org.h2.result.LocalResult@2e40013e columns: 19 rows: 1 pos: 0
+[2022-07-21 17:05:27][DEBUG](CommonUtils.java:fromResultSet:401) - /home/kollus/upload/jungin-kim/_None/sample.webm
+[2022-07-21 17:05:27][INFO ](CommonUtils.java:pathToTRmpk:738) - [ pathToTRmpk 1/3 ] sample.webm
+[2022-07-21 17:05:27][INFO ](CommonUtils.java:pathToTRmpk:742) - [ pathToTRmpk 2/3 ] sample
+[2022-07-21 17:05:27][DEBUG](CommonUtils.java:fromResultSet:438) - fromResultSet Add TransCoder : null
+[2022-07-21 17:05:27][DEBUG](CommonUtils.java:fromResultSet:439) - fromResultSet Path : /jungin-kim/_None/sample.webm
+[2022-07-21 17:05:27][DEBUG](CommonUtils.java:fromResultSet:440) - fromResultSet item : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/sample.webm","upload_path":"/jungin-kim/_None/sample.webm","filesize":1148996,"filesize_str":"1.1 MB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"sample","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-07-21 17:05:27][DEBUG](FtpUploadDao.java:sendWatchFiles:281) - file register 보내는값 = [{"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/sample.webm","upload_path":"/jungin-kim/_None/sample.webm","filesize":1148996,"filesize_str":"1.1 MB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"sample","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}]
+[2022-07-21 17:05:29][DEBUG](CommonUtils.java:getHttpResponse:176) - Post Requests Transfer Content : watcher_files=[{"kind":1,"module_key":"watcherfile1","is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/sample.webm","upload_path":"/jungin-kim/_None/sample.webm","filesize":1148996,"filesize_str":"1.1 MB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"sample","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}]
+[2022-07-21 17:05:29][DEBUG](CommonUtils.java:sendPostToApi:97) - Post Response Transfer Content [register] : {"error":0,"message":"","watcher_file":{"error":0,"message":"","result":{"error_code":0,"error_detail":"","content_provider_key":"","key":"","media_content_id":0,"content_path":"","upload_path":"","is_audio_file":0,"checksum_type":0,"snapshot_path":"","physical_path":"","delete_watcher_file_upload_url":"","poster":{"second":0}}},"result":{"error_code":0,"error_detail":"","watcher_files":[{"error":0,"message":"ok","result":{"error_code":0,"error_detail":"","content_provider_key":"jungin-kim","key":"DSFDS123SDFDS","media_content_id":0,"content_path":"/jungin-kim","upload_path":"/jungin-kim/_None/sample.webm","is_audio_file":0,"checksum_type":0,"snapshot_path":"","physical_path":"/home/kollus/upload/jungin-kim/_None/sample.webm","delete_watcher_file_upload_url":"","poster":{"second":0}}}]}}
+
+[2022-07-21 17:05:35][DEBUG](CommonUtils.java:convertResultApiItem:266) - register 반환값 (fileItem) = {"error":0,"message":"ok","result":{"error_code":0,"error_detail":"","content_provider_key":"jungin-kim","key":"DSFDS123SDFDS","media_content_id":0,"content_path":"/jungin-kim","upload_path":"/jungin-kim/_None/sample.webm","is_audio_file":0,"checksum_type":0,"snapshot_path":"","physical_path":"/home/kollus/upload/jungin-kim/_None/sample.webm","poster":{"second":0,"width":0,"height":0}}}
+[2022-07-21 17:05:35][INFO ](FtpUploadDao.java:sendWatchFiles:290) - HTTP Register Server Send STEP
+[2022-07-21 17:05:35][DEBUG](FtpUploadDao.java:sendWatchFiles:299) - 등록성공: DSFDS123SDFDS, {"kind":1,"module_key":"watcherfile1","is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/sample.webm","upload_path":"/jungin-kim/_None/sample.webm","filesize":1148996,"filesize_str":"1.1 MB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"DSFDS123SDFDS","content_path":"/jungin-kim","snapshot_path":"","title":"sample","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-07-21 17:05:35][INFO ](FtpUploadDao.java:sendWatchFiles:302) - HTTP Register Server Send STEP
+[2022-07-21 17:05:35][INFO ](FtpUploadDao.java:sendWatchFiles:333) - postWatcherFileRegister End : watcherfile1
+[2022-07-21 17:05:35][INFO ](FtpUploadServiceImp.java:findWorkFileList:114) - Send to register count : 1
+[2022-07-21 17:05:35][DEBUG](CommonUtils.java:fromResultSet:401) - /home/kollus/upload/jungin-kim/_None/sample.webm
+[2022-07-21 17:05:35][INFO ](CommonUtils.java:pathToTRmpk:738) - [ pathToTRmpk 1/3 ] sample.webm
+[2022-07-21 17:05:35][INFO ](CommonUtils.java:pathToTRmpk:742) - [ pathToTRmpk 2/3 ] sample
+[2022-07-21 17:05:35][DEBUG](CommonUtils.java:fromResultSet:438) - fromResultSet Add TransCoder : null
+[2022-07-21 17:05:35][DEBUG](CommonUtils.java:fromResultSet:439) - fromResultSet Path : /jungin-kim/_None/sample.webm
+[2022-07-21 17:05:35][DEBUG](CommonUtils.java:fromResultSet:440) - fromResultSet item : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/sample.webm","upload_path":"/jungin-kim/_None/sample.webm","filesize":1148996,"filesize_str":"1.1 MB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"DSFDS123SDFDS","content_path":"/jungin-kim","snapshot_path":"","title":"sample","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-07-21 17:05:35][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/upload/jungin-kim/_None/sample.webm
+[2022-07-21 17:05:35][INFO ](CommonUtils.java:setMediaInfo:667) - MediaInfo information : null
+[2022-07-21 17:05:35][DEBUG](FtpUploadDao.java:selectCompareOver:425) - Select work file: {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/sample.webm","upload_path":"/jungin-kim/_None/sample.webm","filesize":1148996,"filesize_str":"1.1 MB","lastmodified":1658386173000,"lastmodified_str":"2022-07-21T15:49:33.000+0900","media_information":"%7B%0A++%22format%22%3A+%22Matroska%22%2C%0A++%22video.format%22%3A+%22AVC%22%2C%0A++%22video.width%22%3A+%221280%22%2C%0A++%22video.height%22%3A+%22720%22%2C%0A++%22video.ratio%22%3A+%221.778%22%2C%0A++%22video.rotation%22%3A+%220%22%2C%0A++%22audio.format%22%3A+%22Opus%22%2C%0A++%22audio.sample.rate%22%3A+%2248000%22%0A%7D","content_provider_key":"jungin-kim","key":"DSFDS123SDFDS","content_path":"/jungin-kim","snapshot_path":"","title":"sample","md5":"","format":"Matroska","duration":0.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-07-21 17:05:35][ERROR](CommonUtils.java:ExceptionLogPrint:333) - org.h2.jdbc.JdbcSQLException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-168]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.get(DbException.java:146)
+	at org.h2.message.DbException.get(DbException.java:135)
+	at org.h2.jdbc.JdbcConnection.checkClosed(JdbcConnection.java:1384)
+	at org.h2.jdbc.JdbcStatement.checkClosed(JdbcStatement.java:927)
+	at org.h2.jdbc.JdbcStatement.checkClosed(JdbcStatement.java:901)
+	at org.h2.jdbc.JdbcResultSet.checkClosed(JdbcResultSet.java:2948)
+	at org.h2.jdbc.JdbcResultSet.next(JdbcResultSet.java:123)
+	at net.catenoid.watcher.uploadDao.FtpUploadDao.selectCompareOver(FtpUploadDao.java:406)
+	at net.catenoid.watcher.uploadImp.FtpUploadServiceImp.findWorkFileList(FtpUploadServiceImp.java:121)
+	at net.catenoid.watcher.job.Role_Watcher.execute(Role_Watcher.java:157)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:557)
+
+[2022-07-21 17:05:35][ERROR](CommonUtils.java:ExceptionLogPrint:334) - org.h2.jdbc.JdbcSQLException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-168]
+[2022-07-21 17:22:45][INFO ](Watcher.java:start:94) - [PRG_START]
+[2022-07-21 17:22:45][INFO ](Watcher.java:printVersion:40) - [PRG_VER]null
+[2022-07-21 17:22:45][DEBUG](ThreadSafeClientConnManager.java:getConnection:235) - Get connection: {}->http://api.kr.dev.kollus.com, timeout = 0
+[2022-07-21 17:22:45][DEBUG](ThreadSafeClientConnManager.java:releaseConnection:280) - Released connection is reusable.
+[2022-07-21 17:22:45][INFO ](Config.java:printUrls:238) - URLS [watcher.list.insert] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/register
+[2022-07-21 17:22:45][INFO ](Config.java:printUrls:238) - URLS [watcher.list.complete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/complete
+[2022-07-21 17:22:45][INFO ](Config.java:printUrls:238) - URLS [watcher.list.delete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/remove
+[2022-07-21 17:22:45][INFO ](Config.java:printUrls:238) - URLS [watcher.usage_day_amount.insert] http://api.kr.dev.kollus.com/0/catenoid/usage_day_amount/register
+[2022-07-21 17:22:45][INFO ](Config.java:printUrls:238) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-07-21 17:22:45][INFO ](Config.java:printUrls:238) - URLS [transcoding_job.assign] http://jobmanager-dev-kr.kollus.com:8180/assign
+[2022-07-21 17:22:45][INFO ](Config.java:printUrls:238) - URLS [transcoding_job.manager] http://api.kr.dev.kollus.com/0/catenoid/transcoding_job/manager
+[2022-07-21 17:22:45][INFO ](Config.java:printUrls:238) - URLS [transcoding_file.register] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/register
+[2022-07-21 17:22:45][INFO ](Config.java:printUrls:238) - URLS [transcoding_file.update] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/update
+[2022-07-21 17:22:45][INFO ](Config.java:printUrls:238) - URLS [transcoding_file.complete] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete
+[2022-07-21 17:22:45][INFO ](Config.java:printUrls:238) - URLS [transcoding_file.complete_all] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete_all
+[2022-07-21 17:22:45][INFO ](Config.java:printUrls:238) - URLS [module.check_activated_at] http://api.kr.dev.kollus.com/0/catenoid/module/check_activated_at
+[2022-07-21 17:22:45][INFO ](Config.java:printUrls:238) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-07-21 17:22:45][DEBUG](Watcher.java:setupWatcher:233) - [PRG_CONF]job_watcherfile1=0/10 * * * * ?
+[2022-07-21 17:24:45][INFO ](Watcher.java:start:94) - [PRG_START]
+[2022-07-21 17:24:45][INFO ](Watcher.java:printVersion:40) - [PRG_VER]null
+[2022-07-21 17:24:45][DEBUG](ThreadSafeClientConnManager.java:getConnection:235) - Get connection: {}->http://api.kr.dev.kollus.com, timeout = 0
+[2022-07-21 17:24:45][DEBUG](ThreadSafeClientConnManager.java:releaseConnection:280) - Released connection is reusable.
+[2022-07-21 17:24:45][INFO ](Config.java:printUrls:238) - URLS [watcher.list.insert] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/register
+[2022-07-21 17:24:45][INFO ](Config.java:printUrls:238) - URLS [watcher.list.complete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/complete
+[2022-07-21 17:24:45][INFO ](Config.java:printUrls:238) - URLS [watcher.list.delete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/remove
+[2022-07-21 17:24:45][INFO ](Config.java:printUrls:238) - URLS [watcher.usage_day_amount.insert] http://api.kr.dev.kollus.com/0/catenoid/usage_day_amount/register
+[2022-07-21 17:24:45][INFO ](Config.java:printUrls:238) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-07-21 17:24:45][INFO ](Config.java:printUrls:238) - URLS [transcoding_job.assign] http://jobmanager-dev-kr.kollus.com:8180/assign
+[2022-07-21 17:24:45][INFO ](Config.java:printUrls:238) - URLS [transcoding_job.manager] http://api.kr.dev.kollus.com/0/catenoid/transcoding_job/manager
+[2022-07-21 17:24:45][INFO ](Config.java:printUrls:238) - URLS [transcoding_file.register] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/register
+[2022-07-21 17:24:45][INFO ](Config.java:printUrls:238) - URLS [transcoding_file.update] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/update
+[2022-07-21 17:24:45][INFO ](Config.java:printUrls:238) - URLS [transcoding_file.complete] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete
+[2022-07-21 17:24:45][INFO ](Config.java:printUrls:238) - URLS [transcoding_file.complete_all] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete_all
+[2022-07-21 17:24:45][INFO ](Config.java:printUrls:238) - URLS [module.check_activated_at] http://api.kr.dev.kollus.com/0/catenoid/module/check_activated_at
+[2022-07-21 17:24:45][INFO ](Config.java:printUrls:238) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-07-21 17:24:45][DEBUG](Watcher.java:setupWatcher:233) - [PRG_CONF]job_watcherfile1=0/10 * * * * ?
+[2022-07-21 17:25:20][DEBUG](LinuxLineParser.java:parser:101) - /home/kollus/upload, /home/kollus/upload/jungin-kim/_None/sample.webm, 1658386173000, 1148996
+[2022-07-21 17:25:21][INFO ](FtpUploadServiceImp.java:newFileItems:235) - Ls Parsing New File Items STEP
+[2022-07-21 17:25:21][INFO ](CommonUtils.java:checkIsMediaContent:569) - MediaInfo Start Time Thu Jul 21 17:25:21 KST 2022
+[2022-07-21 17:25:21][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/upload/jungin-kim/_None/sample.webm
+[2022-07-21 17:50:31][INFO ](Watcher.java:start:94) - [PRG_START]
+[2022-07-21 17:50:31][INFO ](Watcher.java:printVersion:40) - [PRG_VER]null
+[2022-07-21 17:50:31][DEBUG](ThreadSafeClientConnManager.java:getConnection:235) - Get connection: {}->http://api.kr.dev.kollus.com, timeout = 0
+[2022-07-21 17:50:31][DEBUG](ThreadSafeClientConnManager.java:releaseConnection:280) - Released connection is reusable.
+[2022-07-21 17:50:31][INFO ](Config.java:printUrls:238) - URLS [watcher.list.insert] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/register
+[2022-07-21 17:50:31][INFO ](Config.java:printUrls:238) - URLS [watcher.list.complete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/complete
+[2022-07-21 17:50:31][INFO ](Config.java:printUrls:238) - URLS [watcher.list.delete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/remove
+[2022-07-21 17:50:31][INFO ](Config.java:printUrls:238) - URLS [watcher.usage_day_amount.insert] http://api.kr.dev.kollus.com/0/catenoid/usage_day_amount/register
+[2022-07-21 17:50:31][INFO ](Config.java:printUrls:238) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-07-21 17:50:31][INFO ](Config.java:printUrls:238) - URLS [transcoding_job.assign] http://jobmanager-dev-kr.kollus.com:8180/assign
+[2022-07-21 17:50:31][INFO ](Config.java:printUrls:238) - URLS [transcoding_job.manager] http://api.kr.dev.kollus.com/0/catenoid/transcoding_job/manager
+[2022-07-21 17:50:31][INFO ](Config.java:printUrls:238) - URLS [transcoding_file.register] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/register
+[2022-07-21 17:50:31][INFO ](Config.java:printUrls:238) - URLS [transcoding_file.update] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/update
+[2022-07-21 17:50:31][INFO ](Config.java:printUrls:238) - URLS [transcoding_file.complete] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete
+[2022-07-21 17:50:31][INFO ](Config.java:printUrls:238) - URLS [transcoding_file.complete_all] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete_all
+[2022-07-21 17:50:31][INFO ](Config.java:printUrls:238) - URLS [module.check_activated_at] http://api.kr.dev.kollus.com/0/catenoid/module/check_activated_at
+[2022-07-21 17:50:31][INFO ](Config.java:printUrls:238) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-07-21 17:50:31][DEBUG](Watcher.java:setupWatcher:233) - [PRG_CONF]job_watcherfile1=0/10 * * * * ?
+[2022-07-21 17:50:46][DEBUG](LinuxLineParser.java:parser:101) - /home/kollus/upload, /home/kollus/upload/jungin-kim/_None/sample.webm, 1658386173000, 1148996
+[2022-07-21 17:51:12][INFO ](FtpUploadServiceImp.java:newFileItems:235) - Ls Parsing New File Items STEP
+[2022-07-21 17:51:15][INFO ](CommonUtils.java:checkIsMediaContent:569) - MediaInfo Start Time Thu Jul 21 17:51:15 KST 2022
+[2022-07-21 17:51:15][ERROR](CommonUtils.java:ExceptionLogPrint:333) - java.lang.NullPointerException
+	at net.catenoid.watcher.upload.utils.FileExtTransfer.isTarget(FileExtTransfer.java:27)
+	at net.catenoid.watcher.upload.utils.CommonUtils.checkIsMediaContent(CommonUtils.java:572)
+	at net.catenoid.watcher.uploadImp.FtpUploadServiceImp.newFileItems(FtpUploadServiceImp.java:252)
+	at net.catenoid.watcher.uploadImp.FtpUploadServiceImp.renewWorkFileList(FtpUploadServiceImp.java:90)
+	at net.catenoid.watcher.job.Role_Watcher.execute(Role_Watcher.java:156)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:557)
+
+[2022-07-21 17:51:15][ERROR](CommonUtils.java:ExceptionLogPrint:334) - java.lang.NullPointerException
+[2022-07-21 17:51:19][ERROR](CommonUtils.java:ExceptionLogPrint:333) - java.lang.NullPointerException
+	at net.catenoid.watcher.uploadDao.FtpUploadDao.sendWatchFiles(FtpUploadDao.java:335)
+	at net.catenoid.watcher.uploadImp.FtpUploadServiceImp.findWorkFileList(FtpUploadServiceImp.java:111)
+	at net.catenoid.watcher.job.Role_Watcher.execute(Role_Watcher.java:157)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:557)
+
+[2022-07-21 17:51:19][ERROR](CommonUtils.java:ExceptionLogPrint:334) - java.lang.NullPointerException
+[2022-07-21 17:54:01][DEBUG](LinuxLineParser.java:parser:101) - /home/kollus/upload, /home/kollus/upload/jungin-kim/_None/sample.webm, 1658386173000, 1148996
+[2022-07-21 17:54:01][INFO ](FtpUploadServiceImp.java:newFileItems:235) - Ls Parsing New File Items STEP
+[2022-07-21 17:54:01][INFO ](CommonUtils.java:checkIsMediaContent:569) - MediaInfo Start Time Thu Jul 21 17:54:01 KST 2022
+[2022-07-21 17:54:01][ERROR](CommonUtils.java:ExceptionLogPrint:333) - java.lang.NullPointerException
+	at net.catenoid.watcher.upload.utils.FileExtTransfer.isTarget(FileExtTransfer.java:27)
+	at net.catenoid.watcher.upload.utils.CommonUtils.checkIsMediaContent(CommonUtils.java:572)
+	at net.catenoid.watcher.uploadImp.FtpUploadServiceImp.newFileItems(FtpUploadServiceImp.java:252)
+	at net.catenoid.watcher.uploadImp.FtpUploadServiceImp.renewWorkFileList(FtpUploadServiceImp.java:90)
+	at net.catenoid.watcher.job.Role_Watcher.execute(Role_Watcher.java:156)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:557)
+
+[2022-07-21 17:54:01][ERROR](CommonUtils.java:ExceptionLogPrint:334) - java.lang.NullPointerException
+[2022-07-21 17:54:01][ERROR](CommonUtils.java:ExceptionLogPrint:333) - java.lang.NullPointerException
+	at net.catenoid.watcher.uploadDao.FtpUploadDao.sendWatchFiles(FtpUploadDao.java:335)
+	at net.catenoid.watcher.uploadImp.FtpUploadServiceImp.findWorkFileList(FtpUploadServiceImp.java:111)
+	at net.catenoid.watcher.job.Role_Watcher.execute(Role_Watcher.java:157)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:557)
+
+[2022-07-21 17:54:01][ERROR](CommonUtils.java:ExceptionLogPrint:334) - java.lang.NullPointerException
+[2022-07-21 17:54:04][INFO ](Watcher.java:start:94) - [PRG_START]
+[2022-07-21 17:54:04][INFO ](Watcher.java:printVersion:40) - [PRG_VER]null
+[2022-07-21 17:54:04][DEBUG](ThreadSafeClientConnManager.java:getConnection:235) - Get connection: {}->http://api.kr.dev.kollus.com, timeout = 0
+[2022-07-21 17:54:05][DEBUG](ThreadSafeClientConnManager.java:releaseConnection:280) - Released connection is reusable.
+[2022-07-21 17:54:05][INFO ](Config.java:printUrls:238) - URLS [watcher.list.insert] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/register
+[2022-07-21 17:54:05][INFO ](Config.java:printUrls:238) - URLS [watcher.list.complete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/complete
+[2022-07-21 17:54:05][INFO ](Config.java:printUrls:238) - URLS [watcher.list.delete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/remove
+[2022-07-21 17:54:05][INFO ](Config.java:printUrls:238) - URLS [watcher.usage_day_amount.insert] http://api.kr.dev.kollus.com/0/catenoid/usage_day_amount/register
+[2022-07-21 17:54:05][INFO ](Config.java:printUrls:238) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-07-21 17:54:05][INFO ](Config.java:printUrls:238) - URLS [transcoding_job.assign] http://jobmanager-dev-kr.kollus.com:8180/assign
+[2022-07-21 17:54:05][INFO ](Config.java:printUrls:238) - URLS [transcoding_job.manager] http://api.kr.dev.kollus.com/0/catenoid/transcoding_job/manager
+[2022-07-21 17:54:05][INFO ](Config.java:printUrls:238) - URLS [transcoding_file.register] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/register
+[2022-07-21 17:54:05][INFO ](Config.java:printUrls:238) - URLS [transcoding_file.update] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/update
+[2022-07-21 17:54:05][INFO ](Config.java:printUrls:238) - URLS [transcoding_file.complete] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete
+[2022-07-21 17:54:05][INFO ](Config.java:printUrls:238) - URLS [transcoding_file.complete_all] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete_all
+[2022-07-21 17:54:05][INFO ](Config.java:printUrls:238) - URLS [module.check_activated_at] http://api.kr.dev.kollus.com/0/catenoid/module/check_activated_at
+[2022-07-21 17:54:05][INFO ](Config.java:printUrls:238) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-07-21 17:54:05][DEBUG](Watcher.java:setupWatcher:233) - [PRG_CONF]job_watcherfile1=0/10 * * * * ?
+[2022-07-21 17:55:23][DEBUG](LinuxLineParser.java:parser:101) - /home/kollus/upload, /home/kollus/upload/jungin-kim/_None/sample.webm, 1658386173000, 1148996
+[2022-07-21 17:55:29][INFO ](FtpUploadServiceImp.java:newFileItems:235) - Ls Parsing New File Items STEP
+[2022-07-21 17:57:29][INFO ](CommonUtils.java:checkIsMediaContent:569) - MediaInfo Start Time Thu Jul 21 17:57:29 KST 2022
+[2022-07-21 17:57:29][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/upload/jungin-kim/_None/sample.webm
+[2022-07-21 17:57:29][INFO ](CommonUtils.java:checkIsMediaContent:581) - physicalPath : /home/kollus/upload/jungin-kim/_None/sample.webm
+[2022-07-21 17:57:29][INFO ](CommonUtils.java:checkIsMediaContent:597) - MediaInfo End Time Thu Jul 21 17:57:29 KST 2022
+[2022-07-21 17:57:41][INFO ](Watcher.java:start:94) - [PRG_START]
+[2022-07-21 17:57:41][INFO ](Watcher.java:printVersion:40) - [PRG_VER]null
+[2022-07-21 17:57:41][DEBUG](ThreadSafeClientConnManager.java:getConnection:235) - Get connection: {}->http://api.kr.dev.kollus.com, timeout = 0
+[2022-07-21 17:57:42][DEBUG](ThreadSafeClientConnManager.java:releaseConnection:280) - Released connection is reusable.
+[2022-07-21 17:57:42][INFO ](Config.java:printUrls:238) - URLS [watcher.list.insert] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/register
+[2022-07-21 17:57:42][INFO ](Config.java:printUrls:238) - URLS [watcher.list.complete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/complete
+[2022-07-21 17:57:42][INFO ](Config.java:printUrls:238) - URLS [watcher.list.delete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/remove
+[2022-07-21 17:57:42][INFO ](Config.java:printUrls:238) - URLS [watcher.usage_day_amount.insert] http://api.kr.dev.kollus.com/0/catenoid/usage_day_amount/register
+[2022-07-21 17:57:42][INFO ](Config.java:printUrls:238) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-07-21 17:57:42][INFO ](Config.java:printUrls:238) - URLS [transcoding_job.assign] http://jobmanager-dev-kr.kollus.com:8180/assign
+[2022-07-21 17:57:42][INFO ](Config.java:printUrls:238) - URLS [transcoding_job.manager] http://api.kr.dev.kollus.com/0/catenoid/transcoding_job/manager
+[2022-07-21 17:57:42][INFO ](Config.java:printUrls:238) - URLS [transcoding_file.register] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/register
+[2022-07-21 17:57:42][INFO ](Config.java:printUrls:238) - URLS [transcoding_file.update] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/update
+[2022-07-21 17:57:42][INFO ](Config.java:printUrls:238) - URLS [transcoding_file.complete] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete
+[2022-07-21 17:57:42][INFO ](Config.java:printUrls:238) - URLS [transcoding_file.complete_all] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete_all
+[2022-07-21 17:57:42][INFO ](Config.java:printUrls:238) - URLS [module.check_activated_at] http://api.kr.dev.kollus.com/0/catenoid/module/check_activated_at
+[2022-07-21 17:57:42][INFO ](Config.java:printUrls:238) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-07-21 17:57:42][DEBUG](Watcher.java:setupWatcher:233) - [PRG_CONF]job_watcherfile1=0/10 * * * * ?
+[2022-07-21 17:58:16][DEBUG](LinuxLineParser.java:parser:101) - /home/kollus/upload, /home/kollus/upload/jungin-kim/_None/sample.webm, 1658386173000, 1148996
+[2022-07-21 17:58:40][INFO ](FtpUploadServiceImp.java:newFileItems:235) - Ls Parsing New File Items STEP
+[2022-07-21 17:58:40][INFO ](CommonUtils.java:checkIsMediaContent:569) - MediaInfo Start Time Thu Jul 21 17:58:40 KST 2022
+[2022-07-21 17:58:40][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/upload/jungin-kim/_None/sample.webm
+[2022-07-21 17:58:42][INFO ](Watcher.java:start:94) - [PRG_START]
+[2022-07-21 17:58:42][INFO ](Watcher.java:printVersion:40) - [PRG_VER]null
+[2022-07-21 17:58:42][DEBUG](ThreadSafeClientConnManager.java:getConnection:235) - Get connection: {}->http://api.kr.dev.kollus.com, timeout = 0
+[2022-07-21 17:58:42][DEBUG](ThreadSafeClientConnManager.java:releaseConnection:280) - Released connection is reusable.
+[2022-07-21 17:58:42][INFO ](Config.java:printUrls:238) - URLS [watcher.list.insert] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/register
+[2022-07-21 17:58:42][INFO ](Config.java:printUrls:238) - URLS [watcher.list.complete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/complete
+[2022-07-21 17:58:42][INFO ](Config.java:printUrls:238) - URLS [watcher.list.delete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/remove
+[2022-07-21 17:58:42][INFO ](Config.java:printUrls:238) - URLS [watcher.usage_day_amount.insert] http://api.kr.dev.kollus.com/0/catenoid/usage_day_amount/register
+[2022-07-21 17:58:42][INFO ](Config.java:printUrls:238) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-07-21 17:58:42][INFO ](Config.java:printUrls:238) - URLS [transcoding_job.assign] http://jobmanager-dev-kr.kollus.com:8180/assign
+[2022-07-21 17:58:42][INFO ](Config.java:printUrls:238) - URLS [transcoding_job.manager] http://api.kr.dev.kollus.com/0/catenoid/transcoding_job/manager
+[2022-07-21 17:58:42][INFO ](Config.java:printUrls:238) - URLS [transcoding_file.register] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/register
+[2022-07-21 17:58:42][INFO ](Config.java:printUrls:238) - URLS [transcoding_file.update] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/update
+[2022-07-21 17:58:42][INFO ](Config.java:printUrls:238) - URLS [transcoding_file.complete] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete
+[2022-07-21 17:58:42][INFO ](Config.java:printUrls:238) - URLS [transcoding_file.complete_all] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete_all
+[2022-07-21 17:58:42][INFO ](Config.java:printUrls:238) - URLS [module.check_activated_at] http://api.kr.dev.kollus.com/0/catenoid/module/check_activated_at
+[2022-07-21 17:58:42][INFO ](Config.java:printUrls:238) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-07-21 17:58:42][DEBUG](Watcher.java:setupWatcher:233) - [PRG_CONF]job_watcherfile1=0/10 * * * * ?
+[2022-07-21 18:01:30][DEBUG](LinuxLineParser.java:parser:101) - /home/kollus/upload, /home/kollus/upload/jungin-kim/_None/sample.webm, 1658386173000, 1148996
+[2022-07-21 18:01:30][INFO ](FtpUploadServiceImp.java:newFileItems:235) - Ls Parsing New File Items STEP
+[2022-07-21 18:01:30][INFO ](CommonUtils.java:checkIsMediaContent:569) - MediaInfo Start Time Thu Jul 21 18:01:30 KST 2022
+[2022-07-21 18:02:52][INFO ](Watcher.java:start:94) - [PRG_START]
+[2022-07-21 18:02:52][INFO ](Watcher.java:printVersion:40) - [PRG_VER]null
+[2022-07-21 18:02:52][DEBUG](ThreadSafeClientConnManager.java:getConnection:235) - Get connection: {}->http://api.kr.dev.kollus.com, timeout = 0
+[2022-07-21 18:02:52][DEBUG](ThreadSafeClientConnManager.java:releaseConnection:280) - Released connection is reusable.
+[2022-07-21 18:02:52][INFO ](Config.java:printUrls:238) - URLS [watcher.list.insert] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/register
+[2022-07-21 18:02:52][INFO ](Config.java:printUrls:238) - URLS [watcher.list.complete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/complete
+[2022-07-21 18:02:52][INFO ](Config.java:printUrls:238) - URLS [watcher.list.delete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/remove
+[2022-07-21 18:02:52][INFO ](Config.java:printUrls:238) - URLS [watcher.usage_day_amount.insert] http://api.kr.dev.kollus.com/0/catenoid/usage_day_amount/register
+[2022-07-21 18:02:52][INFO ](Config.java:printUrls:238) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-07-21 18:02:52][INFO ](Config.java:printUrls:238) - URLS [transcoding_job.assign] http://jobmanager-dev-kr.kollus.com:8180/assign
+[2022-07-21 18:02:52][INFO ](Config.java:printUrls:238) - URLS [transcoding_job.manager] http://api.kr.dev.kollus.com/0/catenoid/transcoding_job/manager
+[2022-07-21 18:02:52][INFO ](Config.java:printUrls:238) - URLS [transcoding_file.register] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/register
+[2022-07-21 18:02:52][INFO ](Config.java:printUrls:238) - URLS [transcoding_file.update] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/update
+[2022-07-21 18:02:52][INFO ](Config.java:printUrls:238) - URLS [transcoding_file.complete] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete
+[2022-07-21 18:02:52][INFO ](Config.java:printUrls:238) - URLS [transcoding_file.complete_all] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete_all
+[2022-07-21 18:02:52][INFO ](Config.java:printUrls:238) - URLS [module.check_activated_at] http://api.kr.dev.kollus.com/0/catenoid/module/check_activated_at
+[2022-07-21 18:02:52][INFO ](Config.java:printUrls:238) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-07-21 18:02:52][DEBUG](Watcher.java:setupWatcher:233) - [PRG_CONF]job_watcherfile1=0/10 * * * * ?
+[2022-07-21 18:03:07][DEBUG](LinuxLineParser.java:parser:101) - /home/kollus/upload, /home/kollus/upload/jungin-kim/_None/sample.webm, 1658386173000, 1148996
+[2022-07-21 18:03:13][INFO ](FtpUploadServiceImp.java:newFileItems:235) - Ls Parsing New File Items STEP
+[2022-07-21 18:03:15][INFO ](CommonUtils.java:checkIsMediaContent:569) - MediaInfo Start Time Thu Jul 21 18:03:15 KST 2022
+[2022-07-21 18:03:23][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/upload/jungin-kim/_None/sample.webm
+[2022-07-21 18:03:30][INFO ](Watcher.java:start:94) - [PRG_START]
+[2022-07-21 18:03:30][INFO ](Watcher.java:printVersion:40) - [PRG_VER]null
+[2022-07-21 18:03:30][DEBUG](ThreadSafeClientConnManager.java:getConnection:235) - Get connection: {}->http://api.kr.dev.kollus.com, timeout = 0
+[2022-07-21 18:03:31][DEBUG](ThreadSafeClientConnManager.java:releaseConnection:280) - Released connection is reusable.
+[2022-07-21 18:03:31][INFO ](Config.java:printUrls:238) - URLS [watcher.list.insert] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/register
+[2022-07-21 18:03:31][INFO ](Config.java:printUrls:238) - URLS [watcher.list.complete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/complete
+[2022-07-21 18:03:31][INFO ](Config.java:printUrls:238) - URLS [watcher.list.delete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/remove
+[2022-07-21 18:03:31][INFO ](Config.java:printUrls:238) - URLS [watcher.usage_day_amount.insert] http://api.kr.dev.kollus.com/0/catenoid/usage_day_amount/register
+[2022-07-21 18:03:31][INFO ](Config.java:printUrls:238) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-07-21 18:03:31][INFO ](Config.java:printUrls:238) - URLS [transcoding_job.assign] http://jobmanager-dev-kr.kollus.com:8180/assign
+[2022-07-21 18:03:31][INFO ](Config.java:printUrls:238) - URLS [transcoding_job.manager] http://api.kr.dev.kollus.com/0/catenoid/transcoding_job/manager
+[2022-07-21 18:03:31][INFO ](Config.java:printUrls:238) - URLS [transcoding_file.register] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/register
+[2022-07-21 18:03:31][INFO ](Config.java:printUrls:238) - URLS [transcoding_file.update] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/update
+[2022-07-21 18:03:31][INFO ](Config.java:printUrls:238) - URLS [transcoding_file.complete] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete
+[2022-07-21 18:03:31][INFO ](Config.java:printUrls:238) - URLS [transcoding_file.complete_all] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete_all
+[2022-07-21 18:03:31][INFO ](Config.java:printUrls:238) - URLS [module.check_activated_at] http://api.kr.dev.kollus.com/0/catenoid/module/check_activated_at
+[2022-07-21 18:03:31][INFO ](Config.java:printUrls:238) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-07-21 18:03:31][DEBUG](Watcher.java:setupWatcher:233) - [PRG_CONF]job_watcherfile1=0/10 * * * * ?
+[2022-07-21 18:03:46][DEBUG](LinuxLineParser.java:parser:101) - /home/kollus/upload, /home/kollus/upload/jungin-kim/_None/sample.webm, 1658386173000, 1148996
+[2022-07-21 18:03:50][INFO ](FtpUploadServiceImp.java:newFileItems:235) - Ls Parsing New File Items STEP
+[2022-07-21 18:03:53][INFO ](CommonUtils.java:checkIsMediaContent:569) - MediaInfo Start Time Thu Jul 21 18:03:53 KST 2022
+[2022-07-21 18:06:40][INFO ](CommonUtils.java:checkIsMediaContent:573) - is Target Provider
+[2022-07-21 18:06:40][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/upload/jungin-kim/_None/sample.webm

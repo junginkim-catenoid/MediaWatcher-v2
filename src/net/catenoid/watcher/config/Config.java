@@ -134,6 +134,10 @@ public class Config extends BaseConfig {
     @SerializedName("rsync.use")
     private boolean use_rsync = false;
 
+    @Expose
+    @SerializedName("transfer_file_ext")
+    private TransferFileExtConf[] transferFileExtConf;
+
     public WatcherFolder[] getWatchers() {
         return watchers;
     }
@@ -293,6 +297,10 @@ public class Config extends BaseConfig {
 
     public String get_convmv_path() {
         return this.convmv_path ;
+    }
+
+    public TransferFileExtConf[] getTransferFileExtConf() {
+        return this.transferFileExtConf;
     }
 
     /**
