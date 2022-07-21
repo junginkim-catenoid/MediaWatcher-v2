@@ -28,6 +28,7 @@ public class UploadProcessLogDTO {
     private String uploadPath;
     private String uploadFileKey;
     private Map<String,String> mediaInfo;
+    private long bytes;
 
     public UploadProcessLogDTO(UploadMode uploadMode, UploadProcessStep uploadProcessStep, String stepName,
                                String description, ArrayList<FileItemDTO> files) {
@@ -104,6 +105,7 @@ public class UploadProcessLogDTO {
         this.contentProviderKey = item.getContentProviderKey();
         this.uploadFileKey = item.getUploadFileKey();
         this.title = item.getTitle();
+        this.bytes = item.getFilesize();
 
         if (item.getMediaInfo() != null) {
             setMediaInfoToMap(item.getMediaInfo());
@@ -134,6 +136,10 @@ public class UploadProcessLogDTO {
             MDC.put("uploadFileKey", this.uploadFileKey);
         }
 
+        if (this.bytes > 0) {
+            MDC.put("bytes", this.bytes);
+        }
+
         if (this.mediaInfo != null) {
             MDC.put("mediaInfo", this.mediaInfo);
         }
@@ -148,6 +154,8 @@ public class UploadProcessLogDTO {
         Appender appender = uploadProcessLog.getAppender("uploadProcessFile");
         JSONEventLayoutV1 layoutV1 = (JSONEventLayoutV1) appender.getLayout();
         List<String> customFields = new ArrayList<>();
+
+        customFields.add("stream_type:vod");
 
         if (hasText(VERSION)) {
             customFields.add("version:" + VERSION);

@@ -110,7 +110,7 @@ public class KusUploadServiceImp implements KusUploadService {
         for (int i = 0; i < apiResult.result.watcher_files.length; i++) {
 
             KollusApiWatcherContentDTO item = apiResult.result.watcher_files[i];
-            if (item.error != 0) {
+            if (item.error == 0) {
                 // error가 아닌 경우만 media_content_id가 있으나 사용처가 없어 삭제함
                 FileItemDTO findItem = utils.findSendItem(fileList, item.result.key);
                 if (findItem == null) {
