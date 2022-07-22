@@ -548,16 +548,20 @@ public class CommonUtils {
         }
         boolean bRet = setMediaInfo(f);
 
-        if (bRet == false) {
-            f.setMediaInfo(null);
-        } else {
+        if (bRet) {
             f.format = f.getMediaInfo().getFormat();
             if (hasText(f.getMediaInfo().getDuration())) {
                 f.duration = Float.parseFloat(f.getMediaInfo().getDuration());
             }
+        } else {
+            f.setMediaInfo(null);
         }
 
-        return bRet;
+        if (bRet && checkIsMediaContent(f)) {
+            return true;
+        }
+
+        return false;
     }
 
     /**
@@ -566,50 +570,28 @@ public class CommonUtils {
      * @return
      */
     public boolean checkIsMediaContent(FileItemDTO f) {
-        log.info("MediaInfo Start Time " + new Date().toString());
-        String physicalPath = f.getPhysicalPath();
 
-        MediaInfo MI = new MediaInfo();
-        if (MI.Open(physicalPath) == 0) {
+        if (f.getMediaInfo() == null) {
             return false;
         }
 
-        log.info("physicalPath : " + physicalPath );
+        ContentInfoDTO mi = f.getMediaInfo();
 
-        MI.Option("Complete", "");
-
-        String duration = empty2null(MI.Get(StreamKind.General, 0, "Duration"));
-        String videoDuration = empty2null(MI.Get(StreamKind.Video, 0, "Duration"));
-        String videoBitRate = empty2null(MI.Get(StreamKind.Video, 0, "BitRate"));
-        String videoWidth = empty2null(MI.Get(StreamKind.Video, 0, "Width"));
-        String videoHeight = empty2null(MI.Get(StreamKind.Video, 0, "Height"));
-        String audioBitRate = empty2null(MI.Get(StreamKind.Audio, 0, "BitRate"));
-        String audioDuration = empty2null(MI.Get(StreamKind.Audio, 0, "Duration"));
-        String imageWidth = empty2null(MI.Get(StreamKind.Image, 0, "Width"));
-        String imageHeight = empty2null(MI.Get(StreamKind.Image, 0, "Height"));
-
-        MI.Close();
-
-        log.info("MediaInfo End Time " + new Date().toString());
-
-        if (hasText(duration)) {
+        if (hasText(mi.getDuration())) {
             return true;
         }
 
-        if (hasText(videoDuration) || hasText(videoBitRate) || hasText(videoWidth) && hasText(videoHeight)) {
+        if (hasText(mi.getVideoDuration()) || hasText(mi.getVideoBitrate()) || hasText(mi.getVideoWidth()) && hasText(mi.getVideoHeight())) {
             return true;
         }
 
-        if (hasText(audioDuration) || hasText(audioBitRate)) {
+        if (hasText(mi.getAudioDuration()) || hasText(mi.getAudioBitrate())) {
             return true;
         }
 
-        if (hasText(imageWidth) && hasText(imageHeight)) {
+        if (hasText(mi.getImageWidth()) && hasText(mi.getImageHeight())) {
             return true;
         }
-
-
-
 
         return false;
     }

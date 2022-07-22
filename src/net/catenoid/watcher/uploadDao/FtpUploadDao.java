@@ -18,6 +18,7 @@ import java.sql.*;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 
 public class FtpUploadDao {
@@ -389,6 +390,7 @@ public class FtpUploadDao {
      */
     protected ArrayList<FileItemDTO> selectCompareOver(String chk_time) throws Exception {
         ArrayList<FileItemDTO> selectItems = new ArrayList<FileItemDTO>();
+        SendFileItemsDTO removeItems = new SendFileItemsDTO();
 
         String sqlFmt = "SELECT PATH, OLD_SIZE, NEW_SIZE, OLD_DATE, NEW_DATE, COMP_CNT, STATUS, CHK_DATE, CID, CPATH, DOMAIN, UPLOAD_PATH, SNAP_PATH, TITLE, MD5, CHECKSUM_TYPE, POSTER_POS, POSTER_WIDTH, POSTER_HEIGHT "
                 + " FROM FILES WHERE STATUS=1 AND COMP_CNT >= %d AND TIMESTAMPDIFF(SECOND, NEW_DATE, '%s') > %d "
@@ -416,7 +418,11 @@ public class FtpUploadDao {
                         log.error(e.toString());
                     }
 
-                    utils.getMediaContentInfo(item);
+                    boolean isMediaFile = utils.getMediaContentInfo(item);
+                    if (!isMediaFile) {
+                        removeItems.add(item);
+                        continue;
+                    }
 
                     selectItems.add(item);
                     count++;
@@ -449,6 +455,13 @@ public class FtpUploadDao {
                     log.debug(String.format("item.path:%s, item.md5 is off", item.getPhysicalPath()));
                 }
             }
+
+            utils.sendDeleteFileList(removeItems);
+            for (FileItemDTO item : removeItems) {
+                removeIsNotMediaFile(item);
+                db_delete_item_pysicalpath(item.getPhysicalPath());
+            }
+
         } finally {
             results.close();
         }
@@ -592,6 +605,14 @@ public class FtpUploadDao {
             if (results != null) {
                 results.close();
             }
+        }
+    }
+
+    private void removeIsNotMediaFile(FileItemDTO item) {
+        log.error("is not MediaFile : " + item.toString());
+        File file = new File(item.getPhysicalPath());
+        if (file.delete()) {
+            log.debug("Not MediaFile removed : " + item.getPhysicalPath());
         }
     }
 }

@@ -238,3 +238,386 @@ Caused by: java.lang.NumberFormatException: empty String
 [2022-07-22 11:21:22][INFO ](FtpUploadServiceImp.java:findWorkFileList:114) - Send to register count : 1
 [2022-07-22 11:21:29][ERROR](LSParser.java:run:159) - java.io.FileNotFoundException: /home/kollus/MediaWatcher2/snap.temp/job_watcherfile1_1658456489871.txt (No such file or directory)
 [2022-07-22 11:21:29][ERROR](FtpUploadServiceImp.java:newFileItems:215) - java.lang.NullPointerException
+[2022-07-22 13:52:33][INFO ](Watcher.java:start:94) - [PRG_START]
+[2022-07-22 13:52:33][INFO ](Watcher.java:printVersion:40) - [PRG_VER]null
+[2022-07-22 13:52:34][DEBUG](ThreadSafeClientConnManager.java:getConnection:235) - Get connection: {}->http://api.kr.dev.kollus.com, timeout = 0
+[2022-07-22 13:52:34][DEBUG](ThreadSafeClientConnManager.java:releaseConnection:280) - Released connection is reusable.
+[2022-07-22 13:52:34][INFO ](Config.java:printUrls:238) - URLS [watcher.list.insert] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/register
+[2022-07-22 13:52:34][INFO ](Config.java:printUrls:238) - URLS [watcher.list.complete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/complete
+[2022-07-22 13:52:34][INFO ](Config.java:printUrls:238) - URLS [watcher.list.delete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/remove
+[2022-07-22 13:52:34][INFO ](Config.java:printUrls:238) - URLS [watcher.usage_day_amount.insert] http://api.kr.dev.kollus.com/0/catenoid/usage_day_amount/register
+[2022-07-22 13:52:34][INFO ](Config.java:printUrls:238) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-07-22 13:52:34][INFO ](Config.java:printUrls:238) - URLS [transcoding_job.assign] http://jobmanager-dev-kr.kollus.com:8180/assign
+[2022-07-22 13:52:34][INFO ](Config.java:printUrls:238) - URLS [transcoding_job.manager] http://api.kr.dev.kollus.com/0/catenoid/transcoding_job/manager
+[2022-07-22 13:52:34][INFO ](Config.java:printUrls:238) - URLS [transcoding_file.register] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/register
+[2022-07-22 13:52:34][INFO ](Config.java:printUrls:238) - URLS [transcoding_file.update] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/update
+[2022-07-22 13:52:34][INFO ](Config.java:printUrls:238) - URLS [transcoding_file.complete] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete
+[2022-07-22 13:52:34][INFO ](Config.java:printUrls:238) - URLS [transcoding_file.complete_all] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete_all
+[2022-07-22 13:52:34][INFO ](Config.java:printUrls:238) - URLS [module.check_activated_at] http://api.kr.dev.kollus.com/0/catenoid/module/check_activated_at
+[2022-07-22 13:52:34][INFO ](Config.java:printUrls:238) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-07-22 13:52:34][DEBUG](Watcher.java:setupWatcher:233) - [PRG_CONF]job_watcherfile1=0/10 * * * * ?
+[2022-07-22 13:52:43][DEBUG](LinuxLineParser.java:parser:101) - /home/kollus/upload, /home/kollus/upload/jungin-kim/_None/123.txt, 1658465544000, 506
+[2022-07-22 13:52:45][INFO ](FtpUploadServiceImp.java:newFileItems:235) - Ls Parsing New File Items STEP
+[2022-07-22 13:52:45][DEBUG](CommonUtils.java:fromResultSet:401) - /home/kollus/upload/jungin-kim/_None/sample.webm
+[2022-07-22 13:52:45][INFO ](CommonUtils.java:pathToTRmpk:701) - [ pathToTRmpk 1/3 ] sample.webm
+[2022-07-22 13:52:45][INFO ](CommonUtils.java:pathToTRmpk:705) - [ pathToTRmpk 2/3 ] sample
+[2022-07-22 13:52:45][DEBUG](CommonUtils.java:fromResultSet:438) - fromResultSet Add TransCoder : null
+[2022-07-22 13:52:45][DEBUG](CommonUtils.java:fromResultSet:439) - fromResultSet Path : /jungin-kim/_None/sample.webm
+[2022-07-22 13:52:45][DEBUG](CommonUtils.java:fromResultSet:440) - fromResultSet item : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/sample.webm","upload_path":"/jungin-kim/_None/sample.webm","filesize":1148996,"filesize_str":"1.1 MB","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"DSFDS123SDFDS","content_path":"/jungin-kim","snapshot_path":"","title":"sample","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-07-22 13:57:57][DEBUG](FtpUploadDao.java:sendWatchFiles:253) - sql result = rs5: org.h2.result.LocalResult@2ba9710a columns: 19 rows: 1 pos: 0
+[2022-07-22 13:57:58][DEBUG](CommonUtils.java:fromResultSet:401) - /home/kollus/upload/jungin-kim/_None/123.txt
+[2022-07-22 13:57:58][INFO ](CommonUtils.java:pathToTRmpk:701) - [ pathToTRmpk 1/3 ] 123.txt
+[2022-07-22 13:57:58][INFO ](CommonUtils.java:pathToTRmpk:705) - [ pathToTRmpk 2/3 ] 123
+[2022-07-22 13:57:58][DEBUG](CommonUtils.java:fromResultSet:438) - fromResultSet Add TransCoder : null
+[2022-07-22 13:57:58][DEBUG](CommonUtils.java:fromResultSet:439) - fromResultSet Path : /jungin-kim/_None/123.txt
+[2022-07-22 13:57:58][DEBUG](CommonUtils.java:fromResultSet:440) - fromResultSet item : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/123.txt","upload_path":"/jungin-kim/_None/123.txt","filesize":506,"filesize_str":"506 B","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"123","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-07-22 13:57:58][DEBUG](FtpUploadDao.java:sendWatchFiles:282) - file register 보내는값 = [{"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/123.txt","upload_path":"/jungin-kim/_None/123.txt","filesize":506,"filesize_str":"506 B","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"123","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}]
+[2022-07-22 13:58:06][DEBUG](CommonUtils.java:getHttpResponse:176) - Post Requests Transfer Content : watcher_files=[{"kind":1,"module_key":"watcherfile1","is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/123.txt","upload_path":"/jungin-kim/_None/123.txt","filesize":506,"filesize_str":"506 B","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"123","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}]
+[2022-07-22 13:58:10][DEBUG](CommonUtils.java:sendPostToApi:97) - Post Response Transfer Content [register] : {"error":0,"message":"","watcher_file":{"error":0,"message":"","result":{"error_code":0,"error_detail":"","content_provider_key":"","key":"","media_content_id":0,"content_path":"","upload_path":"","is_audio_file":0,"checksum_type":0,"snapshot_path":"","physical_path":"","delete_watcher_file_upload_url":"","poster":{"second":0}}},"result":{"error_code":0,"error_detail":"","watcher_files":[{"error":0,"message":"ok","result":{"error_code":0,"error_detail":"","content_provider_key":"jungin-kim","key":"DSFDS123SDFDS","media_content_id":0,"content_path":"/jungin-kim","upload_path":"/jungin-kim/_None/123.txt","is_audio_file":0,"checksum_type":0,"snapshot_path":"","physical_path":"/home/kollus/upload/jungin-kim/_None/123.txt","delete_watcher_file_upload_url":"","poster":{"second":0}}}]}}
+
+[2022-07-22 13:58:11][DEBUG](CommonUtils.java:convertResultApiItem:266) - register 반환값 (fileItem) = {"error":0,"message":"ok","result":{"error_code":0,"error_detail":"","content_provider_key":"jungin-kim","key":"DSFDS123SDFDS","media_content_id":0,"content_path":"/jungin-kim","upload_path":"/jungin-kim/_None/123.txt","is_audio_file":0,"checksum_type":0,"snapshot_path":"","physical_path":"/home/kollus/upload/jungin-kim/_None/123.txt","poster":{"second":0,"width":0,"height":0}}}
+[2022-07-22 13:58:23][INFO ](FtpUploadDao.java:sendWatchFiles:291) - HTTP Register Server Send STEP
+[2022-07-22 13:58:24][DEBUG](FtpUploadDao.java:sendWatchFiles:300) - 등록성공: DSFDS123SDFDS, {"kind":1,"module_key":"watcherfile1","is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/123.txt","upload_path":"/jungin-kim/_None/123.txt","filesize":506,"filesize_str":"506 B","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"DSFDS123SDFDS","content_path":"/jungin-kim","snapshot_path":"","title":"123","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-07-22 13:58:25][INFO ](FtpUploadDao.java:sendWatchFiles:303) - HTTP Register Server Send STEP
+[2022-07-22 13:58:26][INFO ](FtpUploadDao.java:sendWatchFiles:334) - postWatcherFileRegister End : watcherfile1
+[2022-07-22 13:58:27][INFO ](FtpUploadServiceImp.java:findWorkFileList:114) - Send to register count : 1
+[2022-07-22 13:58:41][ERROR](FtpUploadUtils.java:postRemoveFileItem:204) - org.apache.http.NoHttpResponseException: localhost:3002 failed to respond
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:143)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:57)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:260)
+	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:161)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.http.impl.conn.CPoolProxy.invoke(CPoolProxy.java:138)
+	at com.sun.proxy.$Proxy6.receiveResponseHeader(Unknown Source)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:271)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:254)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
+	at net.catenoid.watcher.upload.utils.FtpUploadUtils.postRemoveFileItem(FtpUploadUtils.java:201)
+	at net.catenoid.watcher.upload.utils.FtpUploadUtils.sendDeleteFileList(FtpUploadUtils.java:157)
+	at net.catenoid.watcher.uploadDao.FtpUploadDao.selectCompareOver(FtpUploadDao.java:459)
+	at net.catenoid.watcher.uploadImp.FtpUploadServiceImp.findWorkFileList(FtpUploadServiceImp.java:121)
+	at net.catenoid.watcher.job.Role_Watcher.execute(Role_Watcher.java:157)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:557)
+
+[2022-07-22 13:58:41][DEBUG](FtpUploadUtils.java:postRemoveFileItem:212) - postRemoveFileItem CMS API(http://localhost:3002/delete) connection retry(1)
+[2022-07-22 13:58:42][ERROR](FtpUploadUtils.java:postRemoveFileItem:204) - org.apache.http.NoHttpResponseException: localhost:3002 failed to respond
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:143)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:57)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:260)
+	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:161)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.http.impl.conn.CPoolProxy.invoke(CPoolProxy.java:138)
+	at com.sun.proxy.$Proxy6.receiveResponseHeader(Unknown Source)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:271)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:254)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
+	at net.catenoid.watcher.upload.utils.FtpUploadUtils.postRemoveFileItem(FtpUploadUtils.java:201)
+	at net.catenoid.watcher.upload.utils.FtpUploadUtils.sendDeleteFileList(FtpUploadUtils.java:157)
+	at net.catenoid.watcher.uploadDao.FtpUploadDao.selectCompareOver(FtpUploadDao.java:459)
+	at net.catenoid.watcher.uploadImp.FtpUploadServiceImp.findWorkFileList(FtpUploadServiceImp.java:121)
+	at net.catenoid.watcher.job.Role_Watcher.execute(Role_Watcher.java:157)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:557)
+
+[2022-07-22 13:58:42][DEBUG](FtpUploadUtils.java:postRemoveFileItem:212) - postRemoveFileItem CMS API(http://localhost:3002/delete) connection retry(2)
+[2022-07-22 13:58:43][ERROR](FtpUploadUtils.java:postRemoveFileItem:204) - org.apache.http.NoHttpResponseException: localhost:3002 failed to respond
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:143)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:57)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:260)
+	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:161)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.http.impl.conn.CPoolProxy.invoke(CPoolProxy.java:138)
+	at com.sun.proxy.$Proxy6.receiveResponseHeader(Unknown Source)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:271)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:254)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
+	at net.catenoid.watcher.upload.utils.FtpUploadUtils.postRemoveFileItem(FtpUploadUtils.java:201)
+	at net.catenoid.watcher.upload.utils.FtpUploadUtils.sendDeleteFileList(FtpUploadUtils.java:157)
+	at net.catenoid.watcher.uploadDao.FtpUploadDao.selectCompareOver(FtpUploadDao.java:459)
+	at net.catenoid.watcher.uploadImp.FtpUploadServiceImp.findWorkFileList(FtpUploadServiceImp.java:121)
+	at net.catenoid.watcher.job.Role_Watcher.execute(Role_Watcher.java:157)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:557)
+
+[2022-07-22 13:58:43][DEBUG](FtpUploadUtils.java:postRemoveFileItem:212) - postRemoveFileItem CMS API(http://localhost:3002/delete) connection retry(3)
+[2022-07-22 13:58:44][ERROR](FtpUploadUtils.java:postRemoveFileItem:221) - [HTTP_LOG]http://localhost:3002/delete, status: connection failed
+[2022-07-22 13:59:47][DEBUG](LinuxLineParser.java:parser:101) - /home/kollus/upload, /home/kollus/upload/jungin-kim/_None/123.txt, 1658465544000, 506
+[2022-07-22 13:59:52][INFO ](FtpUploadServiceImp.java:newFileItems:235) - Ls Parsing New File Items STEP
+[2022-07-22 14:00:01][DEBUG](CommonUtils.java:fromResultSet:401) - /home/kollus/upload/jungin-kim/_None/123.txt
+[2022-07-22 14:00:01][INFO ](CommonUtils.java:pathToTRmpk:701) - [ pathToTRmpk 1/3 ] 123.txt
+[2022-07-22 14:00:01][INFO ](CommonUtils.java:pathToTRmpk:705) - [ pathToTRmpk 2/3 ] 123
+[2022-07-22 14:00:01][DEBUG](CommonUtils.java:fromResultSet:438) - fromResultSet Add TransCoder : null
+[2022-07-22 14:00:01][DEBUG](CommonUtils.java:fromResultSet:439) - fromResultSet Path : /jungin-kim/_None/123.txt
+[2022-07-22 14:00:01][DEBUG](CommonUtils.java:fromResultSet:440) - fromResultSet item : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/123.txt","upload_path":"/jungin-kim/_None/123.txt","filesize":506,"filesize_str":"506 B","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"DSFDS123SDFDS","content_path":"/jungin-kim","snapshot_path":"","title":"123","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-07-22 14:00:13][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/upload/jungin-kim/_None/123.txt
+[2022-07-22 14:00:20][INFO ](CommonUtils.java:setMediaInfo:630) - MediaInfo information : %7B%7D
+[2022-07-22 14:02:28][ERROR](FtpUploadDao.java:removeIsNotMediaFile:612) - is not MediaFile : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/123.txt","upload_path":"/jungin-kim/_None/123.txt","filesize":506,"filesize_str":"506 B","lastmodified":1658465544000,"lastmodified_str":"2022-07-22T13:52:24.000+0900","media_information":"%7B%0A++%22video.rotation%22%3A+%220%22%0A%7D","content_provider_key":"jungin-kim","key":"DSFDS123SDFDS","content_path":"/jungin-kim","snapshot_path":"","title":"123","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-07-22 14:02:28][DEBUG](FtpUploadDao.java:removeIsNotMediaFile:615) - Not MediaFile removed : /home/kollus/upload/jungin-kim/_None/123.txt
+[2022-07-22 14:02:57][ERROR](FtpUploadUtils.java:postRemoveFileItem:204) - org.apache.http.NoHttpResponseException: localhost:3002 failed to respond
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:143)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:57)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:260)
+	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:161)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.http.impl.conn.CPoolProxy.invoke(CPoolProxy.java:138)
+	at com.sun.proxy.$Proxy6.receiveResponseHeader(Unknown Source)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:271)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:254)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
+	at net.catenoid.watcher.upload.utils.FtpUploadUtils.postRemoveFileItem(FtpUploadUtils.java:201)
+	at net.catenoid.watcher.upload.utils.FtpUploadUtils.sendDeleteFileList(FtpUploadUtils.java:157)
+	at net.catenoid.watcher.uploadDao.FtpUploadDao.selectCompareOver(FtpUploadDao.java:459)
+	at net.catenoid.watcher.uploadImp.FtpUploadServiceImp.findWorkFileList(FtpUploadServiceImp.java:121)
+	at net.catenoid.watcher.job.Role_Watcher.execute(Role_Watcher.java:157)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:557)
+
+[2022-07-22 14:02:57][DEBUG](FtpUploadUtils.java:postRemoveFileItem:212) - postRemoveFileItem CMS API(http://localhost:3002/delete) connection retry(1)
+[2022-07-22 14:02:58][ERROR](FtpUploadUtils.java:postRemoveFileItem:204) - org.apache.http.NoHttpResponseException: localhost:3002 failed to respond
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:143)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:57)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:260)
+	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:161)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.http.impl.conn.CPoolProxy.invoke(CPoolProxy.java:138)
+	at com.sun.proxy.$Proxy6.receiveResponseHeader(Unknown Source)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:271)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:254)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
+	at net.catenoid.watcher.upload.utils.FtpUploadUtils.postRemoveFileItem(FtpUploadUtils.java:201)
+	at net.catenoid.watcher.upload.utils.FtpUploadUtils.sendDeleteFileList(FtpUploadUtils.java:157)
+	at net.catenoid.watcher.uploadDao.FtpUploadDao.selectCompareOver(FtpUploadDao.java:459)
+	at net.catenoid.watcher.uploadImp.FtpUploadServiceImp.findWorkFileList(FtpUploadServiceImp.java:121)
+	at net.catenoid.watcher.job.Role_Watcher.execute(Role_Watcher.java:157)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:557)
+
+[2022-07-22 14:02:58][DEBUG](FtpUploadUtils.java:postRemoveFileItem:212) - postRemoveFileItem CMS API(http://localhost:3002/delete) connection retry(2)
+[2022-07-22 14:03:00][ERROR](FtpUploadUtils.java:postRemoveFileItem:204) - org.apache.http.NoHttpResponseException: localhost:3002 failed to respond
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:143)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:57)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:260)
+	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:161)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.http.impl.conn.CPoolProxy.invoke(CPoolProxy.java:138)
+	at com.sun.proxy.$Proxy6.receiveResponseHeader(Unknown Source)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:271)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:254)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
+	at net.catenoid.watcher.upload.utils.FtpUploadUtils.postRemoveFileItem(FtpUploadUtils.java:201)
+	at net.catenoid.watcher.upload.utils.FtpUploadUtils.sendDeleteFileList(FtpUploadUtils.java:157)
+	at net.catenoid.watcher.uploadDao.FtpUploadDao.selectCompareOver(FtpUploadDao.java:459)
+	at net.catenoid.watcher.uploadImp.FtpUploadServiceImp.findWorkFileList(FtpUploadServiceImp.java:121)
+	at net.catenoid.watcher.job.Role_Watcher.execute(Role_Watcher.java:157)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:557)
+
+[2022-07-22 14:03:00][DEBUG](FtpUploadUtils.java:postRemoveFileItem:212) - postRemoveFileItem CMS API(http://localhost:3002/delete) connection retry(3)
+[2022-07-22 14:03:01][ERROR](FtpUploadUtils.java:postRemoveFileItem:221) - [HTTP_LOG]http://localhost:3002/delete, status: connection failed
+[2022-07-22 14:03:23][ERROR](FtpUploadUtils.java:postRemoveFileItem:204) - org.apache.http.NoHttpResponseException: localhost:3002 failed to respond
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:143)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:57)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:260)
+	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:161)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.http.impl.conn.CPoolProxy.invoke(CPoolProxy.java:138)
+	at com.sun.proxy.$Proxy6.receiveResponseHeader(Unknown Source)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:271)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:254)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
+	at net.catenoid.watcher.upload.utils.FtpUploadUtils.postRemoveFileItem(FtpUploadUtils.java:201)
+	at net.catenoid.watcher.upload.utils.FtpUploadUtils.sendDeleteFileList(FtpUploadUtils.java:157)
+	at net.catenoid.watcher.uploadDao.FtpUploadDao.selectCompareOver(FtpUploadDao.java:459)
+	at net.catenoid.watcher.uploadImp.FtpUploadServiceImp.findWorkFileList(FtpUploadServiceImp.java:121)
+	at net.catenoid.watcher.job.Role_Watcher.execute(Role_Watcher.java:157)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:557)
+
+[2022-07-22 14:03:23][DEBUG](FtpUploadUtils.java:postRemoveFileItem:212) - postRemoveFileItem CMS API(http://localhost:3002/delete) connection retry(1)
+[2022-07-22 14:11:09][INFO ](Watcher.java:start:94) - [PRG_START]
+[2022-07-22 14:11:09][INFO ](Watcher.java:printVersion:40) - [PRG_VER]null
+[2022-07-22 14:11:09][DEBUG](ThreadSafeClientConnManager.java:getConnection:235) - Get connection: {}->http://api.kr.dev.kollus.com, timeout = 0
+[2022-07-22 14:11:10][DEBUG](ThreadSafeClientConnManager.java:releaseConnection:280) - Released connection is reusable.
+[2022-07-22 14:11:10][INFO ](Config.java:printUrls:238) - URLS [watcher.list.insert] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/register
+[2022-07-22 14:11:10][INFO ](Config.java:printUrls:238) - URLS [watcher.list.complete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/complete
+[2022-07-22 14:11:10][INFO ](Config.java:printUrls:238) - URLS [watcher.list.delete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/remove
+[2022-07-22 14:11:10][INFO ](Config.java:printUrls:238) - URLS [watcher.usage_day_amount.insert] http://api.kr.dev.kollus.com/0/catenoid/usage_day_amount/register
+[2022-07-22 14:11:10][INFO ](Config.java:printUrls:238) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-07-22 14:11:10][INFO ](Config.java:printUrls:238) - URLS [transcoding_job.assign] http://jobmanager-dev-kr.kollus.com:8180/assign
+[2022-07-22 14:11:10][INFO ](Config.java:printUrls:238) - URLS [transcoding_job.manager] http://api.kr.dev.kollus.com/0/catenoid/transcoding_job/manager
+[2022-07-22 14:11:10][INFO ](Config.java:printUrls:238) - URLS [transcoding_file.register] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/register
+[2022-07-22 14:11:10][INFO ](Config.java:printUrls:238) - URLS [transcoding_file.update] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/update
+[2022-07-22 14:11:10][INFO ](Config.java:printUrls:238) - URLS [transcoding_file.complete] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete
+[2022-07-22 14:11:10][INFO ](Config.java:printUrls:238) - URLS [transcoding_file.complete_all] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete_all
+[2022-07-22 14:11:10][INFO ](Config.java:printUrls:238) - URLS [module.check_activated_at] http://api.kr.dev.kollus.com/0/catenoid/module/check_activated_at
+[2022-07-22 14:11:10][INFO ](Config.java:printUrls:238) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-07-22 14:11:10][DEBUG](Watcher.java:setupWatcher:233) - [PRG_CONF]job_watcherfile1=0/10 * * * * ?
+[2022-07-22 14:11:21][DEBUG](LinuxLineParser.java:parser:101) - /home/kollus/upload, /home/kollus/upload/jungin-kim/_None/123.txt, 1658466677000, 506
+[2022-07-22 14:11:23][INFO ](FtpUploadServiceImp.java:newFileItems:235) - Ls Parsing New File Items STEP
+[2022-07-22 14:11:24][DEBUG](FtpUploadDao.java:sendWatchFiles:253) - sql result = rs5: org.h2.result.LocalResult@158bc4a5 columns: 19 rows: 1 pos: 0
+[2022-07-22 14:11:25][DEBUG](CommonUtils.java:fromResultSet:401) - /home/kollus/upload/jungin-kim/_None/123.txt
+[2022-07-22 14:11:25][INFO ](CommonUtils.java:pathToTRmpk:701) - [ pathToTRmpk 1/3 ] 123.txt
+[2022-07-22 14:11:25][INFO ](CommonUtils.java:pathToTRmpk:705) - [ pathToTRmpk 2/3 ] 123
+[2022-07-22 14:11:25][DEBUG](CommonUtils.java:fromResultSet:438) - fromResultSet Add TransCoder : null
+[2022-07-22 14:11:25][DEBUG](CommonUtils.java:fromResultSet:439) - fromResultSet Path : /jungin-kim/_None/123.txt
+[2022-07-22 14:11:25][DEBUG](CommonUtils.java:fromResultSet:440) - fromResultSet item : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/123.txt","upload_path":"/jungin-kim/_None/123.txt","filesize":506,"filesize_str":"506 B","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"123","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-07-22 14:11:25][DEBUG](FtpUploadDao.java:sendWatchFiles:282) - file register 보내는값 = [{"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/123.txt","upload_path":"/jungin-kim/_None/123.txt","filesize":506,"filesize_str":"506 B","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"123","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}]
+[2022-07-22 14:11:27][DEBUG](CommonUtils.java:getHttpResponse:176) - Post Requests Transfer Content : watcher_files=[{"kind":1,"module_key":"watcherfile1","is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/123.txt","upload_path":"/jungin-kim/_None/123.txt","filesize":506,"filesize_str":"506 B","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"123","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}]
+[2022-07-22 14:11:28][DEBUG](CommonUtils.java:sendPostToApi:97) - Post Response Transfer Content [register] : {"error":0,"message":"","watcher_file":{"error":0,"message":"","result":{"error_code":0,"error_detail":"","content_provider_key":"","key":"","media_content_id":0,"content_path":"","upload_path":"","is_audio_file":0,"checksum_type":0,"snapshot_path":"","physical_path":"","delete_watcher_file_upload_url":"","poster":{"second":0}}},"result":{"error_code":0,"error_detail":"","watcher_files":[{"error":0,"message":"ok","result":{"error_code":0,"error_detail":"","content_provider_key":"jungin-kim","key":"DSFDS123SDFDS","media_content_id":0,"content_path":"/jungin-kim","upload_path":"/jungin-kim/_None/123.txt","is_audio_file":0,"checksum_type":0,"snapshot_path":"","physical_path":"/home/kollus/upload/jungin-kim/_None/123.txt","delete_watcher_file_upload_url":"","poster":{"second":0}}}]}}
+
+[2022-07-22 14:11:29][DEBUG](CommonUtils.java:convertResultApiItem:266) - register 반환값 (fileItem) = {"error":0,"message":"ok","result":{"error_code":0,"error_detail":"","content_provider_key":"jungin-kim","key":"DSFDS123SDFDS","media_content_id":0,"content_path":"/jungin-kim","upload_path":"/jungin-kim/_None/123.txt","is_audio_file":0,"checksum_type":0,"snapshot_path":"","physical_path":"/home/kollus/upload/jungin-kim/_None/123.txt","poster":{"second":0,"width":0,"height":0}}}
+[2022-07-22 14:11:32][INFO ](FtpUploadDao.java:sendWatchFiles:291) - HTTP Register Server Send STEP
+[2022-07-22 14:11:34][DEBUG](FtpUploadDao.java:sendWatchFiles:300) - 등록성공: DSFDS123SDFDS, {"kind":1,"module_key":"watcherfile1","is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/123.txt","upload_path":"/jungin-kim/_None/123.txt","filesize":506,"filesize_str":"506 B","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"DSFDS123SDFDS","content_path":"/jungin-kim","snapshot_path":"","title":"123","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-07-22 14:11:35][INFO ](FtpUploadDao.java:sendWatchFiles:303) - HTTP Register Server Send STEP
+[2022-07-22 14:11:37][INFO ](FtpUploadDao.java:sendWatchFiles:334) - postWatcherFileRegister End : watcherfile1
+[2022-07-22 14:11:38][INFO ](FtpUploadServiceImp.java:findWorkFileList:114) - Send to register count : 1
+[2022-07-22 14:12:00][ERROR](FtpUploadUtils.java:postRemoveFileItem:204) - org.apache.http.NoHttpResponseException: localhost:3002 failed to respond
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:143)
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:57)
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:260)
+	at org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader(DefaultBHttpClientConnection.java:161)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.http.impl.conn.CPoolProxy.invoke(CPoolProxy.java:138)
+	at com.sun.proxy.$Proxy6.receiveResponseHeader(Unknown Source)
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:271)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:254)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:195)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:86)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:108)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:186)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:57)
+	at net.catenoid.watcher.upload.utils.FtpUploadUtils.postRemoveFileItem(FtpUploadUtils.java:201)
+	at net.catenoid.watcher.upload.utils.FtpUploadUtils.sendDeleteFileList(FtpUploadUtils.java:157)
+	at net.catenoid.watcher.uploadDao.FtpUploadDao.selectCompareOver(FtpUploadDao.java:459)
+	at net.catenoid.watcher.uploadImp.FtpUploadServiceImp.findWorkFileList(FtpUploadServiceImp.java:121)
+	at net.catenoid.watcher.job.Role_Watcher.execute(Role_Watcher.java:157)
+	at org.quartz.core.JobRunShell.run(JobRunShell.java:213)
+	at org.quartz.simpl.SimpleThreadPool$WorkerThread.run(SimpleThreadPool.java:557)
+
+[2022-07-22 14:12:00][DEBUG](FtpUploadUtils.java:postRemoveFileItem:212) - postRemoveFileItem CMS API(http://localhost:3002/delete) connection retry(1)
+[2022-07-22 14:12:16][INFO ](Watcher.java:start:94) - [PRG_START]
+[2022-07-22 14:12:16][INFO ](Watcher.java:printVersion:40) - [PRG_VER]null
+[2022-07-22 14:12:17][DEBUG](ThreadSafeClientConnManager.java:getConnection:235) - Get connection: {}->http://api.kr.dev.kollus.com, timeout = 0
+[2022-07-22 14:12:17][DEBUG](ThreadSafeClientConnManager.java:releaseConnection:280) - Released connection is reusable.
+[2022-07-22 14:12:17][INFO ](Config.java:printUrls:238) - URLS [watcher.list.insert] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/register
+[2022-07-22 14:12:17][INFO ](Config.java:printUrls:238) - URLS [watcher.list.complete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/complete
+[2022-07-22 14:12:17][INFO ](Config.java:printUrls:238) - URLS [watcher.list.delete] http://api.kr.dev.kollus.com/0/catenoid/watcher_file/remove
+[2022-07-22 14:12:17][INFO ](Config.java:printUrls:238) - URLS [watcher.usage_day_amount.insert] http://api.kr.dev.kollus.com/0/catenoid/usage_day_amount/register
+[2022-07-22 14:12:17][INFO ](Config.java:printUrls:238) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-07-22 14:12:17][INFO ](Config.java:printUrls:238) - URLS [transcoding_job.assign] http://jobmanager-dev-kr.kollus.com:8180/assign
+[2022-07-22 14:12:17][INFO ](Config.java:printUrls:238) - URLS [transcoding_job.manager] http://api.kr.dev.kollus.com/0/catenoid/transcoding_job/manager
+[2022-07-22 14:12:17][INFO ](Config.java:printUrls:238) - URLS [transcoding_file.register] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/register
+[2022-07-22 14:12:17][INFO ](Config.java:printUrls:238) - URLS [transcoding_file.update] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/update
+[2022-07-22 14:12:17][INFO ](Config.java:printUrls:238) - URLS [transcoding_file.complete] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete
+[2022-07-22 14:12:17][INFO ](Config.java:printUrls:238) - URLS [transcoding_file.complete_all] http://api.kr.dev.kollus.com/0/catenoid/transcoding_file/complete_all
+[2022-07-22 14:12:17][INFO ](Config.java:printUrls:238) - URLS [module.check_activated_at] http://api.kr.dev.kollus.com/0/catenoid/module/check_activated_at
+[2022-07-22 14:12:17][INFO ](Config.java:printUrls:238) - URLS [module.error_report] http://mc-dev.kollus.com/report/error
+[2022-07-22 14:12:17][DEBUG](Watcher.java:setupWatcher:233) - [PRG_CONF]job_watcherfile1=0/10 * * * * ?
+[2022-07-22 14:12:23][DEBUG](LinuxLineParser.java:parser:101) - /home/kollus/upload, /home/kollus/upload/jungin-kim/_None/123.txt, 1658466677000, 506
+[2022-07-22 14:12:24][INFO ](FtpUploadServiceImp.java:newFileItems:235) - Ls Parsing New File Items STEP
+[2022-07-22 14:12:25][DEBUG](FtpUploadDao.java:sendWatchFiles:253) - sql result = rs12: org.h2.result.LocalResult@716f9654 columns: 19 rows: 1 pos: 0
+[2022-07-22 14:12:25][DEBUG](CommonUtils.java:fromResultSet:401) - /home/kollus/upload/jungin-kim/_None/123.txt
+[2022-07-22 14:12:25][INFO ](CommonUtils.java:pathToTRmpk:701) - [ pathToTRmpk 1/3 ] 123.txt
+[2022-07-22 14:12:25][INFO ](CommonUtils.java:pathToTRmpk:705) - [ pathToTRmpk 2/3 ] 123
+[2022-07-22 14:12:25][DEBUG](CommonUtils.java:fromResultSet:438) - fromResultSet Add TransCoder : null
+[2022-07-22 14:12:25][DEBUG](CommonUtils.java:fromResultSet:439) - fromResultSet Path : /jungin-kim/_None/123.txt
+[2022-07-22 14:12:25][DEBUG](CommonUtils.java:fromResultSet:440) - fromResultSet item : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/123.txt","upload_path":"/jungin-kim/_None/123.txt","filesize":506,"filesize_str":"506 B","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"123","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-07-22 14:12:25][DEBUG](FtpUploadDao.java:sendWatchFiles:282) - file register 보내는값 = [{"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/123.txt","upload_path":"/jungin-kim/_None/123.txt","filesize":506,"filesize_str":"506 B","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"123","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}]
+[2022-07-22 14:12:28][DEBUG](CommonUtils.java:getHttpResponse:176) - Post Requests Transfer Content : watcher_files=[{"kind":1,"module_key":"watcherfile1","is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/123.txt","upload_path":"/jungin-kim/_None/123.txt","filesize":506,"filesize_str":"506 B","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"","content_path":"","snapshot_path":"","title":"123","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}]
+[2022-07-22 14:12:29][DEBUG](CommonUtils.java:sendPostToApi:97) - Post Response Transfer Content [register] : {"error":0,"message":"","watcher_file":{"error":0,"message":"","result":{"error_code":0,"error_detail":"","content_provider_key":"","key":"","media_content_id":0,"content_path":"","upload_path":"","is_audio_file":0,"checksum_type":0,"snapshot_path":"","physical_path":"","delete_watcher_file_upload_url":"","poster":{"second":0}}},"result":{"error_code":0,"error_detail":"","watcher_files":[{"error":0,"message":"ok","result":{"error_code":0,"error_detail":"","content_provider_key":"jungin-kim","key":"DSFDS123SDFDS","media_content_id":0,"content_path":"/jungin-kim","upload_path":"/jungin-kim/_None/123.txt","is_audio_file":0,"checksum_type":0,"snapshot_path":"","physical_path":"/home/kollus/upload/jungin-kim/_None/123.txt","delete_watcher_file_upload_url":"","poster":{"second":0}}}]}}
+
+[2022-07-22 14:12:29][DEBUG](CommonUtils.java:convertResultApiItem:266) - register 반환값 (fileItem) = {"error":0,"message":"ok","result":{"error_code":0,"error_detail":"","content_provider_key":"jungin-kim","key":"DSFDS123SDFDS","media_content_id":0,"content_path":"/jungin-kim","upload_path":"/jungin-kim/_None/123.txt","is_audio_file":0,"checksum_type":0,"snapshot_path":"","physical_path":"/home/kollus/upload/jungin-kim/_None/123.txt","poster":{"second":0,"width":0,"height":0}}}
+[2022-07-22 14:12:31][INFO ](FtpUploadDao.java:sendWatchFiles:291) - HTTP Register Server Send STEP
+[2022-07-22 14:12:32][DEBUG](FtpUploadDao.java:sendWatchFiles:300) - 등록성공: DSFDS123SDFDS, {"kind":1,"module_key":"watcherfile1","is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/123.txt","upload_path":"/jungin-kim/_None/123.txt","filesize":506,"filesize_str":"506 B","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"DSFDS123SDFDS","content_path":"/jungin-kim","snapshot_path":"","title":"123","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-07-22 14:12:33][INFO ](FtpUploadDao.java:sendWatchFiles:303) - HTTP Register Server Send STEP
+[2022-07-22 14:12:34][INFO ](FtpUploadDao.java:sendWatchFiles:334) - postWatcherFileRegister End : watcherfile1
+[2022-07-22 14:12:35][INFO ](FtpUploadServiceImp.java:findWorkFileList:114) - Send to register count : 1
+[2022-07-22 14:12:39][DEBUG](CommonUtils.java:fromResultSet:401) - /home/kollus/upload/jungin-kim/_None/123.txt
+[2022-07-22 14:12:39][INFO ](CommonUtils.java:pathToTRmpk:701) - [ pathToTRmpk 1/3 ] 123.txt
+[2022-07-22 14:12:39][INFO ](CommonUtils.java:pathToTRmpk:705) - [ pathToTRmpk 2/3 ] 123
+[2022-07-22 14:12:39][DEBUG](CommonUtils.java:fromResultSet:438) - fromResultSet Add TransCoder : null
+[2022-07-22 14:12:39][DEBUG](CommonUtils.java:fromResultSet:439) - fromResultSet Path : /jungin-kim/_None/123.txt
+[2022-07-22 14:12:39][DEBUG](CommonUtils.java:fromResultSet:440) - fromResultSet item : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/123.txt","upload_path":"/jungin-kim/_None/123.txt","filesize":506,"filesize_str":"506 B","lastmodified":0,"lastmodified_str":"1970-01-01T09:00:00.000+0900","content_provider_key":"jungin-kim","key":"DSFDS123SDFDS","content_path":"/jungin-kim","snapshot_path":"","title":"123","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-07-22 14:12:45][INFO ](MediaInfo.java:Open:67) - MediaInfo Open Path  :  /home/kollus/upload/jungin-kim/_None/123.txt
+[2022-07-22 14:12:48][INFO ](CommonUtils.java:setMediaInfo:630) - MediaInfo information : %7B%7D
+[2022-07-22 14:13:22][ERROR](FtpUploadDao.java:removeIsNotMediaFile:612) - is not MediaFile : {"kind":1,"is_audio_file":0,"checksum_type":0,"use_encryption":0,"category":"None","physical_path":"/home/kollus/upload/jungin-kim/_None/123.txt","upload_path":"/jungin-kim/_None/123.txt","filesize":506,"filesize_str":"506 B","lastmodified":1658466677000,"lastmodified_str":"2022-07-22T14:11:17.000+0900","media_information":"%7B%0A++%22video.rotation%22%3A+%220%22%0A%7D","content_provider_key":"jungin-kim","key":"DSFDS123SDFDS","content_path":"/jungin-kim","snapshot_path":"","title":"123","md5":"","format":"Unknown","duration":0.0,"passthrough_ahead":0,"channel_keys":""}
+[2022-07-22 14:13:22][DEBUG](FtpUploadDao.java:removeIsNotMediaFile:615) - Not MediaFile removed : /home/kollus/upload/jungin-kim/_None/123.txt
+[2022-07-22 14:13:47][ERROR](LSParser.java:run:159) - java.io.FileNotFoundException: /home/kollus/MediaWatcher2/snap.temp/job_watcherfile1_1658466827439.txt (No such file or directory)
+[2022-07-22 14:13:47][ERROR](FtpUploadServiceImp.java:newFileItems:215) - java.lang.NullPointerException

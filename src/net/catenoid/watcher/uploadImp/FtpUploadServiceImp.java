@@ -248,21 +248,7 @@ public class FtpUploadServiceImp extends FtpUploadDao implements FtpUploadServic
             }
 
 
-            // 미디어파일 여부를 조사한 후 로깅 및 삭제처리
-            boolean isMediaContentFile = utils.checkIsMediaContent(f);
-            if (!isMediaContentFile) {
-                log.debug("is not MediaFile : " + f.toString());
-
-                UploadProcessLogDTO step1ErrorMsg = new UploadProcessLogDTO(UploadMode.FTP, UploadProcessStep.LS_PARSING_NEW_FILES_SUB, i+1, "[ERROR] Ls Parsing New File Items STEP", "is not MediaFile : " + f.getTitle(), f);
-                uploadProcessLog.error(step1ErrorMsg.getJsonLogMsg());
-
-                if (file.delete()) {
-                    log.debug("Not MediaFile removed");
-                    files.remove(f);
-                }
-            }
-
-            if (utils.isIgnoreFile(f) == false && isMediaContentFile) {
+            if (utils.isIgnoreFile(f) == false) {
                 if (existFileItem(f, check_time) == true) {
                     update_count++;
                     updateFileItem(f, check_time);
