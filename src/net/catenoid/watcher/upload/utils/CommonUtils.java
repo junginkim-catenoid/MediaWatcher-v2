@@ -569,12 +569,6 @@ public class CommonUtils {
         log.info("MediaInfo Start Time " + new Date().toString());
         String physicalPath = f.getPhysicalPath();
 
-        FileExtTransfer fileExtTransfer = new FileExtTransfer(conf.getTransferFileExtConf(), f.getContentProviderKey(), WatcherUtils.getFileExtention(physicalPath));
-        if (fileExtTransfer.isTarget()) {
-            log.info("is Target Provider");
-            physicalPath = fileExtTransfer.run(physicalPath);
-        }
-
         MediaInfo MI = new MediaInfo();
         if (MI.Open(physicalPath) == 0) {
             return false;
@@ -615,26 +609,7 @@ public class CommonUtils {
         }
 
 
-        log.info(empty2null("format : " + MI.Get(StreamKind.General, 0, "Format")));
-        log.info(empty2null("duration : " + MI.Get(StreamKind.General, 0, "Duration")));
-        log.info(empty2null("videoDuration : " + MI.Get(StreamKind.Video, 0, "Duration")));
-        log.info(empty2null("videoFormat : " + MI.Get(StreamKind.Video, 0, "Format")));
-        log.info(empty2null("videoCodec : " + MI.Get(StreamKind.Video, 0, "CodecID/Hint")));
-        log.info(empty2null("videoBitrate : " + MI.Get(StreamKind.Video, 0, "BitRate")));
-        log.info(empty2null("videoWidth : " + MI.Get(StreamKind.Video, 0, "Width")));
-        log.info(empty2null("videoHeight : " + MI.Get(StreamKind.Video, 0, "Height")));
-        log.info(empty2null("video frameRate : " + MI.Get(StreamKind.Video, 0, "FrameRate")));
-        log.info(empty2null("video displayAspectRatio : " + MI.Get(StreamKind.Video, 0, "DisplayAspectRatio")));
-        log.info(empty2null("video rotation : " + MI.Get(StreamKind.Video, 0, "Rotation")));
-        log.info(empty2null("video scanType : " + MI.Get(StreamKind.Video, 0, "ScanType/String")));
-        log.info(empty2null("audio format : " + MI.Get(StreamKind.Audio, 0, "Format")));
-        log.info(empty2null("audio codec : " + MI.Get(StreamKind.Audio, 0, "CodecID/Hint")));
-        log.info(empty2null("audio bitrate : " + MI.Get(StreamKind.Audio, 0, "BitRate")));
-        log.info(empty2null("audio samplingRate : " + MI.Get(StreamKind.Audio, 0, "SamplingRate")));
-        log.info(empty2null("audio duration : " + MI.Get(StreamKind.Audio, 0, "Duration")));
-        log.info(empty2null("image format : " + MI.Get(StreamKind.Image, 0, "Format")));
-        log.info(empty2null("image width : " + MI.Get(StreamKind.Image, 0, "Width")));
-        log.info(empty2null("image height : " + MI.Get(StreamKind.Image, 0, "Height")));
+
 
         return false;
     }

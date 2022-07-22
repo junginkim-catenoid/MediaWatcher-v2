@@ -244,25 +244,25 @@ public class FtpUploadUtils extends CommonUtils {
                     if (api_result.error != 0) {
                         log.error(api_result.message);
 
-//                        if (api_result.result != null && api_result.result.error_code > 0) {
-//                            this.sendErrorReport(api_result.result.error_code, api_result.message, "");
-//                        }
+                        if (api_result.result != null && api_result.result.error_code > 0) {
+                            this.sendErrorReport(api_result.result.error_code, api_result.message, "");
+                        }
                     } else {
-//                        for (KollusApiWatcherContentDTO item : api_result.result.watcher_files) {
-//                            if (item.error != 0) {
-//                                log.error(item.message);
-//                                // 실패한 경우 key정보를 확인하고 원복한다.
-//
-//                                if (item.result != null) {
-//                                    /**
-//                                     * error_code가 반환되면 추가 처리함.
-//                                     */
-//                                    if (item.result.error_code > 0) {
-//                                        this.sendErrorReport(item.result.error_code, item.result.error_detail, "");
-//                                    }
-//                                }
-//                            }
-//                        }
+                        for (KollusApiWatcherContentDTO item : api_result.result.watcher_files) {
+                            if (item.error != 0) {
+                                log.error(item.message);
+                                // 실패한 경우 key정보를 확인하고 원복한다.
+
+                                if (item.result != null) {
+                                    /**
+                                     * error_code가 반환되면 추가 처리함.
+                                     */
+                                    if (item.result.error_code > 0) {
+                                        this.sendErrorReport(item.result.error_code, item.result.error_detail, "");
+                                    }
+                                }
+                            }
+                        }
                     }
                 } catch (Exception e) {
                     log.error(Utils.getStackTrace(e));
